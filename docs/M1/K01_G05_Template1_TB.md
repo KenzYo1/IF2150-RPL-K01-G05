@@ -9,7 +9,7 @@ TOPIC BRAINSTORMING
 
 ## *Stop Loss Water*
 
-### Untuk: *Jordhy*
+### Untuk: *Made Branenda Jordhy*
 
 Dipersiapkan oleh:
 | Informasi | Keterangan |
