@@ -1,4 +1,4 @@
-<h1>
+<img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/5eff8d30-91a9-432a-b61f-3920748ffc1a" /><img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/acf9140e-4604-48f3-9769-ac5c67d5471d" /><h1>
 IF2150 REKAYASA PERANGKAT LUNAK
 <br>
 TUGAS 1
@@ -86,8 +86,16 @@ Definisikan apa yang ingin dicapai oleh pengguna saat menggunakan sistem ini dal
 | US-02 | *[Nama Aktor]* | *[Kebutuhan pengguna]* | *[Tujuan yang dicapai pengguna]* |
 | ... | ... | ... | ... |
 
-## 3.3 Model Proses Bisnis
-Buatlah *Activity Diagram* atau *Swimlane Diagram* yang menunjukkan alur kerja proses bisnis dari sistem solusi. Diagram ini harus memvisualisasikan bagaimana alur operasional di dunia nyata berjalan lebih efisien dengan adanya interaksi antara aktor (yang didefinisikan pada poin 3.1) dan sistem perangkat lunak. Perhatikan notasi yang digunakan dalam pembuatannya.
+## 3.3 Deskripsi Aktivitas
+Buatlah daftar seluruh aktivitas yang terdapat dalam sistem solusi, lengkap dengan ID dan penjelasan jika perlu. Bisa dibuat dalam bentuk tabel.
+| ID | Aktivitas | Penjelasan |
+| :--- | :--- | :--- |
+| AK01 | Melakukan Pemesanan | Pelanggan memulai proses dengan memesan produk. |
+| AK02 | Memproses Pesanan | Sistem memproses dan menyiapkan detail sesuai dengan pesanan. |
+| ... | ... | ... |
+
+## 3.4 Model Proses Bisnis
+Buatlah Activity Diagram atau Swimlane Diagram yang menunjukkan alur kerja proses bisnis dari sistem solusi. Diagram ini harus memvisualisasikan bagaimana alur operasional di dunia nyata berjalan lebih efisien dengan adanya interaksi antara aktor (yang didefinisikan pada poin 3.1) dan sistem perangkat lunak. Perhatikan notasi yang digunakan dalam pembuatannya.
 <br>
 
 <p align="center">
@@ -98,6 +106,5 @@ Buatlah *Activity Diagram* atau *Swimlane Diagram* yang menunjukkan alur kerja p
 </p>
 
 <br>
-
 # Referensi
 - Diagram UML: https://www.drawio.com/, https://staruml.io/
