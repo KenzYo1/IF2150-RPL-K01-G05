@@ -54,7 +54,12 @@ Dengan demikian, sistem yang diusulkan tidak menggantikan proses perbaikan fasil
 # BAB 2: Analisis Solusi
 
 ## 2.1 Deskripsi Perangkat Lunak
-Abstraksikan solusi perangkat lunak yang diusulkan dari sudut pandang pengguna. Jelaskan target platform yang akan digunakan (misalnya: desktop application) beserta alasan pemilihannya. Deskripsikan juga nilai unik (inovasi inti) dari perangkat lunak kalian dan apa yang membedakannya dari solusi yang sudah ada.
+Perangkat lunak ini merupakan solusi dalam meningkatkan efisiensi dan sanitasi suatu tempat. Melalui fitur-fiturnya, pengguna dapat melaporkan secara langsung tempat kebocoran terjadi, beserta dengan lokasi, waktu, dan foto kejadian tersebut. Tidak hanya itu, untuk membantu sanitasi, pengguna dapat melaporkan juga mengenai ketersediaan sabun di suatu tempat, serta memberi laporan jika terdapat kamar mandi yang perlu dibersihkan.
+
+Pastinya, kegiatan melapor tersebut mensyaratkan adanya media yang dapat digunakan kapan saja, seperti ponsel pintar, laptop, ataupun komputer. Kami memilih menggunakan *web application* karena dapat dibuat responsif dengan berbagai jenis perangkat sehingga bersifat fleksibel, sedangkan *mobile application* hanya dapat digunakan oleh ponsel pintar dan pengguna pun harus mengunduhnya terlebih dahulu, begitu pun dengan *desktop application* yang hanya dapat digunakan di komputer.Target pengguna dari perangkat lunak ini dapat berupa siswa, mahasiswa, dosen, dan kalangan umum jika suatu tempat bersedia memakainya.
+
+Perangkat lunak ini memiliki nilai unik yakni mempermudah pelaporan masalah air dan sanitasi pada suatu tempat dengan cepat, fleksibel, dan terpusat. Hal ini pun menjadi pembeda dengan solusi yang sekarang ada, yakni dengan mengontak petugas kebersihan melalui kanal media, seperti WhatsApp, atau bahkan pengguna kadang harus mencari terlebih dahulu keberadaan petugas tersebut. Karenanya, perangkat lunak ini pun menawarkan kecepatan dan fleksibilitas laporan karena dapat dilakukan di mana saja dan kapan pun saja. Selain itu, seluruh data juga dikirimkan ke suatu pusat yang dapat dilihat oleh petugas kebersihan untuk menanggapi laporan-laporan tersebut sehingga manajemen laporan menjadi lebih terpusat. 
+
 
 ## 2.2 Asumsi dan Batasan
 Definisikan secara tegas asumsi (baik teknis maupun dari sisi pengguna) yang menjadi dasar pengembangan. Tuliskan batasan seperti regulasi/hukum, keterbatasan sumber daya, dan ruang lingkup solusi.

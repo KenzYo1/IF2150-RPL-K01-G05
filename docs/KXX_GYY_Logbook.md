@@ -4,20 +4,20 @@
 
 | Informasi | Keterangan |
 |---|---|
-| Kelas | *[Kelas]* |
-| Nomor Kelompok | *[Nomor Kelompok]* |
-| Nama Kelompok | *[Nama Kelompok]* |
+| Kelas | *\[Kelas K01\]* |
+| Nomor Kelompok | *\[5\]* |
+| Nama Kelompok | *\[Furina: Forum RPL Indonesia Jaya\]* |
 | Nama Perangkat Lunak | *[Nama P/L]* |
 
 **Anggota Kelompok:**
 
 | NIM | Nama |
 |---|---|
-| *[NIM 1]* | *[Nama Anggota 1]* |
-| *[NIM 2]* | *[Nama Anggota 2]* |
-| *[NIM 3]* | *[Nama Anggota 3]* |
-| *[NIM 4]* | *[Nama Anggota 4]* |
-| *[NIM 5]* | *[Nama Anggota 5]* |
+| *13525016* | *Kenzo Yo* |
+| *13525112* | *Justin Sepvian* |
+| *13525142* | *Jessica Audrey Tjahjadi* |
+| *13525073* | *Nadia Layla Safira* |
+| *13525097* | *Arini Karimatunnikmah* |
 
 ---
 
@@ -35,7 +35,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *04-05-2026* | *[Nama Mahasiswa]* | *[Jelaskan Pekerjaan secara Singkat]* | *[Durasi Pengerjaan]* | *[On Progress/Done]* | [Kendala yang dialami, jika tidak ada cukup tandai "-"] | 
 | *05-05-2026* | *John Doe* | *Mendesain diagram kelas* | *3* | *Done* | *-* | 
-| | | | | | | |
+| *27-08-2026* | *Kenzo Yo* | *Membantu Menentukan Nama Kelompok* | *1* | *Done* | *-* |
+| *28-08-2026* | *Kenzo Yo* | *Membantu membahas SDG dan Topik perangkat lunak* | *1*  | *Done* | *-* |
+| *29-08-2026* | *Kenzo Yo* | *Mengontak asisten, membantu membahas solusi perangkat lunak* | *Done* | *1* | *-* |
+| *30-08-2026* | *Kenzo Yo* | *Menulis subbab 2.1* | *1* | *On Progress* | *-* |
 
 **Catatan/Evaluasi Milestone 1:**
 * *(Isi jika ada catatan khusus untuk asisten atau evaluasi singkat kerja tim)*
