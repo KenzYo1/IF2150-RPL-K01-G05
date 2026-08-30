@@ -73,12 +73,11 @@ Buatlah daftar seluruh aktor (pengguna) yang akan berinteraksi langsung dengan s
 
 
 ## 3.2 Kebutuhan Pengguna Awal
-Definisikan apa yang ingin dicapai oleh pengguna saat menggunakan sistem ini dalam format *User Story* (Sebagai [Aktor], saya ingin [Aktivitas/Kebutuhan], sehingga [Tujuan/Nilai]). Pastikan kalian berfokus pada "apa yang ingin dilakukan pengguna".
 
 | ID | Aktor | Kebutuhan / Aktivitas | Tujuan / Nilai |
 | :--- | :--- | :--- | :--- |
-| US-01 | *Kasir* |  *Memindai barcode barang* | *Proses pembayaran berjalan cepat dan akurat* |
-| US-02 | *[Nama Aktor]* | *[Kebutuhan pengguna]* | *[Tujuan yang dicapai pengguna]* |
+| US-01 | *Mahasiswa A* |  *Melapor masalah fasilitas air dan/atau sanitasi* | *Masalah fasilitas dapat diketahui oleh pengurus fasilitas dengan cepat* |
+| US-02 | *Pengurus Fasilitas A* | *Mengetahui permasalahan fasilitas air dan/atau sanitasi* | *Mengetahui dengan mudah masalah fasilitas yang ada* |
 | ... | ... | ... | ... |
 
 ## 3.3 Model Proses Bisnis
