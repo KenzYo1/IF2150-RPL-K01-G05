@@ -9,13 +9,13 @@ TOPIC BRAINSTORMING
 
 ## *Nama Perangkat Lunak*
 
-### Untuk: *[Nama Asisten]*
+### Untuk: Made Branenda Jordhy
 
 Dipersiapkan oleh:
 | Informasi | Keterangan |
 | --- | --- |
-| Kelas | *\[Kelas\]* |
-| Kelompok | *\[Nomor Kelompok\]*  |
+| Kelas | K-01 |
+| Kelompok | 5  |
 
 | NIM | Nama |
 |---|---|
@@ -43,6 +43,13 @@ Lakukan analisis terhadap proses yang berjalan saat ini di dunia nyata, baik itu
 
 ## 2.1 Deskripsi Perangkat Lunak
 Abstraksikan solusi perangkat lunak yang diusulkan dari sudut pandang pengguna. Jelaskan target platform yang akan digunakan (misalnya: desktop application) beserta alasan pemilihannya. Deskripsikan juga nilai unik (inovasi inti) dari perangkat lunak kalian dan apa yang membedakannya dari solusi yang sudah ada.
+
+Perangkat lunak ini merupakan solusi dalam meningkatkan efisiensi dan sanitasi suatu tempat. Melalui fitur-fiturnya, pengguna dapat melaporkan secara langsung tempat kebocoran terjadi, beserta dengan lokasi, waktu, dan foto kejadian tersebut. Tidak hanya itu, untuk membantu sanitasi, pengguna dapat melaporkan juga mengenai ketersediaan sabun di suatu tempat, serta memberi laporan jika terdapat kamar mandi yang perlu dibersihkan.
+
+Pastinya, kegiatan melapor tersebut mensyaratkan adanya media yang dapat digunakan kapan saja, seperti ponsel pintar, laptop, ataupun komputer. Kami memilih menggunakan *web application* yang bersifat responsif sehingga dapat digunakan oleh berbagai jenis perangkat sehingga bersifat sangat fleksibel. Terlebih, dari sisi pengembangan, waktu, dan ekonomi, perangkat lunak berbasis *web* harusnya lebih murah dibandingkan dengan *mobile app*. 
+
+Sebagai pembeda, solusi ini menawarkan laporan terhadap air dan sanitasi secara lebih cepat, fleksibel, dan terpusat. Hal ini karena solusi yang sekarang ada biasanya hanya berupa melapor pada suatu nomor di WhatsApp, satpam, ataupun petugas yang bekerja. Namun, seringkali para petugas sulit ditemukan, terlebih jika tempat tersebut lumayan terpencil, terkadang pengguna tidak tahu apakah laporan tersebut sudah terselesaikan atau belum. Maka, dengan solusi ini, pengguna juga dapat melihat status aktif dari suatu laporan.
+
 
 ## 2.2 Asumsi dan Batasan
 Definisikan secara tegas asumsi (baik teknis maupun dari sisi pengguna) yang menjadi dasar pengembangan. Tuliskan batasan seperti regulasi/hukum, keterbatasan sumber daya, dan ruang lingkup solusi.
