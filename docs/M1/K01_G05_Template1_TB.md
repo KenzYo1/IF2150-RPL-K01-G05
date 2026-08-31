@@ -62,6 +62,16 @@ Perangkat lunak ini memiliki nilai unik yakni mempermudah pelaporan masalah air 
 
 
 ## 2.2 Asumsi dan Batasan
+Asumsi yang menjadi dasar pengembangan sebagai berikut.
+1. Setiap pengguna memiliki gawai yang dilengkapi kamera.
+2. Setiap pengguna memiliki akun gmail ITB.
+3. Setiap pengguna memiliki koneksi internet yang stabil sehingga mempu mengirimmkan laporan melalui aplikasi.
+4. Setiap pengguna memiliki kesadaran dan kepedulian terhadap SDGs 6 Air Bersih dan Sanitasi.
+5. Setiap pengguna yang berperan sebagai admin memahami denah kampus ITB.
+Batasan
+1. Ruang lingkup solusi adalah pada kampus ITB baik Kampus Ganesha, Kampus Jatinangor, Kampus Cirebon, dan Kampus Jakarta.
+2. Sumber daya dalam pengembangan web application ini terbatas pada 5 mahasiswa informatika dengan penggunaan AI tertera pada bagian AI Usage.
+3. Berdasarkan UU ITE No. 11 Tahun 2008 (Pasal 26), penggunaan data pribadi dijabarkan secara jelas dengan meminta persetujuan penguna pada awal registrasi aplikasi. Peangksesan foto untuk keperluan pelaporan juga berdasarkan persetujuann pengguna.
 Definisikan secara tegas asumsi (baik teknis maupun dari sisi pengguna) yang menjadi dasar pengembangan. Tuliskan batasan seperti regulasi/hukum, keterbatasan sumber daya, dan ruang lingkup solusi.
 
 ---
@@ -73,8 +83,8 @@ Buatlah daftar seluruh aktor (pengguna) yang akan berinteraksi langsung dengan s
 
 | Aktor | Deskripsi |
 | :--- | :--- |
-| *Kasir* | *Pengguna ini bertindak sebagai pihak yang bertanggung jawab untuk memproses transaksi harian dan melayani pembayaran pelanggan. Karakteristik dari pengguna ini adalah mengutamakan kecepatan dan keakuratan saat bertransaksi.* |
-| ... | ... |
+| *Pelapor* | *Pengguna ini bertindak sebagai pihak yang secara sukarela melaporkan kejadian seperti kebocoran, ketersediaan sabun di suatu tempat, kamar mandi yang perlu dibersihkan, serta kualitas air. Karakteristik dari pengguna ini adalah mengutamakan kemudahan dalam proses pelaporan dan sistem leaderboard yang transparan.* |
+| *Petugas* | *Pengguna ini bertanggung jawab untuk memantau laporan yang dikirimakan oleh keluarga besar ITB serta meresponnya. Karakteristik dari pengguna ini adalah mengutamakan keakuratan dan sistem pelaporan terpusat yang ringkas* |
 
 
 ## 3.2 Kebutuhan Pengguna Awal
