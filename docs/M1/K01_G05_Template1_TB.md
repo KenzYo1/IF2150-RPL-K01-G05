@@ -100,9 +100,11 @@ Definisikan apa yang ingin dicapai oleh pengguna saat menggunakan sistem ini dal
 Buatlah daftar seluruh aktivitas yang terdapat dalam sistem solusi, lengkap dengan ID dan penjelasan jika perlu. Bisa dibuat dalam bentuk tabel.
 | ID | Aktivitas | Penjelasan |
 | :--- | :--- | :--- |
-| AK01 | Melakukan Pemesanan | Pelanggan memulai proses dengan memesan produk. |
-| AK02 | Memproses Pesanan | Sistem memproses dan menyiapkan detail sesuai dengan pesanan. |
-| ... | ... | ... |
+| AK01 | Melakukan login pada web app | Pengguna akan login dengan account ITB untuk mulai menggunakan web appnya. |
+| AK02 | Melaporkan masalah fasilitasi air dan/atau sanitasi | Pengguna melaporkan keluhan tentang fasilitas air yang ia gunakan. |
+| AK03 | Memvalidasi laporan | Petugas akan melakukan filter agar konten di web app sesuai. |
+| AK04 | Membaca laporan-laporan yang telah divalidasi | Pengguna mendapatkan informasi tentang fasilitas yang sedang rusak. |
+| AK05 | Like sebuah laporan | Pengguna dapat membawa atensi pada sebuah masalah yang telah dilaporkan pengguna lain agar fasilitas tersebut dapat diperbaiki lebih cepat oleh petugas. |
 
 ## 3.4 Model Proses Bisnis
 Buatlah Activity Diagram atau Swimlane Diagram yang menunjukkan alur kerja proses bisnis dari sistem solusi. Diagram ini harus memvisualisasikan bagaimana alur operasional di dunia nyata berjalan lebih efisien dengan adanya interaksi antara aktor (yang didefinisikan pada poin 3.1) dan sistem perangkat lunak. Perhatikan notasi yang digunakan dalam pembuatannya.
