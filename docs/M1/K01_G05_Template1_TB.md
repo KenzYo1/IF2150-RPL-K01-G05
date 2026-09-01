@@ -111,7 +111,7 @@ Buatlah Activity Diagram atau Swimlane Diagram yang menunjukkan alur kerja prose
 <br>
 
 <p align="center">
-<img alt="Swimlane Diagram" src="./assets/diagram/swimlane-diagram-1.avif" width="70%">
+<img alt="Swimlane Diagram" src="./assets/diagram/swimlane-diagram-1.png" width="70%">
 </p>
 <p align="center">
 <i>Gambar 1. Swimlane Diagram untuk Alur Kerja Web App</i>
