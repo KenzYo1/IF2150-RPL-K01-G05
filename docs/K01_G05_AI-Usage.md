@@ -52,8 +52,8 @@ Kami yang bertanda tangan di bawah ini menyatakan bahwa seluruh log penggunaan A
 
 | Tanda Tangan | Nama Anggota |
 | :---: | :--- |
-| <img src="./assets/ttd-anggota1.png" width="100"> | **[13525016 - Kenzo Yo]** |
-| <img src="./assets/ttd-anggota2.png" width="100"> | **[13525112 - Justin Sepvian]** |
+| <img src="./assets/tandatangan/ttdkenzo.jpeg" width="100"> | **[13525016 - Kenzo Yo]** |
+| <img src="./assets/tandatangan/ttdjustin.jpeg" width="100"> | **[13525112 - Justin Sepvian]** |
 | <img src="./assets/tandatangan/ttdjessica.png" width="100"> | **[13525142 - Jessica Audrey Tjahjadi]** |
-| <img src="./assets/ttd-anggota4.png" width="100"> | **[13525073 - Nadia Layla Safira]** |
+| <img src="./assets/tandatangan/ttdnadia.jpeg" width="100"> | **[13525073 - Nadia Layla Safira]** |
 | <img src="./assets/tandatangan/ttdarini.png" width="100"> | **[13525097 - Arini Karimatunnikmah]** |
