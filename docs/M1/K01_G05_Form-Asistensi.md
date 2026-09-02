@@ -10,7 +10,7 @@
 | **Nomor Kelompok** | *\[5\]*  |
 | **Nama Kelompok** | *\[Furina: Forum RPL Indonesia Jaya\]*  |
 | **Nama Perangkat Lunak** | *\[APATIS: Aplikasi Pelaporan Air dan Sanitasi\]*  |
-| **Dokumen** | *\[K01_G05_Template1_TB\]*  |
+| **Dokumen** | *\[K01_G05_TB\]*  |
 
 ### Anggota Kelompok
 
