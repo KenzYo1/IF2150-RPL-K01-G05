@@ -9,7 +9,7 @@
 | **Kelas** | *\[Kelas K01\]* |
 | **Nomor Kelompok** | *\[5\]*  |
 | **Nama Kelompok** | *\[Furina: Forum RPL Indonesia Jaya\]*  |
-| **Nama Perangkat Lunak** | *\[Stop Loss Water\]*  |
+| **Nama Perangkat Lunak** | *\[APATIS: Aplikasi Pelaporan Air dan Sanitasi\]*  |
 | **Dokumen** | *\[K01_G05_Template1_TB\]*  |
 
 ### Anggota Kelompok
