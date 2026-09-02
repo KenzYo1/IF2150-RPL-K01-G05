@@ -54,7 +54,7 @@ Dengan demikian, sistem yang diusulkan tidak menggantikan proses perbaikan fasil
 # BAB 2: Analisis Solusi
 
 ## 2.1 Deskripsi Perangkat Lunak
-Perangkat lunak ini merupakan solusi dalam meningkatkan efisiensi dan sanitasi suatu tempat. Melalui fitur-fiturnya, pengguna dapat melaporkan secara langsung tempat kebocoran terjadi, beserta dengan lokasi, waktu, dan foto kejadian tersebut. Tidak hanya itu, untuk membantu sanitasi, pengguna dapat melaporkan juga mengenai ketersediaan sabun di suatu tempat, serta memberi laporan jika terdapat kamar mandi yang perlu dibersihkan.
+Perangkat lunak ini merupakan solusi dalam meningkatkan efisiensi monitoring atau pelaporan mengenai fasilitas air dan sanitasi suatu tempat. Melalui fitur-fiturnya, pengguna dapat melaporkan secara langsung tempat kebocoran terjadi, beserta dengan lokasi, waktu, dan foto kejadian tersebut. Tidak hanya itu, untuk membantu sanitasi, pengguna dapat melaporkan juga mengenai ketersediaan sabun di suatu tempat, serta memberi laporan jika terdapat kamar mandi yang perlu dibersihkan.
 
 Pastinya, kegiatan melapor tersebut mensyaratkan adanya media yang dapat digunakan kapan saja, seperti ponsel pintar, laptop, ataupun komputer. Kami memilih menggunakan *web application* karena dapat dibuat responsif dengan berbagai jenis perangkat sehingga bersifat fleksibel, sedangkan *mobile application* hanya dapat digunakan oleh ponsel pintar dan pengguna pun harus mengunduhnya terlebih dahulu, begitu pun dengan *desktop application* yang hanya dapat digunakan di komputer.Target pengguna dari perangkat lunak ini dapat berupa siswa, mahasiswa, dosen, dan kalangan umum jika suatu tempat bersedia memakainya.
 
