@@ -39,11 +39,9 @@
 | *30-08-2026* | *Kenzo Yo* | *Menulis subbab 2.1* | *1* | *Done* | *-* |
 | *31-08-2026* | *Arini K.* | *Menulis draft subbab 2.2 dan 3.1* | *1* | *Done* | *-* |
 | *01-09-2026* | *Semua.* | *Mendiskusikan nama perangkat lunak, sistem reward, dsb* | *1* | *Done* | *-* |
-| *02-09-2026* | *Arini K.* | *Menyempurnakan subbab 2.2 dan 3.1* | *0.5* | *Done* | *-* |
-| *02-09-2026* | *Nadia Layla S.* | *Menulis subbab 3.2* | *1* | *Done* | *-* |
-| *01-09-2026* | *Semua.* | *Mendiskusikan nama perangkat lunak, sistem reward, dsb* | *1* | *Done* | *-* |
 | *01-09-2026* | *Jessica A.T* | *Menulis  bab 3.3 dan 3.4* | *2* | *Done* | *-* | 
 | *02-09-2026* | *Arini K.* | *Menyempurnakan subbab 2.2 dan 3.1* | *0.5* | *Done* | *-* |
+| *02-09-2026* | *Nadia Layla S.* | *Menulis subbab 3.2* | *1* | *Done* | *-* |
 | *02-09-2026* | *Semua.* | *Mengisi tanda tangan di AI Usage* | *0.5* | *Done* | *-* | 
 
 **Catatan/Evaluasi Milestone 1:**
