@@ -67,19 +67,19 @@ Asumsi yang menjadi dasar pengembangan sebagai berikut.
 2. Setiap pengguna memiliki akun gmail ITB.
 3. Setiap pengguna memiliki koneksi internet yang stabil sehingga mempu mengirimmkan laporan melalui aplikasi.
 4. Setiap pengguna memiliki kesadaran dan kepedulian terhadap SDGs 6 Air Bersih dan Sanitasi.
-5. Setiap pengguna yang berperan sebagai admin memahami denah kampus ITB.
-Batasan
+5. Setiap pengguna yang berperan sebagai petugas memahami denah kampus ITB.
+
+Batasan dari solusi yang akan dikembangkan sebagai berikut.
 1. Ruang lingkup solusi adalah pada kampus ITB baik Kampus Ganesha, Kampus Jatinangor, Kampus Cirebon, dan Kampus Jakarta.
 2. Sumber daya dalam pengembangan web application ini terbatas pada 5 mahasiswa informatika dengan penggunaan AI tertera pada bagian AI Usage.
-3. Berdasarkan UU ITE No. 11 Tahun 2008 (Pasal 26), penggunaan data pribadi dijabarkan secara jelas dengan meminta persetujuan penguna pada awal registrasi aplikasi. Peangksesan foto untuk keperluan pelaporan juga berdasarkan persetujuann pengguna.
-Definisikan secara tegas asumsi (baik teknis maupun dari sisi pengguna) yang menjadi dasar pengembangan. Tuliskan batasan seperti regulasi/hukum, keterbatasan sumber daya, dan ruang lingkup solusi.
+3. Berdasarkan UU ITE No. 11 Tahun 2008 (Pasal 26), penggunaan data pribadi yang digunakan perangkat lunak harus dijabarkan secara jelas dengan meminta persetujuan penguna pada awal registrasi aplikasi. Peangksesan foto untuk keperluan pelaporan juga berdasarkan persetujuann pengguna.
 
 ---
 
 # BAB 3: Spesifikasi Kebutuhan dan Proses Bisnis
 
 ## 3.1 Identifikasi Aktor
-Buatlah daftar seluruh aktor (pengguna) yang akan berinteraksi langsung dengan sistem solusi yang kalian kembangkan. Berikan penjelasan singkat mengenai peran dan karakteristik dari masing-masing aktor tersebut.
+Berikut penjelasan singkat mengenai peran dan karakteristik dari masing-masing aktor yang akan berinteraksi langsung dengan sistem ini.
 
 | Aktor | Deskripsi |
 | :--- | :--- |
