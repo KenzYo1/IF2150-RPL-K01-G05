@@ -76,9 +76,17 @@ Buatlah daftar seluruh aktor (pengguna) yang akan berinteraksi langsung dengan s
 
 | ID | Aktor | Kebutuhan / Aktivitas | Tujuan / Nilai |
 | :--- | :--- | :--- | :--- |
-| US-01 | *Mahasiswa A* |  *Melapor masalah fasilitas air dan/atau sanitasi* | *Masalah fasilitas dapat diketahui oleh pengurus fasilitas dengan cepat* |
-| US-02 | *Pengurus Fasilitas A* | *Mengetahui permasalahan fasilitas air dan/atau sanitasi* | *Mengetahui dengan mudah masalah fasilitas yang ada* |
-| ... | ... | ... | ... |
+| US-01 | *Pelapor* |  *Melapor masalah fasilitas air dan/atau sanitasi* | *Masalah fasilitas dapat diketahui oleh petugas fasilitas dengan cepat* |
+| US-02 | *Pelapor* | *Melampirkan foto dan deskripsi permasalahan yang dilapor* | *Petugas fasilitas dapat menanganinya dengan tepat* |
+| US-03 | *Admin* | *Mengelola data laporan yang masuk* | *Memastikan bahwa laporan yang masuk merupakan masalah yang valid* |
+| US-04 | *Umum* | *Mengetahui lokasi fasilitas yang tersedia* | *Pengguna dapat mengetahui dan menuju lokasi fasilitas terdekat* |
+| US-05 | *Pelapor* | *Melihat laporan yang dibuat oleh orang lain* | *Menegetahui masalah yang sudah dilapor* |
+| US-06 | *Pelapor* | *Melakukan upvote pada laporan yang ada* | *Petugas dapat mengetahui masalah yang perlu diprioritas* |
+| US-07 | *Pelapor* | *Melihat status laporan yang disampaikan* | *Mendapatkan transparansi terkait progres laporan yang dibuat* |
+| US-08 | *Petugas fasilitas* | *Menerima laporan masalah* | *Petugas dapat mengetahui masalah yang ada dengan detail dari pelapor* |
+| US-09 | *Pelapor* | *Mendapatkan poin berdasarkan laporan yang dibuat* | *Menambah poin pada leaderboard untuk hadiah* |
+| US-10 | *Admin* | *Memberikan poin pada akun pelapor yang sesuai* | *Mendorong kepedulian pengguna melalui sistem reward* |
+| US-11 | *Pelapor* | *Membuat akun pada perangkat lunak* | *Sebagai identitas pengguna di web* |
 
 ## 3.3 Model Proses Bisnis
 Buatlah *Activity Diagram* atau *Swimlane Diagram* yang menunjukkan alur kerja proses bisnis dari sistem solusi. Diagram ini harus memvisualisasikan bagaimana alur operasional di dunia nyata berjalan lebih efisien dengan adanya interaksi antara aktor (yang didefinisikan pada poin 3.1) dan sistem perangkat lunak. Perhatikan notasi yang digunakan dalam pembuatannya.
