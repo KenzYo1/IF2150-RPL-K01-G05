@@ -94,11 +94,14 @@ Berikut penjelasan singkat mengenai peran dan karakteristik dari masing-masing a
 | US-01 | *Pelapor* |  *Melapor masalah fasilitas air dan/atau sanitasi* | *Masalah fasilitas dapat diketahui oleh petugas fasilitas dengan cepat* |
 | US-02 | *Pelapor* | *Melampirkan foto dan deskripsi permasalahan yang dilapor* | *Petugas fasilitas dapat menanganinya dengan tepat* |
 | US-03 | *Pelapor* | *Melihat laporan yang dibuat oleh orang lain* | *Menegetahui masalah yang sudah dilapor* |
-| US-04 | *Pelapor* | *Melakukan upvote pada laporan yang ada* | *Petugas dapat mengetahui masalah yang perlu diprioritas* |
+| US-04 | *Pelapor* | *Melakukan upvote/like pada laporan yang ada* | *Petugas dapat mengetahui masalah yang perlu diprioritas* |
 | US-05 | *Pelapor* | *Melihat status laporan yang disampaikan* | *Mendapatkan transparansi terkait progres laporan yang dibuat* |
-| US-06 | *Petugas fasilitas* | *Menerima laporan masalah* | *Petugas dapat mengetahui masalah yang ada dengan detail dari pelapor* |
-| US-07 | *Pelapor* | *Mendapatkan poin berdasarkan laporan yang dibuat* | *Menambah poin pada leaderboard untuk hadiah* |
-| US-08 | *Pelapor* | *Membuat akun pada perangkat lunak* | *Sebagai identitas pengguna di web* |
+| US-06 | *Pelapor* | *Mendapatkan poin berdasarkan laporan yang dibuat* | *Menambah poin pada leaderboard untuk hadiah* |
+| US-07 | *Pelapor* | *Membuat akun pada perangkat lunak* | *Sebagai identitas pengguna di web* |
+| US-08 | *Petugas* | *Menerima laporan masalah* | *Petugas dapat mengetahui masalah yang ada dengan detail dari pelapor* |
+| US-09 | *Petugas* | *Membuat akun pada perangkat lunak* | *Sebagai identitas petugas di web* |
+| US-10 | *Petugas* | *Memproses validitas laporan* | *Memastikan masalah yang dilaporkan bersifat valid* |
+| US-11 | *Petugas* | *Memberi poin untuk laporan valid* | *Pelapor mendapatkan reward berupa poin* |
 
 ## 3.3 Deskripsi Aktivitas
 Buatlah daftar seluruh aktivitas yang terdapat dalam sistem solusi, lengkap dengan ID dan penjelasan jika perlu. Bisa dibuat dalam bentuk tabel.
