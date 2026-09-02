@@ -36,6 +36,7 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
 | :--- | :--- | :--- | :--- |
 | ChatGPT | Membantu kelengkapan dokumen | (Pada subbab 2.1) Is there anything else i need to add? Give me ideas only | Jawaban AI berupa ide-ide yang valid, tetapi hanya beberapa yang digunakan karena cakupan yang terlalu luas |
+| Claude | Membantu pemahaman tugas | (Pada subbab 3.2) How does a user story work for software development? Give me example | Jawaban AI menjelaskan bagaimana penggunaan user story dalam pengembangan perangkat lunak dengan contoh yang membantu dalam memahami cara membuat user story.
 
 
 ### Milestone 2

@@ -44,6 +44,7 @@
 | *02-09-2026* | *Nadia Layla S.* | *Menulis subbab 3.2* | *1* | *Done* | *-* |
 | *02-09-2026* | *Semua.* | *Mengisi tanda tangan di AI Usage* | *0.5* | *Done* | *-* | 
 
+
 **Catatan/Evaluasi Milestone 1:**
 * *(Isi jika ada catatan khusus untuk asisten atau evaluasi singkat kerja tim)*
 
