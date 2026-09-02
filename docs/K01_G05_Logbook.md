@@ -7,7 +7,7 @@
 | Kelas | *\[Kelas K01\]* |
 | Nomor Kelompok | *\[5\]* |
 | Nama Kelompok | *\[Furina: Forum RPL Indonesia Jaya\]* |
-| Nama Perangkat Lunak | *[Nama P/L]* |
+| Nama Perangkat Lunak | *\[APATIS: Aplikasi Pelaporan Air dan Sanitasi\]* |
 
 **Anggota Kelompok:**
 
@@ -38,7 +38,7 @@
 | *27-08-2026* | *Kenzo Yo* | *Membantu Menentukan Nama Kelompok* | *1* | *Done* | *-* |
 | *28-08-2026* | *Kenzo Yo* | *Membantu membahas SDG dan Topik perangkat lunak* | *1*  | *Done* | *-* |
 | *29-08-2026* | *Kenzo Yo* | *Mengontak asisten, membantu membahas solusi perangkat lunak* | *1* | *Done* | *-* |
-| *30-08-2026* | *Kenzo Yo* | *Menulis subbab 2.1* | *1* | *On Progress* | *-* |
+| *30-08-2026* | *Kenzo Yo* | *Menulis subbab 2.1* | *1* | *Done* | *-* |
 | *31-08-2026* | *Arini K.* | *Menulis draft subbab 2.2 dan 3.1* | *1* | *Done* | *-* |
 | *01-09-2026* | *Semua.* | *Mendiskusikan nama perangkat lunak, sistem reward, dsb* | *1* | *Done* | *-* |
 | *02-09-2026* | *Arini K.* | *Menyempurnakan subbab 2.2 dan 3.1* | *0.5* | *Done* | *-* |
