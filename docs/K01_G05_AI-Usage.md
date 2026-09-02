@@ -36,7 +36,11 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
 | :--- | :--- | :--- | :--- |
 | ChatGPT | Membantu kelengkapan dokumen | (Pada subbab 2.1) Is there anything else i need to add? Give me ideas only | Jawaban AI berupa ide-ide yang valid, tetapi hanya beberapa yang digunakan karena cakupan yang terlalu luas |
+<<<<<<< Updated upstream
 | Claude | Membantu pemahaman tugas | (Pada subbab 3.2) How does a user story work for software development? Give me example | Jawaban AI menjelaskan bagaimana penggunaan user story dalam pengembangan perangkat lunak dengan contoh yang membantu dalam memahami cara membuat user story.
+=======
+| Microsoft Copilot | Diskusi ide dan membantu memperbaiki tata bahasa | apakah ada ide buat sistem software SDG 6? | Ide dari AI didiskusikan kembali dengan kelompok dan disesuaikan dengan kebutuhan SDG yang dipilih. Perbaikan kalimat juga diperiksa dan diubah agar tetap sesuai dengan gaya penulisan.|
+>>>>>>> Stashed changes
 
 
 ### Milestone 2
@@ -52,8 +56,16 @@ Kami yang bertanda tangan di bawah ini menyatakan bahwa seluruh log penggunaan A
 
 | Tanda Tangan | Nama Anggota |
 | :---: | :--- |
+<<<<<<< Updated upstream
 | <img src="./assets/tandatangan/ttdkenzo.jpeg" width="100"> | **[13525016 - Kenzo Yo]** |
 | <img src="./assets/tandatangan/ttdjustin.jpeg" width="100"> | **[13525112 - Justin Sepvian]** |
 | <img src="./assets/tandatangan/ttdjessica.png" width="100"> | **[13525142 - Jessica Audrey Tjahjadi]** |
 | <img src="./assets/tandatangan/ttdnadia.jpeg" width="100"> | **[13525073 - Nadia Layla Safira]** |
 | <img src="./assets/tandatangan/ttdarini.png" width="100"> | **[13525097 - Arini Karimatunnikmah]** |
+=======
+| <img src="./assets/ttd-anggota1.png" width="100"> | **[13525016 - Kenzo Yo]** |
+| <img src="./assets/ttd-anggota2.png" width="100"> | **[13525112 - Justin Sepvian]** |
+| <img src="./assets/ttd-anggota3.png" width="100"> | **[13525142 - Jessica Audrey Tjahjadi]** |
+| <img src="./assets/ttd-anggota4.png" width="100"> | **[13525073 - Nadia Layla Safira]** |
+| <img src="./assets/ttd-anggota5.png" width="100"> | **[13525097 - Arini Karimatunnikmah]** |
+>>>>>>> Stashed changes
