@@ -29,12 +29,10 @@
 ---
 
 ### Milestone 1
-**Periode:** [Tanggal Mulai] - [Tanggal Selesai]
+**Periode:** 26 Agustus 2026 - 2 September 2026
 
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
-| *04-05-2026* | *[Nama Mahasiswa]* | *[Jelaskan Pekerjaan secara Singkat]* | *[Durasi Pengerjaan]* | *[On Progress/Done]* | [Kendala yang dialami, jika tidak ada cukup tandai "-"] | 
-| *05-05-2026* | *John Doe* | *Mendesain diagram kelas* | *3* | *Done* | *-* | 
 | *27-08-2026* | *Kenzo Yo* | *Membantu Menentukan Nama Kelompok* | *1* | *Done* | *-* |
 | *28-08-2026* | *Kenzo Yo* | *Membantu membahas SDG dan Topik perangkat lunak* | *1*  | *Done* | *-* |
 | *29-08-2026* | *Kenzo Yo* | *Mengontak asisten, membantu membahas solusi perangkat lunak* | *1* | *Done* | *-* |
@@ -43,6 +41,10 @@
 | *01-09-2026* | *Semua.* | *Mendiskusikan nama perangkat lunak, sistem reward, dsb* | *1* | *Done* | *-* |
 | *02-09-2026* | *Arini K.* | *Menyempurnakan subbab 2.2 dan 3.1* | *0.5* | *Done* | *-* |
 | *02-09-2026* | *Nadia Layla S.* | *Menulis subbab 3.2* | *1* | *Done* | *-* |
+| *01-09-2026* | *Semua.* | *Mendiskusikan nama perangkat lunak, sistem reward, dsb* | *1* | *Done* | *-* |
+| *01-09-2026* | *Jessica A.T* | *Menulis  bab 3.3 dan 3.4* | *2* | *Done* | *-* | 
+| *02-09-2026* | *Arini K.* | *Menyempurnakan subbab 2.2 dan 3.1* | *0.5* | *Done* | *-* |
+| *02-09-2026* | *Semua.* | *Mengisi tanda tangan di AI Usage* | *0.5* | *Done* | *-* | 
 
 **Catatan/Evaluasi Milestone 1:**
 * *(Isi jika ada catatan khusus untuk asisten atau evaluasi singkat kerja tim)*
