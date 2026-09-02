@@ -71,8 +71,9 @@ Asumsi yang menjadi dasar pengembangan sebagai berikut.
 
 Batasan dari solusi yang akan dikembangkan sebagai berikut.
 1. Ruang lingkup solusi adalah pada kampus ITB baik Kampus Ganesha, Kampus Jatinangor, Kampus Cirebon, dan Kampus Jakarta.
-2. Sumber daya dalam pengembangan web application ini terbatas pada 5 mahasiswa informatika dengan penggunaan AI tertera pada bagian AI Usage.
-3. Berdasarkan UU ITE No. 11 Tahun 2008 (Pasal 26), penggunaan data pribadi yang digunakan perangkat lunak harus dijabarkan secara jelas dengan meminta persetujuan penguna pada awal registrasi aplikasi. Peangksesan foto untuk keperluan pelaporan juga berdasarkan persetujuann pengguna.
+2. Ruang lingkup SDG 6 (Sustainable Development Goal 6: Air Bersih dan Sanitasi Layak) berfokus pada menjamin ketersediaan serta pengelolaan air bersih dan sanitasi yang berkelanjutan untuk semua orang.
+3. Sumber daya dalam pengembangan web application ini terbatas pada 5 mahasiswa informatika dengan penggunaan AI tertera pada bagian AI Usage.
+4. Berdasarkan UU ITE No. 11 Tahun 2008 (Pasal 26), penggunaan data pribadi yang digunakan perangkat lunak harus dijabarkan secara jelas dengan meminta persetujuan penguna pada awal registrasi aplikasi. Peangksesan foto untuk keperluan pelaporan juga berdasarkan persetujuann pengguna.
 
 ---
 
