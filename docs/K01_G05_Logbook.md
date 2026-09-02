@@ -37,7 +37,7 @@
 | *05-05-2026* | *John Doe* | *Mendesain diagram kelas* | *3* | *Done* | *-* | 
 | *27-08-2026* | *Kenzo Yo* | *Membantu Menentukan Nama Kelompok* | *1* | *Done* | *-* |
 | *28-08-2026* | *Kenzo Yo* | *Membantu membahas SDG dan Topik perangkat lunak* | *1*  | *Done* | *-* |
-| *29-08-2026* | *Kenzo Yo* | *Mengontak asisten, membantu membahas solusi perangkat lunak* | *Done* | *1* | *-* |
+| *29-08-2026* | *Kenzo Yo* | *Mengontak asisten, membantu membahas solusi perangkat lunak* | *1* | *Done* | *-* |
 | *30-08-2026* | *Kenzo Yo* | *Menulis subbab 2.1* | *1* | *On Progress* | *-* |
 | *31-08-2026* | *Arini K.* | *Menulis draft subbab 2.2 dan 3.1* | *1* | *Done* | *-* |
 | *01-09-2026* | *Semua.* | *Mendiskusikan nama perangkat lunak, sistem reward, dsb* | *1* | *Done* | *-* |
