@@ -80,8 +80,6 @@ Batasan dari solusi yang akan dikembangkan sebagai berikut.
 # BAB 3: Spesifikasi Kebutuhan dan Proses Bisnis
 
 ## 3.1 Identifikasi Aktor
-Berikut penjelasan singkat mengenai peran dan karakteristik dari masing-masing aktor yang akan berinteraksi langsung dengan sistem ini.
-
 | Aktor | Deskripsi |
 | :--- | :--- |
 | *Pelapor* | *Pengguna ini bertindak sebagai pihak yang secara sukarela melaporkan kejadian seperti kebocoran, ketersediaan sabun di suatu tempat, kamar mandi yang perlu dibersihkan, serta kualitas air. Karakteristik dari pengguna ini adalah mengutamakan kemudahan dalam proses pelaporan dan sistem leaderboard yang transparan.* |
@@ -104,7 +102,6 @@ Berikut penjelasan singkat mengenai peran dan karakteristik dari masing-masing a
 | US-11 | *Petugas* | *Memberi poin untuk laporan valid* | *Pelapor mendapatkan reward berupa poin* |
 
 ## 3.3 Deskripsi Aktivitas
-Buatlah daftar seluruh aktivitas yang terdapat dalam sistem solusi, lengkap dengan ID dan penjelasan jika perlu. Bisa dibuat dalam bentuk tabel.
 | ID | Aktivitas | Penjelasan |
 | :--- | :--- | :--- |
 | AK01 | Melakukan login pada web app | Pengguna akan login dengan account ITB untuk mulai menggunakan web appnya. |
@@ -114,9 +111,6 @@ Buatlah daftar seluruh aktivitas yang terdapat dalam sistem solusi, lengkap deng
 | AK05 | Like sebuah laporan | Pengguna dapat membawa atensi pada sebuah masalah yang telah dilaporkan pengguna lain agar fasilitas tersebut dapat diperbaiki lebih cepat oleh petugas. |
 
 ## 3.4 Model Proses Bisnis
-Buatlah Activity Diagram atau Swimlane Diagram yang menunjukkan alur kerja proses bisnis dari sistem solusi. Diagram ini harus memvisualisasikan bagaimana alur operasional di dunia nyata berjalan lebih efisien dengan adanya interaksi antara aktor (yang didefinisikan pada poin 3.1) dan sistem perangkat lunak. Perhatikan notasi yang digunakan dalam pembuatannya.
-<br>
-
 <p align="center">
 <img alt="Swimlane Diagram" src="./assets/diagram/swimlane-diagram-1.png" width="70%">
 </p>
