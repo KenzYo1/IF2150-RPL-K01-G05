@@ -4,20 +4,20 @@
 
 | Informasi | Keterangan |
 |---|---|
-| Kelas | *[Kelas]* |
-| Nomor Kelompok | *[Nomor Kelompok]* |
-| Nama Kelompok | *[Nama Kelompok]* |
-| Nama Perangkat Lunak | *[Nama P/L]* |
+| Kelas | *\[Kelas K01\]* |
+| Nomor Kelompok | *\[5\]* |
+| Nama Kelompok | *\[Furina: Forum RPL Indonesia Jaya\]* |
+| Nama Perangkat Lunak | *\[APATIS: Aplikasi Pelaporan Air dan Sanitasi\]* |
 
 **Anggota Kelompok:**
 
 | NIM | Nama |
 |---|---|
-| *[NIM 1]* | *[Nama Anggota 1]* |
-| *[NIM 2]* | *[Nama Anggota 2]* |
-| *[NIM 3]* | *[Nama Anggota 3]* |
-| *[NIM 4]* | *[Nama Anggota 4]* |
-| *[NIM 5]* | *[Nama Anggota 5]* |
+| *13525016* | *Kenzo Yo* |
+| *13525112* | *Justin Sepvian* |
+| *13525142* | *Jessica Audrey Tjahjadi* |
+| *13525073* | *Nadia Layla Safira* |
+| *13525097* | *Arini Karimatunnikmah* |
 
 ---
 
@@ -36,8 +36,7 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
 | :--- | :--- | :--- | :--- |
 | ChatGPT | Membantu kelengkapan dokumen | (Pada subbab 2.1) Is there anything else i need to add? Give me ideas only | Jawaban AI berupa ide-ide yang valid, tetapi hanya beberapa yang digunakan karena cakupan yang terlalu luas |
-| *Gemini* | *Mengecek relasi antar class* | *"Apakah relasi antara class User dan Order dalam UML ini seharusnya composition atau aggregation?"* | *AI menyarankan composition, tapi setelah dicek kembali ke requirement, kami menggunakan aggregation karena Order masih bisa eksis di history.* |
-| | | | | |
+
 
 ### Milestone 2
 | Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
@@ -52,8 +51,8 @@ Kami yang bertanda tangan di bawah ini menyatakan bahwa seluruh log penggunaan A
 
 | Tanda Tangan | Nama Anggota |
 | :---: | :--- |
-| <img src="./assets/ttd-anggota1.png" width="100"> | **[NIM - Nama Anggota 1]** |
-| <img src="./assets/ttd-anggota2.png" width="100"> | **[NIM - Nama Anggota 2]** |
-| <img src="./assets/ttd-anggota3.png" width="100"> | **[NIM - Nama Anggota 3]** |
-| <img src="./assets/ttd-anggota4.png" width="100"> | **[NIM - Nama Anggota 4]** |
-| <img src="./assets/ttd-anggota5.png" width="100"> | **[NIM - Nama Anggota 5]** |
+| <img src="./assets/ttd-anggota1.png" width="100"> | **[13525016 - Kenzo Yo]** |
+| <img src="./assets/ttd-anggota2.png" width="100"> | **[13525112 - Justin Sepvian]** |
+| <img src="./assets/ttd-anggota3.png" width="100"> | **[13525142 - Jessica Audrey Tjahjadi]** |
+| <img src="./assets/ttd-anggota4.png" width="100"> | **[13525073 - Nadia Layla Safira]** |
+| <img src="./assets/ttd-anggota5.png" width="100"> | **[13525097 - Arini Karimatunnikmah]** |
