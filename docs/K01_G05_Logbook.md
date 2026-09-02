@@ -33,11 +33,7 @@
 
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
-<<<<<<< Updated upstream
-=======
-| *04-05-2026* | *[Nama Mahasiswa]* | *[Jelaskan Pekerjaan secara Singkat]* | *[Durasi Pengerjaan]* | *[On Progress/Done]* | [Kendala yang dialami, jika tidak ada cukup tandai "-"] | 
 | *27-08-2026* | *Justin Sepvian* | *Membuat bab 1 dan pemilihan ide perangkat lunak* | *1* | *Done* | *Kebanyakan ide jadi lama memilihnya* | 
->>>>>>> Stashed changes
 | *27-08-2026* | *Kenzo Yo* | *Membantu Menentukan Nama Kelompok* | *1* | *Done* | *-* |
 | *28-08-2026* | *Kenzo Yo* | *Membantu membahas SDG dan Topik perangkat lunak* | *1*  | *Done* | *-* |
 | *29-08-2026* | *Kenzo Yo* | *Mengontak asisten, membantu membahas solusi perangkat lunak* | *1* | *Done* | *-* |
