@@ -53,11 +53,6 @@ Kami yang bertanda tangan di bawah ini menyatakan bahwa seluruh log penggunaan A
 | :---: | :--- |
 | <img src="./assets/ttd-anggota1.png" width="100"> | **[13525016 - Kenzo Yo]** |
 | <img src="./assets/ttd-anggota2.png" width="100"> | **[13525112 - Justin Sepvian]** |
-| <img src="./assets/ttd-anggota3.png" width="100"> | **[13525142 - Jessica Audrey Tjahjadi]** |
+| <img src="./assets/tandatangan/ttdjessica.png" width="100"> | **[13525142 - Jessica Audrey Tjahjadi]** |
 | <img src="./assets/ttd-anggota4.png" width="100"> | **[13525073 - Nadia Layla Safira]** |
-| <img src="./assets/ttd-anggota5.png" width="100"> | **[13525097 - Arini Karimatunnikmah]** |
-| <img src="./assets/tandatangan/ttd-anggota1.png" width="100"> | **[NIM - Nama Anggota 1]** |
-| <img src="./assets/tandatangan/ttd-anggota2.png" width="100"> | **[NIM - Nama Anggota 2]** |
-| <img src="./assets/tandatangan/ttdjessica.png" width="100"> | **[NIM - Nama Anggota 3]** |
-| <img src="./assets/tandatangan/ttd-anggota4.png" width="100"> | **[NIM - Nama Anggota 4]** |
-| <img src="./assets/tandatangan/ttdarini.png" width="100"> | **[NIM - Nama Anggota 5]** |
+| <img src="./assets/tandatangan/ttdarini.png" width="100"> | **[13525097 - Arini Karimatunnikmah]** |
