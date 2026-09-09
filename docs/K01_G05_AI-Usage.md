@@ -43,8 +43,7 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 ### Milestone 2
 | Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
 | :--- | :--- | :--- | :--- |
-| | | | | |
-| | | | | |
+| Microsoft Copilot | Diskusi ide dan membantu memperbaiki tata bahasa | Contoh kebutuhan untuk ide kebutuhan fungsional dan nonfungsional | Ide dari AI didiskusikan kembali dengan kelompok dan disesuaikan dengan subbab 2.4 dan 2.5 untuk subbab 2.3. Perbaikan kalimat juga diperiksa dan diubah agar tetap sesuai dengan gaya penulisan.|
 
 ---
 ### Pernyataan Integritas dan Persetujuan
