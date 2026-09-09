@@ -56,7 +56,8 @@
 **Periode:** 2 September 2026 - 9 September 2026
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
+| *06-09-2026* | *Kenzo Yo* | *Membuat kasaran dari bab 1 milestone 2* | *1* | *Done* | *-* |
 | *09-09-2026* | *Nadia Layla S* | *Memperbarui dan memperbaiki subbab 2.1 dan 2.2* | *3* | *Done* | *-* | 
-
+| *09-09-2026* | *Kenzo Yo* | *Melengkapi bab 1 milestone 2* | *1* | *Done* | *-* | 
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
