@@ -60,5 +60,6 @@
 | *09-09-2026* | *Nadia Layla S* | *Memperbarui dan memperbaiki subbab 2.1 dan 2.2* | *3* | *Done* | *-* | 
 | *09-09-2026* | *Kenzo Yo* | *Melengkapi bab 1 milestone 2* | *1* | *Done* | *-* | 
 | *09-09-2026* | *Justin Sepvian* | *Membuat dan memperbaiki isi subbab 2.3, menyederhanakan aturan pada sistem APATIS* | *2* | *Done* | *-* | 
+| *09-09-2026* | *Arini K.* | *Membuat subbab 2.5 dan memperbarui subbab 2.3* | *2* | *Done* | *-* | 
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
