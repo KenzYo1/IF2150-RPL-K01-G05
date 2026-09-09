@@ -56,7 +56,7 @@
 **Periode:** 2 September 2026 - 9 September 2026
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
-| *09-09-2026* | *Nadia Layla S* | *Memperbarui dan memperbaiki subbab 2.1 dan 2.2* | *3* | *Done* | *-* | 
-
+| *09-09-2026* | *Nadia Layla S* | *Memperbarui dan memperbaiki subbab 2.1 dan 2.2* | *3* | *Done* | *-* | "
+| *09-09-2026* | *Justin Sepvian* | *Membuat, memperbarui dan memperbaiki subbab 2.3* | *2* | *Done* | *-* | "
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
