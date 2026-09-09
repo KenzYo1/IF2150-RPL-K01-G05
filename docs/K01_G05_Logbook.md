@@ -44,7 +44,7 @@
 | *02-09-2026* | *Arini K.* | *Menyempurnakan subbab 2.2 dan 3.1* | *0.5* | *Done* | *-* |
 | *02-09-2026* | *Nadia Layla S.* | *Menulis subbab 3.2* | *1* | *Done* | *-* |
 | *02-09-2026* | *Semua.* | *Mengisi tanda tangan di AI Usage* | *0.5* | *Done* | *-* | 
-| *02-09-2026* | *Justin Sepvian* | *Mengupdate isi bab 1 untuk menyesuaikan hasil diskusi kelompok mengenai fitur dalam sistem* | *1* | *Done* | *Kebanyakan ide jadi lama memilihnya* | 
+| *02-09-2026* | *Justin Sepvian* | *Mengupdate isi bab 1 untuk menyesuaikan hasil diskusi kelompok mengenai fitur dalam sistem* | *1* | *Done* | *-* | 
 
 
 **Catatan/Evaluasi Milestone 1:**
