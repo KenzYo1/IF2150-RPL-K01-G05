@@ -24,6 +24,7 @@
 ### Daftar Isi
 * [Milestone 1](#milestone-1)
 * [Milestone 2](#milestone-2)
+* [Milestone 3](#milestone-3)
 
 
 ---
@@ -62,5 +63,15 @@
 | *09-09-2026* | *Justin Sepvian* | *Membuat dan memperbaiki isi subbab 2.3, menyederhanakan aturan pada sistem APATIS* | *2* | *Done* | *-* | 
 | *09-09-2026* | *Arini K.* | *Membuat subbab 2.5 dan memperbarui subbab 2.3* | *2* | *Done* | *-* | 
 | *09-09-2026* | *Jessica A.T* | *Membuat subbab 2.4* | *2* | *Done* | *-* | 
+
+---
+
+### Milestone 3
+**Periode:** 9 September 2026 - 16 September 2026
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *12-09-2026* | *Arini K.* | *Membuat subbab 3.1* | *0.5* | *Done* | *-* | 
+
+---
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
