@@ -57,7 +57,7 @@ Salin ulang **seluruh Kebutuhan Fungsional (KF)** yang telah didefinisikan pada 
 | *KF05* | *R11* | *Ketika sebuah laporan dinyatakan valid oleh Petugas, sistem harus memperbolehkan pengguna untuk melihat laporan tersebut di halaman utama atau feed dengan isinya, seperti detail foto, deskripsi, lokasi, waktu, status, dan jumlah _like_.* |
 | *KF06* | *R12* | *Selama sebuah laporan dinyatakan valid, sistem harus memperbolehkan pengguna untuk memberikan dan membatalkan _like_ pada laporan tersebut.* |
 | *KF07* | *R13* | *Bila seorang pengguna memberikan lebih dari satu _like_ di sebuah laporan, maka sistem harus membatasi agar hanya dapat memberi satu like pada laporan yang sama.* |
-| *KF08* | *R14* | *Sistem harus memperbarui jumlah like setelah tindakan pengguna berhasiil diproses, yaitu memberi atau membatalkan _like_.* |
+| *KF08* | *R14* | *Sistem harus memperbarui jumlah like setelah tindakan pengguna berhasil diproses, yaitu memberi atau membatalkan _like_.* |
 | *KF09* | *R15* | *Sistem harus memperbolehkan Petugas untuk mengubah status laporan sesuai dengan perkembangan penanganannya.* |
 | *KF10* | *R16* | *Ketika laporan dinyatakan valid oleh Petugas atau Admin, sistem harus dapat memberi pemilik laporan sebuah poin.* |
 | *KF11* | *R17* | *Ketika laporan dinyatakan valid oleh Petugas atau Admin, sistem harus menunjukkan poin pengguna menambah.* |
@@ -88,9 +88,20 @@ Identifikasi seluruh use case yang mencakup Kebutuhan Fungsional pada BAB 2. Sat
 
 | ID UC | Nama Use Case | Deskripsi Singkat | Aktor Terlibat | ID KF Terkait |
 | :--- | :--- | :--- | :--- | :--- |
-| *UC01* | *Melakukan Pembayaran Digital* | *Pelanggan memilih metode pembayaran dan menyelesaikan transaksi.* | *Pelanggan* | *KF01, KF02* |
-| *UC02* | *Memverifikasi Status Pembayaran* | *Kasir mengecek status transaksi pelanggan sebelum menyerahkan barang.* | *Kasir* | *KF03* |
-| *...* | *...* | *...* | *...* | *...* |
+| *UC01* | *Melakukan login di web* | *Pengguna melakukan login menggunakan akun ITB dan masuk ke peran akun yang sesuai* | *Pelapor, Petugas, Admin* | *KF01, KF02* |
+| *UC02* | *Melakukan pelaporan* | *Pengguna mengisi formulir laporan terkait masalah yang ditemukan* | *Pelapor* | *KF03* |
+| *UC03* | *Mengecek validitas laporan* | *Pengguna mampu melihat dan memastikan validitas dari laporan sesuai peran* | *Petugas, Admin* | *KF04* |
+| *UC04* | *Memberikan status laporan* | *Petugas dan admin mampu memberikan status laporan berupa penerimaan, penolakan, dan progres yang dapat disertai dengan tanggapan. Status laporan dapat disunting kapan saja oleh petugas dan admin.* | *Petugas, Admin* | *KF04, KF09* |
+| *UC05* | *Melihat status dari laporan-laporan yang ada* | *Pengguna mampu melihat laporan dan status laporan, baik laporan yang dibuat sendiri maupun oleh pelapor lain.* | *Pelapor* | *KF05* |
+| *UC06* | *Memberi dan membatalkan like* | *Pengguna dapat memberikan like pada laporan yang dirasa perlu diprioritaskan.* | *Pelapor* | *KF05, KF06, KF07, KF08* |
+| *UC07* | *Memperoleh poin* | *Pengguna dapat memperoleh poin jika laporan telah diterima oleh admin dan petugas. Jumlah poin dapat dilihat pada akun masing-masing pengguna* | *Pelapor* | *KF10, KF11* |
+| *UC09* | *Melihat top 20 pada leaderboard* | *Pengguna dapat melihat peringkat 20 ke atas pada leaderboard.* | *Pelapor* | *KF12, KF13, KF14* |
+
+
+
+
+
+
 
 ## 3.3 Use Case Diagram
 Buatlah **satu** use case diagram yang mencakup seluruh aktor dan use case. Sertakan relasi *include*/*extend* apabila ada use case yang saling bergantung.
