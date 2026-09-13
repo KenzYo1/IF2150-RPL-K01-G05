@@ -170,5 +170,36 @@ Format tabel skenario: kolom **Aksi Aktor** berisi apa yang dilakukan/diinput ak
 | :--- | :--- | :--- |
 | 1 | *Kasir memasukkan ID Pesanan yang salah/tidak ada* | *Sistem menampilkan pesan "ID Pesanan tidak ditemukan" dan meminta kasir memasukkan ulang* |
 
+## 3.4.6 Skenario UC06
 
-<sub>*Lanjutkanlah pola 3.4.x ini untuk setiap ID UC yang telah diidentifikasi pada 3.2, sampai seluruh use case memiliki skenario normal dan skenario alternatif (tidak usah dibuat jika use case tersebut memang tidak memiliki skenario alternatif).*<sub>
+**Nama Use Case:** Memberikan dan Membatalkan *Like*  
+**Aktor:** Pelapor  
+**Kebutuhan Fungsional Terkait:** KF05, KF06, KF07, KF08
+
+### Skenario Normal: Memberikan Like
+
+| No. | Aksi Aktor | Reaksi Perangkat Lunak |
+| :---: | :--- | :--- |
+| 1 | Pelapor membuka halaman utama APATIS. | Sistem menampilkan daftar laporan yang telah dinyatakan valid. |
+| 2 | Pelapor memilih salah satu laporan. | Sistem menampilkan detail laporan beserta jumlah *like*. |
+| 3 | Pelapor menekan tombol *like*. | Sistem memeriksa apakah Pelapor sudah memberikan *like* pada laporan tersebut. |
+| 4 | Pelapor menunggu proses pemberian *like*. | Sistem menyimpan *like* dan menambah jumlah *like* pada laporan sebanyak satu. |
+| 5 | Pelapor melihat kembali laporan tersebut. | Sistem menampilkan tombol *like* dalam keadaan aktif dan jumlah *like* terbaru. |
+
+### Skenario Alternatif 1: Membatalkan Like
+
+| No. | Aksi Aktor | Reaksi Perangkat Lunak |
+| :---: | :--- | :--- |
+| 1 | Pelapor membuka laporan yang sebelumnya telah diberi *like*. | Sistem menampilkan detail laporan dan tombol *like* dalam keadaan aktif. |
+| 2 | Pelapor menekan kembali tombol *like*. | Sistem menghapus *like* yang sebelumnya diberikan oleh Pelapor. |
+| 3 | Pelapor melihat kembali laporan tersebut. | Sistem mengurangi jumlah *like* sebanyak satu dan menampilkan tombol *like* dalam keadaan tidak aktif. |
+
+### Skenario Alternatif 2: Like Gagal Diproses
+
+| No. | Aksi Aktor | Reaksi Perangkat Lunak |
+| :---: | :--- | :--- |
+| 1 | Pelapor membuka salah satu laporan. | Sistem menampilkan detail laporan beserta jumlah *like*. |
+| 2 | Pelapor menekan tombol *like*. | Sistem mencoba menyimpan *like* Pelapor. |
+| 3 | Pelapor menunggu proses pemberian *like*. | Sistem gagal menyimpan *like* karena gangguan jaringan atau sistem. |
+| 4 | Pelapor melihat pemberitahuan kegagalan. | Sistem menampilkan pesan bahwa *like* gagal diberikan dan jumlah *like* tidak berubah. |
+| 5 | Pelapor menekan tombol “Coba Lagi”. | Sistem mencoba kembali menyimpan *like*. |
