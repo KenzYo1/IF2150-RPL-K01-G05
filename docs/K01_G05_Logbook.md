@@ -70,11 +70,14 @@
 **Periode:** 9 September 2026 - 16 September 2026
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
-| *12-09-2026* | *Arini K.* | *Membuat subbab 3.1* | *0.5* | *Done* | *-* | 
-| *15-09-2026* | *Jessica A.T* | *Membuat subbab 3.3* | *2* | *Done* | *-* | 
+| *12-09-2026* | *Arini K.* | *Membuat subbab 3.1* | *0.5* | *Done* | *-* |
+| *13-09-2026* | *Nadia Layla S.* | *Membuat Use Case* | *1.5* | *Done* | *-* | 
+| *15-09-2026* | *Jessica A.T* | *Membuat subbab 3.3* | *2* | *Done* | *-* |
 | *15-09-2026* | *Kenzo Yo* | *Membuat Skenario UC01 dan UC02* | *1* | *In Progress* | *-* |
+| *16-09-2026* | *Nadia Layla S.* | *Merevisi Use Case* | *1* | *Done* | *-* | 
 | *16-09-2026* | *Kenzo Yo* | *Melengkapi Skenario UC01 dan UC02* | *2* | *Done* | *-* |
-| *16-09-2026* | *Jessica A.T* | *Merevisi Use Case Diagram* | *0.5* | *Done* | *-* | 
+| *16-09-2026* | *Jessica A.T* | *Merevisi Use Case Diagram* | *0.5* | *Done* | *-* |
+| *16-09-2026* | *Nadia Layla S.* | *Merevisi Aktor dan KF pada UC* | *0.5* | *Done* | *-* | 
 ---
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
