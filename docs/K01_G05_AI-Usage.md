@@ -24,6 +24,7 @@
 ### Daftar Isi
 * [Milestone 1](#milestone-1)
 * [Milestone 2](#milestone-2)
+* [Milestone 3](#milestone-3)
 
 ---
 
@@ -44,6 +45,12 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
 | :--- | :--- | :--- | :--- |
 | Microsoft Copilot | Diskusi ide dan membantu memperbaiki tata bahasa | Contoh kebutuhan untuk ide kebutuhan fungsional dan nonfungsional | Ide dari AI didiskusikan kembali dengan kelompok dan disesuaikan dengan subbab 2.4 dan 2.5 untuk subbab 2.3. Perbaikan kalimat juga diperiksa dan diubah agar tetap sesuai dengan gaya penulisan.|
+
+
+### Milestone 3
+| Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
+| :--- | :--- | :--- | :--- |
+| ChatGPT| Diskusi ide | Admin dan Petugas memiliki peran yang sangat mirip di Skenario UC02, apa saja idemu untuk menanganinya | Ide yang diberikan valid, yakni admin harus berposisi lebih tinggi secara administratif sehingga tugasnya lebih bersifat moderasi pada Skenario UC02. |
 
 ---
 ### Pernyataan Integritas dan Persetujuan
