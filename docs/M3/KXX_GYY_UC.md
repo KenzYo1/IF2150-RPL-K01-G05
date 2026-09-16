@@ -88,15 +88,10 @@ Identifikasi seluruh use case yang mencakup Kebutuhan Fungsional pada BAB 2. Sat
 
 | ID UC | Nama Use Case | Deskripsi Singkat | Aktor Terlibat | ID KF Terkait |
 | :--- | :--- | :--- | :--- | :--- |
-| *UC01* | *Melakukan pelaporan* | *Pengguna melakukan pelaporan terkait masalah air dan/atau sanitasi yang ditemukan. Pengguna mengisi formulir laporan dengan menggunggah bukti pendukung beserta deskripsi masalah. Laporan akan diterima oleh petugas dan admin untuk diproses validitasnya terlebih dahulu. Laporan yang valid akan diproses penanganannya dan laporan yang tidak valid akan ditolak dengan tanggapan.* | *Pelapor, Petugas, Admin* | *KF01, KF02, KF03, KF04* |
+| *UC01* | *Melakukan pelaporan* | *Pengguna melakukan pelaporan terkait masalah air dan/atau sanitasi yang ditemukan. Pengguna mengisi formulir laporan dengan menggunggah bukti pendukung beserta deskripsi masalah. Laporan akan diterima oleh petugas dan admin untuk diproses validitasnya terlebih dahulu. Laporan yang valid akan diproses penanganannya dan laporan yang tidak valid akan ditolak dengan tanggapan.* | *Pelapor* | *KF01, KF02, KF03, KF04* |
 | *UC02* | *Memberikan status laporan* | *Petugas dan admin mampu memberikan status laporan berupa penerimaan, penolakan, dan progres yang dapat disertai dengan tanggapan. Status laporan dapat disunting kapan saja oleh petugas dan admin. Status laporan dapat dilihat kapan saja oleh pengguna, baik yang dibuat sendiri dan yang dibuat oleh pengguna lain.* | *Petugas, Admin* | *KF04, KF09, KF05* |
 | *UC03* | *Memberi dan membatalkan like* | *Pengguna dapat memberikan like pada laporan yang dirasa perlu diprioritaskan, baik laporan yang dibuat sendiri dan yang dibuat oleh pengguna lain. Apabila pengguna memiliki pendapat yang berbeda setelah memberikan like, pengguna dapat membatalkan like tersebut. Petugas dapat mengetahui daftar prioritas dari masalah yang dilaporkan.* | *Pelapor, Petugas* | *KF05, KF06, KF07, KF08* |
-| *UC04* | *Memperoleh poin* | *Pengguna akan memperoleh poin untuk setiap laporan yang telah dinyatakan valid oleh petugas dan admin. Poin yang diperoleh dapat dilihat pada akunnya sendiri atau pada leaderboard.Melalui leaderboard, pengguna dapat mengetahui peringkatnya sendiri dan pengguna yang menempati peringkat 20 ke atas. Pengguna yang menempati peringkat 20 ke atas pada akhir bulan akan mendapatkan merchandise sesuai dengan peringkatnya.* | *Pelapor* | *KF10, KF11* |
-
-
-
-
-
+| *UC04* | *Memperoleh poin* | *Pengguna akan memperoleh poin untuk setiap laporan yang telah dinyatakan valid oleh petugas dan admin. Poin yang diperoleh dapat dilihat pada akunnya sendiri atau pada leaderboard.Melalui leaderboard, pengguna dapat mengetahui peringkatnya sendiri dan pengguna yang menempati peringkat 20 ke atas. Pengguna yang menempati peringkat 20 ke atas pada akhir bulan akan mendapatkan merchandise sesuai dengan peringkatnya.* | *Pelapor* | *KF10, KF11, KF12, KF13, KF14* |
 
 
 ## 3.3 Use Case Diagram
