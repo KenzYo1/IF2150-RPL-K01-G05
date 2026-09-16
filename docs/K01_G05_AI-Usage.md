@@ -51,7 +51,7 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
 | :--- | :--- | :--- | :--- |
 | ChatGPT| Diskusi ide | Admin dan Petugas memiliki peran yang sangat mirip di Skenario UC02, apa saja idemu untuk menanganinya | Ide yang diberikan valid, yakni admin harus berposisi lebih tinggi secara administratif sehingga tugasnya lebih bersifat moderasi pada Skenario UC02. |
-
+| Microsoft Copilot | Diskusi ide  | IDe yang bagus untuk skenario pemeberian poin bagusan dari terima laporan atau tidak | Ide dari AI didiskusikan kembali dengan kelompok bahwa pemberian poin tetap melalui proses menunggu laporan divalidasi oleh Admin atau Petugas. |
 ---
 ### Pernyataan Integritas dan Persetujuan
 
