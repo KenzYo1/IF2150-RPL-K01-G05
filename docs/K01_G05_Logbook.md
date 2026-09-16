@@ -71,7 +71,7 @@
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *12-09-2026* | *Arini K.* | *Membuat subbab 3.1* | *0.5* | *Done* | *-* | 
-
+| *15-09-2026* | *Jessica A.T* | *Membuat subbab 3.3* | *2* | *In Progress* | *-* | 
 ---
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
