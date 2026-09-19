@@ -173,14 +173,19 @@ Identifikasi seluruh kelas yang diperlukan berdasarkan use case dan skenarionya.
 
 | ID Kelas | Nama Kelas | Deskripsi Kelas | ID Use Case |
 | :--- | :--- | :--- | :--- |
-| *C01* | *Pelanggan* | *Menyimpan data akun pelanggan yang membuat pesanan.* | *UC01, UC05* |
-| *C02* | *Pesanan* | *Menyimpan data pesanan beserta status pembayarannya.* | *UC01, UC03, UC05* |
-| *C03* | *Keranjang* | *Menyimpan sementara item yang dipilih sebelum checkout.* | *UC01, UC02* |
-| *C04* | *MetodePembayaran* | *Kelas abstrak yang merepresentasikan metode pembayaran yang dipilih pelanggan.* | *UC03, UC04* |
-| *C05* | *Kartu* | *Merealisasikan pembayaran melalui kartu kredit/debit dengan mengirimkan permintaan ke payment gateway (dummy).* | *UC03, UC04* |
-| *C06* | *EWallet* | *Merealisasikan pembayaran melalui e-wallet, termasuk pengecekan saldo, dengan mengirimkan permintaan ke payment gateway (dummy).* | *UC03, UC04* |
-| *C07* | *RiwayatTransaksi* | *Menyimpan catatan transaksi beserta status yang dikembalikan payment gateway (dummy).* | *UC03, UC05* |
-| *...* | *...* | *...* | *...* |
+| *C01* | *Pelapor* | *Menyimpan data akun pelapor yang membuat nama, nim/nip bagi civitas akademika ITB, poin yang dimiliki, serta riwayat laporan.* | *UC01, UC4* |
+| *C02* | *Laporan* | *Menyimpan data laporan berupa deskripsi masalah, lokasi, bukti foto, tombol like dan banyak like-nya, beserta status validitasnya secara administrasi dan status penanganannya.* | *UC01, UC3* |
+| *C03* | *Beranda Laporan* | *Bagi akun pelapor menampilkan seluruh laporan terurut dari laporan dengan like terbanyak dari pengguna lain dengan tombol untuk memberikan like serta tombol untuk mulai membuat laporan. Bagi akun petugas menampilkan seluruh laporan yang telah diterima admin, terurut berdasarkan like, serta berisi opsi belum ditangani, dalam penanganan, dan tuntas. Bagi akun admin menampilkan seluruh laporan terurut dari paling awal dikirim dari pengguna dengan opsi terima, tolak, atau ditangguhkan dengan catatan.* | *UC01, UC2, UC3* |
+| *C04* | *Formulir Laporan* | *Menerima input pelapor berupa data diri pelapor, deskripsi masalah, lokasi, dan bukti pendukung. Pada bagian ini juga terdapat tombol konfirmasi untuk mengirimkan laporan * | *UC01* |
+| *C05* | *Laporan Controller* | *Mengarahkan pelapor untuk membuat laporan dari tombol lapor hingga keterangan berhasil atau gagal.* | *UC01* |
+| *C06* | *Validasi Controller* | *Memberikan keterangan terkait batasan administratif dalam pengisian laporan seperti maksimal karakter dalam deskripsi masalah serta maksimal ukuran bukti yang diunggah.* | *UC01* |
+| *C07* | *Admin* | *Menyimpan data akun admin yang memuat nama, nip, dan sebagainya* | *UC03, UC02* |
+| *C08* | *Petugas* | *Menyimpan data akun admin yang memuat nama, nip, dan sebagainya* | *UC03, UC02* |
+| *C09* | *Formulir Tanggapan* | *Hanya ada pada akun admin dan petugas. Menerima input dari admin berupa pilihan untuk terima, tolak, atau ditangguhkan sebuah laporan dan/atau petugas berupa pilihan untuk belum ditangani, dalam penanganan, atau tuntas sebuah laporan, catatan, serta tombol kirim. * | *UC02* |
+| *C10* | *Tanggapan Contoller* | *Mengarahkan pengguna untuk memberikan tanggapan dimulai dari membuka laporan yang ingin ditanggapi hingga muncul pesan berhasil terkirim. Kelas ini juga mengatur penambahan poin pada laporan yang valid* | *UC02, UC04* |
+| *C11* | *Like Controller* | *Mengatur pemberian like dan pembatalan like oleh pengguna. Semakin banyak yang sebuah postingan semakin atas posisinya dalam beranda selagi laporan tersebut tidak berstatus tuntas dan dalam penanganan.* | *UC03* |
+| *C12* | *Halaman Leaderboard* | *Menampilkan perolehan 20 pelapor dengan poin terbanyak, serta menampilkan peringkat dan jumlah poin pemilik akun* | *UC04* |
+
 
 Pastikan setiap kelas memiliki tanggung jawab yang jelas dan memang diperlukan untuk merealisasikan fungsi yang dimodelkan. Hindari kelas yang tidak memiliki keterkaitan dengan KF atau use case manapun.
 
