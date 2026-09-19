@@ -25,6 +25,7 @@
 * [Milestone 1](#milestone-1)
 * [Milestone 2](#milestone-2)
 * [Milestone 3](#milestone-3)
+* [Milestone 4](#milestone-4)
 
 
 ---
@@ -80,6 +81,13 @@
 | *16-09-2026* | *Jessica A.T* | *Merevisi Use Case Diagram* | *0.5* | *Done* | *-* |
 | *16-09-2026* | *Nadia Layla S.* | *Merevisi Aktor dan KF pada UC* | *0.5* | *Done* | *-* | 
 | *16-09-2026* | *Justin Sepvian.* | *Membuat Skenario Usecase UC04 dan mengupdate skenario usecase UC03* | *2* | *Done* | *-* | 
+
 ---
+
+### Milestone 3
+**Periode:** 16 September 2026 - 23 September 2026
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *19-09-2026* | *Arini K.* | *Membuat subbab 4.1* | *1.5* | *Done* | *-* |
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
