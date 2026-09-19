@@ -7,23 +7,23 @@ CLASS DIAGRAM
 </h1>
 <br>
 
-## *Nama Perangkat Lunak*
+## *APATIS: Aplikasi Pelaporan Air dan Sanitasi*
 
-### Untuk: *[Nama Asisten]*
+### Untuk: *Made Branenda Jordhy*
 
 Dipersiapkan oleh:
 | Informasi | Keterangan |
 | --- | --- |
-| Kelas | *\[Kelas\]* |
-| Kelompok | *\[Nomor Kelompok\]*  |
+| Kelas | *\[Kelas K01\]* |
+| Kelompok | *\[5\]*  |
 
 | NIM | Nama |
 |---|---|
-| *[NIM 1]* | *[Nama Anggota 1]* |
-| *[NIM 2]* | *[Nama Anggota 2]* |
-| *[NIM 3]* | *[Nama Anggota 3]* |
-| *[NIM 4]* | *[Nama Anggota 4]* |
-| *[NIM 5]* | *[Nama Anggota 5]* |
+| *13525016* | *Kenzo Yo* |
+| *13525112* | *Justin Sepvian* |
+| *13525142* | *Jessica Audrey Tjahjadi* |
+| *13525073* | *Nadia Layla Safira* |
+| *13525097* | *Arini Karimatunnikmah* |
 ---
 
 ## Daftar Perubahan
@@ -40,9 +40,11 @@ Dipersiapkan oleh:
 
 # BAB 1: Deskripsi Perangkat Lunak
 
-Tuliskan overview perangkat lunak dalam narasi yang dapat memberikan gambaran tentang konteks perangkat lunak aplikasi Anda.
+Sistem perangkat lunak ini merupakan gabungan dari perangkat lunak dan pengguna. Pada sistem solusi ini, pengguna akan menggunakan perangkat lunak untuk melaporkan berbagai permalasahan fasilitas air dan sanitasi di ITB, seperti kebocoran air, kualitas air, perlengkapan kamar mandi yang kurang, dan sebagainya. Melalui sistem ini, pengguna berekspektasi memiliki pengalaman yang lebih mudah dan transparan dalam melaporkan suatu permasalahan air dan sanitasi di ITB. 
 
-Pada bagian ini, Anda diperbolehkan untuk menyalin dari dokumen sebelumnya.
+Sistem solusi ini memiliki alur kerja yang sederhana, yakni pengguna, yang merupakan civitas academica, sebagai pelapor terhadap suatu masalah mengenai fasilitas air dan sanitasi di ITB, petugas sebagai pengguna yang menanggapi laporan tersebut, dan admin sebagai pengguna yang melakukan tugas administratif, seperti validasi teknis laporan dan pemberian poin terhadap laporan yang valid dan sah.
+
+Penerapan dari sistem solusi ini diharapkan dapat mempermudah pelaporan terkait masalah fasilitas sanitasi dan air di ITB, serta memusatkan sistem pelaporan dan mempercepat penanggapan laporan tersebut. Dengan adanya sistem ini, Sustainable Development Goals (SDG) yang ke-6, yakni mengenai air bersih dan sanitasi, diharapkan dapat lebih tercapai dan terpenuhi di ITB.
 
 ---
 
@@ -50,55 +52,47 @@ Pada bagian ini, Anda diperbolehkan untuk menyalin dari dokumen sebelumnya.
 
 ## 2.1 Kebutuhan Fungsional
 
-Salin ulang seluruh Kebutuhan Fungsional (KF) yang telah dirumuskan pada dokumen sebelumnya, lengkap dengan ID KF, ID Kebutuhan (mengacu ke ID pada tabel Pemetaan Kebutuhan di dokumen *Requirement Gathering*), dan penjelasannya.
-
-Pada bagian ini, Anda diperbolehkan untuk menyalin dari dokumen sebelumnya.
-
-<sub> ***Catatan***: *Kebutuhan ditulis mengikuti pola EARS. Pada contoh di bawah, sebagian besar KF dipicu oleh satu aksi pelanggan, sehingga memakai pola event-driven "Ketika ⟨pemicu⟩, sistem harus ⟨respons⟩".*
-<sub>
-
 Tabel 2.1. Daftar Kebutuhan Fungsional
 
 | ID KF | ID Kebutuhan | Penjelasan |
 | :--- | :--- | :--- |
-| *KF01* | *R01* | *Ketika pelanggan membuka halaman katalog, sistem harus menampilkan daftar produk yang tersedia.* |
-| *KF02* | *R02* | *Ketika pelanggan memilih "Tambah ke Keranjang" pada suatu produk, sistem harus menyimpan produk tersebut ke dalam keranjang pelanggan.* |
-| *KF03* | *R03* | *Ketika pelanggan menekan tombol checkout, sistem harus menampilkan pilihan metode pembayaran yang tersedia.* |
-| *KF04* | *R04* | *Ketika pelanggan memilih metode pembayaran, sistem harus mengirimkan permintaan otorisasi beserta nominal tagihan dan ID pesanan ke payment gateway (dummy).* |
-| *KF05* | *R04* | *Ketika payment gateway (dummy) mengembalikan status pembayaran berhasil, sistem harus memperbarui status pesanan menjadi "Lunas" dan menampilkan notifikasi pembayaran berhasil.* |
-| *KF06* | *R05* | *Ketika pelanggan membuka menu riwayat pesanan, sistem harus menampilkan daftar pesanan beserta statusnya.* |
-| *KFXX* | *...* | *...* |
+| *KF01* | *R02* | *Sistem harus memasukan pengguna ke dalam akun yang benar dan mengakses fitur yang sesuai peran yang telah terdaftar.* |
+| *KF02* | *R03* | *Sistem harus dapat mengidentifikasi setiap akun sesuai perannya, yaitu Pelapor, Petugas, atau Admin.* |
+| *KF03* | *R05* | *Ketika pengguna ingin melapor, sistem harus memperbolehkan pengguna untuk membuat laporan dan mencantum kategori, deskripsi, foto, waktu, dan lokasi masalah mengenai fasilitas air dan/atau sanitasi.* |
+| *KF04* | *R10* | *Sistem harus mengizinkan Admin dan Petugas untuk melihat, memvalidasi, lalu menerima atau menolak laporan.* |
+| *KF05* | *R11* | *Ketika sebuah laporan dinyatakan valid oleh Petugas, sistem harus memperbolehkan pengguna untuk melihat laporan tersebut di halaman utama atau feed dengan isinya, seperti detail foto, deskripsi, lokasi, waktu, status, dan jumlah _like_.* |
+| *KF06* | *R12* | *Selama sebuah laporan dinyatakan valid, sistem harus memperbolehkan pengguna untuk memberikan dan membatalkan _like_ pada laporan tersebut.* |
+| *KF07* | *R13* | *Bila seorang pengguna memberikan lebih dari satu _like_ di sebuah laporan, maka sistem harus membatasi agar hanya dapat memberi satu like pada laporan yang sama.* |
+| *KF08* | *R14* | *Sistem harus memperbarui jumlah like setelah tindakan pengguna berhasil diproses, yaitu memberi atau membatalkan _like_.* |
+| *KF09* | *R15* | *Sistem harus memperbolehkan Petugas untuk mengubah status laporan sesuai dengan perkembangan penanganannya.* |
+| *KF10* | *R16* | *Ketika laporan dinyatakan valid oleh Petugas atau Admin, sistem harus dapat memberi pemilik laporan sebuah poin.* |
+| *KF11* | *R17* | *Ketika laporan dinyatakan valid oleh Petugas atau Admin, sistem harus menunjukkan poin pengguna menambah.* |
+| *KF12* | *R18* | *Sistem harus membatasi informasi yang ditampilkan di leaderboard, seperti peringkat dan total poin pengguna sendiri serta nama, peringkat, dan total poin semua pengguna dalam top 20.* |
+| *KF13* | *R20* | *Sistem harus dapat menunjukkan calon penerima merchandise pada akhir bulan, yaitu pelapor yang top 20.* |
+| *KF14* | *R21* | *Ketika sudah akhir bulan, sistem harus menghitung dan menampilkan hasil top 20 di leaderboard.* |
 
-
+<sub> ***Catatan***: *Kebutuhan ditulis mengikuti pola EARS. Pada contoh di bawah, sebagian besar KF dipicu oleh satu aksi pelanggan, sehingga memakai pola event-driven "Ketika ⟨pemicu⟩, sistem harus ⟨respons⟩".*
+<sub>
 ---
 
 # BAB 3: Model Use Case
 
 ## 3.1 Identifikasi Aktor
 
-Tuliskan kembali daftar aktor yang terlibat dan deskripsi perannya dalam perangkat lunak (P/L). Deskripsi peran harus menjelaskan wewenang aktor tersebut dalam perangkat lunak. Perlu diingat bahwa aktor yang dimaksud adalah pengguna yang berinteraksi langsung dengan P/L. Komponen seperti database, payment gateway, atau library bukan aktor.
-
-Pada bagian ini, Anda diperbolehkan untuk menyalin dari dokumen sebelumnya.
-
 | Aktor | Deskripsi |
 | :--- | :--- |
-| *Pelanggan* | *Pengguna yang memesan produk, mengelola keranjang, dan menyelesaikan pembayaran melalui sistem.* |
-| *...* | *...* |
+| *Pelapor* | *Pengguna eksternal yang melaporkan kerusakan fasilitas air dan sanitasi sehingga memperoleh poin serta melihat dan memberikan like atau unlike pada laporan kerusakan fasilitas air dan sanitasi dalam sistem APATIS yang telah dilaporkan pengguna lain.* |
+| *Petugas* | *Pengguna yang menanggapi laporan yang masuk, menentukan dan memberikan status apakah laporan tersebut merupakan kersusakan pada fasilitas air dan sanitasi atau bukan, serta memberikan status pada laporan telah dituntaskan.* |
+| *Admin* | *Pengguna yang mengelola validitas laporan secara administratif serta memberikan catatan pada kekurangan laporan.* |
 
 ## 3.2 Identifikasi Use Case
 
-Use case berfungsi untuk mendeskripsikan interaksi aktor-aktor yang terlibat dengan sistem. Isi daftar use case dan deskripsi singkatnya dalam tabel di bawah.
-
-Pada bagian ini, Anda diperbolehkan untuk menyalin dari dokumen sebelumnya.
-
-| ID UC | Nama Use Case | Deskripsi Singkat | Aktor | ID KF |
+| ID UC | Nama Use Case | Deskripsi Singkat | Aktor Terlibat | ID KF Terkait |
 | :--- | :--- | :--- | :--- | :--- |
-| *UC01* | *Memesan Produk* | *Pelanggan memilih produk hingga pesanan tersimpan di sistem.* | *Pelanggan* | *KF01, KF02* |
-| *UC02* | *Melihat Keranjang* | *Pelanggan melihat daftar item yang telah dipilih sebelum checkout.* | *Pelanggan* | *KF02* |
-| *UC03* | *Melakukan Pembayaran* | *Pelanggan menyelesaikan pembayaran atas pesanan yang dibuat.* | *Pelanggan* | *KF03, KF04, KF05* |
-| *UC04* | *Memilih Metode Pembayaran* | *Pelanggan memilih metode pembayaran alternatif (kartu atau e-wallet).* | *Pelanggan* | *KF03* |
-| *UC05* | *Melihat Riwayat Pesanan* | *Pelanggan melihat daftar pesanan yang pernah dibuat beserta statusnya.* | *Pelanggan* | *KF06* |
-| *...* | *...* | *...* | *...* | *...* |
+| *UC01* | *Melakukan pelaporan* | *Pengguna melakukan pelaporan terkait masalah air dan/atau sanitasi yang ditemukan. Pengguna mengisi formulir laporan dengan menggunggah bukti pendukung beserta deskripsi masalah. Laporan akan diterima oleh petugas dan admin untuk diproses validitasnya terlebih dahulu. Laporan yang valid akan diproses penanganannya dan laporan yang tidak valid akan ditolak dengan tanggapan.* | *Pelapor* | *KF01, KF02, KF03, KF04* |
+| *UC02* | *Memberikan status laporan* | *Petugas dan admin mampu memberikan status laporan berupa penerimaan, penolakan, dan progres yang dapat disertai dengan tanggapan. Status laporan dapat disunting kapan saja oleh petugas dan admin. Status laporan dapat dilihat kapan saja oleh pengguna, baik yang dibuat sendiri dan yang dibuat oleh pengguna lain.* | *Petugas, Admin* | *KF04, KF09, KF05* |
+| *UC03* | *Memberi dan membatalkan like* | *Pengguna dapat memberikan like pada laporan yang dirasa perlu diprioritaskan, baik laporan yang dibuat sendiri dan yang dibuat oleh pengguna lain. Apabila pengguna memiliki pendapat yang berbeda setelah memberikan like, pengguna dapat membatalkan like tersebut. Petugas dapat mengetahui daftar prioritas dari masalah yang dilaporkan.* | *Pelapor, Petugas* | *KF05, KF06, KF07, KF08* |
+| *UC04* | *Memperoleh poin* | *Pengguna akan memperoleh poin untuk setiap laporan yang telah dinyatakan valid oleh petugas dan admin. Poin yang diperoleh dapat dilihat pada akunnya sendiri atau pada leaderboard.Melalui leaderboard, pengguna dapat mengetahui peringkatnya sendiri dan pengguna yang menempati peringkat 20 ke atas. Pengguna yang menempati peringkat 20 ke atas pada akhir bulan akan mendapatkan merchandise sesuai dengan peringkatnya.* | *Pelapor* | *KF10, KF11, KF12, KF13, KF14* |
 
 ## 3.3 Use Case Diagram
 Buatlah diagram use case keseluruhan berdasarkan identifikasi use case beserta aktor yang melakukan use case tersebut. Perhatikan garis `<<extend>>` dan `<<include>>`.
@@ -107,10 +101,10 @@ Pada bagian ini, Anda diperbolehkan untuk menyalin dari dokumen sebelumnya.
 
 <br>
 <p align="center">
-<img alt="Use Case Diagram" src="../M4/assets/diagram/contoh-uc-diagram.webp" width="80%">
+<img alt="Contoh Activity Diagram" src="./assets/diagram/use case diagram.png" width="70%">
 </p>
 <p align="center">
-<i>Gambar 1. Use Case Diagram</i>
+<i>Gambar 1. Use Case Diagram APATIS</i>
 </p>
 <br>
 
@@ -121,46 +115,139 @@ Pada bagian ini, Anda diperbolehkan untuk menyalin dari dokumen sebelumnya.
 
 ### 3.4.1 Skenario UC01
 
-**Nama Use Case:** *Memesan Produk*
+**Nama Use Case:** *Melaporkan Masalah Fasilitas Air atau Sanitasi di ITB*
+
+**Aktor:** *Pelapor*
+
+**Prasyarat:** *Pelapor telah melakukan login*
 
 **Skenario Normal**
 
 | No | Aksi Aktor | Reaksi Perangkat Lunak |
 | :--- | :--- | :--- |
-| 1 | *Pelanggan memilih produk dari katalog* | *Sistem menampilkan detail produk dan menambahkannya ke keranjang* |
-| 2 | *Pelanggan menekan tombol checkout* | *Sistem membuat pesanan baru dari isi keranjang dan menampilkan ringkasan pesanan* |
-| ... | *...* | *...* |
+| 1 | *Pelapor menekan tombol lapor* ||
+| 2 || *Sistem menampilkan halaman laporan yang berisi formulir laporan* |
+| 3 | *Pelapor mengisi formulir laporan dengan lengkap* ||
+| 4 || *Sistem menerima data dari kolom-kolom yang diisi pelapor pada _front-end_ atau antarmuka dan secara bersamaan melakukan validasi teknis (misal, jumlah karakter deskripsi laporan, jenis file foto)* |
+| 5 | *Pelapor mengonfirmasi pengiriman laporan* ||
+| 6 || *Sistem menerima data formulir laporan dan mengirimnya ke database sebagai daftar laporan untuk ditanggapi Petugas atau Admin* |
 
-**Skenario Alternatif 1: Produk Tidak Tersedia**
+<br>
+
+**Skenario Alternatif 1: Laporan Tidak Valid Secara Teknis**
+
+**Prasyarat:** *Pelapor telah melakukan login*
 
 | No | Aksi Aktor | Reaksi Perangkat Lunak |
 | :--- | :--- | :--- |
-| 1 | *Pelanggan memilih produk dari katalog* | *Sistem menampilkan pesan "Produk tidak tersedia" karena stok habis* |
-| 2 | *Pelanggan memilih produk lain* | *Sistem kembali ke langkah 1 skenario normal* |
-| ... | *...* | *...* |
+| 1 | *Pelapor menekan tombol lapor untuk membuat laporan* ||
+| 2 || *Sistem menampilkan halaman formulir laporan* |
+| 3 | *Pelapor mengisi formulir laporan, tetapi salah satu aspek teknis laporan (misal, jumlah karakter tidak melebihi batas, jenis file foto sesuai, dan kolom yang wajib diisi terisi semua) tidak terpenuhi* |
+| 4 || *Sistem menampilkan pesan _error_ yang sesuai dengan aspek teknis yang tidak terpenuhi* |
+| 5 | *Pelapor menyesuaikan laporannya* ||
+| 6 || *Sistem kembali ke langkah 2 skenario normal* |
 
-### 3.4.3 Skenario UC03
 
-**Nama Use Case:** *Melakukan Pembayaran*
+### 3.4.2 Skenario UC02
+
+**Nama Use Case:** *Memberikan Status Laporan*
+
+**Aktor:** *Petugas, Admin*
+
+**Prasyarat:** *Petugas telah melakukan login*
 
 **Skenario Normal**
 
 | No | Aksi Aktor | Reaksi Perangkat Lunak |
 | :--- | :--- | :--- |
-| 1 | *Pelanggan menekan tombol "Bayar" pada ringkasan pesanan* | *Sistem menampilkan pilihan metode pembayaran yang tersedia (mis. Kartu, E-Wallet)* |
-| 2 | *Pelanggan memilih salah satu metode pembayaran* | *Sistem mengirimkan permintaan otorisasi ke payment gateway (dummy) sesuai metode yang dipilih* |
-| 3 | *-* | *Payment gateway (dummy) mengembalikan status pembayaran berhasil; sistem memperbarui status pesanan menjadi "Lunas" dan menampilkan notifikasi pembayaran berhasil* |
-| ... | *...* | *...* |
+| 1 | *Petugas membuka daftar laporan* ||
+| 2 || *Sistem menampilkan seluruh laporan beserta status laporan tersebut* |
+| 3 | *Petugas mengubah status salah satu laporan (misal, penerimaan, penolakan, dan _progress_ berupa tanggapan)* ||
+| 4 || *Sistem memperbarui data status laporan pada _front-end_ atau antarmuka untuk dikirim nantinya* |
+| 5 | *Petugas menekan tombol untuk mengirim perubahan status laporan* ||
+| 6 || *Sistem mengirimkan data perubahan status laporan ke basis data* |
+| 7 || *Sistem mengirimkan notifikasi perubahan laporan ke pelapor yang berkaitan* | 
+| 8 || *Sistem memberi poin jika laporannya diterima, sebaliknya laporan dihapus jika ditolak* |
+<br>
 
-**Skenario Alternatif 1: Pembayaran Dummy Gagal**
+**Skenario Alternatif 1: Admin Melakukan Validasi Administratif / Moderasi**
+
+**Prasyarat:** *Admin telah melakukan login*
 
 | No | Aksi Aktor | Reaksi Perangkat Lunak |
 | :--- | :--- | :--- |
-| 1 | *Pelanggan menekan tombol "Bayar" pada ringkasan pesanan* | *Sistem menampilkan pilihan metode pembayaran yang tersedia* |
-| 2 | *Pelanggan memilih salah satu metode pembayaran* | *Sistem mengirimkan permintaan otorisasi ke payment gateway (dummy), yang mengembalikan status gagal (mis. saldo e-wallet dummy tidak mencukupi)* |
-| 3 | *Pelanggan memilih untuk mencoba lagi atau memilih metode lain* | *Sistem kembali ke langkah 1 skenario normal* |
-| ... | *...* | *...* |
+| 1 | *Admin membuka daftar laporan* ||
+| 2 || *Sistem menampilkan daftar laporan beserta status dari laporan tersebut* |
+| 3 | *Admin mengubah salah satu status laporan karena alasan administratif, seperti laporan yang tidak senonoh, spam, laporan palsu, dan sebagainya* ||
+| 4 || *Sistem memperbarui data status laporan pada _front-end_ atau antarmuka untuk dikirim nantinya* |
+| 5 | *Admin menekan tombol untuk mengirim perubahan status laporan* ||
+| 6 || *Sistem mengirimkan data perubahan status laporan ke basis data* |
+| 7 || *Sistem mengirimkan notifikasi perubahan laporan ke pelapor yang berkaitan* | 
+| 8 || *Sistem memberi poin jika laporannya diterima, sebaliknya laporan dihapus jika ditolak* |
 
+## 3.4.3 Skenario UC03
+
+**Nama Use Case:** *Memberikan dan Membatalkan _Like_*  
+
+**Aktor:** *Pelapor, Petugas*
+
+**Prasyarat:** *Admin telah melakukan login*
+
+**Skenario Normal: Memberikan Like**
+
+| No | Aksi Aktor | Reaksi Perangkat Lunak |
+| :- | :--------- | :--------------------- |
+| 1  | *Pelapor melihat daftar laporan pada halaman utama APATIS.* ||
+| 2  || *Sistem menampilkan laporan yang telah dinyatakan valid beserta jumlah like pada setiap laporan.*|
+| 3  | *Pelapor menekan tombol like pada salah satu laporan.* ||
+| 4  || *Sistem memeriksa bahwa Pelapor belum pernah memberikan like pada laporan tersebut.* |
+| 5  | *Pelapor menunggu proses pemberian like.* ||
+| 6  || *Sistem menyimpan like, menambah jumlah like sebanyak satu, dan menampilkan tombol like di laporan dalam keadaan aktif.*  |
+
+**Skenario Alternatif 1: Membatalkan Like**
+
+**Prasyarat:** *Admin telah melakukan login*
+
+| No | Aksi Aktor | Reaksi Perangkat Lunak |
+| :- | :--------- | :--------------------- |
+| 1  | *Pelapor melihat daftar laporan yang sebelumnya telah diberi like.* ||
+| 2  || *Sistem menampilkan tombol like dalam keadaan aktif.*|
+| 3  | *Pelapor menekan kembali tombol like pada laporan tersebut.* ||
+| 4  || *Sistem menghapus like yang sebelumnya diberikan oleh Pelapor.* |
+| 5  | *Pelapor menunggu proses pembatalan like.* ||
+| 6  || *Sistem mengurangi jumlah like sebanyak satu dan menampilkan tombol like dalam keadaan tidak aktif.*  |
+
+
+## 3.4.4 Skenario UC04
+
+**Nama Use Case:** *Memperoleh Poin*  
+
+**Aktor:** *Pelapor* 
+
+**Prakondisi:** *Pelapor telah login dan telah mengirimkan laporan.*
+
+**Skenario Normal**
+
+| No | Aksi Aktor | Reaksi Perangkat Lunak |
+| :- | :--------- | :--------------------- |
+| 1  | *Pelapor menunggu laporan diproses.* ||
+| 2  || *Sistem menampilkan laporan kepada Admin atau Petugas untuk divalidasi.*|
+| 3  | *Pelapor menunggu hasil validasi laporan.* ||
+| 4  || *Sistem mencatat bahwa laporan telah divalidasi dan diterima oleh Admin atau Petugas.* |
+| 5  | *Pelapor menerima pemberitahuan bahwa laporannya telah diterima.* ||
+| 6  || *Sistem memberikan poin kepada Pelapor dan memperbarui jumlah poin pada akun Pelapor.*  |
+
+**Skenario Alternatif 1: Laporan Tidak Lolos Validasi oleh Admin atau Petugas**
+
+**Prakondisi:** *Pelapor telah login dan telah mengirimkan laporan.*
+
+| No | Aksi Aktor | Reaksi Perangkat Lunak |
+| :- | :--------- | :--------------------- |
+| 1  | *Pelapor menunggu laporan diproses.* ||
+| 2  || *Sistem menampilkan laporan kepada Admin atau Petugas untuk divalidasi.*|
+| 3  | *Pelapor menunggu hasil validasi laporan.* ||
+| 4  || *Sistem mencatat bahwa laporan tidak lolos validasi oleh Admin atau Petugas.* |
+| 5  | *Pelapor menerima pemberitahuan bahwa laporannya tidak diterima.* ||
 <sub>*Lanjutkan pola 3.4.x ini untuk setiap ID UC pada 3.2, sampai seluruh use case tercakup.*<sub>
 
 ---
