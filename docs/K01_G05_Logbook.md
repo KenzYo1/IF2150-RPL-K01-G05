@@ -84,10 +84,11 @@
 
 ---
 
-### Milestone 3
+### Milestone 4
 **Periode:** 16 September 2026 - 23 September 2026
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
-| *19-09-2026* | *Arini K.* | *Membuat subbab 4.1* | *1.5* | *Done* | *-* |
+| *19-09-2026* | *Arini K.* | *Membuat subbab 4.1* | *1* | *Done* | *-* |
+| *21-09-2026* | *Arini K.* | *Merevisi subbab 4.1* | *0.25* | *Done* | *-* |
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
