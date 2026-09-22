@@ -260,10 +260,10 @@ Identifikasi seluruh kelas yang diperlukan berdasarkan use case dan skenarionya.
 
 | ID Kelas | Nama Kelas | Deskripsi Kelas | ID Use Case |
 | :--- | :--- | :--- | :--- |
-| *C01* | *Pelapor* | *Menyimpan data akun pelapor yang membuat nama, NIM/NIP bagi civitas akademika ITB, poin yang dimiliki, serta riwayat laporan.* | *UC01, UC4* |
+| *C01* | *Pelapor* | *Menyimpan data akun pelapor yang membuat nama dan NIM/NIP bagi civitas akademika ITB.* | *UC01, UC4* |
 | *C02* | *Laporan* | *Menyimpan data laporan berupa deskripsi masalah, lokasi, bukti foto, tombol like dan banyak like-nya, beserta status validitasnya secara administrasi dan status penanganannya.* | *UC01, UC3* |
 | *C03* | *Beranda Laporan* | *Menampilkan seluruh laporan terurut dari laporan dengan like terbanyak dari pengguna lain yang telah disetujui admin dan petugas dilengkapi dengan tombol untuk memberikan like serta tombol untuk mulai membuat laporan bagi pelapor. Selain itu, tombol tanggapan bagi admin dan petugas.* | *UC01, UC2, UC3* |
-| *C04* | *Formulir Laporan* | *Menerima input pelapor berupa data diri pelapor, deskripsi masalah, lokasi, dan bukti pendukung. Pada bagian ini juga terdapat tombol konfirmasi untuk mengirimkan laporan. Pada masing-masing bentuk input terdapat validasi teknis yang harus dipenuhi seperti maksimal karakter dan maksimal ukuran foto, jika tidak memenuhi validasi teknis ini halaman akan menampilkan pesan kesalahan.* | *UC01* |
+| *C04* | *Formulir Laporan* | *Menerima input pelapor berupa deskripsi masalah, lokasi, dan bukti pendukung. Pada bagian ini juga terdapat tombol konfirmasi untuk mengirimkan laporan. Pada masing-masing bentuk input terdapat validasi teknis yang harus dipenuhi seperti maksimal karakter dan maksimal ukuran foto, jika tidak memenuhi validasi teknis ini halaman akan menampilkan pesan kesalahan.* | *UC01* |
 | *C05* | *Laporan Controller* | *Mengarahkan pelapor untuk membuat laporan dari tombol lapor hingga keterangan berhasil atau gagal.* | *UC01* |
 | *C06* | *Admin* | *Menyimpan data akun admin yang memuat nama, NIP, dan sebagainya.* | *UC03, UC02* |
 | *C07* | *Petugas* | *Menyimpan data akun admin yang memuat nama, NIP, dan sebagainya.* | *UC03, UC02* |
@@ -271,6 +271,8 @@ Identifikasi seluruh kelas yang diperlukan berdasarkan use case dan skenarionya.
 | *C09* | *Tanggapan Controller* | *Mengarahkan pengguna untuk memberikan tanggapan dimulai dari membuka laporan yang ingin ditanggapi hingga muncul pesan berhasil terkirim. Kelas ini juga mengatur penambahan poin pada laporan yang valid.* | *UC02, UC04* |
 | *C10* | *Like Controller* | *Mengatur pemberian like dan pembatalan like oleh pengguna.* | *UC03* |
 | *C11* | *Halaman Leaderboard* | *Menampilkan perolehan 20 pelapor dengan poin terbanyak, serta menampilkan peringkat dan jumlah poin pemilik akun.* | *UC04* |
+| *C12* | *Database Laporan* | *Menyimpan data formulir laporan yang telah dikirim berupa deskripsi  masalah, lokas, dan bukti foto baik yang sudah divalidasi maupun yang belum.* | *UC01, UC02* |
+| *C13* | *Database pelapor* | *Menyimpan data diri pelapor termasuk jumlah poin yang dimiliki.* | *UC04* |
 
 
 Pastikan setiap kelas memiliki tanggung jawab yang jelas dan memang diperlukan untuk merealisasikan fungsi yang dimodelkan. Hindari kelas yang tidak memiliki keterkaitan dengan KF atau use case manapun.
