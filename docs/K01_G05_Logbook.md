@@ -98,5 +98,6 @@
 | *23-09-2026* | *Jessica A.T* | *Merevisi Diagram Kelas UC01 dan UC02* | *2* | *Done* | *-* |
 | *23-09-2026* | *Kenzo Yo* | *Melengkapi Atribut dan Metode/Operasi diagram kelas UC03 dan UC04* | *1* | *Done* | *-* |
 | *23-09-2026* | *Nadia Layla S.* | *Membuat diagram keseluruhan* | *1* | *Done* | *-* |
+| *23-09-2026* | *Justin Sepvian* | *Membuat dan mengupdate bab 5* | *2* | *Done* | *-* |
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
