@@ -92,8 +92,9 @@
 | *22-09-2026* | *Arini K.* | *Merevisi subbab 4.1* | *0.25* | *Done* | *-* |
 | *22-09-2026* | *Jessica A.T* | *Membuat Diagram Kelas UC01 dan UC02* | *3* | *Done* | *-* |
 | *22-09-2026* | *Kenzo Yo* | *Membuat Diagram Kelas UC03 dan UC04* | *3* | *Done* | *-* |
-| *22-09-2026* | *Jessica A.T* | *Mengisi Atribut dan Metode/Operasi untuk diaagram kelas UC01 dan UC02* | *?* | *In progress* | *-* |
+| *22-09-2026* | *Jessica A.T* | *Mengisi Atribut dan Metode/Operasi untuk diaagram kelas UC01 dan UC02* | *2* | *Done* | *-* |
 | *22-09-2026* | *Kenzo Yo* | *Mengisi Atribut dan Metode/Operasi diagram kelas UC03 dan UC04* | *1* | *In progress* | *-* |
 | *23-09-2026* | *Arini K.* | *Merevisi subbab 4.1* | *0.25* | *Done* | *-* |
+| *23-09-2026* | *Jessica A.T* | *Merevisi Diagram Kelas UC01 dan UC02* | *2* | *Done* | *-* |
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
