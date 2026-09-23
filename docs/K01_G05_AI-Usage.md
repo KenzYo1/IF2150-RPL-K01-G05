@@ -59,6 +59,7 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
 | :--- | :--- | :--- | :--- |
 | ChatGPT | Diskusi ide dan diagram | Aktor pada UC ini perlu menunggu tanggapan dari laporannya, kira-kira bagaimana diagramnya, apa hubungan dependensi dari HalamanLeaderboard dengan TanggapanController? | Jawaban yang diberikan valid, tetapi tidak begitu diterima karena selalu keluar dari UC yang dimaksud. Oleh karena itu hanya idenya saja yang diterima. |
+| Claude | Memahami UML class diagram | Explain the relationships within a class diagram and what are the criteria, give me examples | Jawaban yang diberikan membantu pemahaman terhadap hubungan dalam kelas diagram. |
 
 
 ---
