@@ -25,6 +25,7 @@
 * [Milestone 1](#milestone-1)
 * [Milestone 2](#milestone-2)
 * [Milestone 3](#milestone-3)
+* [Milestone 4](#milestone-4)
 
 ---
 
@@ -52,7 +53,16 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | :--- | :--- | :--- | :--- |
 | ChatGPT| Diskusi ide | Admin dan Petugas memiliki peran yang sangat mirip di Skenario UC02, apa saja idemu untuk menanganinya | Ide yang diberikan valid, yakni admin harus berposisi lebih tinggi secara administratif sehingga tugasnya lebih bersifat moderasi pada Skenario UC02. |
 | Microsoft Copilot | Diskusi ide  | IDe yang bagus untuk skenario pemeberian poin bagusan dari terima laporan atau tidak | Ide dari AI didiskusikan kembali dengan kelompok bahwa pemberian poin tetap melalui proses menunggu laporan divalidasi oleh Admin atau Petugas. |
+
+
+### Milestone 4
+| Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
+| :--- | :--- | :--- | :--- |
+| ChatGPT | Diskusi ide dan diagram | Aktor pada UC ini perlu menunggu tanggapan dari laporannya, kira-kira bagaimana diagramnya, apa hubungan dependensi dari HalamanLeaderboard dengan TanggapanController? | Jawaban yang diberikan valid, tetapi tidak begitu diterima karena selalu keluar dari UC yang dimaksud. Oleh karena itu hanya idenya saja yang diterima. |
+
+
 ---
+
 ### Pernyataan Integritas dan Persetujuan
 
 Kami yang bertanda tangan di bawah ini menyatakan bahwa seluruh log penggunaan AI di atas adalah benar. Kami telah memvalidasi seluruh hasil AI dan bertanggung jawab penuh atas orisinalitas, keamanan, dan kebenaran hasil akhir dari tugas ini.
