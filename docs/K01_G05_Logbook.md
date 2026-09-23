@@ -96,5 +96,6 @@
 | *22-09-2026* | *Kenzo Yo* | *Mengisi Atribut dan Metode/Operasi diagram kelas UC03 dan UC04* | *1* | *In progress* | *-* |
 | *23-09-2026* | *Arini K.* | *Merevisi subbab 4.1* | *0.25* | *Done* | *-* |
 | *23-09-2026* | *Jessica A.T* | *Merevisi Diagram Kelas UC01 dan UC02* | *2* | *Done* | *-* |
+| *23-09-2026* | *Kenzo Yo* | *Melengkapi Atribut dan Metode/Operasi diagram kelas UC03 dan UC04* | *1* | *Done* | *-* |
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
