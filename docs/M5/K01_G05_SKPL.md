@@ -65,7 +65,6 @@ Tabel 1.3. Definisi Istilah dan Singkatan
 | *KNF* | *Singkatan dari Kebutuhan Non-Fungsional.* |
 | *UC* | *Singkatan dari Use Case.* |
 | *EARS* | *Easy Approach to Requirements Syntax, yaitu pola penulisan kebutuhan agar konsisten dan mudah diuji.* |
-| *...* | *...* |
 
 ## 1.4 Aturan Penomoran
 Tuliskan aturan penomoran (ID) yang digunakan dalam dokumen ini. Gunakan pola ID yang **sama** dengan yang sudah dipakai pada dokumen-dokumen sebelumnya, jangan membuat pola baru di dokumen ini.
@@ -74,12 +73,11 @@ Tabel 1.4. Aturan Penomoran
 
 | Hal/Bagian | Penomoran | Keterangan |
 | :--- | :--- | :--- |
-| *Kebutuhan Fungsional* | *KFXX* | |
-| *Kebutuhan Non-Fungsional* | *KNFXX* | |
-| *Aktor* | *AXX* | |
-| *Use Case* | *UCXX* | |
-| *Kelas* | *CXX* | |
-| *...* | *...* |
+| *Kebutuhan Fungsional* | *KFXX* | *Menunjukkan kebutuhan fungsional perangkat lunak.* |
+| *Kebutuhan Non-Fungsional* | *KNFXX* | *Menunjukkan kebutuhan non-fungsional perangkat.* |
+| *Aktor* | *AXX* | *Menunjukkan aktor-aktor yang akan menggunakan perangkat lunak.* |
+| *Use Case* | *UCXX* | *Menunjukkan kegunaan perangkat lunak dari perspektif pengguna.* |
+| *Kelas* | *CXX* | *Menunjukkan kelas-kelas pada perangkat lunak.* |
 
 ## 1.5 Referensi
 Dokumentasi P/L yang dirujuk oleh dokumen ini. Referensi dapat berupa buku, panduan, ataupun dokumentasi lain yang dipakai dalam pengembangan P/L ini.
@@ -126,11 +124,10 @@ Spesifikasi *operating system* atau lingkungan yang dibutuhkan P/L untuk beroper
 
 | Komponen | Spesifikasi |
 | :--- | :--- |
-| *Server* | *[contoh: Node.js v20, dijalankan pada layanan cloud]* |
-| *Client* | *[contoh: Web Browser modern (Chrome, Firefox terbaru)]* |
-| *DBMS* | *[contoh: PostgreSQL 15]* |
-| *OS* | *[contoh: Cross-platform (Windows/Linux/MacOS) melalui browser]* |
-| *...* | *...* |
+| *Server* | *Cloudflare* |
+| *Client* | *Web Browser modern, seperti Chrome, Firefox terbaru, dan lain-lain* |
+| *DBMS* | *PostgreSQL 15* |
+| *OS* | *Cross-platform (Windows/Linux/MacOS) melalui browser* |
 
 ---
 
