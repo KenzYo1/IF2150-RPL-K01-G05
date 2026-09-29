@@ -106,6 +106,12 @@ Diisi dengan deskripsi umum perangkat lunak untuk mendukung proses bisnis yang t
 
 *Contoh narasi:* "*[Nama P/L]* merupakan aplikasi *[deskripsi singkat]* yang berinteraksi dengan *Payment Gateway (dummy)* untuk memproses otorisasi pembayaran. Sistem menerima input dari *Pelanggan* melalui antarmuka aplikasi dan mengirimkan permintaan transaksi ke *Payment Gateway* setiap kali pelanggan melakukan checkout."
 
+APATIS: Aplikasi Pelaporan Air dan Sanitasi adalah perangkat lunak yang memusatkan seluruh pelaporan dan penanganan terkait permasalahan air dan sanitasi di lingkup ITB. Oleh karena itu, untuk menjamin keterpusatan aplikasi tersebut, diperlukan suatu layanan _hosting_ website serta _database_ atau basis data yang dapat mencakup seluruh pengguna di ITB.
+
+Sebagai perangkat lunak yang mengedepankan kemudahan akses, maka diperlukan website yang dapat melayani pengguna ITB dengan baik dan lancar. Hal tersebut memerlukan adanya _hosting_ website dari layanan pihak ketiga yang memiliki _server_ atau alat pemrosesan yang baik.
+
+Selanjutnya, pada saat pembuatan laporan, sistem akan mengirim data laporan yang dibuat pengguna dari website ke sistem basis data untuk disimpan. Lalu, ketika terdapat program yang memerlukan data tersebut, sistem perlu akses basis data dengan cepat dan baik. Karena jumlah data yang ditampung berukuran besar, diperlukan sistem basis data layanan ketiga.
+
 ## 2.3 Pengguna dan Kebutuhan Pengguna Perangkat Lunak
 Tuliskan seluruh jenis pengguna (*role*/aktor) yang terlibat dalam perangkat lunak (P/L), beserta kebutuhannya secara umum. Bagian ini dapat disalin dari 1.2 *Deskripsi Pengguna Perangkat Lunak* (dokumen Requirement Gathering) atau 3.1 *Identifikasi Aktor* (dokumen Use Case), pastikan sudah konsisten dengan aktor final yang dipakai di BAB 4.
 
