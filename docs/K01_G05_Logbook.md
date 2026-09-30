@@ -111,5 +111,7 @@
 | *29-09-2026* | *Kenzo Yo* | *Membuat subbab 2.2* | *0.5* | *In progress* | *-* |
 | *29-09-2026* | *Kenzo Yo* | *Mencari tahu tech stack atau tech requirement dari P/L* | *0.5* | *Done* | *-* |
 | *30-09-2026* | *Kenzo Yo* | *Membuat subbab 2.4* | *0.5* | *In progress* | *-* |
+| *30-09-2026* | *Jessica A.T* | *Merevisi subbab 2.1* | *4* | *Done* | *-* |
+| *30-09-2026* | *Nadia Layla S.* | *Membuat subbab 1.5 dan 1.6* | *1* | *Done* | *-* |
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
