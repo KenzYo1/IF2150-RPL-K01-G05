@@ -44,17 +44,9 @@ Tuliskan dengan ringkas tujuan dokumen SKPL ini dibuat dan siapa saja yang akan 
 Dokumen ini berisi tentang spesifikasi kebutuhan perangkat lunak (SKPL) yang selanjutnya untuk penamaan dokumen ini akan digunakan istilah SKPL. Dokumen SKPL merupakan spesifikasi kebutuhan perangkat lunak yang akan dikembangkan. Dokumen ini digunakan oleh pengembang perangkat lunak sebagai bahan acuan dalam proses pengembangan dan sebagai bahan evaluasi pada saat proses pengembangan perangkat lunak maupun diakhir pengembangannya. Dengan adanya dokumen ini diharapkan pengembangan perangkat lunak akan lebih terarah dan lebih terfokus serta tidak menimbulkan ambiguitas terutama bagi pengembang perangkat lunak. Harapannya dokumen ini juga bisa digunakan oleh pengembang perangkat lunak lain ketika pengembangan dan pemeliharaan perangkat lunak telah berpindah tangan.
 
 ## 1.2 Lingkup Masalah
-Tuliskan dengan ringkas nama aplikasi dan deskripsi singkatnya. Bagian ini maksimal berisi satu paragraf, dapat diringkas dari BAB 1 *Analisis Permasalahan* pada dokumen *Topic Brainstorming*.
-
-Fasilitas air bersih dan sanitasi di lingkungan kampus sangat penting untuk mendukung kegiatan sivitas akademika dan berkaitan langsung dengan SDGs ke-6. Namun, proses pelaporan kerusakan yang ada saat ini masih menjadi kendala karena belum terpusat, informasi lokasi sering tidak lengkap, laporan berpotensi tersebar, dan pelapor tidak mengetahui apakah masalah tersebut sudah pernah dilaporkan atau belum.
-
-Untuk mengatasi permasalahan tersebut, diusulkan sistem terpusat bernama APATIS (Aplikasi Pelaporan Air dan Sanitasi) yang memungkinkan pengguna mencantumkan foto, deskripsi, serta lokasi kerusakan secara bertingkat. Sistem ini juga dilengkapi fitur like untuk mencegah laporan ganda serta membantu pengelola menentukan prioritas penanganan berdasarkan jumlah dukungan.
-
-Selain itu, setiap laporan akan melalui tahapan status yang jelas (Submitted, In Progress, dan Resolved) sehingga pelapor dapat memantau perkembangannya, sementara pengguna yang mengirimkan laporan valid akan mendapatkan poin XP dan ditampilkan pada leaderboard serta memeroleh merchandise sebagai bentuk apresiasi.
+Fasilitas air bersih dan sanitasi penting untuk mendukung kegiatan di lingkungan kampus dan berkaitan dengan SDG 6. Namun, proses pelaporan masalah fasilitas masih dapat terkendala karena belum dilakukan secara terpusat, informasi lokasi dapat kurang lengkap, dan pelapor sulit mengetahui apakah suatu masalah sudah pernah dilaporkan. Untuk membantu mengatasi masalah tersebut, APATIS menyediakan pelaporan terpusat yang memungkinkan pengguna mencantumkan foto, deskripsi, dan lokasi masalah, melihat laporan pengguna lain, memberikan like, serta memantau perkembangan penanganan melalui status laporan. Pengguna yang mengirimkan laporan valid akan memperoleh poin yang digunakan untuk menentukan peringkat pada leaderboard, sedangkan pengguna dalam 20 peringkat teratas dapat menjadi calon penerima merchandise apabila hadiah tersedia.
 
 ## 1.3 Definisi, Istilah, dan Singkatan
-Semua definisi dan singkatan yang digunakan dalam dokumen ini beserta penjelasannya.
-
 Tabel 1.3. Definisi Istilah dan Singkatan
 
 | Singkatan, Akronim, atau Istilah | Penjelasan |
