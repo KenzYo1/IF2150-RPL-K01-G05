@@ -41,7 +41,7 @@ Dipersiapkan oleh:
 
 ## 1.1 Tujuan Penulisan Dokumen
 
-Dokumen ini berisi tentang spesifikasi kebutuhan perangkat lunak (SKPL) yang selanjutnya untuk penamaan dokumen ini akan digunakan istilah SKPL. Dokumen SKPL merupakan spesifikasi kebutuhan perangkat lunak yang akan dikembangkan. Dokumen ini digunakan oleh pengembang perangkat lunak sebagai bahan acuan dalam proses pengembangan dan sebagai bahan evaluasi pada saat proses pengembangan perangkat lunak maupun diakhir pengembangannya. Dengan adanya dokumen ini diharapkan pengembangan perangkat lunak akan lebih terarah dan lebih terfokus serta tidak menimbulkan ambiguitas terutama bagi pengembang perangkat lunak. Harapannya dokumen ini juga bisa digunakan oleh pengembang perangkat lunak lain ketika pengembangan dan pemeliharaan perangkat lunak telah berpindah tangan.
+Dokumen Spesifikasi Kebutuhan Perangkat Lunak (SKPL) ini menjelaskan kebutuhan yang harus dipenuhi dalam pengembangan APATIS. Dokumen ini digunakan oleh tim pengembang sebagai acuan selama proses perancangan, implementasi, pengujian, evaluasi, dan pemeliharaan perangkat lunak. Dengan adanya dokumen ini, pengembangan APATIS diharapkan dapat berjalan secara terarah, konsisten, dan tidak menimbulkan perbedaan pemahaman mengenai fungsi sistem. Dokumen ini juga dapat menjadi acuan apabila pengembangan dan pemeliharaan perangkat lunak berpindah kepada tim lain.
 
 ## 1.2 Lingkup Masalah
 Fasilitas air bersih dan sanitasi penting untuk mendukung kegiatan di lingkungan kampus dan berkaitan dengan SDG 6. Namun, proses pelaporan masalah fasilitas masih dapat terkendala karena belum dilakukan secara terpusat, informasi lokasi dapat kurang lengkap, dan pelapor sulit mengetahui apakah suatu masalah sudah pernah dilaporkan. Untuk membantu mengatasi masalah tersebut, APATIS menyediakan pelaporan terpusat yang memungkinkan pengguna mencantumkan foto, deskripsi, dan lokasi masalah, melihat laporan pengguna lain, memberikan like, serta memantau perkembangan penanganan melalui status laporan. Pengguna yang mengirimkan laporan valid akan memperoleh poin yang digunakan untuk menentukan peringkat pada leaderboard, sedangkan pengguna dalam 20 peringkat teratas dapat menjadi calon penerima merchandise apabila hadiah tersedia.
@@ -52,11 +52,14 @@ Tabel 1.3. Definisi Istilah dan Singkatan
 | Singkatan, Akronim, atau Istilah | Penjelasan |
 | :--- | :--- |
 | *P/L* | *Singkatan dari Perangkat Lunak, yaitu aplikasi yang memberikan perintah kepada komputer untuk menjalankan tugas tertentu.* |
-| *SKPL* | *Singkatan dari Spesifikasi Kebutuhan Perangkat Lunak, yaitu dokumen yang merangkum kriteria-kriteria yang diperlukan untuk membangun aplikasi menjalankan tugasnya.* |
+| *SKPL* | *Singkatan dari Spesifikasi Kebutuhan Perangkat Lunak, yaitu dokumen yang menjelaskan kebutuhan fungsional dan nonfungsional yang harus dipenuhi oleh perangkat lunak.* |
 | *KF* | *Singkatan dari Kebutuhan Fungsional.* |
 | *KNF* | *Singkatan dari Kebutuhan Non-Fungsional.* |
 | *UC* | *Singkatan dari Use Case.* |
 | *EARS* | *Easy Approach to Requirements Syntax, yaitu pola penulisan kebutuhan agar konsisten dan mudah diuji.* |
+| *SDG* | *Sustainable Development Goals atau Tujuan Pembangunan Berkelanjutan.* |
+| *OTP* | *One Time Password, yaitu kode sekali pakai yang digunakan dalam proses autentikasi.* |
+| *DBMS* | *Database Management System, yaitu sistem yang digunakan untuk mengelola basis data.* |
 
 ## 1.4 Aturan Penomoran
 Tabel 1.4. Aturan Penomoran
@@ -94,11 +97,11 @@ Dokumen SKPL APATIS terdiri atas enam bab. BAB 1 berisi tujuan penulisan, lingku
 # BAB 2: Deskripsi Perangkat Lunak
 
 ## 2.1 Deskripsi Umum Sistem
-Sistem perangkat lunak ini merupakan gabungan dari perangkat lunak dan pengguna. Pada sistem solusi ini, pengguna akan menggunakan perangkat lunak untuk melaporkan berbagai permalasahan fasilitas air dan sanitasi di ITB, seperti kebocoran air, kualitas air, perlengkapan kamar mandi yang kurang, dan sebagainya. Melalui sistem ini, pengguna berekspektasi memiliki pengalaman yang lebih mudah dan transparan dalam melaporkan suatu permasalahan air dan sanitasi di ITB. 
+APATIS merupakan sistem yang membantu pengguna melaporkan masalah fasilitas air dan sanitasi di lingkungan ITB, seperti kebocoran air, kondisi air yang tidak wajar, serta perlengkapan kamar mandi yang kurang. Melalui sistem ini, proses pelaporan diharapkan menjadi lebih mudah, terpusat, dan transparan.
 
-Sistem solusi ini memiliki alur kerja yang sederhana, yakni pengguna, yang merupakan civitas academica, sebagai pelapor terhadap suatu masalah mengenai fasilitas air dan sanitasi di ITB, petugas sebagai pengguna yang menanggapi laporan tersebut, dan admin sebagai pengguna yang melakukan tugas administratif, seperti validasi atau moderasi laporan.
+APATIS melibatkan tiga jenis pengguna, yaitu Pelapor, Petugas, dan Admin. Pelapor membuat laporan mengenai masalah fasilitas air dan sanitasi. Admin melakukan validasi atau moderasi administratif terhadap laporan, sedangkan Petugas memeriksa laporan dan memperbarui status penanganannya.
 
-Penerapan dari sistem solusi ini diharapkan dapat mempermudah pelaporan terkait masalah fasilitas sanitasi dan air di ITB, serta memusatkan sistem pelaporan dan mempercepat penanggapan laporan tersebut. Dengan adanya sistem ini, Sustainable Development Goals (SDG) yang ke-6, yakni mengenai air bersih dan sanitasi, diharapkan dapat lebih tercapai dan terpenuhi di ITB. 
+Penerapan APATIS diharapkan dapat membantu memusatkan proses pelaporan dan mempercepat penyampaian informasi mengenai masalah fasilitas air dan sanitasi. Sistem ini juga mendukung pelaksanaan SDG 6 di lingkungan ITB, khususnya dalam pengelolaan fasilitas air bersih dan sanitasi.
 
 <p align="center">
 <img alt="Activity Diagram" src="./assets/diagram/swimlane diagram.jpg" width="70%">
@@ -109,7 +112,7 @@ Penerapan dari sistem solusi ini diharapkan dapat mempermudah pelaporan terkait 
 
 ## 2.2 Deskripsi Umum Perangkat Lunak
 
-APATIS: Aplikasi Pelaporan Air dan Sanitasi adalah perangkat lunak yang memusatkan seluruh pelaporan dan penanganan terkait permasalahan air dan sanitasi di lingkup ITB. Sebagai aplikasi yang menampung ribuan pengguna, perangkat lunak ini akan berinteraksi dengan berbagai layanan eksternal.
+APATIS: Aplikasi Pelaporan Air dan Sanitasi adalah perangkat lunak yang memusatkan seluruh pelaporan dan penanganan terkait permasalahan air dan sanitasi di lingkup ITB. Sebagai aplikasi yang dapat digunakan oleh banyak pengguna, perangkat lunak ini akan berinteraksi dengan berbagai layanan eksternal.
 
 Sistem perangkat lunak ini akan menggunakan layanan eksternal _hosting server_, seperti Cloudflare, agar banyak pengguna, baik pelapor, petugas, maupun admin, dapat mengaksesnya secara sekaligus. 
 
@@ -144,7 +147,7 @@ Perangkat lunak (P/L) ini memiliki beberapa batasan, yakni sebagai berikut.
 | *Server* | *Cloudflare Worker* |
 | *Client* | *Web Browser modern, seperti Chrome, Firefox terbaru, dan lain-lain* |
 | *DBMS* | *Supabase dengan PostgreSQL 15* |
-| *OS* | *Cross-platform (Windows/Linux/MacOS) melalui browser* |
+| *OS* | *Cross-platform (Windows/Linux/MacOS), android, dan iOS melalui browser* |
 | *Auth* | *Supabase Auth* |
 | *Object Storage* | *Supabase Storage* |
 
