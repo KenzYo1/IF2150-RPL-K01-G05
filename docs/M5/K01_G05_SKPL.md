@@ -117,7 +117,7 @@ Dokumen ini berisikan bagian-bagian perancangan dan pembuatan perangkat lunak ya
 Bagian ini dapat disalin dari BAB 1.1 *Deskripsi Umum Sistem* pada dokumen *Requirement Gathering*, disesuaikan bila ada perubahan alur bisnis. Lengkapi dengan gambaran proses bisnis dalam bentuk *Activity Diagram* (boleh disalin dan diperbarui dari 3.3 *Model Proses Bisnis* pada dokumen *Topic Brainstorming*).
 
 <p align="center">
-<img alt="Activity Diagram" src="./assets/diagram/diagram-act-1.avif" width="70%">
+<img alt="Activity Diagram" src="./assets/diagram/swimlane diagram.jpg" width="70%">
 </p>
 <p align="center">
 <i>Gambar 1. Swimlane Diagram APATIS</i>
