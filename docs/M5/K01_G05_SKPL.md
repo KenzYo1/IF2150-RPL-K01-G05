@@ -59,10 +59,6 @@ Tabel 1.3. Definisi Istilah dan Singkatan
 | *EARS* | *Easy Approach to Requirements Syntax, yaitu pola penulisan kebutuhan agar konsisten dan mudah diuji.* |
 
 ## 1.4 Aturan Penomoran
-<<<<<<< HEAD
-=======
-
->>>>>>> ab2cbae68b9ee214e1eeedc6bb921caf1a7cfd44
 Tabel 1.4. Aturan Penomoran
 
 | Hal/Bagian | Penomoran | Keterangan |
@@ -341,7 +337,7 @@ Tabel 3.2. Kebutuhan Non-Fungsional
 | :--- | :--- | :--- | :--- |
 | *C01* | *PelaporEntity* | *Menyimpan data akun pelapor yang membuat nama dan NIM/NIP bagi civitas akademika ITB.* | *UC01, UC02, UC03, UC04* |
 | *C02* | *LaporanEntity* | *Menyimpan data laporan berupa deskripsi masalah, lokasi, bukti foto, status tombol like dan banyak like-nya, beserta status validitasnya secara administrasi dan status penanganannya.* | *UC01, UC02, UC03* |
-| *C03* | *HalamanLaporan* | *Menampilkan seluruh laporan terurut dari laporan dengan like terbanyak dari pengguna lain yang telah disetujui admin dan petugas dilengkapi dengan tombol untuk memberikan like serta tombol untuk mulai membuat laporan bagi pelapor. Selain itu, tombol tanggapan bagi admin dan petugas.* | *UC03* |
+| *C03* | *HalamanLaporan* | *Menampilkan seluruh laporan terurut dari laporan dengan like terbanyak dari pengguna lain yang telah disetujui admin atau petugas dilengkapi dengan tombol untuk memberikan like serta tombol untuk mulai membuat laporan bagi pelapor. Selain itu, tombol tanggapan bagi admin dan petugas.* | *UC03* |
 | *C04* | *HalamanFormulirLaporan* | *Menerima input pelapor berupa deskripsi masalah, lokasi, dan bukti pendukung. Pada bagian ini juga terdapat tombol konfirmasi untuk mengirimkan laporan. Pada masing-masing bentuk input terdapat validasi teknis yang harus dipenuhi seperti maksimal karakter dan maksimal ukuran foto, jika tidak memenuhi validasi teknis ini halaman akan menampilkan pesan kesalahan.* | *UC01* |
 | *C05* | *LaporanController* | *Mengarahkan pelapor untuk membuat laporan dari tombol lapor hingga keterangan berhasil atau gagal.* | *UC01* |
 | *C06* | *AdminEntity* | *Menyimpan data akun admin yang memuat nama, NIP, dan sebagainya.* | *UC02* |
