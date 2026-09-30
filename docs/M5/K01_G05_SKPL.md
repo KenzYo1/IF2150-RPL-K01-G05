@@ -80,10 +80,26 @@ Tabel 1.4. Aturan Penomoran
 | *Kelas* | *CXX* | *Menunjukkan kelas-kelas pada perangkat lunak.* |
 
 ## 1.5 Referensi
-Dokumentasi P/L yang dirujuk oleh dokumen ini. Referensi dapat berupa buku, panduan, ataupun dokumentasi lain yang dipakai dalam pengembangan P/L ini.
+Tim Pengajar IF2150, *Model Proses & Cara Kerja Tim: Agile First*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Tim Pengajar IF2150, *Elisitasi Kebutuhan*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Tim Pengajar IF2150, *Perumusan Kebutuhan*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Tim Pengajar IF2150, *Skenario dan Keterlacakan*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Tim Pengajar IF2150, *Objek, Tanggung Jawab, dan Kolaborasi*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Tim Asisten IF2150, *Class Diagram, Institut Teknologi Bandung*, Semester 1, Tahun Ajaran 2026/2027.
+
+Tim Pengajar IF2150, *Stereotipe peran, gaya kendali, dan lapisan*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Tim Pengajar IF2150, SKPL, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
 
 ## 1.6 Deskripsi Umum Dokumen (Ikhtisar)
-**BAB 1. Pendahuluan** : Berisi tujuan penulisan dokuman, lingkup masalah, definisi, istilah, singkatan, aturan penomoran, serta referensi.
+Dokumen ini berisikan bagian-bagian perancangan dan pembuatan perangkat lunak yang terdiri dari deskripsi perangkat lunak, kebutuhan perangkat lunak, use case, kelas, serta traceability. Bagian-bagian tersebut dituliskan dalam bentuk bab-bab sebagai berikut:
+
+**BAB 1. Pendahuluan** : Berisi tujuan penulisan dokumen, lingkup masalah, definisi, istilah, singkatan, aturan penomoran, serta referensi.
 
 **BAB 2. Deskripsi Perangkat Lunak** : Berisi deskripsi umum sistem dan perangkat lunak, pengguna dan kebutuhan pengguna, serta batasan dan lingkup operasi perangkat lunak.
 
