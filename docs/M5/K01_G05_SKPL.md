@@ -59,7 +59,6 @@ Tabel 1.3. Definisi Istilah dan Singkatan
 | *EARS* | *Easy Approach to Requirements Syntax, yaitu pola penulisan kebutuhan agar konsisten dan mudah diuji.* |
 
 ## 1.4 Aturan Penomoran
-Tuliskan aturan penomoran (ID) yang digunakan dalam dokumen ini. Gunakan pola ID yang **sama** dengan yang sudah dipakai pada dokumen-dokumen sebelumnya, jangan membuat pola baru di dokumen ini.
 
 Tabel 1.4. Aturan Penomoran
 
@@ -148,10 +147,12 @@ Perangkat lunak (P/L) ini memiliki beberapa batasan, yakni sebagai berikut.
 
 | Komponen | Spesifikasi |
 | :--- | :--- |
-| *Server* | *Cloudflare* |
+| *Server* | *Cloudflare Worker* |
 | *Client* | *Web Browser modern, seperti Chrome, Firefox terbaru, dan lain-lain* |
-| *DBMS* | *PostgreSQL 15* |
+| *DBMS* | *Supabase dengan PostgreSQL 15* |
 | *OS* | *Cross-platform (Windows/Linux/MacOS) melalui browser* |
+| *Auth* | *Supabase Auth* |
+| *Object Storage* | *Supabase Storage* |
 
 ---
 
