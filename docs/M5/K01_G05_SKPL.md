@@ -30,10 +30,7 @@ Dipersiapkan oleh:
 
 | Revisi | Deskripsi |
 | :--- | :--- |
-| *A* |  |
-| *B* |  |
-| *C* |  |
-| ... |  |
+| *A* | Memperbarui dan menyesuaikan diagram swimlane dengan dokumen milestone terbaru |
 
 <br>
 
