@@ -126,6 +126,15 @@ Batasan yang harus dituliskan, di antaranya:
 2. *P/L harus memakai format data yang sama dengan sistem lain.*
 3. *P/L harus berfungsi pada platform tertentu (misal: web browser modern, atau desktop Windows dan Linux).*
 4. *...*
+Perangkat lunak (P/L) ini memiliki beberapa batasan, yakni sebagai berikut.
+1. *P/L harus bersifat _platform independent_, yakni dapat berjalan di web browser modern apa pun*
+2. *P/L harus bersifat "ringan", dalam artian perangkat dengan performa lemah dapat menggunakan P/L dengan baik*
+3. *P/L harus memiliki sistem basis data eksternal, yakni untuk menyimpan data relasional sederhana seperti akun pengguna*
+4. *P/L harus memiliki penyimpanan objek atau _Object Storage_ untuk menyimpan data berukuran besar seperti foto*
+4. *P/L harus menggunakan layanan _hosting_ server, seperti Cloudflare Worker, untuk memastikan P/L dapat diakses banyak pengguna*
+5. *P/L harus menggunakan sistem basis data PostgreSQL agar dapat menerima banyak operasi data dari banyak pengguna*
+6. *P/L harus menggunakan ORM atau _Object-Relational Mapping_ untuk mempermudah manajemen database selama pengembangan dan keberjalanan P/L*
+7. *P/L harus menggunakan AuthJS atau layanan autentikasi lainnya yang dapat mengirimkan _One Time Password_ (OTP) pada email pengguna ketika login*
 
 ## 2.5 Lingkungan Operasi Perangkat Lunak
 Spesifikasi *operating system* atau lingkungan yang dibutuhkan P/L untuk beroperasi. Bagian ini digunakan untuk memastikan pengguna memiliki spesifikasi yang cukup untuk menjalankan P/L. Misalnya mencakup komponen server, client, OS, DBMS, tetapi tidak menutupi kemungkinan komponen lain.
