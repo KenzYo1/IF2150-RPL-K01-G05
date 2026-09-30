@@ -114,5 +114,6 @@
 | *30-09-2026* | *Jessica A.T* | *Merevisi subbab 2.1* | *4* | *Done* | *-* |
 | *30-09-2026* | *Nadia Layla S.* | *Membuat subbab 1.5 dan 1.6* | *1* | *Done* | *-* |
 | *30-09-2026* | *Kenzo Yo* | *Melakukan finishing terhadap subbab 2.2 dan 2.4* | *0.5* | *Done* | *-* |
+| *30-09-2026* | *Justin Sepvian* | *Membuat subbab 1.6 dan 1.2, beberapa perubahan di bab 5, dan mereview ulang isi dokumen* | *0.5* | *Done* | *-* |
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``

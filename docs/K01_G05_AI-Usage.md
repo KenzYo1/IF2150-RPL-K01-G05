@@ -69,7 +69,7 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | :--- | :--- | :--- | :--- |
 | Claude | Mencari tau lebih tentang requirement backend dari P/L | Dari yang telah aku berikan, apa aja yang diperlukan buat sistem basis data? | Ide AI valid, hanya saja perlu penyesuaian, misal jenis database dari SQLite ke PostgreSQL |
 | Gemini | Memvalidasi pengertian batasan P/L | Apakah batasan seperti ini sudah benar? Ada tanggapan? | Tanggapan valid, dengan penyesuaian bahasa |
-
+| Microsoft Copilot | Diskusi ide | Sistem yang bagus desainnya bagaimana  | Membantu pemahaman tentang tools yang digunakan. |
 
 ---
 
