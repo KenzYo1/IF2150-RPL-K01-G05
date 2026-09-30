@@ -30,7 +30,7 @@ Dipersiapkan oleh:
 
 | Revisi | Deskripsi |
 | :--- | :--- |
-| *A* | *Deskripsikan perubahan yang dilakukan dari dokumen sebelumnya pada dokumen ini. Jika tidak terdapat perubahan, harap kosongkan tabel.* |
+| *A* |  |
 | *B* |  |
 | *C* |  |
 | ... |  |
@@ -97,19 +97,9 @@ Tim Pengajar IF2150, *Stereotipe peran, gaya kendali, dan lapisan*, Institut Tek
 Tim Pengajar IF2150, SKPL, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
 
 ## 1.6 Deskripsi Umum Dokumen (Ikhtisar)
-Dokumen ini berisikan bagian-bagian perancangan dan pembuatan perangkat lunak yang terdiri dari deskripsi perangkat lunak, kebutuhan perangkat lunak, use case, kelas, serta traceability. Bagian-bagian tersebut dituliskan dalam bentuk bab-bab sebagai berikut:
+Tuliskan sistematika pembahasan dokumen SKPL ini secara runut (misalnya: BAB 2 membahas deskripsi umum P/L, BAB 3 membahas kebutuhan fungsional dan non-fungsional, dst).
 
-**BAB 1. Pendahuluan** : Berisi tujuan penulisan dokumen, lingkup masalah, definisi, istilah, singkatan, aturan penomoran, serta referensi.
-
-**BAB 2. Deskripsi Perangkat Lunak** : Berisi deskripsi umum sistem dan perangkat lunak, pengguna dan kebutuhan pengguna, serta batasan dan lingkup operasi perangkat lunak.
-
-**BAB 3. Deskripsi Kebutuhan Perangkat Lunak** : Berisi kebutuhan fungsional dan non-fungsional pada berdasarkan kebutuhan pengguna.
-
-**BAB 4. Pemodelan Use Case** : Berisi identifikasi aktor dan use case berdasarkan kebutuhan fungsional, diagram use case, dan skenario use case.
-
-**BAB 5. Pemodelan Kelas** : Berisi identifikasi kelas berdasarkan use case, diagram setiap use case menggunakan kelas, serta diagram kelas keseluruhan.
-
-**BAB 6. Traceability** : Berisi tabel terkait penyocokkan kelas dengan use case dan kebutuhan fungsional.
+---
 
 # BAB 2: Deskripsi Perangkat Lunak
 
@@ -117,22 +107,21 @@ Dokumen ini berisikan bagian-bagian perancangan dan pembuatan perangkat lunak ya
 Bagian ini dapat disalin dari BAB 1.1 *Deskripsi Umum Sistem* pada dokumen *Requirement Gathering*, disesuaikan bila ada perubahan alur bisnis. Lengkapi dengan gambaran proses bisnis dalam bentuk *Activity Diagram* (boleh disalin dan diperbarui dari 3.3 *Model Proses Bisnis* pada dokumen *Topic Brainstorming*).
 
 <p align="center">
-<img alt="Activity Diagram" src="./assets/diagram/swimlane diagram.jpg" width="70%">
+<img alt="Activity Diagram" src="./assets/diagram/diagram-act-1.avif" width="70%">
 </p>
 <p align="center">
 <i>Gambar 1. Swimlane Diagram APATIS</i>
 </p>
 
 ## 2.2 Deskripsi Umum Perangkat Lunak
-Diisi dengan deskripsi umum perangkat lunak untuk mendukung proses bisnis yang telah diuraikan pada sub-bab sebelumnya. Uraian harus menunjukkan lingkup perangkat lunak, mencakup keterkaitan perangkat lunak dengan sistem lain di luar (misalnya *Payment Gateway* atau layanan pihak ketiga lain yang dipakai).
-
-*Contoh narasi:* "*[Nama P/L]* merupakan aplikasi *[deskripsi singkat]* yang berinteraksi dengan *Payment Gateway (dummy)* untuk memproses otorisasi pembayaran. Sistem menerima input dari *Pelanggan* melalui antarmuka aplikasi dan mengirimkan permintaan transaksi ke *Payment Gateway* setiap kali pelanggan melakukan checkout."
 
 APATIS: Aplikasi Pelaporan Air dan Sanitasi adalah perangkat lunak yang memusatkan seluruh pelaporan dan penanganan terkait permasalahan air dan sanitasi di lingkup ITB. Sebagai aplikasi yang menampung ribuan pengguna, perangkat lunak ini akan berinteraksi dengan berbagai layanan eksternal.
+
 Sistem perangkat lunak ini akan menggunakan layanan eksternal _hosting server_, seperti Cloudflare, agar banyak pengguna, baik pelapor, petugas, maupun admin, dapat mengaksesnya secara sekaligus. 
-Kemudian, sistem juga akan berinteraksi dengan sistem basis data relasional eksternal untuk menyimpan, mengambil, serta melakukan pembaruan terhadap data-data relasional sederhana, seperti data akun pelapor, petugas, admin, data laporan, dan sebagainya. 
-Sistem juga akan berinteraksi dengan layanan eksternal _object storage_ atau penyimpanan objek untuk menyimpan serta mengambil data berukuran besar seperti foto yang dilampirkan pada laporan.
-Terakhir, sistem juga akan menggunakan layanan autentikasi eksternal untuk melakukan validasi akun pengguna ketika melakukan login.
+
+Kemudian, sistem juga akan berinteraksi dengan sistem basis data relasional eksternal untuk menyimpan, mengambil, serta melakukan pembaruan terhadap data-data relasional sederhana, seperti data akun pelapor, petugas, admin, data laporan, dan sebagainya. Sistem akan berinteraksi dengan layanan ini setiap kali terdapat perubahan data, seperti pelapor membuat laporan, petugas memberi tanggapan, dan seterusnya.
+
+Sistem juga akan berinteraksi dengan layanan eksternal _object storage_ atau penyimpanan objek untuk menyimpan serta mengambil data berukuran besar seperti foto yang dilampirkan pada laporan. Terakhir, sistem juga akan menggunakan layanan autentikasi eksternal untuk melakukan validasi akun pengguna ketika pengguna melakukan login.
 
 
 ## 2.3 Pengguna dan Kebutuhan Pengguna Perangkat Lunak
@@ -149,10 +138,9 @@ Tuliskan seluruh jenis pengguna (*role*/aktor) yang terlibat dalam perangkat lun
 Perangkat lunak (P/L) ini memiliki beberapa batasan, yakni sebagai berikut.
 1. *P/L harus bersifat _platform independent_, yakni dapat berjalan di web browser modern apa pun*
 2. *P/L harus bersifat "ringan", dalam artian perangkat dengan performa lemah dapat menggunakan P/L dengan baik*
-3. *P/L harus memiliki sistem basis data eksternal, yakni untuk menyimpan data relasional sederhana seperti akun pengguna*
-4. *P/L harus memiliki penyimpanan objek atau _Object Storage_, seperti Supabase, untuk menyimpan data berukuran besar seperti foto*
+3. *P/L harus memiliki penyimpanan objek atau _Object Storage_, seperti Supabase, untuk menyimpan data berukuran besar seperti foto*
 4. *P/L harus menggunakan layanan _hosting_ server, seperti Cloudflare Worker, untuk memastikan P/L dapat diakses banyak pengguna*
-5. *P/L harus menggunakan sistem basis data PostgreSQL, seperti Supabase, agar dapat menerima banyak operasi data dari banyak pengguna*
+5. *P/L harus menggunakan sistem basis data relasional PostgreSQL, seperti Supabase, agar dapat menampung dan menerima banyak operasi data dari banyak pengguna*
 6. *P/L harus menggunakan ORM atau _Object-Relational Mapping_ untuk mempermudah manajemen database selama pengembangan dan keberjalanan P/L*
 7. *P/L harus menggunakan Supabase atau layanan autentikasi lainnya yang dapat mengirimkan _One Time Password_ (OTP) pada email pengguna ketika login dan melakukan fungsi autentikasi secara umum*
 
