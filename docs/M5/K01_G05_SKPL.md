@@ -104,11 +104,12 @@ Diisi dengan deskripsi umum perangkat lunak untuk mendukung proses bisnis yang t
 
 *Contoh narasi:* "*[Nama P/L]* merupakan aplikasi *[deskripsi singkat]* yang berinteraksi dengan *Payment Gateway (dummy)* untuk memproses otorisasi pembayaran. Sistem menerima input dari *Pelanggan* melalui antarmuka aplikasi dan mengirimkan permintaan transaksi ke *Payment Gateway* setiap kali pelanggan melakukan checkout."
 
-APATIS: Aplikasi Pelaporan Air dan Sanitasi adalah perangkat lunak yang memusatkan seluruh pelaporan dan penanganan terkait permasalahan air dan sanitasi di lingkup ITB. Oleh karena itu, untuk menjamin keterpusatan aplikasi tersebut, diperlukan suatu layanan _hosting_ website serta _database_ atau basis data yang dapat mencakup seluruh pengguna di ITB.
+APATIS: Aplikasi Pelaporan Air dan Sanitasi adalah perangkat lunak yang memusatkan seluruh pelaporan dan penanganan terkait permasalahan air dan sanitasi di lingkup ITB. Sebagai aplikasi yang menampung ribuan pengguna, perangkat lunak ini akan berinteraksi dengan berbagai layanan eksternal.
+Sistem perangkat lunak ini akan menggunakan layanan eksternal _hosting server_, seperti Cloudflare, agar banyak pengguna, baik pelapor, petugas, maupun admin, dapat mengaksesnya secara sekaligus. 
+Kemudian, sistem juga akan berinteraksi dengan sistem basis data relasional eksternal untuk menyimpan, mengambil, serta melakukan pembaruan terhadap data-data relasional sederhana, seperti data akun pelapor, petugas, admin, data laporan, dan sebagainya. 
+Sistem juga akan berinteraksi dengan layanan eksternal _object storage_ atau penyimpanan objek untuk menyimpan serta mengambil data berukuran besar seperti foto yang dilampirkan pada laporan.
+Terakhir, sistem juga akan menggunakan layanan autentikasi eksternal untuk melakukan validasi akun pengguna ketika melakukan login.
 
-Sebagai perangkat lunak yang mengedepankan kemudahan akses, maka diperlukan website yang dapat melayani pengguna ITB dengan baik dan lancar. Hal tersebut memerlukan adanya _hosting_ website dari layanan pihak ketiga yang memiliki _server_ atau alat pemrosesan yang baik.
-
-Selanjutnya, pada saat pembuatan laporan, sistem akan mengirim data laporan yang dibuat pengguna dari website ke sistem basis data untuk disimpan. Lalu, ketika terdapat program yang memerlukan data tersebut, sistem perlu akses basis data dengan cepat dan baik. Karena jumlah data yang ditampung berukuran besar, diperlukan sistem basis data layanan ketiga.
 
 ## 2.3 Pengguna dan Kebutuhan Pengguna Perangkat Lunak
 Tuliskan seluruh jenis pengguna (*role*/aktor) yang terlibat dalam perangkat lunak (P/L), beserta kebutuhannya secara umum. Bagian ini dapat disalin dari 1.2 *Deskripsi Pengguna Perangkat Lunak* (dokumen Requirement Gathering) atau 3.1 *Identifikasi Aktor* (dokumen Use Case), pastikan sudah konsisten dengan aktor final yang dipakai di BAB 4.
@@ -120,20 +121,16 @@ Tuliskan seluruh jenis pengguna (*role*/aktor) yang terlibat dalam perangkat lun
 | *Admin* | *aa* |
 
 ## 2.4 Batasan Perangkat Lunak
-Batasan yang harus dituliskan, di antaranya:
-1. *P/L harus memakai file data/API dari sistem lain (sebutkan, misal Payment Gateway dummy).*
-2. *P/L harus memakai format data yang sama dengan sistem lain.*
-3. *P/L harus berfungsi pada platform tertentu (misal: web browser modern, atau desktop Windows dan Linux).*
-4. *...*
+
 Perangkat lunak (P/L) ini memiliki beberapa batasan, yakni sebagai berikut.
 1. *P/L harus bersifat _platform independent_, yakni dapat berjalan di web browser modern apa pun*
 2. *P/L harus bersifat "ringan", dalam artian perangkat dengan performa lemah dapat menggunakan P/L dengan baik*
 3. *P/L harus memiliki sistem basis data eksternal, yakni untuk menyimpan data relasional sederhana seperti akun pengguna*
-4. *P/L harus memiliki penyimpanan objek atau _Object Storage_ untuk menyimpan data berukuran besar seperti foto*
+4. *P/L harus memiliki penyimpanan objek atau _Object Storage_, seperti Supabase, untuk menyimpan data berukuran besar seperti foto*
 4. *P/L harus menggunakan layanan _hosting_ server, seperti Cloudflare Worker, untuk memastikan P/L dapat diakses banyak pengguna*
-5. *P/L harus menggunakan sistem basis data PostgreSQL agar dapat menerima banyak operasi data dari banyak pengguna*
+5. *P/L harus menggunakan sistem basis data PostgreSQL, seperti Supabase, agar dapat menerima banyak operasi data dari banyak pengguna*
 6. *P/L harus menggunakan ORM atau _Object-Relational Mapping_ untuk mempermudah manajemen database selama pengembangan dan keberjalanan P/L*
-7. *P/L harus menggunakan AuthJS atau layanan autentikasi lainnya yang dapat mengirimkan _One Time Password_ (OTP) pada email pengguna ketika login*
+7. *P/L harus menggunakan Supabase atau layanan autentikasi lainnya yang dapat mengirimkan _One Time Password_ (OTP) pada email pengguna ketika login dan melakukan fungsi autentikasi secara umum*
 
 ## 2.5 Lingkungan Operasi Perangkat Lunak
 Spesifikasi *operating system* atau lingkungan yang dibutuhkan P/L untuk beroperasi. Bagian ini digunakan untuk memastikan pengguna memiliki spesifikasi yang cukup untuk menjalankan P/L. Misalnya mencakup komponen server, client, OS, DBMS, tetapi tidak menutupi kemungkinan komponen lain.
