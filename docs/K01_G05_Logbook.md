@@ -26,7 +26,7 @@
 * [Milestone 2](#milestone-2)
 * [Milestone 3](#milestone-3)
 * [Milestone 4](#milestone-4)
-
+* [Milestone 5](#milestone-5)
 
 ---
 
@@ -107,5 +107,9 @@
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *29-09-2026* | *Jessica A.T* | *Membuat subbab 1.3, 1.4, 2.5* | *0.5* | *Done* | *-* |
+| *29-09-2026* | *Semua* | *Berdiskusi tentang SKPL, kelengkapan dokumen, fitur, dan tech stack yang akan digunakan* | *1* | *Done* | *-* |
+| *29-09-2026* | *Kenzo Yo* | *Membuat subbab 2.2* | *0.5* | *In progress* | *-* |
+| *29-09-2026* | *Kenzo Yo* | *Mencari tahu tech stack atau tech requirement dari P/L* | *0.5* | *Done* | *-* |
+| *30-09-2026* | *Kenzo Yo* | *Membuat subbab 2.4* | *0.5* | *In progress* | *-* |
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
