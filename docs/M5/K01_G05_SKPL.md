@@ -59,8 +59,6 @@ Tabel 1.3. Definisi Istilah dan Singkatan
 | *EARS* | *Easy Approach to Requirements Syntax, yaitu pola penulisan kebutuhan agar konsisten dan mudah diuji.* |
 
 ## 1.4 Aturan Penomoran
-Tuliskan aturan penomoran (ID) yang digunakan dalam dokumen ini. Gunakan pola ID yang **sama** dengan yang sudah dipakai pada dokumen-dokumen sebelumnya, jangan membuat pola baru di dokumen ini.
-
 Tabel 1.4. Aturan Penomoran
 
 | Hal/Bagian | Penomoran | Keterangan |
@@ -89,7 +87,7 @@ Tim Pengajar IF2150, *Stereotipe peran, gaya kendali, dan lapisan*, Institut Tek
 Tim Pengajar IF2150, SKPL, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
 
 ## 1.6 Deskripsi Umum Dokumen (Ikhtisar)
-Tuliskan sistematika pembahasan dokumen SKPL ini secara runut (misalnya: BAB 2 membahas deskripsi umum P/L, BAB 3 membahas kebutuhan fungsional dan non-fungsional, dst).
+Dokumen SKPL APATIS terdiri atas enam bab. BAB 1 berisi tujuan penulisan, lingkup masalah, definisi dan singkatan, aturan penomoran, serta referensi. BAB 2 menjelaskan sistem dan perangkat lunak secara umum, pengguna, batasan, dan lingkungan operasi perangkat lunak. BAB 3 berisi kebutuhan fungsional dan nonfungsional. BAB 4 berisi identifikasi aktor, identifikasi use case, diagram use case, dan skenario use case. BAB 5 berisi identifikasi kelas, diagram kelas untuk setiap use case, dan diagram kelas keseluruhan. BAB 6 berisi traceability antara kelas, use case, dan kebutuhan fungsional.
 
 ---
 
@@ -121,17 +119,12 @@ Sistem juga akan berinteraksi dengan layanan eksternal _object storage_ atau pen
 
 
 ## 2.3 Pengguna dan Kebutuhan Pengguna Perangkat Lunak
+Tabel 2.3.1 Tabel Pengguna APATIS
 | Aktor | Deskripsi |
 | :--- | :--- |
 | *Pelapor* | *Pengguna eksternal yang melaporkan kerusakan fasilitas air dan sanitasi sehingga memperoleh poin serta melihat dan memberikan like atau unlike pada laporan kerusakan fasilitas air dan sanitasi dalam sistem APATIS yang telah dilaporkan pengguna lain.* |
 | *Petugas* | *Pengguna yang menanggapi laporan yang masuk, menentukan dan memberikan status apakah laporan tersebut merupakan kersusakan pada fasilitas air dan sanitasi atau bukan, serta memberikan status pada laporan telah dituntaskan.* |
 | *Admin* | *Pengguna yang mengelola validitas laporan secara administratif serta memberikan catatan pada kekurangan laporan.* |
-
-| Pengguna | Kebutuhan |
-| :--- | :--- |
-| *Pelapor* | *aa* |
-| *Petugas* | *aa* |
-| *Admin* | *aa* |
 
 ## 2.4 Batasan Perangkat Lunak
 
@@ -403,7 +396,7 @@ Tabel 3.2. Kebutuhan Non-Fungsional
 
 ### 5.2.3 Use Case UC03
 
-**Nama Use Case:** *Memberikan status laporan*
+**Nama Use Case:** *Memberikan dan membatalkan Like*
 
 <p align="center">
 <img alt="Class Diagram 3" src="./assets/diagram/Diagram Kelas UC03.jpg" width="70%">
@@ -423,7 +416,7 @@ Tabel 3.2. Kebutuhan Non-Fungsional
 
 ### 5.2.4 Use Case UC04
 
-**Nama Use Case:** *Memberikan status laporan*
+**Nama Use Case:** *Memperoleh poin*
 
 <p align="center">
 <img alt="Class Diagram 4" src="./assets/diagram/Diagram Kelas UC04.jpg" width="70%">
