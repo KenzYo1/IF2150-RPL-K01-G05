@@ -26,6 +26,7 @@
 * [Milestone 2](#milestone-2)
 * [Milestone 3](#milestone-3)
 * [Milestone 4](#milestone-4)
+* [Milestone 5](#milestone-5)
 
 ---
 
@@ -61,6 +62,13 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | ChatGPT | Diskusi ide dan diagram | Aktor pada UC ini perlu menunggu tanggapan dari laporannya, kira-kira bagaimana diagramnya, apa hubungan dependensi dari HalamanLeaderboard dengan TanggapanController? | Jawaban yang diberikan valid, tetapi tidak begitu diterima karena selalu keluar dari UC yang dimaksud. Oleh karena itu hanya idenya saja yang diterima. |
 | Claude | Memahami UML class diagram | Explain the relationships within a class diagram and what are the criteria, give me examples | Jawaban yang diberikan membantu pemahaman terhadap hubungan dalam kelas diagram. |
 | Microsoft Copilot | Diskusi ide | Pembagian Entity, Controller  | Membantu pemahaman materi. |
+
+
+### Milestone 5
+| Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
+| :--- | :--- | :--- | :--- |
+| Claude | Mencari tau lebih tentang requirement backend dari P/L | Dari yang telah aku berikan, apa aja yang diperlukan buat sistem basis data? | Ide AI valid, hanya saja perlu penyesuaian, misal jenis database dari SQLite ke PostgreSQL |
+| Gemini | Memvalidasi pengertian batasan P/L | Apakah batasan seperti ini sudah benar? Ada tanggapan? | Tanggapan valid, dengan penyesuaian bahasa |
 
 
 ---
