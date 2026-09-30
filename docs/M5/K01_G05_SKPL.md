@@ -141,7 +141,7 @@ Perangkat lunak (P/L) ini memiliki beberapa batasan, yakni sebagai berikut.
 | *Server* | *Cloudflare Worker* |
 | *Client* | *Web Browser modern, seperti Chrome, Firefox terbaru, dan lain-lain* |
 | *DBMS* | *Supabase dengan PostgreSQL 15* |
-| *OS* | *Cross-platform (Windows/Linux/MacOS) melalui browser* |
+| *OS* | *Cross-platform (Windows/Linux/MacOS/Android/iOS) melalui browser* |
 | *Auth* | *Supabase Auth* |
 | *Object Storage* | *Supabase Storage* |
 
