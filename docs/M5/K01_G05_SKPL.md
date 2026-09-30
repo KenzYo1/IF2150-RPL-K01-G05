@@ -159,7 +159,6 @@ Perangkat lunak (P/L) ini memiliki beberapa batasan, yakni sebagai berikut.
 # BAB 3: Deskripsi Kebutuhan Perangkat Lunak
 
 ## 3.1 Kebutuhan Fungsional (KF)
-Salin ulang **seluruh Kebutuhan Fungsional (KF)** versi terbaru dari BAB 2.1 dokumen *Class Diagram* (sudah versi final dan sudah memakai format EARS). Pastikan ID Kebutuhan (kolom "ID Kebutuhan") juga konsisten dengan ID pada tabel Pemetaan Kebutuhan di dokumen *Requirement Gathering*.
 
 Tabel 3.1. Kebutuhan Fungsional
 
