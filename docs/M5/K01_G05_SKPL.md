@@ -59,6 +59,10 @@ Tabel 1.3. Definisi Istilah dan Singkatan
 | *EARS* | *Easy Approach to Requirements Syntax, yaitu pola penulisan kebutuhan agar konsisten dan mudah diuji.* |
 
 ## 1.4 Aturan Penomoran
+<<<<<<< HEAD
+=======
+
+>>>>>>> ab2cbae68b9ee214e1eeedc6bb921caf1a7cfd44
 Tabel 1.4. Aturan Penomoran
 
 | Hal/Bagian | Penomoran | Keterangan |
@@ -101,7 +105,7 @@ Sistem solusi ini memiliki alur kerja yang sederhana, yakni pengguna, yang merup
 Penerapan dari sistem solusi ini diharapkan dapat mempermudah pelaporan terkait masalah fasilitas sanitasi dan air di ITB, serta memusatkan sistem pelaporan dan mempercepat penanggapan laporan tersebut. Dengan adanya sistem ini, Sustainable Development Goals (SDG) yang ke-6, yakni mengenai air bersih dan sanitasi, diharapkan dapat lebih tercapai dan terpenuhi di ITB. 
 
 <p align="center">
-<img alt="Activity Diagram" src="./assets/diagram/diagram-act-1.avif" width="70%">
+<img alt="Activity Diagram" src="./assets/diagram/swimlane diagram.jpg" width="70%">
 </p>
 <p align="center">
 <i>Gambar 1. Swimlane Diagram APATIS</i>
@@ -141,17 +145,18 @@ Perangkat lunak (P/L) ini memiliki beberapa batasan, yakni sebagai berikut.
 
 | Komponen | Spesifikasi |
 | :--- | :--- |
-| *Server* | *Cloudflare* |
+| *Server* | *Cloudflare Worker* |
 | *Client* | *Web Browser modern, seperti Chrome, Firefox terbaru, dan lain-lain* |
-| *DBMS* | *PostgreSQL 15* |
+| *DBMS* | *Supabase dengan PostgreSQL 15* |
 | *OS* | *Cross-platform (Windows/Linux/MacOS) melalui browser* |
+| *Auth* | *Supabase Auth* |
+| *Object Storage* | *Supabase Storage* |
 
 ---
 
 # BAB 3: Deskripsi Kebutuhan Perangkat Lunak
 
 ## 3.1 Kebutuhan Fungsional (KF)
-Salin ulang **seluruh Kebutuhan Fungsional (KF)** versi terbaru dari BAB 2.1 dokumen *Class Diagram* (sudah versi final dan sudah memakai format EARS). Pastikan ID Kebutuhan (kolom "ID Kebutuhan") juga konsisten dengan ID pada tabel Pemetaan Kebutuhan di dokumen *Requirement Gathering*.
 
 Tabel 3.1. Kebutuhan Fungsional
 
