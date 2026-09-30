@@ -102,7 +102,7 @@ Sistem solusi ini memiliki alur kerja yang sederhana, yakni pengguna, yang merup
 Penerapan dari sistem solusi ini diharapkan dapat mempermudah pelaporan terkait masalah fasilitas sanitasi dan air di ITB, serta memusatkan sistem pelaporan dan mempercepat penanggapan laporan tersebut. Dengan adanya sistem ini, Sustainable Development Goals (SDG) yang ke-6, yakni mengenai air bersih dan sanitasi, diharapkan dapat lebih tercapai dan terpenuhi di ITB. 
 
 <p align="center">
-<img alt="Activity Diagram" src="./assets/diagram/diagram-act-1.avif" width="70%">
+<img alt="Activity Diagram" src="./assets/diagram/swimlane diagram.jpg" width="70%">
 </p>
 <p align="center">
 <i>Gambar 1. Swimlane Diagram APATIS</i>
