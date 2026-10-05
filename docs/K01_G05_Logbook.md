@@ -27,6 +27,7 @@
 * [Milestone 3](#milestone-3)
 * [Milestone 4](#milestone-4)
 * [Milestone 5](#milestone-5)
+* [Milestone 6](#milestone-6)
 
 ---
 
@@ -115,5 +116,12 @@
 | *30-09-2026* | *Nadia Layla S.* | *Membuat subbab 1.5 dan 1.6* | *1* | *Done* | *-* |
 | *30-09-2026* | *Kenzo Yo* | *Melakukan finishing terhadap subbab 2.2 dan 2.4* | *0.5* | *Done* | *-* |
 | *30-09-2026* | *Justin Sepvian* | *Membuat subbab 1.6 dan 1.2, beberapa perubahan di bab 5, dan mereview ulang isi dokumen* | *0.5* | *Done* | *-* |
+
+
+### Milestone 6
+**Periode:** 30 September 2026 - 7 Oktober 2026
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *05-10-2026* | *Kenzo Yo* | *Membuat draft bab 1* | *1* | *Done* | *-* |
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
