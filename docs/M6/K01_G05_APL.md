@@ -38,7 +38,7 @@ Pada bagian ini, tentukan *architectural style* atau *pattern* yang menjadi acua
 <img alt="Arsitektur Client-Server APATIS" src="./assets/diagram/arsitektur-server-client.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar 1. Contoh Arsitektur MVC</i>
+<i>Gambar 1. Contoh Arsitektur Client-Server</i>
 </p>
 
 Isi bab ini dengan hal-hal berikut:
