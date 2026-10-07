@@ -71,6 +71,11 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | Gemini | Memvalidasi pengertian batasan P/L | Apakah batasan seperti ini sudah benar? Ada tanggapan? | Tanggapan valid, dengan penyesuaian bahasa |
 | Microsoft Copilot | Diskusi ide | Sistem yang bagus desainnya bagaimana  | Membantu pemahaman tentang tools yang digunakan. |
 
+
+### Milestone 6
+| Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
+| :--- | :--- | :--- | :--- |
+| Chatgpt | Diskusi ide | Apakah ada kekurangan modul/informasi dalam tabel untuk ditambah | Menyeleksi informasi yang perlu ditambahkan/dikurangkan |
 ---
 
 ### Pernyataan Integritas dan Persetujuan
