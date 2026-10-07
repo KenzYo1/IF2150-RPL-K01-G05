@@ -129,5 +129,6 @@
 | *07-10-2026* | *Kenzo Yo* | *Finishing bab 1* | *0.5* | *Done* | *-* |
 | *07-10-2026* | *Kenzo Yo* | *Membantu membuat diagram bab 3* | *0.5* | *Done* | *-* |
 | *07-10-2026* | *Arini K.* | *membantu pembuatan diagram dan mengisi alasan pemilihan diagram* | *0.5* | *Done* | *-* |
+| *07-10-2026* | *Justin Sepvian* | *melengkapi tabel bab 2 dan memberi ide diagram* | *0.5* | *Done* | *-* |
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
