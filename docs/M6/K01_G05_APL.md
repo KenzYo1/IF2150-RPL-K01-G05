@@ -98,7 +98,7 @@ Tabel 2.1. Identifikasi Komponen/Modul/Subsistem
 Physical view dipilih karena menggambarkan pemetaan komponen perangkat lunak ke infrastruktur perangkat keras atau cloud. Aplikasi APATIS menggunakan model Client-Server Architecture. Pada model ini komponen berjalan di lingkungan secara terpisah secara fisik, yakni client yang dijalankan pengguna, server yang menjalankan logika, dan database server yang menyimpan data  sehingga deployment diagram (salah satu diagram physical view) kami nilai tepat untuk merepresentasikan model kami.
 
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/Physical View.jpg" width="100%">
+<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/PhysicalView.jpg" width="100%">
 </p>
 <p align="center">
 <i>Gambar 2. Physical View untuk APATIS</i>
