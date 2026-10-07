@@ -33,7 +33,7 @@ Dipersiapkan oleh:
 # BAB 1: Style/Pattern Arsitektur Acuan
 
 <p align="center">
-<img alt="Arsitektur Client-Server APATIS" src="./assets/diagram/arsitektur-server-client.jpg" width="50%">
+<img alt="Arsitektur Client-Server APATIS" src="./assets/diagram/client-server-architecture.jpg" width="50%">
 </p>
 <p align="center">
 <i>Gambar 1. Contoh Arsitektur Client-Server</i>
