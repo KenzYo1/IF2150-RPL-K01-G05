@@ -130,5 +130,6 @@
 | *07-10-2026* | *Jessica A.T* | *Membuat diagram bab 3* | *2* | *Done* | *-* |
 | *07-10-2026* | *Kenzo Yo* | *Membantu membuat diagram bab 3* | *0.5* | *Done* | *-* |
 | *07-10-2026* | *Arini K.* | *Membantu pembuatan diagram dan mengisi alasan pemilihan diagram* | *0.5* | *Done* | *-* |
+| *07-10-2026* | *Justin Sepvian* | *Melengkapi tabel bab 2 dan memberi ide diagram* | *0.5* | *Done* | *-* |
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
