@@ -263,7 +263,7 @@ Silahkan lanjutkan untuk  *use case* berikutnya dengan content yang sama dengan 
 <img alt="Class Diagram Keseluruhan" src="./assets/diagram/DiagramKeseluruhan.png" width="70%">
 </p>
 <p align="center">
-<i>4.1. Diagram Kelas Perancangan Keseluruhan Perangkat Lunak APATIS</i>
+<i> Gambar 4.1. Diagram Kelas Perancangan Keseluruhan Perangkat Lunak APATIS</i>
 </p>
 
 Tabel 4.1. Daftar Kelas Perancangan Keseluruhan
@@ -294,10 +294,24 @@ Tabel 4.1. Daftar Kelas Perancangan Keseluruhan
 
 Petakan kelas perancangan dengan use case yang terkait. Gunakan **BAB 6 Traceability pada dokumen SKPL** sebagai acuan keterkaitan kelas analisis dan use case, lalu sesuaikan dengan realisasi use case dan kelas perancangan pada BAB 3–BAB 5 DPPL.
 
-Tabel 7.1. Matriks Kerunutan Kelas terhadap Use Case
+Tabel 5.1. Matriks Kerunutan Kelas terhadap Use Case
 
 | Kelas | Use Case Terkait |
 | :--- | :--- |
-| *[ID kelas - Nama kelas]* | *[ID UC - Nama use case]* |
-| *[ID kelas - Nama kelas]* | *[ID UC - Nama use case]* |
-| *...* | *...* |
+| **C01 - PelaporEntity** | *UC01 - Melakukan pelaporan, UC02 - Memberikan Status Laporan, UC03 - Memberikan dan Membatalkan _Like_, UC04 - Memperoleh Poin* |
+| **C02 - LaporanEntity** | *UC01 - Melakukan pelaporan, UC02 - Memberikan Status Laporan, UC03 - Memberikan dan Membatalkan _Like_* |
+| **C03 - HalamanLaporan** | *UC03 - Memberikan dan Membatalkan _Like_* |
+| **C04 - HalamanFormulirLaporan** | *UC01 - Melakukan pelaporan* |
+| **C05 - LaporanController** | *UC01 - Melakukan pelaporan* |
+| **C06 - AdminEntity** | *UC02 - Memberikan Status Laporan* |
+| **C07 - PetugasEntity** | *UC02 - Memberikan Status Laporan* |
+| **C08 - HalamanFormulirTanggapan** | *UC02 - Memberikan Status Laporan* |
+| **C09 - TanggapanController** | *UC02 - Memberikan Status Laporan, UC04 - Memperoleh Poin* |
+| **C10 - LikeController** | *UC03 - Memberikan dan Membatalkan _Like_* |
+| **C11 - HalamanLeaderboard** | *UC04 - Memperoleh Poin* |
+| **C12 - DatabaseLaporanEntity** | *UC01 - Melakukan pelaporan, UC02, UC03* |
+| **C13 - DatabasePelaporEntity** | *UC04 - Memperoleh Poin* |
+| **C14 - LeaderboardController** | *UC04 - Memperoleh Poin* |
+| **C15 - HalamanAkun** | *UC04 - Memperoleh Poin* |
+| **C16 - HalamanNotifikasi** | *UC02 - Memberikan Status Laporan, UC04 - Memperoleh Poin* |
+| **C17 - NotifikasiController** | *UC02 - Memberikan Status Laporan, UC04 - Memperoleh Poin* |
