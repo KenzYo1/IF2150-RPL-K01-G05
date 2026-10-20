@@ -251,6 +251,65 @@ Pada diagram, pastikan:
 
 Silahkan lanjutkan untuk  *use case* berikutnya dengan content yang sama dengan 3.1
 
+## 3.3 Use Case Memberikan dan membatalkan Like
+
+**ID Use Case:** *UC03*  
+**Nama Use Case:** *Memberikan dan membatalkan Like*
+
+### 3.3.1 Identifikasi Kelas
+
+Tabel 3.3 Identifikasi Kelas Use Case [UC03]
+
+| No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
+|:--- | :--- | :--- |
+| 1 | *PelaporEntity* | *PelaporEntity* |
+| 2 | *LaporanEntity* | *LaporanEntity* |
+| 3 | *HalamanLaporan* | *HalamanLaporan* |
+| 4 | *LikeController* | *LikeController* |
+| 5 | *DatabaseLaporanEntity* | *DatabaseLaporanEntity* |
+| 6 | *PetugasEntity* | *PetugasEntity* |
+
+### 3.1.2 Sequence Diagram
+
+- **Skenario Normal**
+
+<p align="center">
+<img alt="Sequence Diagram UC03 - Alur Normal" src="./assets/diagram/UC03-Normal.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar 3. Sequence Diagram UC03 Memberikan Like</i>
+</p>
+
+- **Skenario Alternatif 1: Membatalkan Like**
+
+<p align="center">
+<img alt="Sequence Diagram UC03 - Alternatif 1" src="./assets/diagram/UC03-Alt.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar 4. Sequence Diagram UC03 - Membatalkan Like</i>
+</p>
+
+### 3.1.3 Diagram Kelas
+
+<p align="center">
+<img alt="Diagram Kelas UC03" src="./assets/diagram/DiagramKelas-UC03.jpg" width="35%">
+</p>
+<p align="center">
+<i>Gambar 5. Diagram Kelas UC03</i>
+</p>
+
+## 3.4 Use Case Memperoleh poin
+
+| ID Kelas | Nama Kelas | Atribut | Metode/Operasi |
+| :--- | :--- | :--- | :--- |
+| *C01* | *PelaporEntity* | *idPelapor, namaPelapor, nimnipPelapor, poinPelapor* | *getIdPelapor(), getNamaPelapor(), getNimNipPelapor(), getPoinPelapor(), setIdPelapor(), setNamaPelapor(), setNimNipPelapor(), setPoinPelapor()* |
+| *C15* | *HalamanAkun* | *pelaporData* | *showPelaporData()* |
+| *C11* | *HalamanLeaderboard* | *top20Pelapor* | *sortPelaporByPoin(), show20Pelapor()* |
+| *C14* | *LeaderboardController* | *-* | *getPelaporPoin(), getPelaporRank()* |
+| *C13* | *DatabasePelaporEntity* | *daftarPelapor* | *updateDataPelapor()* |
+| *C09* | *TanggapanController* | *newStatusLaporan* | *addPoinPelapor(), setStatusLaporan(), sendTanggapan()* |
+
+
 <br>
 
 ---
