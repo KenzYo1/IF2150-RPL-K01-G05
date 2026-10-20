@@ -138,5 +138,6 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *20-10-2026* | *Arini K.* | *Mengisi bab 2 dan 4* | *0.75* | *Done* | *-* |
 | *20-10-2026* | *Arini K.* | *Mengisi bab 5* | *0.25* | *Done* | *-* |
+| *20-10-2026* | *Kenzo Yo* | *Membuat diagram dan mengisi subbab 3.3* | *2* | *Done* | *-* |
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
