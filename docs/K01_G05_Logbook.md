@@ -28,7 +28,7 @@
 * [Milestone 4](#milestone-4)
 * [Milestone 5](#milestone-5)
 * [Milestone 6](#milestone-6)
-
+* [Milestone 7](#milestone-7)
 ---
 
 ### Milestone 1
@@ -131,5 +131,12 @@
 | *07-10-2026* | *Kenzo Yo* | *Membantu membuat diagram bab 3* | *0.5* | *Done* | *-* |
 | *07-10-2026* | *Arini K.* | *Membantu pembuatan diagram dan mengisi alasan pemilihan diagram* | *0.5* | *Done* | *-* |
 | *07-10-2026* | *Justin Sepvian* | *Melengkapi tabel bab 2 dan memberi ide diagram* | *0.5* | *Done* | *-* |
+
+### Milestone 7
+**Periode:** 7 Oktober 2026 - 21 Oktober 2026
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *20-10-2026* | *Arini K.* | *Mengisi bab 2 dan 4* | *0.75* | *Done* | *-* |
+| *20-10-2026* | *Arini K.* | *Mengisi bab 5* | *0.25* | *Done* | *-* |
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
