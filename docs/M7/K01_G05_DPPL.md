@@ -211,7 +211,7 @@ Tabel 3.1. Identifikasi Kelas Use Case [UC01]
 - **Skenario Normal**
 
 <p align="center">
-<img alt="Sequence Diagram UC01 - Alur Normal" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+<img alt="Sequence Diagram UC01 - Alur Normal" src="./assets/diagram/SequenceDiagramNormalUC01.jpg" width="50%">
 </p>
 <p align="center">
 <i>Gambar 3. Sequence Diagram UC01</i>
@@ -220,7 +220,7 @@ Tabel 3.1. Identifikasi Kelas Use Case [UC01]
 - **Skenario Alternatif 1: Laporan Tidak Valid Secara Teknis**
 
 <p align="center">
-<img alt="Sequence Diagram UC01 - Alternatif 1" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+<img alt="Sequence Diagram UC01 - Alternatif 1" src="./assets/diagram/SequenceDiagramAlt1UC01.jpg" width="50%">
 </p>
 <p align="center">
 <i>Gambar 4. Sequence Diagram UC01 - Laporan Tidak Valid Secara Teknis</i>
@@ -229,7 +229,7 @@ Tabel 3.1. Identifikasi Kelas Use Case [UC01]
 ### 3.1.3 Diagram Kelas
 
 <p align="center">
-<img alt="Diagram Kelas UC01" src="./assets/diagram/contoh_class-diagram2.jpg" width="35%">
+<img alt="Diagram Kelas UC01" src="./assets/diagram/ClassDiagramUC01.jpg" width="35%">
 </p>
 <p align="center">
 <i>Gambar 5. Diagram Kelas Melakukan pelaporan</i>
@@ -259,7 +259,7 @@ Tabel 3.2. Identifikasi Kelas Use Case [UC02]
 - **Skenario Normal**
 
 <p align="center">
-<img alt="Sequence Diagram UC02 - Alur Normal" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+<img alt="Sequence Diagram UC02 - Alur Normal" src="./assets/diagram/SequenceDiagramNormalUC02.jpg" width="50%">
 </p>
 <p align="center">
 <i>Gambar 6. Sequence Diagram UC02</i>
@@ -268,7 +268,7 @@ Tabel 3.2. Identifikasi Kelas Use Case [UC02]
 - **Skenario Alternatif 1: Admin Melakukan Validasi Administratif / Moderasi**
 
 <p align="center">
-<img alt="Sequence Diagram UC02 - Alternatif 1" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+<img alt="Sequence Diagram UC02 - Alternatif 1" src="./assets/diagram/SequenceDiagramAlt1UC02.jpg" width="50%">
 </p>
 <p align="center">
 <i>Gambar 7. Sequence Diagram UC02 - Admin Melakukan Validasi Administratif / Moderasi</i>
@@ -277,7 +277,7 @@ Tabel 3.2. Identifikasi Kelas Use Case [UC02]
 ### 3.2.3 Diagram Kelas
 
 <p align="center">
-<img alt="Diagram Kelas UC02" src="./assets/diagram/contoh_class-diagram2.jpg" width="35%">
+<img alt="Diagram Kelas UC02" src="./assets/diagram/ClassDiagramUC02.jpg" width="35%">
 </p>
 <p align="center">
 <i>Gambar 8. Diagram Kelas Memberikan status laporan</i>
