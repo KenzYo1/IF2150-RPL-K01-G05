@@ -38,7 +38,11 @@ Dipersiapkan oleh:
 
 ## 1.1 Tujuan Penulisan Dokumen
 
-Dokumen Spesifikasi Kebutuhan Perangkat Lunak (SKPL) ini menjelaskan kebutuhan yang harus dipenuhi dalam pengembangan APATIS. Dokumen ini digunakan oleh tim pengembang sebagai acuan selama proses perancangan, implementasi, pengujian, evaluasi, dan pemeliharaan perangkat lunak. Dengan adanya dokumen ini, pengembangan APATIS diharapkan dapat berjalan secara terarah, konsisten, dan tidak menimbulkan perbedaan pemahaman mengenai fungsi sistem. Dokumen ini juga dapat menjadi acuan apabila pengembangan dan pemeliharaan perangkat lunak berpindah kepada tim lain.
+Dokumen Deskripsi Perancangan Perangkat Lunak (DPPL) ini menjelaskan rancangan teknis perangkat lunak APATIS berdasarkan kebutuhan dan model yang telah ditetapkan dalam dokumen Spesifikasi Kebutuhan Perangkat Lunak (SKPL) serta Arsitektur Perangkat Lunak (APL).
+
+Dokumen ini digunakan oleh tim pengembang sebagai acuan dalam mengimplementasikan APATIS. Rancangan yang dijelaskan meliputi lingkungan implementasi, arsitektur perangkat lunak, identifikasi komponen, realisasi setiap use case melalui sequence diagram, serta perancangan kelas beserta atribut, metode, dan relasinya.
+
+Dokumen DPPL juga digunakan untuk memastikan bahwa setiap use case dalam SKPL telah didukung oleh kelas perancangan dan interaksi antarkelas yang sesuai. Dengan demikian, proses implementasi, pengujian, pengembangan lanjutan, dan pemeliharaan APATIS dapat dilakukan secara terarah dan konsisten, termasuk apabila pengembangan perangkat lunak dilanjutkan oleh tim lain.
 
 ## 1.2 Lingkup Masalah
 Fasilitas air bersih dan sanitasi penting untuk mendukung kegiatan di lingkungan kampus dan berkaitan dengan SDG 6. Namun, proses pelaporan masalah fasilitas masih dapat terkendala karena belum dilakukan secara terpusat, informasi lokasi dapat kurang lengkap, dan pelapor sulit mengetahui apakah suatu masalah sudah pernah dilaporkan. Untuk membantu mengatasi masalah tersebut, APATIS menyediakan pelaporan terpusat yang memungkinkan pengguna mencantumkan foto, deskripsi, dan lokasi masalah, melihat laporan pengguna lain, memberikan like, serta memantau perkembangan penanganan melalui status laporan. Pengguna yang mengirimkan laporan valid akan memperoleh poin yang digunakan untuk menentukan peringkat pada leaderboard, sedangkan pengguna dalam 20 peringkat teratas dapat menjadi calon penerima merchandise apabila hadiah tersedia.
@@ -70,6 +74,8 @@ Tabel 1.4. Aturan Penomoran
 | *Kelas* | *CXX* | *Menunjukkan kelas-kelas pada perangkat lunak.* |
 
 ## 1.5 Referensi
+Kelompok 5 IF2150 K01, *Spesifikasi Kebutuhan Perangkat Lunak APATIS*, Institut Teknologi Bandung, 2026.
+Kelompok 5 IF2150 K01, *Arsitektur Perangkat Lunak APATIS*, Institut Teknologi Bandung, 2026.
 Tim Pengajar IF2150, *Model Proses & Cara Kerja Tim: Agile First*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
 Tim Pengajar IF2150, *Elisitasi Kebutuhan*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
 Tim Pengajar IF2150, *Perumusan Kebutuhan*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
@@ -80,7 +86,7 @@ Tim Pengajar IF2150, *Stereotipe peran, gaya kendali, dan lapisan*, Institut Tek
 Tim Pengajar IF2150, SKPL, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
 
 ## 1.6 Deskripsi Umum Dokumen (Ikhtisar)
-Dokumen SKPL APATIS terdiri atas enam bab. BAB 1 berisi tujuan penulisan, lingkup masalah, definisi dan singkatan, aturan penomoran, serta referensi. BAB 2 menjelaskan sistem dan perangkat lunak secara umum, pengguna, batasan, dan lingkungan operasi perangkat lunak. BAB 3 berisi kebutuhan fungsional dan nonfungsional. BAB 4 berisi identifikasi aktor, identifikasi use case, diagram use case, dan skenario use case. BAB 5 berisi identifikasi kelas, diagram kelas untuk setiap use case, dan diagram kelas keseluruhan. BAB 6 berisi traceability antara kelas, use case, dan kebutuhan fungsional.
+Dokumen DPPL APATIS terdiri atas lima bab. BAB 1 berisi tujuan penulisan dokumen, lingkup masalah, definisi, istilah dan singkatan, aturan penomoran, serta referensi. BAB 2 menjelaskan rancangan lingkungan implementasi, gaya arsitektur acuan, identifikasi komponen atau subsistem, serta model arsitektur perangkat lunak APATIS. BAB 3 menjelaskan realisasi setiap use case melalui identifikasi kelas perancangan, sequence diagram untuk skenario normal dan alternatif, serta diagram kelas untuk setiap use case. BAB 4 berisi diagram kelas perancangan keseluruhan beserta atribut dan metode setiap kelas. BAB 5 berisi matriks kerunutan antara kelas perancangan dan use case yang didukung.
 
 <br>
 
