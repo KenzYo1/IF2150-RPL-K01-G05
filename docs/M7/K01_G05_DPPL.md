@@ -30,6 +30,8 @@ Dipersiapkan oleh:
 
 | Revisi | Deskripsi |
 | :--- | :--- |
+| *A* | *Mengubah letak beberapa metode dan atribut, seperti dari boundary (HalamanLeaderboard, fungsi sort) ke Controller-nya (LeaderboardController) karena lebih sesuai.* |
+| *B* | *Menambahkan dan melengkapi beberapa metode operasi dan atribut yang sesuai pada kelas DatabasePelaporEntity dan HalamanLaporan, setelah menyadari kekurangan ketika pembuatan Sequence Diagram.*| 
 
 
 <br>
