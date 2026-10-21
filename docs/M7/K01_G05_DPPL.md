@@ -350,6 +350,51 @@ Tabel 3.3 Identifikasi Kelas Use Case [UC03]
 | *C13* | *DatabasePelaporEntity* | *daftarPelapor* | *updateDataPelapor()* |
 | *C09* | *TanggapanController* | *newStatusLaporan* | *addPoinPelapor(), setStatusLaporan(), sendTanggapan()* |
 
+**ID Use Case:** *UC04*  
+**Nama Use Case:** *Memperoleh poin*
+
+### 3.4.1 Identifikasi Kelas
+
+Tabel 3.4 Identifikasi Kelas Use Case [UC04]
+
+| No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
+|:--- | :--- | :--- |
+| 1 | *PelaporEntity* | *PelaporEntity* |
+| 2 | *HalamanAkun* | *HalamanAkun* |
+| 3 | *HalamanLeaderboard* | *HalamanLeaderboard* |
+| 4 | *LeaderboardController* | *LeaderboardController* |
+| 5 | *DatabasePelaporEntity* | *DatabasePelaporEntity* |
+| 6 | *TanggapanController* | *TanggapanController* |
+
+### 3.3.2 Sequence Diagram
+
+- **Skenario Normal**
+
+<p align="center">
+<img alt="Sequence Diagram UC03 - Alur Normal" src="./assets/diagram/UC03-Normal.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar 3. Sequence Diagram UC03 Memberikan Like</i>
+</p>
+
+- **Skenario Alternatif 1: Membatalkan Like**
+
+<p align="center">
+<img alt="Sequence Diagram UC03 - Alternatif 1" src="./assets/diagram/UC03-Alt.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar 4. Sequence Diagram UC03 - Membatalkan Like</i>
+</p>
+
+### 3.3.3 Diagram Kelas
+
+<p align="center">
+<img alt="Diagram Kelas UC03" src="./assets/diagram/DiagramKelas-UC03.jpg" width="35%">
+</p>
+<p align="center">
+<i>Gambar 5. Diagram Kelas UC03</i>
+</p>
+
 
 <br>
 
