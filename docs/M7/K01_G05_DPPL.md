@@ -339,7 +339,7 @@ Tabel 3.3 Identifikasi Kelas Use Case [UC03]
 ### 3.3.3 Diagram Kelas
 
 <p align="center">
-<img alt="Diagram Kelas UC03" src="./assets/diagram/DiagramKelas-UC03.jpg" width="35%">
+<img alt="Diagram Kelas UC03" src="./assets/diagram/ClassDiagram-UC03.jpg" width="35%">
 </p>
 <p align="center">
 <i>Gambar 5. Diagram Kelas UC03</i>
@@ -347,24 +347,54 @@ Tabel 3.3 Identifikasi Kelas Use Case [UC03]
 
 ## 3.4 Use Case Memperoleh poin
 
-| ID Kelas | Nama Kelas | Atribut | Metode/Operasi |
-| :--- | :--- | :--- | :--- |
-| *C01* | *PelaporEntity* | *idPelapor, namaPelapor, nimnipPelapor, poinPelapor* | *getIdPelapor(), getNamaPelapor(), getNimNipPelapor(), getPoinPelapor(), setIdPelapor(), setNamaPelapor(), setNimNipPelapor(), setPoinPelapor()* |
-| *C15* | *HalamanAkun* | *pelaporData* | *showPelaporData()* |
-| *C11* | *HalamanLeaderboard* | *top20Pelapor* | *sortPelaporByPoin(), show20Pelapor()* |
-| *C14* | *LeaderboardController* | *-* | *getPelaporPoin(), getPelaporRank()* |
-| *C13* | *DatabasePelaporEntity* | *daftarPelapor* | *updateDataPelapor()* |
-| *C09* | *TanggapanController* | *newStatusLaporan* | *addPoinPelapor(), setStatusLaporan(), sendTanggapan()* |
+**ID Use Case:** *UC04*  
+**Nama Use Case:** *Memperoleh poin*
+
+### 3.4.1 Identifikasi Kelas
+
+Tabel 3.4 Identifikasi Kelas Use Case [UC04]
+
+| No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
+|:--- | :--- | :--- |
+| 1 | *PelaporEntity* | *PelaporEntity* |
+| 2 | *HalamanAkun* | *HalamanAkun* |
+| 3 | *HalamanLeaderboard* | *HalamanLeaderboard* |
+| 4 | *LeaderboardController* | *LeaderboardController* |
+| 5 | *DatabasePelaporEntity* | *DatabasePelaporEntity* |
+| 6 | *TanggapanController* | *TanggapanController* |
+
+### 3.4.2 Sequence Diagram
+
+- **Skenario Normal**
+
+<p align="center">
+<img alt="Sequence Diagram UC04 - Alur Normal" src="./assets/diagram/UC04-Normal.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar 3. Sequence Diagram UC04 Memberikan Like</i>
+</p>
+
+- **Skenario Alternatif 1: Laporan Tidak Lolos Validasi oleh Admin atau Petugas**
+
+<p align="center">
+<img alt="Sequence Diagram UC03 - Alternatif 1" src="./assets/diagram/UC04-Alt.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar 4. Sequence Diagram UC04 - Membatalkan Like</i>
+</p>
+
+### 3.4.3 Diagram Kelas
+
+<p align="center">
+<img alt="Diagram Kelas UC03" src="./assets/diagram/ClassDiagram-UC04.jpg" width="35%">
+</p>
+<p align="center">
+<i>Gambar 5. Diagram Kelas UC04</i>
+</p>
 
 
 <br>
 
-Pada diagram, pastikan:
-- Atribut dituliskan beserta visibilitas dan tipe datanya, misalnya `- email: String`.
-- Operasi dituliskan beserta visibilitas, parameter, dan tipe kembaliannya, misalnya `+ login(email: String, password: String): Boolean`.
-- Relasi antarkelas (asosiasi, agregasi, komposisi, generalisasi, dan dependensi) digambarkan lengkap dengan multiplisitas.
-- Semua operasi yang dipanggil pada sequence diagram 3.1.2 (skenario normal dan alternatif) ada pada kelas yang bersangkutan.
-- Kelas yang sama dengan kelas di use case lain memakai nama, atribut, dan metode yang konsisten.
 ---
 
 # BAB 4: Diagram Kelas Keseluruhan
