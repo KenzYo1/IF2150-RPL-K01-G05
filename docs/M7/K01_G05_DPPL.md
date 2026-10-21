@@ -190,22 +190,22 @@ Tuliskan secara singkat model arsitektur yang dipilih dan alasan model tersebut 
 
 # BAB 3: Realisasi Use Case
 
-## 3.1 Use Case [Nama Use Case 1]
+## 3.1 Use Case Melakukan pelaporan
 
-**ID Use Case:** *[UC01 sesuai SKPL]*  
-**Nama Use Case:** *[Nama use case sesuai SKPL]*
+**ID Use Case:** *UC01*  
+**Nama Use Case:** *Melakukan pelaporan*
 
 ### 3.1.1 Identifikasi Kelas
-
-Identifikasi kelas yang terkait dengan use case tersebut. Kelas di tahap perancangan dapat berbeda dengan dengan kelas di tahap analisis. Dapat menggunakan tabel di bawah:
 
 Tabel 3.1. Identifikasi Kelas Use Case [UC01]
 
 | No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
 |:--- | :--- | :--- |
-| 1 | *[Nama kelas perancangan]* | *[Nama kelas analisis pada SKPL]* |
-| 2 | *[Nama kelas perancangan]* | *[Nama kelas analisis pada SKPL]* |
-| ... | *...* | *...* |
+| 1 | *PelaporEntity* | *PelaporEntity* |
+| 2 | *LaporanEntity* | *LaporanEntity* |
+| 3 | *HalamanFormulirLaporan* | *HalamanFormulirLaporan* |
+| 4 | *LaporanController* | *LaporanController* |
+| 5 | *DatabaseLaporanEntity* | *DatabaseLaporanEntity* |
 
 ### 3.1.2 Sequence Diagram
 
@@ -214,19 +214,19 @@ Buat *sequence diagram* untuk **setiap skenario use case**, mencakup skenario no
 - **Skenario Normal**
 
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+<img alt="Sequence Diagram UC01 - Alur Normal" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC01]</i>
+<i>Gambar X. Sequence Diagram UC01</i>
 </p>
 
-- **Skenario Alternatif [Nomor]: [Nama Skenario]**
+- **Skenario Alternatif 1: Laporan Tidak Valid Secara Teknis**
 
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+<img alt="Sequence Diagram UC01 - Alternatif 1" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC01] - [Nama skenario alternatif]</i>
+<i>Gambar X. Sequence Diagram UC01 - Laporan Tidak Valid Secara Teknis</i>
 </p>
 
 ### 3.1.3 Diagram Kelas
@@ -234,22 +234,63 @@ Buat *sequence diagram* untuk **setiap skenario use case**, mencakup skenario no
 Buatlah diagram kelas untuk use case ini yang terdiri atas kelas-kelas dari 3.1.1. **Setiap kelas pada diagram wajib menampilkan atribut dan metode/operasi langsung di dalam kotak kelasnya**, sehingga tidak perlu membuat tabel daftar atribut dan metode per kelas pada subbab ini. Daftar lengkap atribut dan metode seluruh kelas disajikan pada Tabel 4.1 (Bab 4).
 
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh_class-diagram2.jpg" width="35%">
+<img alt="Diagram Kelas UC01" src="./assets/diagram/contoh_class-diagram2.jpg" width="35%">
 </p>
 <p align="center">
-<i>Gambar X. Diagram Kelas [Nama Uce Case]</i>
+<i>Gambar X. Diagram Kelas Melakukan pelaporan</i>
 </p>
 
-Pada diagram, pastikan:
-- Atribut dituliskan beserta visibilitas dan tipe datanya, misalnya `- email: String`.
-- Operasi dituliskan beserta visibilitas, parameter, dan tipe kembaliannya, misalnya `+ login(email: String, password: String): Boolean`.
-- Relasi antarkelas (asosiasi, agregasi, komposisi, generalisasi, dan dependensi) digambarkan lengkap dengan multiplisitas.
-- Semua operasi yang dipanggil pada sequence diagram 3.1.2 (skenario normal dan alternatif) ada pada kelas yang bersangkutan.
-- Kelas yang sama dengan kelas di use case lain memakai nama, atribut, dan metode yang konsisten.
+## 3.2 Use Case Memberikan status laporan
 
-## 3.2 Use Case XX
+**ID Use Case:** *UC02*  
+**Nama Use Case:** *Memberikan status laporan*
 
-Silahkan lanjutkan untuk  *use case* berikutnya dengan content yang sama dengan 3.1
+### 3.2.1 Identifikasi Kelas
+
+Tabel 3.2. Identifikasi Kelas Use Case [UC02]
+
+| No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
+|:--- | :--- | :--- |
+| 1 | *AdminEntity* | *AdminEntity* |
+| 2 | *PetugasEntity* | *PetugasEntity* |
+| 3 | *HalamanFormulirTanggapan* | *HalamanFormulirTanggapan* |
+| 4 | *TanggapanController* | *TanggapanController* |
+| 5 | *DatabaseLaporanEntity* | *DatabaseLaporanEntity* |
+| 6 | *HalamanNotifikasi* | *HalamanNotifikasi* |
+| 7 | *NotifikasiController* | *NotifikasiController* |
+
+### 3.2.2 Sequence Diagram
+
+Buat *sequence diagram* untuk **setiap skenario use case**, mencakup skenario normal dan alternatif pada subbab 4.4 SKPL. Diagram melibatkan kelas-kelas yang telah diidentifikasi pada SKPL. 
+
+- **Skenario Normal**
+
+<p align="center">
+<img alt="Sequence Diagram UC02 - Alur Normal" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+</p>
+<p align="center">
+<i>Gambar X. Sequence Diagram UC02</i>
+</p>
+
+- **Skenario Alternatif 1: Admin Melakukan Validasi Administratif / Moderasi**
+
+<p align="center">
+<img alt="Sequence Diagram UC02 - Alternatif 1" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+</p>
+<p align="center">
+<i>Gambar X. Sequence Diagram UC02 - Admin Melakukan Validasi Administratif / Moderasi</i>
+</p>
+
+### 3.2.3 Diagram Kelas
+
+Buatlah diagram kelas untuk use case ini yang terdiri atas kelas-kelas dari 3.1.1. **Setiap kelas pada diagram wajib menampilkan atribut dan metode/operasi langsung di dalam kotak kelasnya**, sehingga tidak perlu membuat tabel daftar atribut dan metode per kelas pada subbab ini. Daftar lengkap atribut dan metode seluruh kelas disajikan pada Tabel 4.1 (Bab 4).
+
+<p align="center">
+<img alt="Diagram Kelas UC02" src="./assets/diagram/contoh_class-diagram2.jpg" width="35%">
+</p>
+<p align="center">
+<i>Gambar X. Diagram Kelas Memberikan status laporan</i>
+</p>
 
 ## 3.3 Use Case Memberikan dan membatalkan Like
 
@@ -269,7 +310,7 @@ Tabel 3.3 Identifikasi Kelas Use Case [UC03]
 | 5 | *DatabaseLaporanEntity* | *DatabaseLaporanEntity* |
 | 6 | *PetugasEntity* | *PetugasEntity* |
 
-### 3.1.2 Sequence Diagram
+### 3.3.2 Sequence Diagram
 
 - **Skenario Normal**
 
@@ -289,7 +330,7 @@ Tabel 3.3 Identifikasi Kelas Use Case [UC03]
 <i>Gambar 4. Sequence Diagram UC03 - Membatalkan Like</i>
 </p>
 
-### 3.1.3 Diagram Kelas
+### 3.3.3 Diagram Kelas
 
 <p align="center">
 <img alt="Diagram Kelas UC03" src="./assets/diagram/DiagramKelas-UC03.jpg" width="35%">
@@ -312,6 +353,12 @@ Tabel 3.3 Identifikasi Kelas Use Case [UC03]
 
 <br>
 
+Pada diagram, pastikan:
+- Atribut dituliskan beserta visibilitas dan tipe datanya, misalnya `- email: String`.
+- Operasi dituliskan beserta visibilitas, parameter, dan tipe kembaliannya, misalnya `+ login(email: String, password: String): Boolean`.
+- Relasi antarkelas (asosiasi, agregasi, komposisi, generalisasi, dan dependensi) digambarkan lengkap dengan multiplisitas.
+- Semua operasi yang dipanggil pada sequence diagram 3.1.2 (skenario normal dan alternatif) ada pada kelas yang bersangkutan.
+- Kelas yang sama dengan kelas di use case lain memakai nama, atribut, dan metode yang konsisten.
 ---
 
 # BAB 4: Diagram Kelas Keseluruhan
