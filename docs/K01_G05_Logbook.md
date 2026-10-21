@@ -145,5 +145,7 @@
 | *21-10-2026* | *Arini K.* | *Membuat diagram bab 4, Memperbarui 2.1, Memperbarui Tabel 4.1* | *0.25* | *Done* | *-* |
 | *21-10-2026* | *Nadia Layla S.* | *Membantu pembuatan diagram kelas* | *1* | *Done* | *-* |
 | *21-10-2026* | *Justin Sepvian* | *Update bab 1* | *1* | *Done* | 
+| *21-10-2026* | *Kenzo Yo* | *Membuat diagram 3.3 dan 3.4* | *2* | *Done* | *-* |
+| *21-10-2026* | *Kenzo Yo* | *Merevisi hal yang kurang sesuai di DPPL* | *0.5* | *Done* | *-* |
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
