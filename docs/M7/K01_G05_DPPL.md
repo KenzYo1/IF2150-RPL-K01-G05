@@ -198,28 +198,28 @@ Tabel 3.1. Identifikasi Kelas Use Case [UC01]
 - **Skenario Normal**
 
 <p align="center">
-<img alt="Sequence Diagram UC01 - Alur Normal" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+<img alt="Sequence Diagram UC01 - Alur Normal" src="./assets/diagram/SequenceDiagramNormalUC01.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar 4. Sequence Diagram UC01</i>
+<i>Gambar 3. Sequence Diagram UC01</i>
 </p>
 
 - **Skenario Alternatif 1: Laporan Tidak Valid Secara Teknis**
 
 <p align="center">
-<img alt="Sequence Diagram UC01 - Alternatif 1" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+<img alt="Sequence Diagram UC01 - Alternatif 1" src="./assets/diagram/SequenceDiagramAlt1UC01.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar 5. Sequence Diagram UC01 - Laporan Tidak Valid Secara Teknis</i>
+<i>Gambar 4. Sequence Diagram UC01 - Laporan Tidak Valid Secara Teknis</i>
 </p>
 
 ### 3.1.3 Diagram Kelas
 
 <p align="center">
-<img alt="Diagram Kelas UC01" src="./assets/diagram/contoh_class-diagram2.jpg" width="35%">
+<img alt="Diagram Kelas UC01" src="./assets/diagram/ClassDiagramUC01.jpg" width="35%">
 </p>
 <p align="center">
-<i>Gambar 6. Diagram Kelas Melakukan pelaporan</i>
+<i>Gambar 5. Diagram Kelas Melakukan pelaporan</i>
 </p>
 
 ## 3.2 Use Case Memberikan status laporan
@@ -246,28 +246,28 @@ Tabel 3.2. Identifikasi Kelas Use Case [UC02]
 - **Skenario Normal**
 
 <p align="center">
-<img alt="Sequence Diagram UC02 - Alur Normal" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+<img alt="Sequence Diagram UC02 - Alur Normal" src="./assets/diagram/SequenceDiagramNormalUC02.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar 7. Sequence Diagram UC02</i>
+<i>Gambar 6. Sequence Diagram UC02</i>
 </p>
 
 - **Skenario Alternatif 1: Admin Melakukan Validasi Administratif / Moderasi**
 
 <p align="center">
-<img alt="Sequence Diagram UC02 - Alternatif 1" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+<img alt="Sequence Diagram UC02 - Alternatif 1" src="./assets/diagram/SequenceDiagramAlt1UC02.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar 8. Sequence Diagram UC02 - Admin Melakukan Validasi Administratif / Moderasi</i>
+<i>Gambar 7. Sequence Diagram UC02 - Admin Melakukan Validasi Administratif / Moderasi</i>
 </p>
 
 ### 3.2.3 Diagram Kelas
 
 <p align="center">
-<img alt="Diagram Kelas UC02" src="./assets/diagram/contoh_class-diagram2.jpg" width="35%">
+<img alt="Diagram Kelas UC02" src="./assets/diagram/ClassDiagramUC02.jpg" width="35%">
 </p>
 <p align="center">
-<i>Gambar 9. Diagram Kelas Memberikan status laporan</i>
+<i>Gambar 8. Diagram Kelas Memberikan status laporan</i>
 </p>
 
 ## 3.3 Use Case Memberikan dan membatalkan Like
@@ -296,7 +296,7 @@ Tabel 3.3 Identifikasi Kelas Use Case [UC03]
 <img alt="Sequence Diagram UC03 - Alur Normal" src="./assets/diagram/UC03-Normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar 10. Sequence Diagram UC03 Memberikan Like</i>
+<i>Gambar 9. Sequence Diagram UC03 Memberikan Like</i>
 </p>
 
 - **Skenario Alternatif 1: Membatalkan Like**
@@ -305,7 +305,7 @@ Tabel 3.3 Identifikasi Kelas Use Case [UC03]
 <img alt="Sequence Diagram UC03 - Alternatif 1" src="./assets/diagram/UC03-Alt.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar 11. Sequence Diagram UC03 - Membatalkan Like</i>
+<i>Gambar 10. Sequence Diagram UC03 - Membatalkan Like</i>
 </p>
 
 ### 3.3.3 Diagram Kelas
@@ -314,7 +314,7 @@ Tabel 3.3 Identifikasi Kelas Use Case [UC03]
 <img alt="Diagram Kelas UC03" src="./assets/diagram/ClassDiagram-UC03.jpg" width="35%">
 </p>
 <p align="center">
-<i>Gambar 12. Diagram Kelas UC03</i>
+<i>Gambar 11. Diagram Kelas UC03</i>
 </p>
 
 ## 3.4 Use Case Memperoleh poin
@@ -343,7 +343,7 @@ Tabel 3.4 Identifikasi Kelas Use Case [UC04]
 <img alt="Sequence Diagram UC04 - Alur Normal" src="./assets/diagram/UC04-Normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar 13. Sequence Diagram UC04 Memberikan Like</i>
+<i>Gambar 12. Sequence Diagram UC04 Memberikan Like</i>
 </p>
 
 - **Skenario Alternatif 1: Laporan Tidak Lolos Validasi oleh Admin atau Petugas**
@@ -352,7 +352,7 @@ Tabel 3.4 Identifikasi Kelas Use Case [UC04]
 <img alt="Sequence Diagram UC03 - Alternatif 1" src="./assets/diagram/UC04-Alt.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar 14. Sequence Diagram UC04 - Membatalkan Like</i>
+<i>Gambar 13. Sequence Diagram UC04 - Membatalkan Like</i>
 </p>
 
 ### 3.4.3 Diagram Kelas
@@ -361,7 +361,7 @@ Tabel 3.4 Identifikasi Kelas Use Case [UC04]
 <img alt="Diagram Kelas UC03" src="./assets/diagram/ClassDiagram-UC04.jpg" width="35%">
 </p>
 <p align="center">
-<i>Gambar 15. Diagram Kelas UC04</i>
+<i>Gambar 14. Diagram Kelas UC04</i>
 </p>
 
 
@@ -373,7 +373,7 @@ Tabel 3.4 Identifikasi Kelas Use Case [UC04]
 <img alt="Class Diagram Keseluruhan" src="./assets/diagram/DiagramKeseluruhan.png" width="70%">
 </p>
 <p align="center">
-<i> Gambar 16. Diagram Kelas Perancangan Keseluruhan Perangkat Lunak APATIS</i>
+<i> Gambar 15. Diagram Kelas Perancangan Keseluruhan Perangkat Lunak APATIS</i>
 </p>
 
 Tabel 4.1. Daftar Kelas Perancangan Keseluruhan
