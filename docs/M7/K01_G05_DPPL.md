@@ -75,17 +75,30 @@ Tabel 1.4. Aturan Penomoran
 
 ## 1.5 Referensi
 Kelompok 5 IF2150 K01, *Spesifikasi Kebutuhan Perangkat Lunak APATIS*, Institut Teknologi Bandung, 2026.
+
 Kelompok 5 IF2150 K01, *Arsitektur Perangkat Lunak APATIS*, Institut Teknologi Bandung, 2026.
+
 Tim Pengajar IF2150, *Model Proses & Cara Kerja Tim: Agile First*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
 Tim Pengajar IF2150, *Elisitasi Kebutuhan*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
 Tim Pengajar IF2150, *Perumusan Kebutuhan*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
 Tim Pengajar IF2150, *Skenario dan Keterlacakan*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
 Tim Pengajar IF2150, *Objek, Tanggung Jawab, dan Kolaborasi*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
-Tim Asisten IF2150, *Class *Diagram*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Tim Asisten IF2150, *Class Diagram*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
 Tim Pengajar IF2150, *Stereotipe peran, gaya kendali, dan lapisan*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
 Tim Pengajar IF2150, *SKPL*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
-Kelompok Furina: Forum RPL Indonesia Jaya, *K01_G05_SKPL*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027
-Kelompok Furina: Forum RPL Indonesia Jaya, *K01_G05_APL*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027
+
+Tim Asisten IF2150, *Deskripsi Perancangan Perangkat Lunak*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Kelompok Furina: Forum RPL Indonesia Jaya, *K01_G05_SKPL*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Kelompok Furina: Forum RPL Indonesia Jaya, *K01_G05_APL*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
 
 ## 1.6 Deskripsi Umum Dokumen (Ikhtisar)
 Dokumen DPPL APATIS terdiri atas lima bab. BAB 1 berisi tujuan penulisan dokumen, lingkup masalah, definisi, istilah dan singkatan, aturan penomoran, serta referensi. BAB 2 menjelaskan rancangan lingkungan implementasi, gaya arsitektur acuan, identifikasi komponen atau subsistem, serta model arsitektur perangkat lunak APATIS. BAB 3 menjelaskan realisasi setiap use case melalui identifikasi kelas perancangan, sequence diagram untuk skenario normal dan alternatif, serta diagram kelas untuk setiap use case. BAB 4 berisi diagram kelas perancangan keseluruhan beserta atribut dan metode setiap kelas. BAB 5 berisi matriks kerunutan antara kelas perancangan dan use case yang didukung.
@@ -201,7 +214,7 @@ Tabel 3.1. Identifikasi Kelas Use Case [UC01]
 <img alt="Sequence Diagram UC01 - Alur Normal" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar 4. Sequence Diagram UC01</i>
+<i>Gambar 3. Sequence Diagram UC01</i>
 </p>
 
 - **Skenario Alternatif 1: Laporan Tidak Valid Secara Teknis**
@@ -210,7 +223,7 @@ Tabel 3.1. Identifikasi Kelas Use Case [UC01]
 <img alt="Sequence Diagram UC01 - Alternatif 1" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar 5. Sequence Diagram UC01 - Laporan Tidak Valid Secara Teknis</i>
+<i>Gambar 4. Sequence Diagram UC01 - Laporan Tidak Valid Secara Teknis</i>
 </p>
 
 ### 3.1.3 Diagram Kelas
@@ -219,7 +232,7 @@ Tabel 3.1. Identifikasi Kelas Use Case [UC01]
 <img alt="Diagram Kelas UC01" src="./assets/diagram/contoh_class-diagram2.jpg" width="35%">
 </p>
 <p align="center">
-<i>Gambar 6. Diagram Kelas Melakukan pelaporan</i>
+<i>Gambar 5. Diagram Kelas Melakukan pelaporan</i>
 </p>
 
 ## 3.2 Use Case Memberikan status laporan
@@ -249,7 +262,7 @@ Tabel 3.2. Identifikasi Kelas Use Case [UC02]
 <img alt="Sequence Diagram UC02 - Alur Normal" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar 7. Sequence Diagram UC02</i>
+<i>Gambar 6. Sequence Diagram UC02</i>
 </p>
 
 - **Skenario Alternatif 1: Admin Melakukan Validasi Administratif / Moderasi**
@@ -258,7 +271,7 @@ Tabel 3.2. Identifikasi Kelas Use Case [UC02]
 <img alt="Sequence Diagram UC02 - Alternatif 1" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar 8. Sequence Diagram UC02 - Admin Melakukan Validasi Administratif / Moderasi</i>
+<i>Gambar 7. Sequence Diagram UC02 - Admin Melakukan Validasi Administratif / Moderasi</i>
 </p>
 
 ### 3.2.3 Diagram Kelas
@@ -267,7 +280,7 @@ Tabel 3.2. Identifikasi Kelas Use Case [UC02]
 <img alt="Diagram Kelas UC02" src="./assets/diagram/contoh_class-diagram2.jpg" width="35%">
 </p>
 <p align="center">
-<i>Gambar 9. Diagram Kelas Memberikan status laporan</i>
+<i>Gambar 8. Diagram Kelas Memberikan status laporan</i>
 </p>
 
 ## 3.3 Use Case Memberikan dan membatalkan Like
@@ -296,7 +309,7 @@ Tabel 3.3 Identifikasi Kelas Use Case [UC03]
 <img alt="Sequence Diagram UC03 - Alur Normal" src="./assets/diagram/UC03-Normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar 10. Sequence Diagram UC03 Memberikan Like</i>
+<i>Gambar 9. Sequence Diagram UC03 Memberikan Like</i>
 </p>
 
 - **Skenario Alternatif 1: Membatalkan Like**
@@ -305,7 +318,7 @@ Tabel 3.3 Identifikasi Kelas Use Case [UC03]
 <img alt="Sequence Diagram UC03 - Alternatif 1" src="./assets/diagram/UC03-Alt.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar 11. Sequence Diagram UC03 - Membatalkan Like</i>
+<i>Gambar 10. Sequence Diagram UC03 - Membatalkan Like</i>
 </p>
 
 ### 3.3.3 Diagram Kelas
@@ -314,7 +327,7 @@ Tabel 3.3 Identifikasi Kelas Use Case [UC03]
 <img alt="Diagram Kelas UC03" src="./assets/diagram/ClassDiagram-UC03.jpg" width="35%">
 </p>
 <p align="center">
-<i>Gambar 12. Diagram Kelas UC03</i>
+<i>Gambar 11. Diagram Kelas UC03</i>
 </p>
 
 ## 3.4 Use Case Memperoleh poin
@@ -343,7 +356,7 @@ Tabel 3.4 Identifikasi Kelas Use Case [UC04]
 <img alt="Sequence Diagram UC04 - Alur Normal" src="./assets/diagram/UC04-Normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar 13. Sequence Diagram UC04 Memberikan Like</i>
+<i>Gambar 12. Sequence Diagram UC04 Memberikan Like</i>
 </p>
 
 - **Skenario Alternatif 1: Laporan Tidak Lolos Validasi oleh Admin atau Petugas**
@@ -352,7 +365,7 @@ Tabel 3.4 Identifikasi Kelas Use Case [UC04]
 <img alt="Sequence Diagram UC03 - Alternatif 1" src="./assets/diagram/UC04-Alt.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar 14. Sequence Diagram UC04 - Membatalkan Like</i>
+<i>Gambar 13. Sequence Diagram UC04 - Membatalkan Like</i>
 </p>
 
 ### 3.4.3 Diagram Kelas
@@ -361,7 +374,7 @@ Tabel 3.4 Identifikasi Kelas Use Case [UC04]
 <img alt="Diagram Kelas UC03" src="./assets/diagram/ClassDiagram-UC04.jpg" width="35%">
 </p>
 <p align="center">
-<i>Gambar 15. Diagram Kelas UC04</i>
+<i>Gambar 14. Diagram Kelas UC04</i>
 </p>
 
 
@@ -370,10 +383,10 @@ Tabel 3.4 Identifikasi Kelas Use Case [UC04]
 ## 4.1 Diagram Kelas
 
 <p align="center">
-<img alt="Class Diagram Keseluruhan" src="./assets/diagram/DiagramKeseluruhan.png" width="70%">
+<img alt="Class Diagram Keseluruhan" src="./assets/diagram/DiagramKeseluruhan.jpg" width="70%">
 </p>
 <p align="center">
-<i> Gambar 16. Diagram Kelas Perancangan Keseluruhan Perangkat Lunak APATIS</i>
+<i> Gambar 15. Diagram Kelas Perancangan Keseluruhan Perangkat Lunak APATIS</i>
 </p>
 
 Tabel 4.1. Daftar Kelas Perancangan Keseluruhan
