@@ -90,7 +90,7 @@ Dokumen SKPL APATIS terdiri atas enam bab. BAB 1 berisi tujuan penulisan, lingku
 
 ## 2.1 Rancangan Lingkungan Implementasi
 
-Perangkat lunak APATIS berjalan pada lingkungan cross-platform sehingga dapat diakses melalui browser modern seperti Chrome dan Firefox di berbagai sistem operasi, yaitu Windows, Linux, macOS, Android, dan iOS. Pada sisi server, perangkat lunak memanfaatkan Cloudflare Worker sebagai lingkungan komputasi serverless yang menangani logika sistem serta pemrosesan data. Untuk pengelolaan data, sistem menggunakan Supabase dengan PostgreSQL 15 sebagai DBMS yang menyimpan data terstruktur seperti data pelapor dan laporan. Data berukuran besar, seperti foto pada laporan, disimpan pada Supabase Storage yang berperan sebagai filing system atau object storage, sedangkan autentikasi pengguna ditangani oleh Supabase Auth. Pengembangan perangkat lunak dilakukan menggunakan bahasa pemrograman JavaScript, dengan Git sebagai development tools untuk pengelolaan versi kode program.
+Perangkat lunak APATIS berjalan pada lingkungan cross-platform sehingga dapat diakses melalui browser modern seperti Chrome dan Firefox di berbagai sistem operasi, yaitu Windows, Linux, macOS, Android, dan iOS. Pada sisi server, perangkat lunak memanfaatkan Cloudflare Worker sebagai lingkungan komputasi serverless yang menangani logika sistem serta pemrosesan data. Untuk pengelolaan data, sistem menggunakan Supabase dengan PostgreSQL 15 sebagai DBMS yang menyimpan data terstruktur seperti data pelapor dan laporan. Data berukuran besar, seperti foto pada laporan, disimpan pada Supabase Storage yang berperan sebagai filing system atau object storage, sedangkan autentikasi pengguna ditangani oleh Supabase Auth. Pengembangan perangkat lunak APATIS dilakukan menggunakan bahasa pemrograman TypeScript dengan framework React dan Next.js (App Router) pada sisi frontend, serta Tailwind CSS untuk penataan antarmuka. Adapun development tools yang digunakan adalah Git sebagai sistem pengelolaan versi dan GitHub sebagai platform repositori kode program.
 
 ## 2.2 Style/Pattern Arsitektur Acuan
 
@@ -378,12 +378,12 @@ Tabel 4.1. Daftar Kelas Perancangan Keseluruhan
 | :--- | :--- | :--- | :--- |
 | *C01* | *PelaporEntity* | *idPelapor, namaPelapor, nimnipPelapor, poinPelapor* | *getIdPelapor(), getNamaPelapor(), getNimNipPelapor(), getPoinPelapor(), setIdPelapor(), setNamaPelapor(), setNimNipPelapor(), setPoinPelapor()* |
 | *C02* | *LaporanEntity* | *idLaporan, descLaporan, fotoLaporan, likeLaporan, statusLaporan* | *getIdLaporan(), getDescLaporan(), getFotoLaporan(), getLikeLaporan(), getStatusLaporan(), setIdLaporan(), setDescLaporan(), setFotoLaporan(), setLikeLaporan(), setStatusLaporan()* |
-| *C03* | *HalamanLaporan* | *daftarLaporan* | *createLaporan(), sortLaporan(), showLaporan()* |
-| *C04* | *HalamanFormulirLaporan* | *maxKarakter, maxUkuranFoto, laporanValid* | *isJumlahKarakterValid(), isUkuranFotoValid(), isLaporanValid()* |
+| *C03* | *HalamanLaporan* | *daftarLaporan* | *createLaporan(), sortLaporan(), showLaporan(), TekanLike* |
+| *C04* | *HalamanFormulirLaporan* | *maxKarakter, maxUkuranFoto, laporanValid* | *isJumlahKarakterValid(), isUkuranFotoValid(), isLaporanValid(),showFormulirLaporan* |
 | *C05* | *LaporanController* | *laporanValid* | *isLaporanValid(), setStatusLaporan(), getValidLaporan()* |
 | *C06* | *AdminEntity* | *idAdmin, namaAdmin, nipAdmin* | *getIdAdmin(), getNamaAdmin(), getNipAdmin(), setIdAdmin(), setNamaAdmin(), setNipAdmin()* |
 | *C07* | *PetugasEntity* | *idPetugas, namaPetugas, nipPetugas* | *getIdPetugas(), getNamaPetugas(), getNipPetugas(), setIdPetugas(), setNamaPetugas(), setNipPetugas()* |
-| *C08* | *HalamanFormulirTanggapan* | *statusLaporan, statusTuntasLaporan* | *getStatusLaporan(), getStatusTuntasLaporan(), setStatusLaporan(), setStatusTuntasLaporan()* |
+| *C08* | *HalamanFormulirTanggapan* | *statusLaporan, statusTuntasLaporan* | *getStatusLaporan(), getStatusTuntasLaporan(), setStatusLaporan(), setStatusTuntasLaporan(), showFormulirTanggapan()* |
 | *C09* | *TanggapanController* | *newStatusLaporan* | *addPoinPelapor(), setStatusLaporan(), sendTanggapan()* |
 | *C10* | *LikeController* | *-* | *isLaporanLiked(), likeLaporan(), unlikeLaporan()* |
 | *C11* | *HalamanLeaderboard* | *top20Pelapor* | *sortPelaporByPoin(), show20Pelapor()* |
