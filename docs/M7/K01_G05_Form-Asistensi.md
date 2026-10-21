@@ -4,41 +4,41 @@
 
 | Informasi | Keterangan |
 | --- | --- |
-| **Hari** | *\[Hari\]* |
-| **Tanggal** | *\[DD/MM/YYYY\]* |
-| **Kelas** | *\[Kelas\]* |
-| **Nomor Kelompok** | *\[Nomor Kelompok\]*  |
-| **Nama Kelompok** | *\[Nama Kelompok\]*  |
-| **Nama Perangkat Lunak** | *\[Nama P/L\]*  |
-| **Dokumen** | *\[Nama Dokumen yang diasistensikan\]*  |
+| **Hari** | *\[Jumat\]* |
+| **Tanggal** | *\[09/10/2006\]* |
+| **Kelas** | *\[K01\]* |
+| **Nomor Kelompok** | *\[5\]*  |
+| **Nama Kelompok** | *\[Furina: Forum RPL Indonesia Jaya\]*  |
+| **Nama Perangkat Lunak** | *\[APATIS: Aplikasi Pelaporan Air dan Sanitasi\]*  |
+| **Dokumen** | *\[K01_G05_DPPL\]*  |
 
 ### Anggota Kelompok
 
 | NIM | Nama |
 | --- | --- |
-| *\[NIM 1\]* | *\[Nama Anggota 1\]* |
-| *\[NIM 2\]* | *\[Nama Anggota 2\]* |
-| *\[NIM 3\]* | *\[Nama Anggota 3\]* |
-| *\[NIM 4\]* | *\[Nama Anggota 4\]* |
-| *\[NIM 5\]* | *\[Nama Anggota 5\]* |
+| *13525016* | *Kenzo Yo* |
+| *13525112* | *Justin Sepvian* |
+| *13525142* | *Jessica Audrey Tjahjadi* |
+| *13525073* | *Nadia Layla Safira* |
+| *13525097* | *Arini Karimatunnikmah* |
 
 ### Catatan
 
 | Catatan |
 | --- |
-| 1. *\[Berikan catatan hasil asistensi\]*  |
-| 2. ... |
-| 3. ... |
-| 4. ... |
+| 1. *Deskripsi Perancangan Perangkat Lunak (DPPL) merupakan dokumen teknis yang berisi penjelasan mengenai rancangan suatu perangkat lunak.*  |
+| 2. *DPPL terdiri dari lima bab, yaitu pendahuluan, perancangan arsitektur, realisasi use case, diagram kelas keseluruhan, dan matriks kerunutan.* |
+| 3. *Sequence diagram adalah diagram interaksi UML yang menunjukkann bagaimana objek atau komponen saling bertukar pesan, diurutkan dari atas ke bawah berdasarkan waktu.* |
 
 **Notes for this section:**  
 *Catatan dapat dituliskan dalam bentuk paragraf atau poin-poin, disesuaikan saja.* 
+*Asistensi diatas merupakan asistensi akbar.*
 
 ## Dokumentasi
 
 <!-- ![](./assets/foto-asistensi.jpg) -->
 <p align="center">
-  <img src="./assets/foto-asistensi.jpg" width="100%">
+  <img src="./assets/foto-asistensi.jpeg" width="100%">
 </p>
 
 <p align="center">

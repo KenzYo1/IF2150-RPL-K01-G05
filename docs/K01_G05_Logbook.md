@@ -141,5 +141,7 @@
 | *20-10-2026* | *Kenzo Yo* | *Membuat diagram dan mengisi subbab 3.3* | *2* | *Done* | 
 | *21-10-2026* | *Jessica A.T* | *Mengisi bab 3.1 dan 3.2* | *0.5* | *Done* | *-* |
 | *21-10-2026* | *Jessica A.T* | *Membut diagram untuk 3.1 dan 3.2* | *???* | *In Progress* | *-* |
+| *21-10-2026* | *Arini K.* | *Membuat diagram bab 4, Memperbarui 2.1, Memperbarui Tabel 4.1* | *0.25* | *Done* | *-* |
+| *21-10-2026* | *Nadia Layla S.* | *Membantu pembuatan diagram kelas* | *1* | *Done* | *-* |
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
