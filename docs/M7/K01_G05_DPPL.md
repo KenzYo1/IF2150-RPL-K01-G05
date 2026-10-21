@@ -64,6 +64,8 @@ Tabel 1.3. Definisi Istilah dan Singkatan
 | *OTP* | *One Time Password, yaitu kode sekali pakai yang digunakan dalam proses autentikasi.* |
 | *DBMS* | *Database Management System, yaitu sistem yang digunakan untuk mengelola basis data.* |
 | *DPPL* | *Deskripsi Perancangan Perangkat Lunak* |
+| *APL* | *Arsitektur Perangkat Lunak* |
+
 
 ## 1.4 Aturan Penomoran
 Tabel 1.4. Aturan Penomoran
