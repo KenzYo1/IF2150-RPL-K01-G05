@@ -63,6 +63,7 @@ Tabel 1.3. Definisi Istilah dan Singkatan
 | *SDG* | *Sustainable Development Goals atau Tujuan Pembangunan Berkelanjutan.* |
 | *OTP* | *One Time Password, yaitu kode sekali pakai yang digunakan dalam proses autentikasi.* |
 | *DBMS* | *Database Management System, yaitu sistem yang digunakan untuk mengelola basis data.* |
+| *DPPL* | *Deskripsi Perancangan Perangkat Lunak* |
 
 ## 1.4 Aturan Penomoran
 Tabel 1.4. Aturan Penomoran
@@ -103,7 +104,7 @@ Kelompok Furina: Forum RPL Indonesia Jaya, *K01_G05_SKPL*, Institut Teknologi Ba
 Kelompok Furina: Forum RPL Indonesia Jaya, *K01_G05_APL*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
 
 ## 1.6 Deskripsi Umum Dokumen (Ikhtisar)
-Dokumen DPPL APATIS terdiri atas lima bab. BAB 1 berisi tujuan penulisan dokumen, lingkup masalah, definisi, istilah dan singkatan, aturan penomoran, serta referensi. BAB 2 menjelaskan rancangan lingkungan implementasi, gaya arsitektur acuan, identifikasi komponen atau subsistem, serta model arsitektur perangkat lunak APATIS. BAB 3 menjelaskan realisasi setiap use case melalui identifikasi kelas perancangan, sequence diagram untuk skenario normal dan alternatif, serta diagram kelas untuk setiap use case. BAB 4 berisi diagram kelas perancangan keseluruhan beserta atribut dan metode setiap kelas. BAB 5 berisi matriks kerunutan antara kelas perancangan dan use case yang didukung.
+Dokumen DPPL APATIS terdiri atas lima bab. BAB 1 berisi tujuan penulisan dokumen, lingkup masalah, definisi, istilah dan singkatan, aturan penomoran, serta referensi. BAB 2 menjelaskan rancangan lingkungan implementasi, gaya arsitektur acuan, identifikasi komponen atau subsistem, serta model arsitektur perangkat lunak APATIS. BAB 3 menjelaskan realisasi setiap use case melalui identifikasi kelas perancangan, *sequence diagram* untuk skenario normal dan alternatif, serta diagram kelas untuk setiap use case. BAB 4 berisi diagram kelas perancangan keseluruhan beserta atribut dan metode setiap kelas. BAB 5 berisi matriks kerunutan antara kelas perancangan dan use case yang didukung.
 
 <br>
 
@@ -329,7 +330,7 @@ Tabel 3.3 Identifikasi Kelas Use Case [UC03]
 <img alt="Diagram Kelas UC03" src="./assets/diagram/ClassDiagram-UC03.jpg" width="35%">
 </p>
 <p align="center">
-<i>Gambar 11. Diagram Kelas UC03</i>
+<i>Gambar 11. Diagram Kelas UC03: Memberikan dan Membatalkan Like</i>
 </p>
 
 ## 3.4 Use Case Memperoleh poin
@@ -358,7 +359,7 @@ Tabel 3.4 Identifikasi Kelas Use Case [UC04]
 <img alt="Sequence Diagram UC04 - Alur Normal" src="./assets/diagram/UC04-Normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar 12. Sequence Diagram UC04 Memberikan Like</i>
+<i>Gambar 12. Sequence Diagram UC04 Memperoleh Poin</i>
 </p>
 
 - **Skenario Alternatif 1: Laporan Tidak Lolos Validasi oleh Admin atau Petugas**
@@ -367,7 +368,7 @@ Tabel 3.4 Identifikasi Kelas Use Case [UC04]
 <img alt="Sequence Diagram UC03 - Alternatif 1" src="./assets/diagram/UC04-Alt.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar 13. Sequence Diagram UC04 - Membatalkan Like</i>
+<i>Gambar 13. Sequence Diagram UC04 - Laporan Tidak Lolos Validasi oleh Admin atau Petugas</i>
 </p>
 
 ### 3.4.3 Diagram Kelas
@@ -376,7 +377,7 @@ Tabel 3.4 Identifikasi Kelas Use Case [UC04]
 <img alt="Diagram Kelas UC03" src="./assets/diagram/ClassDiagram-UC04.jpg" width="35%">
 </p>
 <p align="center">
-<i>Gambar 14. Diagram Kelas UC04</i>
+<i>Gambar 14. Diagram Kelas UC04: Memperoleh Poin</i>
 </p>
 
 
