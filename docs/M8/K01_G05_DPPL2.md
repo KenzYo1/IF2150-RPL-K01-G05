@@ -52,22 +52,35 @@ Dipersiapkan oleh:
 # BAB 1: Pendahuluan
 
 ## 1.1 Tujuan Penulisan Dokumen
-Tuliskan dengan ringkas tujuan dokumen DPPL ini dibuat dan siapa saja yang akan menggunakan dokumen ini.
+
+Dokumen Deskripsi Perancangan Perangkat Lunak (DPPL-2) ini menjelaskan rancangan teknis perangkat lunak APATIS berdasarkan kebutuhan dan model yang telah ditetapkan dalam dokumen Spesifikasi Kebutuhan Perangkat Lunak (SKPL) serta Arsitektur Perangkat Lunak (APL).
+
+Dokumen ini digunakan oleh tim pengembang sebagai acuan dalam mengimplementasikan APATIS. Rancangan yang dijelaskan meliputi lingkungan implementasi, arsitektur perangkat lunak, identifikasi komponen, realisasi setiap use case melalui sequence diagram, serta perancangan kelas beserta atribut, metode, dan relasinya.
+
+Dokumen DPPL juga digunakan untuk memastikan bahwa setiap use case dalam SKPL telah didukung oleh kelas perancangan dan interaksi antarkelas yang sesuai. Dengan demikian, proses implementasi, pengujian, pengembangan lanjutan, dan pemeliharaan APATIS dapat dilakukan secara terarah dan konsisten, termasuk apabila pengembangan perangkat lunak dilanjutkan oleh tim lain.
+
 
 ## 1.2 Lingkup Masalah
 Fasilitas air bersih dan sanitasi penting untuk mendukung kegiatan di lingkungan kampus dan berkaitan dengan SDG 6. Namun, proses pelaporan masalah fasilitas masih dapat terkendala karena belum dilakukan secara terpusat, informasi lokasi dapat kurang lengkap, dan pelapor sulit mengetahui apakah suatu masalah sudah pernah dilaporkan. Untuk membantu mengatasi masalah tersebut, APATIS menyediakan pelaporan terpusat yang memungkinkan pengguna mencantumkan foto, deskripsi, dan lokasi masalah, melihat laporan pengguna lain, memberikan like, serta memantau perkembangan penanganan melalui status laporan. Pengguna yang mengirimkan laporan valid akan memperoleh poin yang digunakan untuk menentukan peringkat pada leaderboard, sedangkan pengguna dalam 20 peringkat teratas dapat menjadi calon penerima merchandise apabila hadiah tersedia.
 
 ## 1.3 Definisi, Istilah, dan Singkatan
-Semua definisi dan singkatan yang digunakan dalam dokumen ini beserta penjelasannya.
 
 Tabel 1.3. Definisi Istilah dan Singkatan
 
 | Singkatan, Akronim, atau Istilah | Penjelasan |
 | :--- | :--- |
 | *P/L* | *Singkatan dari Perangkat Lunak, yaitu aplikasi yang memberikan perintah kepada komputer untuk menjalankan tugas tertentu.* |
-| *DPPL* | *Singkatan dari Spesifikasi Kebutuhan Perangkat Lunak, yaitu dokumen yang merangkum kriteria-kriteria yang diperlukan untuk membangun aplikasi menjalankan tugasnya.* |
+| *SKPL* | *Singkatan dari Spesifikasi Kebutuhan Perangkat Lunak, yaitu dokumen yang menjelaskan kebutuhan fungsional dan nonfungsional yang harus dipenuhi oleh perangkat lunak.* |
+| *KF* | *Singkatan dari Kebutuhan Fungsional.* |
+| *KNF* | *Singkatan dari Kebutuhan Non-Fungsional.* |
 | *UC* | *Singkatan dari Use Case.* |
-| *...* | *...* |
+| *EARS* | *Easy Approach to Requirements Syntax, yaitu pola penulisan kebutuhan agar konsisten dan mudah diuji.* |
+| *SDG* | *Sustainable Development Goals atau Tujuan Pembangunan Berkelanjutan.* |
+| *OTP* | *One Time Password, yaitu kode sekali pakai yang digunakan dalam proses autentikasi.* |
+| *DBMS* | *Database Management System, yaitu sistem yang digunakan untuk mengelola basis data.* |
+| *DPPL* | *Deskripsi Perancangan Perangkat Lunak* |
+| *APL* | *Arsitektur Perangkat Lunak* |
+
 
 ## 1.4 Aturan Penomoran
 
@@ -82,10 +95,36 @@ Tabel 1.4. Aturan Penomoran
 | *Kelas* | *CXX* | *Menunjukkan kelas-kelas pada perangkat lunak.* |
 
 ## 1.5 Referensi
-Cantumkan dokumentasi P/L yang dirujuk oleh dokumen ini, **minimal dokumen SKPL dan APL**. Tambahkan buku, panduan, atau dokumentasi lain apabila digunakan.
+Kelompok 5 IF2150 K01, *Spesifikasi Kebutuhan Perangkat Lunak APATIS*, Institut Teknologi Bandung, 2026.
+
+Kelompok 5 IF2150 K01, *Arsitektur Perangkat Lunak APATIS*, Institut Teknologi Bandung, 2026.
+
+Tim Pengajar IF2150, *Model Proses & Cara Kerja Tim: Agile First*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Tim Pengajar IF2150, *Elisitasi Kebutuhan*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Tim Pengajar IF2150, *Perumusan Kebutuhan*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Tim Pengajar IF2150, *Skenario dan Keterlacakan*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Tim Pengajar IF2150, *Objek, Tanggung Jawab, dan Kolaborasi*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Tim Asisten IF2150, *Class Diagram*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Tim Pengajar IF2150, *Stereotipe peran, gaya kendali, dan lapisan*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Tim Pengajar IF2150, *SKPL*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Tim Asisten IF2150, *Deskripsi Perancangan Perangkat Lunak*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Kelompok Furina: Forum RPL Indonesia Jaya, *K01_G05_SKPL*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
+Kelompok Furina: Forum RPL Indonesia Jaya, *K01_G05_APL*, Institut Teknologi Bandung, Semester 1, Tahun Ajaran 2026/2027.
+
 
 ## 1.6 Deskripsi Umum Dokumen (Ikhtisar)
-Tuliskan sistematika pembahasan dokumen ini secara ringkas dan runut, dengan maksimal 1 paragraf.
+Dokumen DPPL-2 APATIS terdiri atas lima bab. BAB 1 berisi tujuan penulisan dokumen, lingkup masalah, definisi, istilah dan singkatan, aturan penomoran, serta referensi. BAB 2 menjelaskan rancangan lingkungan implementasi, gaya arsitektur acuan, identifikasi komponen atau subsistem, serta model arsitektur perangkat lunak APATIS. BAB 3 menjelaskan realisasi setiap use case melalui identifikasi kelas perancangan, *sequence diagram* untuk skenario normal dan alternatif, serta diagram kelas untuk setiap use case. BAB 4 berisi diagram kelas perancangan keseluruhan beserta atribut dan metode setiap kelas. BAB 5 berisi daftar seluruh kelas beserta operasi, atribut, dan algoritma atau query dari setiap kelas pada subbab-subbabnya. BAB 6 berisi rancangan setiap dan seluruh antarmuka serta spesifikasi setiap rancangan dan seluruh antarmuka. BAB 7 berisi matriks kerunutan yang memetakan kelas perancangan dengan UC terkait.
+
 
 <br>
 
@@ -95,27 +134,46 @@ Tuliskan sistematika pembahasan dokumen ini secara ringkas dan runut, dengan mak
 
 ## 2.1 Rancangan Lingkungan Implementasi
 
-Sebutkan *operating system*, DBMS, *development tools*, *filing system*, dan bahasa pemrograman yang digunakan.
+Perangkat lunak APATIS berjalan pada lingkungan cross-platform sehingga dapat diakses melalui browser modern seperti Chrome dan Firefox di berbagai sistem operasi, yaitu Windows, Linux, macOS, Android, dan iOS. Pada sisi server, perangkat lunak memanfaatkan Cloudflare Worker sebagai lingkungan komputasi serverless yang menangani logika sistem serta pemrosesan data. Untuk pengelolaan data, sistem menggunakan Supabase dengan PostgreSQL 15 sebagai DBMS yang menyimpan data terstruktur seperti data pelapor dan laporan. Data berukuran besar, seperti foto pada laporan, disimpan pada Supabase Storage yang berperan sebagai filing system atau object storage, sedangkan autentikasi pengguna ditangani oleh Supabase Auth. Pengembangan perangkat lunak APATIS dilakukan menggunakan bahasa pemrograman TypeScript dengan framework React dan Next.js (App Router) pada sisi frontend, serta Tailwind CSS untuk penataan antarmuka. Adapun development tools yang digunakan adalah Git sebagai sistem pengelolaan versi dan GitHub sebagai platform repositori kode program.
 
 ## 2.2 Style/Pattern Arsitektur Acuan
 
-Tentukan *architectural style* atau *pattern* yang menjadi acuan aplikasi, misalnya *layered architecture*, *client-server*, *repository*, *pipe and filter*, atau MVC (*Model-View-Controller*).
-
-
-Gunakan hasil **BAB 1 Style/Pattern Arsitektur Acuan pada dokumen APL**, termasuk alasan pemilihan dan gambar penerapannya pada P/L kelompok. Gunakan komponen aplikasi sendiri pada gambar, bukan hanya contoh pola umum.
-
 <p align="center">
-<img alt="Contoh Arsitektur MVC" src="./assets/diagram/contoh-arsitektur-mvc.webp" width="40%">
+<img alt="Arsitektur Client-Server APATIS" src="./assets/diagram/client-server-architecture.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar 1. Contoh Arsitektur MVC</i>
+<i>Gambar 1. Arsitektur Client-Server</i>
 </p>
+
+Sistem Perangkat Lunak APATIS menggunakan gaya arsitektur *client-server*, yakni merupakan gaya dengan banyak klien atau entitas yang akan meminta dan mendapatkan data dari suatu server utama sehingga klien hanya mendapatkan antarmuka dan interaksi dengan server, sedangkan server yang akan memproses data dari klien.
+
+Klien atau *client* pada APATIS berupa web pengguna yang dapat dijalankan pada *platform* mana pun. Klien berperan hanya untuk menangani antarmuka web, menangkap interaksi pengguna, melakukan validasi awal (validasi dari sisi klien, misalnya jumlah karakter dalam kolom laporan), dan interaksi dengan server berupa permintaan dan penerimaan HTTP.
+
+Server pada APATIS merupakan lingkungan komputasi *serverless* tanpa server fisik dengan menggunakan Cloudflare workers. Server akan menangani pemrosesan data, logika dari sistem, serta pengiriman dan pengambilan dari basis data ke klien.
+
+Basis data pada perangkat lunak ini akan menyimpan data-data terstruktur seperti data laporan dan data pelapor, serta data berukuran besar seperti foto pada laporan.
+
+Gaya arsitektur *client-server* dipilih karena perangkat lunak APATIS merupakan aplikasi web yang memisahkan klien dengan server, yakni klien pada aplikasi web hanya menyediakan antarmuka dan melakukan permintaan data kepada server. Sebaliknya, server hanya menyediakan data dan pemrosesan atau operasi data yang diperlukan bagi klien. 
+
+Arsitektur *client-server* juga dipilih karena arsitektur ini mendukung kemudahan akses bagi banyak pengguna sekaligus atau secara konkuren. Hal ini juga memungkinkan server memproses dan mengirimkan data yang konsisten kepada banyak pengguna sekaligus.
+
+Tabel 1.1 Lingkungan Operasi Perangkat Lunak
+
+| Komponen | Spesifikasi |
+| :--- | :--- |
+| *Server* | *Cloudflare Worker* |
+| *Client* | *Web Browser modern, seperti Chrome, Firefox terbaru, dan lain-lain* |
+| *DBMS* | *Supabase dengan PostgreSQL 15* |
+| *OS* | *Cross-platform (Windows/Linux/MacOS/Android/iOS) melalui browser* |
+| *Auth* | *Supabase Auth* |
+| *Object Storage* | *Supabase Storage* |
+
+Dari tabel tersebut, alasan gaya arsitektur *client-server* dipilih menjadi lebih jelas. Sisi klien berupa web yang digunakan pengguna, sedangkan server berupa Cloudflare Worker yang memungkinkan pemrosesan data secara terpusat. Lalu, *DBMS* dan *Object Storage* digunakan untuk menyimpan data terstruktur seperti data pelapor, laporan, serta data berukuran besar seperti foto. 
+
+---
+
 
 ## 2.3 Identifikasi Komponen / Modul / Subsistem
-
-Identifikasi komponen, modul, atau subsistem penyusun aplikasi berdasarkan *pattern* yang telah ditetapkan. Jelaskan tanggung jawab masing-masing komponen. Pengelompokan dapat mengikuti lapisan arsitektur atau fungsi/peran komponen dalam sistem.
-
-Dapat menyalin dari dokumen DPPL sebelumnya
 
 Tabel 2.3. Identifikasi Komponen/Modul/Subsistem
 
@@ -138,15 +196,14 @@ Tabel 2.3. Identifikasi Komponen/Modul/Subsistem
 | *Supabase Storage*                      | *Layanan eksternal*               | *Menyimpan berkas lampiran laporan.*                        |
 | *Cloudflare Workers* | *Layanan Eksternal* | *Menyediakan lingkungan komputasi serverless untuk menjalankan Server APATIS dan menerima permintaan dari Aplikasi Web APATIS melalui internet.* |
 
+---
 
 ## 2.4 Model Arsitektur Perangkat Lunak
 
-### 2.4.1 View [Nama View]
-
-Tuliskan secara singkat model arsitektur yang dipilih dan alasan model tersebut cocok untuk aplikasi.
+Physical view dipilih karena menggambarkan pemetaan komponen perangkat lunak ke infrastruktur perangkat keras atau cloud. Aplikasi APATIS menggunakan model Client-Server Architecture. Pada model ini komponen berjalan di lingkungan secara terpisah secara fisik, yakni client yang dijalankan pengguna, server yang menjalankan logika, dan database server yang menyimpan data  sehingga deployment diagram (salah satu diagram physical view) kami nilai tepat untuk merepresentasikan model kami.
 
 <p align="center">
-<img alt="Physical View pada APATIS" src="./assets/diagram/PhysicalView.jpg" width="100%">
+<img alt="Physical View APATIS" src="./assets/diagram/PhysicalView.jpg" width="100%">
 </p>
 <p align="center">
 <i>Gambar 2. Physical View untuk APATIS</i>
@@ -159,68 +216,193 @@ Tuliskan secara singkat model arsitektur yang dipilih dan alasan model tersebut 
 
 # BAB 3: Realisasi Use Case
 
-## 3.1 Use Case [Nama Use Case 1]
+## 3.1 Use Case Melakukan pelaporan
 
-**ID Use Case:** *[UC01 sesuai SKPL]*  
-**Nama Use Case:** *[Nama use case sesuai SKPL]*
+**ID Use Case:** *UC01*  
+**Nama Use Case:** *Melakukan pelaporan*
 
 ### 3.1.1 Identifikasi Kelas
-
-Identifikasi kelas yang terkait dengan use case tersebut. Kelas di tahap perancangan dapat berbeda dengan dengan kelas di tahap analisis. Dapat menggunakan tabel di bawah:
 
 Tabel 3.1. Identifikasi Kelas Use Case [UC01]
 
 | No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
 |:--- | :--- | :--- |
-| 1 | *[Nama kelas perancangan]* | *[Nama kelas analisis pada SKPL]* |
-| 2 | *[Nama kelas perancangan]* | *[Nama kelas analisis pada SKPL]* |
-| ... | *...* | *...* |
+| 1 | *PelaporEntity* | *PelaporEntity* |
+| 2 | *LaporanEntity* | *LaporanEntity* |
+| 3 | *HalamanFormulirLaporan* | *HalamanFormulirLaporan* |
+| 4 | *LaporanController* | *LaporanController* |
+| 5 | *DatabaseLaporanEntity* | *DatabaseLaporanEntity* |
 
 ### 3.1.2 Sequence Diagram
-
-Buat *sequence diagram* untuk **setiap skenario use case**, mencakup skenario normal dan alternatif pada subbab 4.4 SKPL. Diagram melibatkan kelas-kelas yang telah diidentifikasi pada SKPL. 
 
 - **Skenario Normal**
 
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+<img alt="Sequence Diagram UC01 - Alur Normal" src="./assets/diagram/SequenceDiagramNormalUC01.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC01]</i>
+<i>Gambar 3. Sequence Diagram UC01</i>
 </p>
 
-- **Skenario Alternatif [Nomor]: [Nama Skenario]**
+- **Skenario Alternatif 1: Laporan Tidak Valid Secara Teknis**
 
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+<img alt="Sequence Diagram UC01 - Alternatif 1" src="./assets/diagram/SequenceDiagramAlt1UC01.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC01] - [Nama skenario alternatif]</i>
+<i>Gambar 4. Sequence Diagram UC01 - Laporan Tidak Valid Secara Teknis</i>
 </p>
 
 ### 3.1.3 Diagram Kelas
 
-Buatlah diagram kelas untuk use case ini yang terdiri atas kelas-kelas dari 3.1.1. **Setiap kelas pada diagram wajib menampilkan atribut dan metode/operasi langsung di dalam kotak kelasnya**, sehingga tidak perlu membuat tabel daftar atribut dan metode per kelas pada subbab ini. Daftar lengkap atribut dan metode seluruh kelas disajikan pada Tabel 4.1 (Bab 4).
-
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh_class-diagram2.jpg" width="35%">
+<img alt="Diagram Kelas UC01" src="./assets/diagram/ClassDiagramUC01.jpg" width="35%">
 </p>
 <p align="center">
-<i>Gambar X. Diagram Kelas [Nama Uce Case]</i>
+<i>Gambar 5. Diagram Kelas Melakukan pelaporan</i>
 </p>
 
-Pada diagram, pastikan:
-- Atribut dituliskan beserta visibilitas dan tipe datanya, misalnya `- email: String`.
-- Operasi dituliskan beserta visibilitas, parameter, dan tipe kembaliannya, misalnya `+ login(email: String, password: String): Boolean`.
-- Relasi antarkelas (asosiasi, agregasi, komposisi, generalisasi, dan dependensi) digambarkan lengkap dengan multiplisitas.
-- Semua operasi yang dipanggil pada sequence diagram 3.1.2 (skenario normal dan alternatif) ada pada kelas yang bersangkutan.
-- Kelas yang sama dengan kelas di use case lain memakai nama, atribut, dan metode yang konsisten.
+## 3.2 Use Case Memberikan status laporan
 
-## 3.2 Use Case XX
+**ID Use Case:** *UC02*  
+**Nama Use Case:** *Memberikan status laporan*
 
-Silahkan lanjutkan untuk  *use case* berikutnya dengan content yang sama dengan 3.1
+### 3.2.1 Identifikasi Kelas
 
-<br>
+Tabel 3.2. Identifikasi Kelas Use Case [UC02]
+
+| No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
+|:--- | :--- | :--- |
+| 1 | *AdminEntity* | *AdminEntity* |
+| 2 | *PetugasEntity* | *PetugasEntity* |
+| 3 | *HalamanFormulirTanggapan* | *HalamanFormulirTanggapan* |
+| 4 | *TanggapanController* | *TanggapanController* |
+| 5 | *DatabaseLaporanEntity* | *DatabaseLaporanEntity* |
+| 6 | *HalamanNotifikasi* | *HalamanNotifikasi* |
+| 7 | *NotifikasiController* | *NotifikasiController* |
+
+### 3.2.2 Sequence Diagram
+
+- **Skenario Normal**
+
+<p align="center">
+<img alt="Sequence Diagram UC02 - Alur Normal" src="./assets/diagram/SequenceDiagramNormalUC02.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar 6. Sequence Diagram UC02</i>
+</p>
+
+- **Skenario Alternatif 1: Admin Melakukan Validasi Administratif / Moderasi**
+
+<p align="center">
+<img alt="Sequence Diagram UC02 - Alternatif 1" src="./assets/diagram/SequenceDiagramAlt1UC02.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar 7. Sequence Diagram UC02 - Admin Melakukan Validasi Administratif / Moderasi</i>
+</p>
+
+### 3.2.3 Diagram Kelas
+
+<p align="center">
+<img alt="Diagram Kelas UC02" src="./assets/diagram/ClassDiagramUC02.jpg" width="35%">
+</p>
+<p align="center">
+<i>Gambar 8. Diagram Kelas Memberikan status laporan</i>
+</p>
+
+## 3.3 Use Case Memberikan dan membatalkan Like
+
+**ID Use Case:** *UC03*  
+**Nama Use Case:** *Memberikan dan membatalkan Like*
+
+### 3.3.1 Identifikasi Kelas
+
+Tabel 3.3 Identifikasi Kelas Use Case [UC03]
+
+| No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
+|:--- | :--- | :--- |
+| 1 | *PelaporEntity* | *PelaporEntity* |
+| 2 | *LaporanEntity* | *LaporanEntity* |
+| 3 | *HalamanLaporan* | *HalamanLaporan* |
+| 4 | *LikeController* | *LikeController* |
+| 5 | *DatabaseLaporanEntity* | *DatabaseLaporanEntity* |
+| 6 | *PetugasEntity* | *PetugasEntity* |
+
+### 3.3.2 Sequence Diagram
+
+- **Skenario Normal**
+
+<p align="center">
+<img alt="Sequence Diagram UC03 - Alur Normal" src="./assets/diagram/UC03-Normal.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar 9. Sequence Diagram UC03 Memberikan Like</i>
+</p>
+
+- **Skenario Alternatif 1: Membatalkan Like**
+
+<p align="center">
+<img alt="Sequence Diagram UC03 - Alternatif 1" src="./assets/diagram/UC03-Alt.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar 10. Sequence Diagram UC03 - Membatalkan Like</i>
+</p>
+
+### 3.3.3 Diagram Kelas
+
+<p align="center">
+<img alt="Diagram Kelas UC03" src="./assets/diagram/ClassDiagram-UC03.jpg" width="35%">
+</p>
+<p align="center">
+<i>Gambar 11. Diagram Kelas UC03: Memberikan dan Membatalkan Like</i>
+</p>
+
+## 3.4 Use Case Memperoleh poin
+
+**ID Use Case:** *UC04*  
+**Nama Use Case:** *Memperoleh poin*
+
+### 3.4.1 Identifikasi Kelas
+
+Tabel 3.4 Identifikasi Kelas Use Case [UC04]
+
+| No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
+|:--- | :--- | :--- |
+| 1 | *PelaporEntity* | *PelaporEntity* |
+| 2 | *HalamanAkun* | *HalamanAkun* |
+| 3 | *HalamanLeaderboard* | *HalamanLeaderboard* |
+| 4 | *LeaderboardController* | *LeaderboardController* |
+| 5 | *DatabasePelaporEntity* | *DatabasePelaporEntity* |
+| 6 | *TanggapanController* | *TanggapanController* |
+
+### 3.4.2 Sequence Diagram
+
+- **Skenario Normal**
+
+<p align="center">
+<img alt="Sequence Diagram UC04 - Alur Normal" src="./assets/diagram/UC04-Normal.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar 12. Sequence Diagram UC04 Memperoleh Poin</i>
+</p>
+
+- **Skenario Alternatif 1: Laporan Tidak Lolos Validasi oleh Admin atau Petugas**
+
+<p align="center">
+<img alt="Sequence Diagram UC03 - Alternatif 1" src="./assets/diagram/UC04-Alt.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar 13. Sequence Diagram UC04 - Laporan Tidak Lolos Validasi oleh Admin atau Petugas</i>
+</p>
+
+### 3.4.3 Diagram Kelas
+
+<p align="center">
+<img alt="Diagram Kelas UC03" src="./assets/diagram/ClassDiagram-UC04.jpg" width="35%">
+</p>
+<p align="center">
+<i>Gambar 14. Diagram Kelas UC04: Memperoleh Poin</i>
+</p>
 
 ---
 
@@ -228,23 +410,34 @@ Silahkan lanjutkan untuk  *use case* berikutnya dengan content yang sama dengan 
 
 ## 4.1 Diagram Kelas
 
-**Bagian ini diisi dengan diagram kelas keseluruhan.**
-
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh-class_diargam.png" width="35%">
+<img alt="Class Diagram Keseluruhan" src="./assets/diagram/DiagramKeseluruhan.jpg" width="70%">
 </p>
 <p align="center">
-<i>Gambar 4.1. Diagram Kelas Perancangan Keseluruhan [Nama P/L]</i>
+<i> Gambar 15. Diagram Kelas Perancangan Keseluruhan Perangkat Lunak APATIS</i>
 </p>
 
 Tabel 4.1. Daftar Kelas Perancangan Keseluruhan
 
 | ID Kelas | Nama Kelas | Atribut | Metode/Operasi |
 | :--- | :--- | :--- | :--- |
-| *[C01]* | *[Nama kelas]* | *[Daftar atribut]* | *[Daftar metode/operasi]* |
-| *[C02]* | *[Nama kelas]* | *[Daftar atribut]* | *[Daftar metode/operasi]* |
-| *[C03]* | *[Nama kelas]* | *[Daftar atribut]* | *[Daftar metode/operasi]* |
-| *...* | *...* | *...* | *...* |
+| *C01* | *PelaporEntity* | *idPelapor, namaPelapor, nimnipPelapor, poinPelapor* | *getIdPelapor(), getNamaPelapor(), getNimNipPelapor(), getPoinPelapor(), setIdPelapor(), setNamaPelapor(), setNimNipPelapor(), setPoinPelapor()* |
+| *C02* | *LaporanEntity* | *idLaporan, descLaporan, fotoLaporan, likeLaporan, statusLaporan* | *getIdLaporan(), getDescLaporan(), getFotoLaporan(), getLikeLaporan(), getStatusLaporan(), setIdLaporan(), setDescLaporan(), setFotoLaporan(), setLikeLaporan(), setStatusLaporan()* |
+| *C03* | *HalamanLaporan* | *daftarLaporan* | *createLaporan(), sortLaporan(), showLaporan(), TekanLike()* |
+| *C04* | *HalamanFormulirLaporan* | *maxKarakter, maxUkuranFoto, laporanValid* | *isJumlahKarakterValid(), isUkuranFotoValid(), isLaporanValid(),showFormulirLaporan()* |
+| *C05* | *LaporanController* | *laporanValid* | *isLaporanValid(), setStatusLaporan(), getValidLaporan()* |
+| *C06* | *AdminEntity* | *idAdmin, namaAdmin, nipAdmin* | *getIdAdmin(), getNamaAdmin(), getNipAdmin(), setIdAdmin(), setNamaAdmin(), setNipAdmin()* |
+| *C07* | *PetugasEntity* | *idPetugas, namaPetugas, nipPetugas* | *getIdPetugas(), getNamaPetugas(), getNipPetugas(), setIdPetugas(), setNamaPetugas(), setNipPetugas()* |
+| *C08* | *HalamanFormulirTanggapan* | *statusLaporan, statusTuntasLaporan* | *getStatusLaporan(), getStatusTuntasLaporan(), setStatusLaporan(), setStatusTuntasLaporan(), showFormulirTanggapan()* |
+| *C09* | *TanggapanController* | *newStatusLaporan* | *addPoinPelapor(), setStatusLaporan(), sendTanggapan()* |
+| *C10* | *LikeController* | *-* | *isLaporanLiked(), likeLaporan(), unlikeLaporan()* |
+| *C11* | *HalamanLeaderboard* | *top20Pelapor* | *show20Pelapor()* |
+| *C12* | *DatabaseLaporanEntity* | *daftarLaporan* | *getLaporanData(), setLaporanData(), insertNewLaporan()* |
+| *C13* | *DatabasePelaporEntity* | *daftarPelapor* | *updateDataPelapor(), getDataPelapor(), insertPelapor()* |
+| *C14* | *LeaderboardController* | *-* | *getPelaporPoin(), getPelaporRank(), sortPelaporByPoin()* |
+| *C15* | *HalamanAkun* | *pelaporData* | *showPelaporData()* |
+| *C16* | *HalamanNotifikasi* | *listNotifikasi* | *showListNotifikasi()* |
+| *C17* | *NotifikasiController* | *statusNotifikasi* | *createNotifikasi(), sendNotifikasi()* |
 
 ---
 
@@ -256,9 +449,23 @@ Tabel 5.1. Daftar Kelas Perancangan dan Kelas Analisis Terkait
 
 | No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
 | :--- | :--- | :--- |
-| 1 | *[Nama kelas perancangan]* | *[Nama kelas analisis pada SKPL atau -]* |
-| 2 | *[Nama kelas perancangan]* | *[Nama kelas analisis pada SKPL atau -]* |
-| ... | *...* | *...* |
+| 1 | *PelaporEntity* | ** |
+| 2 | *LaporanEntity* | ** |
+| 3 | *HalamanLaporan* | ** |
+| 4 | *HalamanFormulirLaporan* | ** |
+| 5 | *LaporanController* | ** |
+| 6 | *AdminEntity* | ** | 
+| 7 | *PetugasEntity* | ** |
+| 8 | *HalamanFormulirTanggapan* | ** |
+| 9 | *TanggapanController* | ** |
+| 10 | *LikeController* | *-* | ** |
+| 11 | *HalamanLeaderboard* | ** |
+| 12 | *DatabaseLaporanEntity* | ** |
+| 13 | *DatabasePelaporEntity* | ** |
+| 14 | *LeaderboardController* | ** |
+| 15 | *HalamanAkun* | ** |
+| 16 | *HalamanNotifikasi* | ** |
+| 17 | *NotifikasiController* | ** |
 
 Untuk **setiap kelas**, identifikasi operasi berdasarkan tanggung jawab kelas beserta *visibility*-nya, serta atribut beserta *visibility* dan tipenya. Buat subbab tersendiri untuk setiap kelas.
 
