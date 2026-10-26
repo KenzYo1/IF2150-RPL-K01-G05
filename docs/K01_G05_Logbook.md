@@ -29,6 +29,7 @@
 * [Milestone 5](#milestone-5)
 * [Milestone 6](#milestone-6)
 * [Milestone 7](#milestone-7)
+* [Milestone 8](#milestone-8)
 ---
 
 ### Milestone 1
@@ -148,5 +149,11 @@
 | *21-10-2026* | *Kenzo Yo* | *Membuat diagram 3.3 dan 3.4* | *2* | *Done* | *-* |
 | *21-10-2026* | *Kenzo Yo* | *Merevisi hal yang kurang sesuai di DPPL* | *0.5* | *Done* | *-* |
 | *21-10-2026* | *Nadia Layla S.* | *Merapikan DPPL* | *0.5* | *Done* | 
+
+### Milestone 8
+**Periode:** 21 Oktober 2026 - 28 Oktober 2026
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *26-10-2026* | *Kenzo Yo* | *Inisialisasi dokumen DPPL2* | *1* | *Done* | *-* | 
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
