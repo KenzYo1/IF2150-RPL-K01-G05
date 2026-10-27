@@ -449,7 +449,7 @@ Tabel 5.1. Daftar Kelas Perancangan dan Kelas Analisis Terkait
 
 | No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
 | :--- | :--- | :--- |
-| 1 | *PelaporEntity* | ** |
+| 1 | *PelaporEntity* | *PelaporEntity* |
 | 2 | *LaporanEntity* | ** |
 | 3 | *HalamanLaporan* | ** |
 | 4 | *HalamanFormulirLaporan* | ** |
@@ -469,24 +469,29 @@ Tabel 5.1. Daftar Kelas Perancangan dan Kelas Analisis Terkait
 
 Untuk **setiap kelas**, identifikasi operasi berdasarkan tanggung jawab kelas beserta *visibility*-nya, serta atribut beserta *visibility* dan tipenya. Buat subbab tersendiri untuk setiap kelas.
 
-## 5.1 Kelas [Nama Kelas 1]
+## 5.1 Kelas PelaporEntity
 
-**Nama Kelas:** *[Nama kelas]*  
-**ID Kelas:** *[ID kelas]*
+**Nama Kelas:** *PelaporEntity*  
+**ID Kelas:** *C01*
 
-Tabel 5.1.1. Operasi Kelas [Nama Kelas 1]
+| *C01* | *PelaporEntity* | *idPelapor, namaPelapor, nimnipPelapor, poinPelapor* | *getIdPelapor(), getNamaPelapor(), getNimNipPelapor(), getPoinPelapor(), setIdPelapor(), setNamaPelapor(), setNimNipPelapor(), setPoinPelapor()* | 
+### jangan lupa dihapus lol
+
+Tabel 5.1.1. Operasi Kelas PelaporEntity
 
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
 | *[Signature operasi, termasuk parameter dan tipe kembalian]* | *[Visibility]* | *[Tanggung jawab operasi]* |
 | *...* | *...* | *...* |
 
-Tabel 5.1.2. Atribut Kelas [Nama Kelas 1]
+Tabel 5.1.2. Atribut Kelas PelaporEntity
 
 | Nama Atribut | Visibility (private, public) | Tipe |
 | :--- | :--- | :--- |
-| *[Nama atribut]* | *[Visibility]* | *[Tipe sesuai bahasa pemrograman yang digunakan]* |
-| *...* | *...* | *...* |
+| *idPelapor* | *private* | *number* |
+| *namaPelapor* | *private* | *string* |
+| *nimnipPelapor* | *private* | *string* |
+| *poinPelapor* | *private* | *number* |
 
 ### 5.1.1 Algoritma/Query
 
@@ -514,9 +519,127 @@ Tabel 5.1.1. Query Operasi [Nama Operasi]
 
 *[Ulangi pola 5.1.1 untuk operasi penting berikutnya pada kelas yang sama, jika ada.]*
 
-## 5.2 Kelas [Nama Kelas Berikutnya]
 
-*[Ulangi pola 5.1: nama dan ID kelas, tabel operasi, tabel atribut, serta subbab algoritma/query untuk operasi penting jika diperlukan.]*
+## 5.2 Kelas PelaporEntity
+
+**Nama Kelas:** *LaporanEntity*  
+**ID Kelas:** *C02*
+
+| *C02* | *LaporanEntity* | *idLaporan, descLaporan, fotoLaporan, likeLaporan, statusLaporan* | *getIdLaporan(), getDescLaporan(), getFotoLaporan(), getLikeLaporan(), getStatusLaporan(), setIdLaporan(), setDescLaporan(), setFotoLaporan(), setLikeLaporan(), setStatusLaporan()* |
+### jangan lupa dihapus lol
+
+Tabel 5.2.1. Operasi Kelas PelaporEntity
+
+| Nama Operasi | Visibility (private, public) | Keterangan |
+| :--- | :--- | :--- |
+| *[Signature operasi, termasuk parameter dan tipe kembalian]* | *[Visibility]* | *[Tanggung jawab operasi]* |
+| *...* | *...* | *...* |
+
+Tabel 5.2.2. Atribut Kelas LaporanEntity
+
+| Nama Atribut | Visibility (private, public) | Tipe |
+| :--- | :--- | :--- |
+| *idLaporan* | *private* | *number* |
+| *descLaporan* | *private* | *string* |
+| *fotoLaporan* | *private* | *string* |
+| *likeLaporan* | *private* | *number* |
+| *statusLaporan* | *private* | *string* |
+
+### 5.2.1 Algoritma/Query
+
+Bagian ini diisi untuk kerangka algoritma proses yang dianggap cukup penting. Algoritma dapat dituliskan sebagai *pseudocode*. Implementasi *skeleton code* juga dapat digunakan untuk kelas yang sudah terdefinisi pada bahasa pemrograman tertentu.
+
+**Nama Kelas:** *[Nama kelas]*  
+**Nama Operasi:** *[Signature operasi]*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+[Tuliskan pseudocode algoritma operasi di sini.]
+```
+
+Jika operasi mengacu pada query tertentu, lengkapi tabel berikut. 
+
+Tabel 5.2.1. Query Operasi [Nama Operasi]
+
+| No Query | Query | Keterangan |
+| :--- | :--- | :--- |
+| *[Q-001]* | *[Tuliskan query]* | *[Fungsi query]* |
+| *...* | *...* | *...* |
+
+
+### 5.2.2 Algoritma/Query
+
+*[Ulangi pola 5.1.1 untuk operasi penting berikutnya pada kelas yang sama, jika ada.]*
+
+
+## 5.3 Kelas PelaporEntity
+
+**Nama Kelas:** *HalamanLaporan*  
+**ID Kelas:** *C03*
+
+| *C03* | *HalamanLaporan* | *daftarLaporan* | *createLaporan(), sortLaporan(), showLaporan(), TekanLike()* |
+### jangan lupa dihapus lol
+
+Tabel 5.2.1. Operasi Kelas PelaporEntity
+
+| Nama Operasi | Visibility (private, public) | Keterangan |
+| :--- | :--- | :--- |
+| *showLaporan* | *public* | *Menampilkan daftar laporan ke halaman berdasarkan data daftarLaporan* |
+
+Tabel 5.2.2. Atribut Kelas LaporanEntity
+
+| Nama Atribut | Visibility (private, public) | Tipe |
+| :--- | :--- | :--- |
+| *daftarLaporan* | *private* | *<List>Laporan* |
+
+
+### 5.2.1 Algoritma/Query
+
+Bagian ini diisi untuk kerangka algoritma proses yang dianggap cukup penting. Algoritma dapat dituliskan sebagai *pseudocode*. Implementasi *skeleton code* juga dapat digunakan untuk kelas yang sudah terdefinisi pada bahasa pemrograman tertentu.
+
+**Nama Kelas:** *PelaporEntity*  
+**Nama Operasi:** *showLaporan()*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA MENAMPILKAN DAFTAR LAPORAN }
+{ KAMUS }
+{ ALGORITMA }
+procedure showLaporan():
+    if isEmpty(daftarLaporan) then
+        return <div>"Belum ada laporan!"<div>
+    {kondisi tidak kosong}
+    return(
+        <div>
+            for laporan in showLaporan
+            <div class="kartu-laporan" key={laporan.idLaporan}>
+                <h3>{laporan.desc}</h3>
+                <p>{laporan.desc}</p>
+                <StatusLaporan status={laporan.statusLaporan}/>
+                <LikeLaporan like={laporan.likeLaporan}/>
+                <!(laporan.fotoLaporan == 0) && (
+                    <Image url={laporan.fotoLaporan}/>
+                )>
+            <div>     
+        <div>
+    )
+```
+
+Jika operasi mengacu pada query tertentu, lengkapi tabel berikut. 
+
+Tabel 5.2.1. Query Operasi [Nama Operasi]
+
+| No Query | Query | Keterangan |
+| :--- | :--- | :--- |
+| *[Q-001]* | *[Tuliskan query]* | *[Fungsi query]* |
+| *...* | *...* | *...* |
+
+
+### 5.2.2 Algoritma/Query
+
+*[Ulangi pola 5.1.1 untuk operasi penting berikutnya pada kelas yang sama, jika ada.]*
+
+
 
 <br>
 
