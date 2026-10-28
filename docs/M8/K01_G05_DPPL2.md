@@ -786,7 +786,7 @@ Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tu
 **Nama Layar:** *Halaman Laporan Pelapor*
 
 <p align="center">
-<img alt="Interface Halaman Laporan Pelapor" src="./assets/interface/halamanlaporanpelapor.png" width="50%">
+<img alt="Interface Halaman Laporan Pelapor" src="./assets/interface/halamanlaporanpelapor-1.png" width="50%">
 </p>
 <p align="center">
 <i>Gambar 6.2. Rancangan Antarmuka I-02 - Halaman Laporan Pelapor</i>
@@ -809,7 +809,7 @@ Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tu
 **Nama Layar:** *Halaman Laporan Petugas*
 
 <p align="center">
-<img alt="Interface Halaman Laporan Petugas" src="./assets/interface/halamanlaporanpetugas.png" width="50%">
+<img alt="Interface Halaman Laporan Petugas" src="./assets/interface/halamanlaporanpetugas-1.png" width="50%">
 </p>
 <p align="center">
 <i>Gambar 6.3. Rancangan Antarmuka I-03 - Halaman Laporan Petugas</i>
