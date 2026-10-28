@@ -80,6 +80,7 @@ Tabel 1.3. Definisi Istilah dan Singkatan
 | *DBMS* | *Database Management System, yaitu sistem yang digunakan untuk mengelola basis data.* |
 | *DPPL* | *Deskripsi Perancangan Perangkat Lunak* |
 | *APL* | *Arsitektur Perangkat Lunak* |
+| *APATIS* | *Aplikasi Pelaporan Air dan Sanitasi* |
 
 
 ## 1.4 Aturan Penomoran
@@ -93,6 +94,10 @@ Tabel 1.4. Aturan Penomoran
 | *Aktor* | *AXX* | *Menunjukkan aktor-aktor yang akan menggunakan perangkat lunak.* |
 | *Use Case* | *UCXX* | *Menunjukkan kegunaan perangkat lunak dari perspektif pengguna.* |
 | *Kelas* | *CXX* | *Menunjukkan kelas-kelas pada perangkat lunak.* |
+| *Algoritma* | *ALGO-XX* | *Menunjukkan algoritma-algoritma signature yang digunakan setiap kelas* |
+| *Query* | *Q-XX* | *Menunjukkan query yang digunakan oleh suatu kelas* |
+| *Interface* | *I-XX* | *Menunjukkan interface atau antarmuka pada APATIS* |
+| *Object* | *O-XX* | *Elemen atau objek setiap interface pada APATIS* |
 
 ## 1.5 Referensi
 Kelompok 5 IF2150 K01, *Spesifikasi Kebutuhan Perangkat Lunak APATIS*, Institut Teknologi Bandung, 2026.
