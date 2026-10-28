@@ -440,8 +440,8 @@ Tabel 4.1. Daftar Kelas Perancangan Keseluruhan
 | *C15* | *HalamanAkun* | *pelaporData* | *showPelaporData()* |
 | *C16* | *HalamanNotifikasi* | *listNotifikasi* | *showListNotifikasi()* |
 | *C17* | *NotifikasiController* | *statusNotifikasi* | *createNotifikasi(), sendNotifikasi()* |
-| *C18* | *HalamanLogin* | *-* | *loginByITBEmail(), loginByNormalEmail()* |
-| *C19* | *LoginController* | *-* | *validateITBLogin(), validateNormalLogin()* |
+| *C18* | *HalamanLogin* | *-* | *loginByITBEmail(), loginByNormalEmail(), showLoginGagal(), showLoginBerhasil()* |
+| *C19* | *LoginController* | *-* | *validateITBLogin(), validateNormalLogin(), getRole(), getEmailFromPage()* |
 
 ---
 
@@ -518,11 +518,6 @@ Tabel 5.1.1. Query Operasi [Nama Operasi]
 | :--- | :--- | :--- |
 | *[Q-001]* | *[Tuliskan query]* | *[Fungsi query]* |
 | *...* | *...* | *...* |
-
-
-### 5.1.2 Algoritma/Query
-
-*[Ulangi pola 5.1.1 untuk operasi penting berikutnya pada kelas yang sama, jika ada.]*
 
 
 ## 5.2 Kelas PelaporEntity
@@ -617,9 +612,7 @@ procedure showLaporan():
                 <p>{laporan.desc}</p>
                 <StatusLaporan status={laporan.statusLaporan}/>
                 <LikeLaporan like={laporan.likeLaporan}/>
-                <!(laporan.fotoLaporan == 0) && (
-                    <Image url={laporan.fotoLaporan}/>
-                )>
+                <Image url={laporan.fotoLaporan}/>
             <div>     
         <div>
     )
@@ -722,9 +715,9 @@ Tabel 5.5.2. Atribut Kelas LaporanController
 { ALGORITMA }
 function isLaporanValid(desc, foto) -> Boolean:
     if (countChar(desc) < maxDescChar and size(foto) < maxFotoSize) 
-        -> true
+        return true
     else 
-        -> false
+        return false
 ```
 
 
@@ -754,6 +747,138 @@ Tabel 5.6 Atribut Kelas AdminEntity
 ### 5.6.1 Algoritma/Query
 *Kelas tidak memiliki algoritma atau query yang bersifat signature karena hanya berupa kumpulan data, setter, dan getter.*
 
+
+
+
+## 5.18 Kelas HalamanLogin
+
+**Nama Kelas:** *HalamanLogin*  
+**ID Kelas:** *C18*
+
+| *C18* | *HalamanLogin* | *email* | *loginByITBEmail(), loginByNormalEmail(), showLoginGagal(), showLoginBerhasil()* | 
+### jangan lupa dihapus lol
+
+Tabel 5.18.1. Operasi Kelas HalamanLogin
+
+| Nama Operasi | Visibility (private, public) | Keterangan |
+| :--- | :--- | :--- |
+| *loginByITBEmail()* | *public* | *Memproses pengguna untuk login melalui email ITB* |
+| *loginByNormalEmail()* | *public* | *Memproses pengguna untuk login menggunakan email pribadinya* |
+
+Tabel 5.18.2. Atribut Kelas HalamanLogin
+
+| Nama Atribut | Visibility (private, public) | Tipe |
+| :--- | :--- | :--- |
+| *email* | *private* | *string* |
+
+### 5.18.1 Algoritma
+
+**Nama Kelas:** *HalamanLogin*  
+**Nama Operasi:** *loginByITBEmail()*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA LOGIN EMAIL ITB }
+{ KAMUS }
+    berhasil: Boolean
+    role: string
+    email: string
+{ ALGORITMA }
+function loginByITBEmail():
+    email <- LoginController.getEmailFromPage()
+    berhasil <- LoginController.validateITBLogin() {note: memanggil service autentikasi eksternal}
+    if berhasil then:
+        role <- getRole(email)
+        showLoginBerhasil()
+    else:
+        showLoginGagal()
+```
+
+### 5.18.2 Algoritma
+
+**Nama Kelas:** *HalamanLogin*  
+**Nama Operasi:** *loginByNormalEmail()*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA LOGIN EMAIL ITB }
+{ KAMUS }
+    berhasil: Boolean
+    role: string
+    email: string
+{ ALGORITMA }
+function loginByITBEmail():
+    email <- LoginController.getEmailFromPage()
+    berhasil <- LoginController.validateNormalLogin() {note: memanggil service autentikasi eksternal}
+    if berhasil then:
+        role <- getRole(email)
+        showLoginBerhasil()
+    else:
+        showLoginGagal()
+```
+
+
+## 5.19 Kelas LoginController
+
+**Nama Kelas:** *LoginController*  
+**ID Kelas:** *C19*
+
+
+| *C19* | *LoginController* | *-* | *validateITBLogin(), validateNormalLogin(), getRole(), getEmailFromPage()* |
+### jangan lupa dihapus lol
+
+Tabel 5.18.1. Operasi Kelas HalamanLogin
+
+| Nama Operasi | Visibility (private, public) | Keterangan |
+| :--- | :--- | :--- |
+| *validateITBLogin(): Boolean* | *public* | *Validasi pengguna untuk login melalui email ITB* |
+| *validateNormalLogin(): Boolean* | *public* | *Validasi pengguna untuk login menggunakan email pribadinya* |
+
+Tabel 5.19.2. Atribut Kelas HalamanLogin
+
+| Nama Atribut | Visibility (private, public) | Tipe |
+| :--- | :--- | :--- |
+| *-* | *-* | *-* |
+
+### 5.19.1 Algoritma
+
+**Nama Kelas:** *LoginController*  
+**Nama Operasi:** *validateITBLogin(): Boolean*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA VALIDASI LOGIN EMAIL ITB }
+{ KAMUS }
+    email: string
+    valid: boolean
+{ ALGORITMA }
+function validateITBLogin():
+    email <- LoginController.getEmailFromPage()
+    valid <- LayananSSO.verifikasiEmail(email) {layanan eksternal}
+    return valid
+```
+
+### 5.19.2 Algoritma
+
+**Nama Kelas:** *LoginController*  
+**Nama Operasi:** *validateNormalLogin(): Boolean*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA VALIDASI LOGIN EMAIL PRIBADI }
+{ KAMUS }
+    email: string
+    respons: ResponsSupabase
+{ ALGORITMA }
+function validateITBLogin():
+    email <- LoginController.getEmailFromPage()
+    respons <- LayananSupabase.kirimOTP(email) {layanan eksternal}
+    if respons == TIMEOUT or respons == ERROR:
+        return false
+    return true
+```
+
+
 <br>
 
 ---
@@ -778,9 +903,17 @@ Tabel 6.1. Spesifikasi Objek Antarmuka I-01
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
-| *[ID objek]* | *[Jenis objek, misalnya Button, RTF Box, dll]* | *[String yang tampil pada layar]* | *[Reaksi sistem, layar tujuan, tautan, atau ID algoritma yang dijalankan]* |
-| *[ID objek]* | *[Jenis objek]* | *[Konten yang ditampilkan]* | *[Reaksi sistem atau nama file terkait beserta deskripsi ringkasnya]* |
-| *...* | *...* | *...* | *...* |
+| *O-01* | *Rich Label* | *APATIS* | *Text yang menunjukkan nama web app.* |
+| *O-02* | *Container* | *Objek lain untuk login* | *Mengandung objek-objek di halaman login seperti label, text field, dan button.* |
+| *O-03* | *Rich Label* | *Welcome!* | *Text welcome login.* |
+| *O-04* | *Button* | *Sign in with ITB Account* | *Button untuk SSO login dengan ITB Account.* |
+| *O-05* | *Rich Label* | *or* | *Text mempisahkan cara login.* |
+| *O-06* | *Rich Label* | *Email* | *Text label untuk input email.* |
+| *O-07* | *Rich Text Input Field* | *Input email here* | *Text field untuk mengisi email akun pengguna.* |
+| *O-08* | *Rich Label* | *Password* | *Text label untuk input password.* |
+| *O-09* | *Rich Text Input Field* | *Input password here* | *Text field untuk mengisi password akun pengguna.* |
+| *O-10* | *Rich Text Link* | *Forget Password* | *Link untuk recover password akun jika pengguna lupa.* |
+| *O-11* | *Button* | *Sign In* | *Button untuk sign in setelah pengguna mengisi email dan password.* |
 
 
 ## 6.2 Rancangan Antarmuka I-02
@@ -801,9 +934,23 @@ Tabel 6.2. Spesifikasi Objek Antarmuka I-02
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
-| *[ID objek]* | *[Jenis objek, misalnya Button, RTF Box, dll]* | *[String yang tampil pada layar]* | *[Reaksi sistem, layar tujuan, tautan, atau ID algoritma yang dijalankan]* |
-| *[ID objek]* | *[Jenis objek]* | *[Konten yang ditampilkan]* | *[Reaksi sistem atau nama file terkait beserta deskripsi ringkasnya]* |
-| *...* | *...* | *...* | *...* |
+| *O-12* | *Rich Label* | *APATIS* | *Text yang menunjukkan nama web app.* |
+| *O-13* | *Drawer Menu* | *Tautan menuju halaman akun, halaman formulir laporan, halaman formulir tanggapan, dan halaman leaderboard* | *Membuka side bar yang berisi tautan ke halaman-halaman lain.* |
+| *O-14* | *Button* | *Icon profil dan rich label Profile* | *Button untuk menuju ke halaman akun.* |
+| *O-15* | *Button* | *Icon report dan rich label Report* | *Button untuk menuju ke halaman formulir laporan.* |
+| *O-16* | *Button* | *Icon leaderboard dan rich label Leaderboard* | *Button untuk menuju ke halaman leaderboard.* |
+| *O-17* | *Icon* | *Daftar notifikasi* | *Untuk membuka halaman notfikasi.* |
+| *O-18* | *Avatar Component* | *Profil akun* | *Untuk membuka halaman akun.* |
+| *O-19* | *Container* | *Header web* | *Mengandung objek-objek header web, seperti nama web, side bar, bel notfikasi, profil akun.* |
+| *O-20* | *Button* | *Make a Report!* | *Button untuk menuju ke halaman formulir laporan.* |
+| *O-21* | *Container* | *Laporan* | *Mengandung objek-objek untuk sebuah laporan seperti foto profil, nama, title, foto pendukung, deskripsi, dan jumlah like.* |
+| *O-22* | *Avatar Component* | *Foto akun yang membuat laporan* | *Memperliatkan foto profil akun yang membuat laporan.* |
+| *O-23* | *Rich Label* | *Nama akun yang membuat laporan* | *Text label nama akun yang membuat laporan.* |
+| *O-24* | *Rich Label* | *Title laporan* | *Text label untuk judul laporan.* |
+| *O-25* | *Image* | *Foto pendukung laporan* | *Foto yang mendukung dalam laporan.* |
+| *O-26* | *Icon* | *Like icon* | *Icon jempol yang berarti like di laporan.* |
+| *O-27* | *Rich Label* | *Jumlah like laporan* | *Text yang menunjukkan jumlah like di laporan.* |
+| *O-28* | *Rich Label* | *Deskripsi laporan* | *Text deskripsi pada laporan.* |
 
 
 ## 6.3 Rancangan Antarmuka I-03
@@ -824,9 +971,15 @@ Tabel 6.3. Spesifikasi Objek Antarmuka I-03
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
-| *[ID objek]* | *[Jenis objek, misalnya Button, RTF Box, dll]* | *[String yang tampil pada layar]* | *[Reaksi sistem, layar tujuan, tautan, atau ID algoritma yang dijalankan]* |
-| *[ID objek]* | *[Jenis objek]* | *[Konten yang ditampilkan]* | *[Reaksi sistem atau nama file terkait beserta deskripsi ringkasnya]* |
-| *...* | *...* | *...* | *...* |
+| *O-29* | *Button* | *Icon tanggapan dan label Response* | *Button untuk menuju ke halaman laporan petugas. Hanya dapat dilihat oleh petugas atau admin.* |
+| *O-30* | *Rich Label* | *Status laporan* | *Label untuk menunjukkan laporan dengan status menunggu (unverified), sedang diperbaiki (ongoing), atau selesai (completed report).* |
+| *O-31* | *Dropdown* | *List laporan dengan status tertentu* | *Expand list laporan dengan status tertentu.* |
+| *O-32* | *Separator* | *Garis pembatas* | *Pembatas antara tipe laporan dan list laporan tersebut.* |
+| *O-33* | *Container* | *Tanggapan* | *Mengandung title laporan dan button tergantung status laporan.* |
+| *O-34* | *Rich Label* | *Title laporan, dengan statusnya jika termasuk dalam status selesai* | *Menunjukkan title laporan.* |
+| *O-35* | *Button* | *Verify* | *Button untuk menuju ke halaman formulir tanggapan untuk memberi status pertama kali.* |
+| *O-36* | *Button* | *Detail* | *Button untuk menuju ke halaman formulir tanggapan untuk melihat laporan dengan status sedang diperbaiki (ongoing).* |
+| *O-37* | *Button* | *Edit* | *Button untuk menuju ke halaman formulir tanggapan untuk laporan dengan status selesai.* |
 
 
 ## 6.4 Rancangan Antarmuka I-04
@@ -847,9 +1000,15 @@ Tabel 6.4. Spesifikasi Objek Antarmuka I-04
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
-| *[ID objek]* | *[Jenis objek, misalnya Button, RTF Box, dll]* | *[String yang tampil pada layar]* | *[Reaksi sistem, layar tujuan, tautan, atau ID algoritma yang dijalankan]* |
-| *[ID objek]* | *[Jenis objek]* | *[Konten yang ditampilkan]* | *[Reaksi sistem atau nama file terkait beserta deskripsi ringkasnya]* |
-| *...* | *...* | *...* | *...* |
+| *O-38* | *Container* | *Objek lain untuk info akun* | *Mengandung info nama, email, status account, total poin, dan button log out.* |
+| *O-39* | *Avatar Component* | *Foto profil akun* | *Menunjukkan foto dari profil akun.* |
+| *O-40* | *Rich Label* | *Nama* | *Text nama panjang akun sekarang.* |
+| *O-41* | *Rich Label* | *Email akun* | *Text email akun sekarang.* |
+| *O-42* | *Rich Label* | *Account Status* | *Text Account Status.* |
+| *O-43* | *Rich Label* | *Tipe akun* | *Menunjukkan tipe akun seperti mahasiswa, petugas, atau admin.* |
+| *O-44* | *Rich Label* | *Total Points* | *Text Total Points* |
+| *O-45* | *Rich Label* | *Total poin akun* | *Menunjukkan total poin yang dipunyai sekarang oleh akun.* |
+| *O-46* | *Button* | *Icon log out dan rich label Log Out* | *Button untuk log out dari akun dan kembali ke halaman login.* |
 
 
 ## 6.5 Rancangan Antarmuka I-05
@@ -868,17 +1027,12 @@ Tabel 6.5. Spesifikasi Objek Antarmuka I-05
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
-| *O-001* | *Rich Label* | *APATIS* | *Text yang menunjukkan nama web app.* |
-| *O-002* | *Drawer Menu* | *Tautan menuju halaman akun, halaman formulir laporan, dan halaman leaderboard. Khusus untuk petugas, terdapat tautan menuju formulir tanggapan* | *Membuka side bar yang berisi tautan ke halaman-halaman lain.* |
-| *O-003* | *Icon* | *Daftar notifikasi* | *Untuk membuka halaman notfikasi.* |
-| *O-004* | *Icon* | *Profil akun* | *Untuk membuka halaman akun.* |
-| *O-005* | *Container* | *Header web* | *Mengandung objek-objek header web, seperti nama web, side bar, bel notfikasi, profil akun.* |
-| *O-006* | *Rich Label* | *Notifications* | *Text yang menunjukkan nama halaman.* |
-| *O-007* | *Rich Label* | *Judul notifikasi* | *Text yang menunjukkan judul notfikasi.* |
-| *O-013* | *Container* | *Seluruh field untuk formulir laporan* | *Mengkelompokkan objek-objek yang dibutuhkan dalam formulir laporan.* |
-| *O-008* | *Rich Label* | *Deskripsi notifikasi* | *Text yang menunjukkan deskripsi notifikasi.* |
-| *O-009* | *Container* | *Notifikasi* | *Mengandung judul dan deskripsi notfikasi.* |
-| *O-010* | *Separator* | *Garis pembatas* | *Pembatas antara judul halaman dan daftar notifikasi.* |
+| *O-48* | *Rich Label* | *Notifications* | *Text yang menunjukkan nama halaman.* |
+| *O-49* | *Rich Label* | *Judul notifikasi* | *Text yang menunjukkan judul notfikasi.* |
+| *O-50* | *Container* | *Seluruh field untuk formulir laporan* | *Mengkelompokkan objek-objek yang dibutuhkan dalam formulir laporan.* |
+| *O-51* | *Rich Label* | *Deskripsi notifikasi* | *Text yang menunjukkan deskripsi notifikasi.* |
+| *O-52* | *Container* | *Notifikasi* | *Mengandung judul dan deskripsi notfikasi.* |
+| *O-53* | *Separator* | *Garis pembatas* | *Pembatas antara judul halaman dan daftar notifikasi.* |
 
 
 ## 6.6 Rancangan Antarmuka I-06
@@ -897,24 +1051,19 @@ Tabel 6.6. Spesifikasi Objek Antarmuka I-06
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
-| *O-001* | *Rich Label* | *APATIS* | *Text yang menunjukkan nama web app.* |
-| *O-002* | *Drawer Menu* | *Tautan menuju halaman akun, halaman formulir laporan, dan halaman leaderboard* | *Membuka side bar yang berisi tautan ke halaman-halaman lain.* |
-| *O-003* | *Icon* | *Daftar notifikasi* | *Untuk membuka halaman notfikasi.* |
-| *O-004* | *Icon* | *Profil akun* | *Untuk membuka halaman akun.* |
-| *O-005* | *Container* | *Header web* | *Mengandung objek-objek header web, seperti nama web, side bar, bel notfikasi, profil akun.* |
-| *O-006* | *Rich Label* | *Report Form* | *Text yang menunjukkan nama halaman.* |
-| *O-007* | *Rich Label* | *Title'*'* | *Text yang menunjukkan tempat input judul laporan.* |
-| *O-008* | *Rich Text Input Field* | *Judul laporan* | *Tempat input judul laporan.* |
-| *O-009* | *Rich Label* | *Description'*'* | *Text yang menunjukkan tempat input deskripsi masalah.* |
-| *O-010* | *Rich Text Input Field* | *Deskripsi masalah* | *Tempat pengisian deskripsi masalah.* |
-| *O-011* | *Rich Label* | *Location'*'* | *Text yang menunjukkan tempat pemilihan lokasi masalah.* |
-| *O-012* | *Drop down* | *Lokasi-lokasi permasalah air dan sanitasi di ITB* | *Memilih lokasi permasalahan terjadi.* |
-| *O-012* | *Rich Label* | *Additional Files'*'* | *Text yang menunjukkan tempat pengunggahan foto pendukung.* |
-| *O-013* | *File input* | *Unggahan foto pendukung* | *Tempat pengunggahan foto pendukung.* |
-| *O-014* | *Separator* | *Garis pembatas tempat unggahan* | *Membedakan tempat untuk menggungah foto pendukung.* |
-| *O-015* | *Button* | *Submit Report* | *Mengirim laporan yang sudah terisi.* |
-| *O-016* | *Container* | *Seluruh field untuk formulir laporan* | *Mengkelompokkan objek-objek yang dibutuhkan dalam formulir laporan.* |
-| *O-018* | *Icon* | *Close* | *Menutup formulir laporan.* |
+| *O-54* | *Rich Label* | *Report Form* | *Text yang menunjukkan nama halaman.* |
+| *O-55* | *Rich Label* | *Title'*'* | *Text yang menunjukkan tempat input judul laporan.* |
+| *O-56* | *Rich Text Input Field* | *Judul laporan* | *Tempat input judul laporan.* |
+| *O-57* | *Rich Label* | *Description'*'* | *Text yang menunjukkan tempat input deskripsi masalah.* |
+| *O-58* | *Rich Text Input Field* | *Deskripsi masalah* | *Tempat pengisian deskripsi masalah.* |
+| *O-59* | *Rich Label* | *Location'*'* | *Text yang menunjukkan tempat pemilihan lokasi masalah.* |
+| *O-60* | *Drop down* | *Lokasi-lokasi permasalah air dan sanitasi di ITB* | *Memilih lokasi permasalahan terjadi.* |
+| *O-61* | *Rich Label* | *Additional Files'*'* | *Text yang menunjukkan tempat pengunggahan foto pendukung.* |
+| *O-62* | *File input* | *Unggahan foto pendukung* | *Tempat pengunggahan foto pendukung.* |
+| *O-63* | *Separator* | *Garis pembatas tempat unggahan* | *Membedakan tempat untuk menggungah foto pendukung.* |
+| *O-64* | *Button* | *Submit Report* | *Mengirim laporan yang sudah terisi.* |
+| *O-65* | *Container* | *Seluruh field untuk formulir laporan* | *Mengkelompokkan objek-objek yang dibutuhkan dalam formulir laporan.* |
+| *O-66* | *Icon* | *Close* | *Menutup formulir laporan.* |
 
 
 ## 6.7 Rancangan Antarmuka I-07
@@ -933,26 +1082,21 @@ Tabel 6.7. Spesifikasi Objek Antarmuka I-07
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
-| *O-001* | *Rich Label* | *APATIS* | *Text yang menunjukkan nama web app.* |
-| *O-002* | *Drawer Menu* | *Tautan menuju halaman akun, halaman formulir laporan, dan halaman leaderboard* | *Membuka side bar yang berisi tautan ke halaman-halaman lain.* |
-| *O-003* | *Icon* | *Daftar notifikasi* | *Untuk membuka halaman notfikasi.* |
-| *O-004* | *Icon* | *Profil akun* | *Untuk membuka halaman akun.* |
-| *O-005* | *Container* | *Header web* | *Mengandung objek-objek header web, seperti nama web, side bar, bel notfikasi, profil akun.* |
-| *O-006* | *Rich Label* | *Response Form* | *Text yang menunjukkan nama halaman.* |
-| *O-007* | *Rich Label* | *Title* | *Text yang menunjukkan tempat judul laporan.* |
-| *O-008* | *Rich Label* | *Judul laporan* | *Text yang menunjukkan judul laporan.* |
-| *O-009* | *Rich Label* | *Description* | *Text yang menunjukkan tempat deskripsi masalah.* |
-| *O-010* | *Rich Label* | *Deskripsi masalah* | *Text yang menunjukkan deskripsi masalah laporan.* |
-| *O-011* | *Rich Label* | *Location* | *Text yang menunjukkan tempat lokasi masalah.* |
-| *O-012* | *Rich Label* | *Lokasi masalah yang dilaporkan* | *Text yang menunjukkan lokasi permasalahan terjadi.* |
-| *O-013* | *Rich Label* | *Additional Files'*'* | *Text yang menunjukkan tempat pengunggahan foto pendukung.* |
-| *O-011* | *Image* | *Unggahan foto pendukung* | *Menunjukkan foto pendukung yang diunggah.* |
-| *O-012* | *Rich Label* | *Status'*'* | *Text yang menunjukkan tempat pemilihan status laporan.* |
-| *O-013* | *Drop down* | *Status laporan* | *Memilih status laporan.* |
-| *O-014* | *Rich Label* | *Comment* | *Text yang menunjukkan tempat input komentar.* |
-| *O-015* | *Rich Text Input Field* | *Komentar laporan* | *Tempat pengisian komentar laporan.* |
-| *O-017* | *Container* | *Seluruh field untuk formulir tanggapan* | *Mengkelompokkan objek-objek yang dibutuhkan dalam formulir tanggapan.* |
-| *O-018* | *Icon* | *Close* | *Menutup formulir tanggapan.* |
+| *O-67* | *Rich Label* | *Response Form* | *Text yang menunjukkan nama halaman.* |
+| *O-68* | *Rich Label* | *Title* | *Text yang menunjukkan tempat judul laporan.* |
+| *O-69* | *Rich Label* | *Judul laporan* | *Text yang menunjukkan judul laporan.* |
+| *O-70* | *Rich Label* | *Description* | *Text yang menunjukkan tempat deskripsi masalah.* |
+| *O-71* | *Rich Label* | *Deskripsi masalah* | *Text yang menunjukkan deskripsi masalah laporan.* |
+| *O-72* | *Rich Label* | *Location* | *Text yang menunjukkan tempat lokasi masalah.* |
+| *O-73* | *Rich Label* | *Lokasi masalah yang dilaporkan* | *Text yang menunjukkan lokasi permasalahan terjadi.* |
+| *O-74* | *Rich Label* | *Additional Files'*'* | *Text yang menunjukkan tempat pengunggahan foto pendukung.* |
+| *O-75* | *Image* | *Unggahan foto pendukung* | *Menunjukkan foto pendukung yang diunggah.* |
+| *O-76* | *Rich Label* | *Status'*'* | *Text yang menunjukkan tempat pemilihan status laporan.* |
+| *O-77* | *Drop down* | *Status laporan* | *Memilih status laporan.* |
+| *O-78* | *Rich Label* | *Comment* | *Text yang menunjukkan tempat input komentar.* |
+| *O-79* | *Rich Text Input Field* | *Komentar laporan* | *Tempat pengisian komentar laporan.* |
+| *O-80* | *Container* | *Seluruh field untuk formulir tanggapan* | *Mengkelompokkan objek-objek yang dibutuhkan dalam formulir tanggapan.* |
+| *O-81* | *Icon* | *Close* | *Menutup formulir tanggapan.* |
 
 
 ## 6.8 Rancangan Antarmuka I-08
@@ -971,12 +1115,12 @@ Tabel 6.8. Spesifikasi Objek Antarmuka I-08
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
-| *O-006* | *Rich Label* | *Leaderboard* | *Text yang menunjukkan nama halaman.* |
-| *O-007* | *Rich Label* | *Ranking* | *Text yang menunjukkan nomor ranking di leaderboard.* |
-| *O-008* | *Avatar* | *Profil akun* | *Gambar yang menunjukkan profil akun pengguna.* |
-| *O-009* | *Rich Label* | *Poin* | *Text yang menunjukkan jumlah poin yang dimiliki pengguna terkait.* |
-| *O-010* | *Container* | *Informasi ranking setiap pengguna* | *Mengelompokkan informasi yang dibutuhkan untuk ranking pengguna.* |
-| *O-011* | *Icon* | *Titik tiga kebawah* | *Icon yang menunjukkan bahwa ada kelanjutan ranking setelah ranking 20.* |
+| *O-82* | *Rich Label* | *Leaderboard* | *Text yang menunjukkan nama halaman.* |
+| *O-83* | *Rich Label* | *Ranking* | *Text yang menunjukkan nomor ranking di leaderboard.* |
+| *O-84* | *Avatar* | *Profil akun* | *Gambar yang menunjukkan profil akun pengguna.* |
+| *O-85* | *Rich Label* | *Poin* | *Text yang menunjukkan jumlah poin yang dimiliki pengguna terkait.* |
+| *O-86* | *Container* | *Informasi ranking setiap pengguna* | *Mengelompokkan informasi yang dibutuhkan untuk ranking pengguna.* |
+| *O-87* | *Icon* | *Titik tiga kebawah* | *Icon yang menunjukkan bahwa ada kelanjutan ranking setelah ranking 20.* |
 
 
 ## 6.9 Rancangan Antarmuka Keseluruhan
