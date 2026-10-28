@@ -698,12 +698,8 @@ Kelas tidak memiliki algoritma atau query yang bersifat *signature* karena hanya
 Tabel 5.7.1. Operasi Kelas PetugasEntity
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
-| *getIdPetugas(petugasObject): Integer* | *Public* | *Mengembalikan idPetugas bertipe Integer dari petugasObject* |
-| *getNamaPetugas(idPetugas): String* | *Public* | *Mengembalikan namaPetugas bertipe String dari IdPetugas bertipe Integer* |
-| *getNipPetugas(idPetugas): Integer* | *Public* | *Mengembalikan nipPetugas bertipe Integer dari petugasObject* |
-| *setIdPetugas(petugasObject, id)* | *Public* | *Mengubah idPetugas bertipe Integer dalam petugasObject menjadi id bertipe Integer* |
-| *setNamaPetugas(idPetugas, nama)* | *Public* | *Mengubah namaPetugas bertipe String dalam petugasObject menjadi nama bertipe String yang idPetugasnya sesuai* |
-| *setNipPetugas(idPetugas, nip)* | *Public* | *Mengubah idPetugas bertipe Integer dalam petugasObject menjadi id bertipe Integer yang idPetugasnya sesuai* |
+
+Kelas ini berisi data, *getter*, serta *setter* dan tidak memiliki *signature operation* apa pun sehingga tabel dibiarkan kosong.
 
 Tabel 5.7.2. Atribut Kelas PetugasEntity
 | Nama Atribut | Visibility (private, public) | Tipe |
@@ -722,10 +718,6 @@ Kelas ini hanya berisi getter dan setter sederhana tanpa logika proses, sehingga
 Tabel 5.8.1. Operasi Kelas HalamanFormulirTanggapan
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
-| *getStatusLaporan(idLaporan): Status(Enum)* | *Public* | *Mengembalikan statusLaporan yaitu diterima, ditolak, maupun ditangguhkan* |
-| *getStatusTuntasLaporan(idLaporan): Status(Enum)* | *Public* | *Mengembalikan statusTuntasLaporan yaitu tuntas, menunggu, ataupun proses* |
-| *setStatusLaporan(idLaporan, status)* | *Public* | *Mengubah statusLaporan berdasarkan idLaporan menjadi status* |
-| *setStatusTuntasLaporan(idLaporan, statusTuntas)* | *Public* | *Mengubah statusTuntasLaporan berdasarkan idLaporan menjadi statusTuntas* |
 | *showFormulirTanggapan()* | *Public* | *Menampilkan halaman formulir tanggapan yang siap menerima input* |
 
 Tabel 5.8.2. Atribut Kelas HalamanFormulirTanggapan
@@ -735,8 +727,6 @@ Tabel 5.8.2. Atribut Kelas HalamanFormulirTanggapan
 | *statusTuntasLaporan* | *private* | *Enumerate* |
 
 ### 5.8.1 Algoritma/Query showFormulirTanggapan()
-
-Bagian ini diisi untuk kerangka algoritma proses yang dianggap cukup penting. Algoritma dapat dituliskan sebagai *pseudocode*. Implementasi *skeleton code* juga dapat digunakan untuk kelas yang sudah terdefinisi pada bahasa pemrograman tertentu.
 
 **Nama Kelas:** *HalamanFormulirTanggapan*  
 **Nama Operasi:** *showFormulirTanggapan()*  
@@ -788,7 +778,6 @@ Tabel 5.9.1. Operasi Kelas TanggapanController
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
 | *addPoinPelapor(idPelapor, poin)* | *Public* | *Menambahkan poin bertipe Integer ke perolehan poin Pelapor dengan idPelapor terkait* |
-| *setStatusLaporan(idLaporan, status)* | *Public* | *Mengubah statusLaporan berdasarkan idLaporan menjadi status pada kelas ini statusnya adalah ditinjau* |
 | *sendTanggapan(idLaporan, tanggapan)* | *Public* | *Mengirimkan tanggapan ke database dan menampilkan status pengiriman tanggapan* |
 
 Tabel 5.9.2. Atribut Kelas TanggapanController
@@ -824,7 +813,7 @@ Tabel 5.9.1. Query Operasi addPoinPelapor()
 | *[Q-003]* | *SELECT poin_Pelapor FROM pelapor WHERE id_Pelapor = idPelapor;* | *Mengambil data poin yang dimiliki pelapor dengan idPelapor* |
 | *[Q-004]* | *UPDATE pelapor SET poin_Pelapor = poinBaru WHERE id_Pelapor = idPelapor;* | *mengubah data poin yang dimiliki pelapor dengan idPelapor* |
 
-### 5.9.3 Algoritma/Query sendTanggapan()
+### 5.9.2 Algoritma/Query sendTanggapan()
 **Nama Kelas:** *TanggapanController*  
 **Nama Operasi:** *sendTanggapan(idLaporan, tanggapan)*  
 **ID Algoritma:** *[Algo-006]*
@@ -846,10 +835,11 @@ procedure sendTanggapan(idLaporan, tanggapan): boolean
     return
 ```
 
-Tabel 5.9.1. Query Operasi [Nama Operasi]
+Tabel 5.9.2 Query Operasi [Nama Operasi]
 | No Query | Query | Keterangan |
 | :--- | :--- | :--- |
 | *[Q-005]* | *UPDATE Laporan SET tanggapan_Laporan = tanggapan WHERE id_Laporan = idLaporan;* | *Mengubah tanggapan di database* |
+
 ## 5.10 Kelas LikeController
 **Nama Kelas:** *LikeController*  
 **ID Kelas:** *C10*
@@ -939,6 +929,7 @@ procedure likeLaporan(idLaporan, idPelapor): boolean
 | :--- | :--- | :--- |
 | *[Q-009]* | *SELECT status_Like FROM Laporan WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengambil status like sesui idPelapor dan idLaporan* |
 | *[Q-010]* | *UPDATE Laporan SET status_Like = poinBaru WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengubah status like sesui idPelapor dan idLaporan* |
+
 ## 5.11 Kelas HalamanLeaderboard
 **Nama Kelas:** *HalamanLeaderboard*  
 **ID Kelas:** *C11*
