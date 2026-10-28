@@ -367,7 +367,7 @@ Tabel 3.4 Identifikasi Kelas Use Case [UC04]
 - **Skenario Alternatif 1: Laporan Tidak Lolos Validasi oleh Admin atau Petugas**
 
 <p align="center">
-<img alt="Sequence Diagram UC03 - Alternatif 1" src="./assets/diagram/UC04-Alt.jpg" width="50%">
+<img alt="Sequence Diagram UC04 - Alternatif 1" src="./assets/diagram/UC04-Alt.jpg" width="50%">
 </p>
 <p align="center">
 <i>Gambar 13. Sequence Diagram UC04 - Laporan Tidak Lolos Validasi oleh Admin atau Petugas</i>
@@ -376,7 +376,7 @@ Tabel 3.4 Identifikasi Kelas Use Case [UC04]
 ### 3.4.3 Diagram Kelas
 
 <p align="center">
-<img alt="Diagram Kelas UC03" src="./assets/diagram/ClassDiagram-UC04.jpg" width="35%">
+<img alt="Diagram Kelas UC04" src="./assets/diagram/ClassDiagram-UC04.jpg" width="35%">
 </p>
 <p align="center">
 <i>Gambar 14. Diagram Kelas UC04: Memperoleh Poin</i>
