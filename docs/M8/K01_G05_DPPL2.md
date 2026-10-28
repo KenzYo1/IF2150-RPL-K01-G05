@@ -747,7 +747,333 @@ Tabel 5.6 Atribut Kelas AdminEntity
 ### 5.6.1 Algoritma/Query
 *Kelas tidak memiliki algoritma atau query yang bersifat signature karena hanya berupa kumpulan data, setter, dan getter.*
 
+## 5.7 Kelas PetugasEntity
+**Nama Kelas:** *PetugasEntity*  
+**ID Kelas:** *C07*
 
+Tabel 5.7.1. Operasi Kelas PetugasEntity
+| Nama Operasi | Visibility (private, public) | Keterangan |
+| :--- | :--- | :--- |
+| *getIdPetugas(petugasObject): Integer* | *Public* | *Mengembalikan idPetugas bertipe Integer dari petugasObject* |
+| *getNamaPetugas(idPetugas): String* | *Public* | *Mengembalikan namaPetugas bertipe String dari IdPetugas bertipe Integer* |
+| *getNipPetugas(idPetugas): Integer* | *Public* | *Mengembalikan nipPetugas bertipe Integer dari petugasObject* |
+| *setIdPetugas(petugasObject, id)* | *Public* | *Mengubah idPetugas bertipe Integer dalam petugasObject menjadi id bertipe Integer* |
+| *setNamaPetugas(idPetugas, nama)* | *Public* | *Mengubah namaPetugas bertipe String dalam petugasObject menjadi nama bertipe String yang idPetugasnya sesuai* |
+| *setNipPetugas(idPetugas, nip)* | *Public* | *Mengubah idPetugas bertipe Integer dalam petugasObject menjadi id bertipe Integer yang idPetugasnya sesuai* |
+
+Tabel 5.7.2. Atribut Kelas PetugasEntity
+| Nama Atribut | Visibility (private, public) | Tipe |
+| :--- | :--- | :--- |
+| *idPetugas* | *private* | *Integer* |
+| *namaPetugas* | *private* | *String* |
+| *nipPetugas* | *private* | *Integer* |
+
+### 5.7.1 Algoritma/Query
+Kelas ini hanya berisi getter dan setter sederhana tanpa logika proses, sehingga tidak memerlukan pseudocode. Jika ada query yang mengambil data petugas dari database, query tersebut ditulis pada kelas control, bukan di kelas entity ini.
+## 5.8 Kelas HalamanFormulirTanggapan
+**Nama Kelas:** *HalamanFormulirTanggapan*  
+**ID Kelas:** *C08*
+
+Tabel 5.8.1. Operasi Kelas HalamanFormulirTanggapan
+| Nama Operasi | Visibility (private, public) | Keterangan |
+| :--- | :--- | :--- |
+| *getStatusLaporan(idLaporan): Status(Enum)* | *Public* | *Mengembalikan statusLaporan yaitu diterima, ditolak, maupun ditangguhkan* |
+| *getStatusTuntasLaporan(idLaporan): Status(Enum)* | *Public* | *Mengembalikan statusTuntasLaporan yaitu tuntas, menunggu, ataupun proses* |
+| *setStatusLaporan(idLaporan, status)* | *Public* | *Mengubah statusLaporan berdasarkan idLaporan menjadi status* |
+| *setStatusTuntasLaporan(idLaporan, statusTuntas)* | *Public* | *Mengubah statusTuntasLaporan berdasarkan idLaporan menjadi statusTuntas* |
+| *showFormulirTanggapan()* | *Public* | *Menampilkan halaman formulir tanggapan yang siap menerima input* |
+
+Tabel 5.8.2. Atribut Kelas HalamanFormulirTanggapan
+| Nama Atribut | Visibility (private, public) | Tipe |
+| :--- | :--- | :--- |
+| *statusLaporan* | *private* | *Enumerate* |
+| *statusTuntasLaporan* | *private* | *Enumerate* |
+
+### 5.8.1 Algoritma/Query showFormulirTanggapan()
+
+Bagian ini diisi untuk kerangka algoritma proses yang dianggap cukup penting. Algoritma dapat dituliskan sebagai *pseudocode*. Implementasi *skeleton code* juga dapat digunakan untuk kelas yang sudah terdefinisi pada bahasa pemrograman tertentu.
+
+**Nama Kelas:** *HalamanFormulirTanggapan*  
+**Nama Operasi:** *showFormulirTanggapan()*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA MENAMPILKAN FORMULIR TANGGAPAN }
+
+{ KAMUS }
+daftarLaporan : LaporanEntity[]
+laporan       : LaporanEntity
+StatusLaporan : enum {diterima, ditolak, ditangguhkan}
+StatusTuntasLaporan : enum {tuntas, belum tuntas, dalam penanganan}
+
+{ ALGORITMA }
+procedure showFormulirTanggapan():
+    if isEmpty(daftarLaporan) then
+        return <div>Belum ada laporan!</div>
+    {kondisi tidak kosong}
+    for laporan in daftarLaporan
+        if laporan.statusLaporan = "ditangguhkan"
+        or laporan.statusTuntasLaporan = "belum tuntas" then
+            laporanPrioritas.push(laporan)
+        else
+            laporanLainnya.push(laporan)
+    daftarLaporan <- laporanPrioritas.concat(laporanLainnya)
+
+    return (
+        <div>
+            for laporan in daftarLaporan
+            <div className="LaporanEntity" key={laporan.idLaporan}>
+                <h3>{laporan.judulLaporan}</h3>
+                <p>{laporan.deskripsiLaporan}</p>
+                <DropdownEnum nilai={laporan.statusLaporan}
+                              tanggapan={StatusLaporan}
+                              sendTanggapan(idLaporan, tanggapan)/>
+                <DropdownEnum nilai={laporan.statusTuntasLaporan}
+                              tanggapanTuntas={StatusTuntasLaporan}
+                              sendTanggapan(idLaporan,tanggapanTuntas)/>
+            </div>
+        </div>
+    )
+```
+## 5.9 Kelas TanggapanController
+**Nama Kelas:** *TanggapanController*  
+**ID Kelas:** *C09*
+
+Tabel 5.9.1. Operasi Kelas TanggapanController
+| Nama Operasi | Visibility (private, public) | Keterangan |
+| :--- | :--- | :--- |
+| *addPoinPelapor(idPelapor, poin)* | *Public* | *Menambahkan poin bertipe Integer ke perolehan poin Pelapor dengan idPelapor terkait* |
+| *setStatusLaporan(idLaporan, status)* | *Public* | *Mengubah statusLaporan berdasarkan idLaporan menjadi status pada kelas ini statusnya adalah ditinjau* |
+| *sendTanggapan(idLaporan, tanggapan)* | *Public* | *Mengirimkan tanggapan ke database dan menampilkan status pengiriman tanggapan* |
+
+Tabel 5.9.2. Atribut Kelas TanggapanController
+| Nama Atribut | Visibility (private, public) | Tipe |
+| :--- | :--- | :--- |
+| *newStatusLaporan* | *private* | *Enumerate* |
+
+### 5.9.1 Algoritma/Query addPoinPelapor()
+**Nama Kelas:** *TanggapanController*  
+**Nama Operasi:** *addPoinPelapor(idPelapor, poin)*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA MENAMBAHKAN POIN PELAPOR }
+
+{ KAMUS }
+idPelapor : Integer   
+poin      : Integer    
+poinLama  : Integer    
+poinBaru  : Integer       
+
+{ ALGORITMA }
+procedure addPoinPelapor(idPelapor, poin): boolean
+    poinLama <- getPoinPelapor(idPelapor)          
+    poinBaru <- poinLama + poin
+    setPoinPelapor(idPelapor, poinBaru)   
+    return 
+```
+
+Tabel 5.9.1. Query Operasi addPoinPelapor()
+| No Query | Query | Keterangan |
+| :--- | :--- | :--- |
+| *[Q-00X]* | *SELECT poin_Pelapor FROM pelapor WHERE id_Pelapor = idPelapor;* | *Mengambil data poin yang dimiliki pelapor dengan idPelapor* |
+| *[Q-00X]* | *UPDATE pelapor SET poin_Pelapor = poinBaru WHERE id_Pelapor = idPelapor;* | *mengubah data poin yang dimiliki pelapor dengan idPelapor* |
+
+### 5.9.3 Algoritma/Query sendTanggapan()
+**Nama Kelas:** *TanggapanController*  
+**Nama Operasi:** *sendTanggapan(idLaporan, tanggapan)*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA MENGIRIM TANGGAPAN }
+
+{ KAMUS }
+idLaporan : Integer
+tanggapan : StatusLaporan
+komentar  : String | null
+idPelapor : Integer
+
+{ ALGORITMA }
+procedure sendTanggapan(idLaporan, tanggapan): boolean
+    setStatusLaporan(idLaporan, tanggapan)
+    idPelapor ← ambil idPelapor dari laporan idLaporan
+    addPoinPelapor(idPelapor, 1)
+    return
+```
+
+Tabel 5.9.1. Query Operasi [Nama Operasi]
+| No Query | Query | Keterangan |
+| :--- | :--- | :--- |
+| *[Q-001]* | *UPDATE Laporan SET tanggapan_Laporan = tanggapan WHERE id_Laporan = idLaporan;* | *Mengubah tanggapan di database* |
+## 5.10 Kelas LikeController
+**Nama Kelas:** *LikeController*  
+**ID Kelas:** *C10*
+
+Tabel 5.10.1. Operasi Kelas LikeController
+| Nama Operasi | Visibility (private, public) | Keterangan |
+| :--- | :--- | :--- |
+| *isLaporanLiked(idLaporan, idPelapor): Boolean* | *Public* | *Mengembalikan true jika Pelapor dengan idPelapor sudah tekan like untuk laporan dengan idLaporan dan belum pernah membatalkannya. Menghasilkan false jika kondisinya sebaliknya* |
+| *likeLaporan(idLaporan, idPelapor)* | *Public* | *Mengubah status like pada idLaporan dan idPelapor terkait menjadi true* |
+| *unlikeLaporan(idLaporan, idPelapor)* | *Public* | *Mengubah status like pada idLaporan dan idPelapor terkait menjadi false* |
+
+### 5.10.1 Algoritma isLaporanLiked()
+**Nama Kelas:** *LikeController*  
+**Nama Operasi:** *isLaporanLiked(idLaporan, idPelapor): Boolean*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA MENGECEK STATUS LIKE LAPORAN }
+
+{ KAMUS }
+idLaporan : Integer
+idPelapor : Integer
+hasil     : Boolean
+
+{ ALGORITMA }
+procedure isLaporanLiked(idLaporan, idPelapor): boolean
+    hasil <- ambil status like untuk idLaporan dan idPelapor
+    return hasil
+```
+
+Tabel 5.10.1. Query Operasi [Nama Operasi]
+
+| No Query | Query | Keterangan |
+| :--- | :--- | :--- |
+| *[Q-001]* | *SELECT status_like FROM Laporan WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengambil data status like dari database* |
+
+### 5.10.2 Algoritma likeLaporan()
+**Nama Kelas:** *LikeController*  
+**Nama Operasi:** *likeLaporan(idLaporan, idPelapor)*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA MELAKUKAN LIKE LAPORAN }
+
+{ KAMUS }
+idLaporan :Integer
+idPelapor :Integer
+
+{ ALGORITMA }
+procedure likeLaporan(idLaporan, idPelapor): boolean
+    statusLike <- ambil status like dari database
+    if statusLike = True
+        unlikeLaporan(idLaporan, idPelapor)
+    {kondisi belum like}
+    statusLike <- ubah status like = True untuk idLaporan dan idPelapor
+    return
+```
+| No Query | Query | Keterangan |
+| :--- | :--- | :--- |
+| *[Q-00X]* | *SELECT status_Like FROM Laporan WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengambil status like sesui idPelapor dan idLaporan* |
+| *[Q-00X]* | *UPDATE Laporan SET status_Like = poinBaru WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengubah status like sesui idPelapor dan idLaporan* |
+
+### 5.10.3 Algoritma/Query unlikeLaporan()
+
+**Nama Kelas:** *LikeController*  
+**Nama Operasi:** *unlikeLaporan(idLaporan, idPelapor)*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA MELAKUKAN LIKE LAPORAN }
+
+{ KAMUS }
+idLaporan :Integer
+idPelapor :Integer
+
+{ ALGORITMA }
+procedure likeLaporan(idLaporan, idPelapor): boolean
+    statusLike <- ambil status like dari database
+    if statusLike = False
+        likeLaporan(idLaporan, idPelapor)
+    {kondisi sudah like}
+    statusLike <- ubah status like = False untuk idLaporan dan idPelapor
+    return
+```
+
+| No Query | Query | Keterangan |
+| :--- | :--- | :--- |
+| *[Q-00X]* | *SELECT status_Like FROM Laporan WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengambil status like sesui idPelapor dan idLaporan* |
+| *[Q-00X]* | *UPDATE Laporan SET status_Like = poinBaru WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengubah status like sesui idPelapor dan idLaporan* |
+## 5.11 Kelas HalamanLeaderboard
+**Nama Kelas:** *HalamanLeaderboard*  
+**ID Kelas:** *C11*
+
+Tabel 5.11.1. Operasi Kelas HalamanLeaderboard
+| Nama Operasi | Visibility (private, public) | Keterangan |
+| :--- | :--- | :--- |
+| *sortPelaporByPoin(daftarPelapor)* | *Public* | *Mengurutkan daftarPelapor berdasarkan perolehan poin* |
+| *show20Pelapor()* | *Public* | *Menampilkan list 20 pelapor dengan perolehan poin tertinggi* |
+
+Tabel 5.11.2. Atribut Kelas HalamanLeaderboard
+| Nama Atribut | Visibility (private, public) | Tipe |
+| :--- | :--- | :--- |
+| *top20Pelapor* | *private* | *list of pelaporObject* |
+
+### 5.11.1 Algoritma/Query sortPelaporByPoin()
+**Nama Kelas:** *HalamanLeaderboard*  
+**Nama Operasi:** *sortPelaporByPoin(daftarPelapor)*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA MENGURUTKAN PELAPOR BERDASARKAN POIN }
+
+{ KAMUS }
+daftarPelapor : PelaporEntity[]
+hasil         : PelaporEntity[]
+i, j          : Integer
+pelapor1         : PelaporEntity
+
+{ ALGORITMA }
+procedure sortPelaporByPoin(daftarPelapor): PelaporEntity[]
+    hasil <- salin daftarPelapor
+    for i <- 1 to length(hasil) - 1 do
+        pelapor1 <- hasil[i]
+        j <- i - 1
+        while j >= 0 and hasil[j].getPoinPelapor() < kunci.getPoinPelapor() do
+            hasil[j + 1] <- hasil[j]
+            j <- j - 1
+        hasil[j + 1] <- pelapor1
+    return
+```
+### 5.11.2 Algoritma/Query show20Pelapor()
+**Nama Kelas:** *HalamanLeaderboard*  
+**Nama Operasi:** *show20Pelapor()*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA MENAMPILKAN 20 PELAPOR POIN TERTINGGI }
+
+{ KAMUS }
+daftarPelapor : PelaporEntity[]
+top20Pelapor  : PelaporEntity[]
+pelapor       : PelaporEntity
+peringkat     : Integer
+
+{ ALGORITMA }
+procedure show20Pelapor():
+    daftarPelapor <- ambil seluruh data pelapor dari database
+    if isEmpty(daftarPelapor) then
+        return <div>Belum ada pelapor!</div>
+    {kondisi tidak kosong}
+    daftarPelapor <- sortPelaporByPoin(daftarPelapor)
+    top20Pelapor <- daftarPelapor.slice(0, 20)
+    return (
+        <div>
+            for pelapor in top20Pelapor
+            peringkat <- indeks pelapor + 1
+            <div className="baris-leaderboard" key={pelapor.getIdPelapor()}>
+                <span>{peringkat}</span>
+                <span>{pelapor.getNamaPelapor()}</span>
+                <span>{pelapor.getPoinPelapor()}</span>
+            </div>
+        </div>
+    )
+```
+
+Tabel 5.11.1. Query Operasi show20Pelapor()
+| No Query | Query | Keterangan |
+| :--- | :--- | :--- |
+| *[Q-001]* | *SELECT id_pelapor, nama_pelapor, poin FROM Pelapor;* | *Mengambil data seluruh pelapor untuk diurutkan dan diambil 20 teratas* |
 
 
 ## 5.18 Kelas HalamanLogin
@@ -1146,12 +1472,25 @@ Tabel 6.9. Rancangan Antarmuka Keseluruhan
 
 # BAB 7: Matriks Kerunutan
 
-Petakan kelas perancangan dengan use case yang terkait. Gunakan **BAB 6 Traceability pada dokumen SKPL** sebagai acuan keterkaitan kelas analisis dan use case, lalu sesuaikan dengan realisasi use case dan kelas perancangan pada BAB 3–BAB 5 DPPL.
-
 Tabel 7.1. Matriks Kerunutan Kelas terhadap Use Case
-
 | Kelas | Use Case Terkait |
 | :--- | :--- |
-| *[ID kelas - Nama kelas]* | *[ID UC - Nama use case; tuliskan seluruh use case terkait]* |
-| *[ID kelas - Nama kelas]* | *[ID UC - Nama use case]* |
-| *...* | *...* |
+| **C01 - PelaporEntity** | *UC01 - Melakukan pelaporan, UC02 - Memberikan Status Laporan, UC03 - Memberikan dan Membatalkan _Like_, UC04 - Memperoleh Poin* |
+| **C02 - LaporanEntity** | *UC01 - Melakukan pelaporan, UC02 - Memberikan Status Laporan, UC03 - Memberikan dan Membatalkan _Like_* |
+| **C03 - HalamanLaporan** | *UC03 - Memberikan dan Membatalkan _Like_* |
+| **C04 - HalamanFormulirLaporan** | *UC01 - Melakukan pelaporan* |
+| **C05 - LaporanController** | *UC01 - Melakukan pelaporan* |
+| **C06 - AdminEntity** | *UC02 - Memberikan Status Laporan* |
+| **C07 - PetugasEntity** | *UC02 - Memberikan Status Laporan* |
+| **C08 - HalamanFormulirTanggapan** | *UC02 - Memberikan Status Laporan* |
+| **C09 - TanggapanController** | *UC02 - Memberikan Status Laporan, UC04 - Memperoleh Poin* |
+| **C10 - LikeController** | *UC03 - Memberikan dan Membatalkan _Like_* |
+| **C11 - HalamanLeaderboard** | *UC04 - Memperoleh Poin* |
+| **C12 - DatabaseLaporanEntity** | *UC01 - Melakukan pelaporan, UC02, UC03* |
+| **C13 - DatabasePelaporEntity** | *UC04 - Memperoleh Poin* |
+| **C14 - LeaderboardController** | *UC04 - Memperoleh Poin* |
+| **C15 - HalamanAkun** | *UC04 - Memperoleh Poin* |
+| **C16 - HalamanNotifikasi** | *UC02 - Memberikan Status Laporan, UC04 - Memperoleh Poin* |
+| **C17 - NotifikasiController** | *UC02 - Memberikan Status Laporan, UC04 - Memperoleh Poin* |
+| **C18 - HalamanLogin** | *UC01 - Melakukan pelaporan (prekondisi)* |
+| **C19 - LoginController** | *UC01 - Melakukan pelaporan (prekondisi)* |
