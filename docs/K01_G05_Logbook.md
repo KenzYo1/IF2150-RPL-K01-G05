@@ -169,7 +169,6 @@
 | *28-10-2026* | *Nadia Layla S.* | *Mengisi Bab 6.4 - 6.8* | *1.5* | *Done* | *-* |
 | *28-10-2026* | *Kenzo Yo* | *Mengisi Bab 5.1 - 5.6* | *2* | *Done* | *-* | 
 | *28-10-2026* | *Nadia Layla S.* | *Membuat logo perangkat lunak* | *0.5* | *Done* | *-* |
-| *28-10-2026* | *Arini K* | *Mengisi Bab 5.7 - 5.11 dan Bab 7* | *2* | *Done* | *-* | 
->>>>>>> 3c4025ba8845f3c3f69cb57aa1e1d6a1663d0323
-
+| *28-10-2026* | *Arini K* | *Mengisi Bab 5.7 - 5.11 dan Bab 7* | *2* | *Done* | *-* |
+| *28-10-2026* | *Justin S* | *C12-C17* | *2* | *Done* | *-* |
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
