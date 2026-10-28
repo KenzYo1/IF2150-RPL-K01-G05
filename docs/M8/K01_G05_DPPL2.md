@@ -647,21 +647,21 @@ Tabel 5.2.1. Query Operasi [Nama Operasi]
 
 # BAB 6: Perancangan Antarmuka
 
-## 6.1 Rancangan Antarmuka [ID Layar 1]
+## 6.1 Rancangan Antarmuka I-01
 
 Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tuliskan spesifikasi rinci objek yang ditampilkan dan reaksi sistem terhadap interaksi pengguna.
 
-**Antarmuka:** *[ID layar]*  
-**Nama Layar:** *[Nama layar]*
+**Antarmuka:** *I-01*  
+**Nama Layar:** *Halaman Login*
 
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh-design.png" width="50%">
+<img alt="Interface Halaman Login" src="./assets/interface/halamanlogin.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar 6.1. Rancangan Antarmuka [ID Layar] - [Nama Layar]</i>
+<i>Gambar 6.1. Rancangan Antarmuka I-01 - Halaman Login</i>
 </p>
 
-Tabel 6.1. Spesifikasi Objek Antarmuka [ID Layar]
+Tabel 6.1. Spesifikasi Objek Antarmuka I-01
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
@@ -670,21 +670,183 @@ Tabel 6.1. Spesifikasi Objek Antarmuka [ID Layar]
 | *...* | *...* | *...* | *...* |
 
 
-## 6.X Rancangan Antarmuka [ID Layar X]
+## 6.2 Rancangan Antarmuka I-02
 
-*[Ulangi pola 6.1 untuk layar berikutnya sampai semua layar teridentifikasi]*
+Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tuliskan spesifikasi rinci objek yang ditampilkan dan reaksi sistem terhadap interaksi pengguna.
 
-## 6.Y Rancangan Antarmuka Keseluruhan
+**Antarmuka:** *I-02*  
+**Nama Layar:** *Halaman Laporan Pelapor*
+
+<p align="center">
+<img alt="Interface Halaman Laporan Pelapor" src="./assets/interface/halamanlaporanpelapor.png" width="50%">
+</p>
+<p align="center">
+<i>Gambar 6.2. Rancangan Antarmuka I-02 - Halaman Laporan Pelapor</i>
+</p>
+
+Tabel 6.2. Spesifikasi Objek Antarmuka I-02
+
+| Id_Objek | Jenis | Konten | Keterangan |
+| :--- | :--- | :--- | :--- |
+| *[ID objek]* | *[Jenis objek, misalnya Button, RTF Box, dll]* | *[String yang tampil pada layar]* | *[Reaksi sistem, layar tujuan, tautan, atau ID algoritma yang dijalankan]* |
+| *[ID objek]* | *[Jenis objek]* | *[Konten yang ditampilkan]* | *[Reaksi sistem atau nama file terkait beserta deskripsi ringkasnya]* |
+| *...* | *...* | *...* | *...* |
+
+
+## 6.3 Rancangan Antarmuka I-03
+
+Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tuliskan spesifikasi rinci objek yang ditampilkan dan reaksi sistem terhadap interaksi pengguna.
+
+**Antarmuka:** *I-03*  
+**Nama Layar:** *Halaman Laporan Petugas*
+
+<p align="center">
+<img alt="Interface Halaman Laporan Petugas" src="./assets/interface/halamanlaporanpetugas.png" width="50%">
+</p>
+<p align="center">
+<i>Gambar 6.3. Rancangan Antarmuka I-03 - Halaman Laporan Petugas</i>
+</p>
+
+Tabel 6.3. Spesifikasi Objek Antarmuka I-03
+
+| Id_Objek | Jenis | Konten | Keterangan |
+| :--- | :--- | :--- | :--- |
+| *[ID objek]* | *[Jenis objek, misalnya Button, RTF Box, dll]* | *[String yang tampil pada layar]* | *[Reaksi sistem, layar tujuan, tautan, atau ID algoritma yang dijalankan]* |
+| *[ID objek]* | *[Jenis objek]* | *[Konten yang ditampilkan]* | *[Reaksi sistem atau nama file terkait beserta deskripsi ringkasnya]* |
+| *...* | *...* | *...* | *...* |
+
+
+## 6.4 Rancangan Antarmuka I-04
+
+Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tuliskan spesifikasi rinci objek yang ditampilkan dan reaksi sistem terhadap interaksi pengguna.
+
+**Antarmuka:** *I-04*  
+**Nama Layar:** *Halaman Akun*
+
+<p align="center">
+<img alt="Interface Halaman Akun" src="./assets/interface/halamanakun.png" width="50%">
+</p>
+<p align="center">
+<i>Gambar 6.4. Rancangan Antarmuka I-04 - Halaman Akun</i>
+</p>
+
+Tabel 6.4. Spesifikasi Objek Antarmuka I-04
+
+| Id_Objek | Jenis | Konten | Keterangan |
+| :--- | :--- | :--- | :--- |
+| *[ID objek]* | *[Jenis objek, misalnya Button, RTF Box, dll]* | *[String yang tampil pada layar]* | *[Reaksi sistem, layar tujuan, tautan, atau ID algoritma yang dijalankan]* |
+| *[ID objek]* | *[Jenis objek]* | *[Konten yang ditampilkan]* | *[Reaksi sistem atau nama file terkait beserta deskripsi ringkasnya]* |
+| *...* | *...* | *...* | *...* |
+
+
+## 6.5 Rancangan Antarmuka I-05
+
+Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tuliskan spesifikasi rinci objek yang ditampilkan dan reaksi sistem terhadap interaksi pengguna.
+
+**Antarmuka:** *I-05*  
+**Nama Layar:** *Halaman Notifikasi*
+
+<p align="center">
+<img alt="Interface Halaman Notifikasi" src="./assets/interface/halamannotifikasi.png" width="50%">
+</p>
+<p align="center">
+<i>Gambar 6.5. Rancangan Antarmuka I-05 - Halaman Notifikasi</i>
+</p>
+
+Tabel 6.5. Spesifikasi Objek Antarmuka I-05
+
+| Id_Objek | Jenis | Konten | Keterangan |
+| :--- | :--- | :--- | :--- |
+| *[ID objek]* | *[Jenis objek, misalnya Button, RTF Box, dll]* | *[String yang tampil pada layar]* | *[Reaksi sistem, layar tujuan, tautan, atau ID algoritma yang dijalankan]* |
+| *[ID objek]* | *[Jenis objek]* | *[Konten yang ditampilkan]* | *[Reaksi sistem atau nama file terkait beserta deskripsi ringkasnya]* |
+| *...* | *...* | *...* | *...* |
+
+
+## 6.6 Rancangan Antarmuka I-06
+
+Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tuliskan spesifikasi rinci objek yang ditampilkan dan reaksi sistem terhadap interaksi pengguna.
+
+**Antarmuka:** *I-06*  
+**Nama Layar:** *Halaman Formulir Laporan*
+
+<p align="center">
+<img alt="Interface Halaman Formulir Laporan" src="./assets/interface/halamanformulirlaporan.png" width="50%">
+</p>
+<p align="center">
+<i>Gambar 6.6. Rancangan Antarmuka I-06 - Halaman Formulir Laporan</i>
+</p>
+
+Tabel 6.6. Spesifikasi Objek Antarmuka I-06
+
+| Id_Objek | Jenis | Konten | Keterangan |
+| :--- | :--- | :--- | :--- |
+| *[ID objek]* | *[Jenis objek, misalnya Button, RTF Box, dll]* | *[String yang tampil pada layar]* | *[Reaksi sistem, layar tujuan, tautan, atau ID algoritma yang dijalankan]* |
+| *[ID objek]* | *[Jenis objek]* | *[Konten yang ditampilkan]* | *[Reaksi sistem atau nama file terkait beserta deskripsi ringkasnya]* |
+| *...* | *...* | *...* | *...* |
+
+
+## 6.7 Rancangan Antarmuka I-07
+
+Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tuliskan spesifikasi rinci objek yang ditampilkan dan reaksi sistem terhadap interaksi pengguna.
+
+**Antarmuka:** *I-07*  
+**Nama Layar:** *Halaman Formulir Tanggapan*
+
+<p align="center">
+<img alt="Interface Halaman Formulir Tanggapan" src="./assets/interface/halamanformulirtanggapan.png" width="50%">
+</p>
+<p align="center">
+<i>Gambar 6.7. Rancangan Antarmuka I-07 - Halaman Formulir Tanggapan</i>
+</p>
+
+Tabel 6.7. Spesifikasi Objek Antarmuka I-07
+
+| Id_Objek | Jenis | Konten | Keterangan |
+| :--- | :--- | :--- | :--- |
+| *[ID objek]* | *[Jenis objek, misalnya Button, RTF Box, dll]* | *[String yang tampil pada layar]* | *[Reaksi sistem, layar tujuan, tautan, atau ID algoritma yang dijalankan]* |
+| *[ID objek]* | *[Jenis objek]* | *[Konten yang ditampilkan]* | *[Reaksi sistem atau nama file terkait beserta deskripsi ringkasnya]* |
+| *...* | *...* | *...* | *...* |
+
+
+## 6.8 Rancangan Antarmuka I-08
+
+Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tuliskan spesifikasi rinci objek yang ditampilkan dan reaksi sistem terhadap interaksi pengguna.
+
+**Antarmuka:** *I-08*  
+**Nama Layar:** *Halaman Leaderboard*
+
+<p align="center">
+<img alt="Interface Halaman Leaderboard" src="./assets/interface/halamanleaderboard.png" width="50%">
+</p>
+<p align="center">
+<i>Gambar 6.1. Rancangan Antarmuka I-08 - Halaman Leaderboard</i>
+</p>
+
+Tabel 6.8. Spesifikasi Objek Antarmuka I-08
+
+| Id_Objek | Jenis | Konten | Keterangan |
+| :--- | :--- | :--- | :--- |
+| *[ID objek]* | *[Jenis objek, misalnya Button, RTF Box, dll]* | *[String yang tampil pada layar]* | *[Reaksi sistem, layar tujuan, tautan, atau ID algoritma yang dijalankan]* |
+| *[ID objek]* | *[Jenis objek]* | *[Konten yang ditampilkan]* | *[Reaksi sistem atau nama file terkait beserta deskripsi ringkasnya]* |
+| *...* | *...* | *...* | *...* |
+
+
+## 6.9 Rancangan Antarmuka Keseluruhan
 
 Tuliskan daftar gambar seluruh antarmuka. Berikan ID unik untuk setiap tampilan dan gunakan ID yang sama pada subbab perancangan antarmuka masing-masing.
 
-Tabel 6.Y. Rancangan Antarmuka Keseluruhan
+Tabel 6.9. Rancangan Antarmuka Keseluruhan
 
 | No | Tampilan Antarmuka |
 | :--- | :--- |
-| *[I-01]* | <img src="./assets/diagram/contoh-design.png" alt="Contoh Desain" width="400"> |
-| *[I-02]* | *[Sisipkan gambar antarmuka I-02]* |
-| *[I-XX]* | *[Sisipkan gambar antarmuka berikutnya]* |
+| *[I-01]* | <img src="./assets/interface/halamanlogin.png" alt="Interface Login" width="400"> |
+| *[I-02]* | <img src="./assets/interface/halamanlaporanpelapor.png" alt="Interface Laporan Pelapor" width="400"> |
+| *[I-03]* | <img src="./assets/interface/halamanlaporanpetugas.png" alt="Interface Laporan Petugas/Admin" width="400"> |
+| *[I-04]* | <img src="./assets/interface/halamanakun.png" alt="Interface Akun" width="400"> |
+| *[I-05]* | <img src="./assets/interface/halamannotifikasi.png" alt="Interface Notifikasi" width="400"> |
+| *[I-06]* | <img src="./assets/interface/halamanformulirlaporan.png" alt="Interface Formulir Laporan" width="400"> |
+| *[I-07]* | <img src="./assets/interface/halamanformulirtanggapan.png" alt="Interface Formulir Tanggapan" width="400"> |
+| *[I-08]* | <img src="./assets/interface/halamanleaderboard.png" alt="Interface Leaderboard" width="400"> |
 
 <br>
 
