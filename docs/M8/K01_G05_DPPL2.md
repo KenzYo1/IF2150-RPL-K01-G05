@@ -479,6 +479,7 @@ Tabel 5.1.1. Operasi Kelas PelaporEntity
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
 | *-* | *-* | *-* |
+
 PelaporEntity tidak memiliki operasi kelas *signature* karena berupa kumpulan data, getter, dan setter.
 
 Tabel 5.1.2. Atribut Kelas PelaporEntity
@@ -504,6 +505,7 @@ Tabel 5.2.1. Operasi Kelas PelaporEntity
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
 | ** | ** | ** |
+
 Tabel kosong karena kelas hanya berupa data, *setter*, dan *getter* sehingga tidak memiliki *signature operation*
 
 Tabel 5.2.2. Atribut Kelas LaporanEntity
@@ -667,6 +669,7 @@ Tabel 5.6 Operasi Kelas AdminEntity
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
 | ** | ** | ** |
+
 Kelas tidak memiliki signature operation karena hanya berupa data, fungsi *setter*, dan fungsi *getter* sehingga tidak memiliki *signature operation* apa pun.
 
 Tabel 5.6 Atribut Kelas AdminEntity
