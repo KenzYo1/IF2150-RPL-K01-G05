@@ -29,7 +29,7 @@
 * [Milestone 5](#milestone-5)
 * [Milestone 6](#milestone-6)
 * [Milestone 7](#milestone-7)
-
+* [Milestone 8](#milestone-8)
 ---
 
 ### Log Penggunaan AI per Milestone
@@ -85,11 +85,18 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | Claude | Diskusi ide dan bentuk diagram kelas | Apakah diagram yang dibuat sudah sesuai? Apakan metode dan atribut-nya sudah benar? | Beberapa ide valid, yakni pemindahan beberapa metode dan atribut ke kelas yang lebih cocok (Controller) |
 | Claude | Diskusi ide dan bentuk diagram sekuens | Apakah alur diagram sekuens ini sudah baik? | Memilih ide yang valid, yakni sesuai dengan apa yang ada di SKPL. |
 
+<<<<<<< HEAD
 ### Milestone 7
 | Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
 | :--- | :--- | :--- | :--- |
 | ChatGPT | Pseudecode | Apakah pseudocode yang dibuat sudah sesuai? Apakah variabel dan logika-nya sudah benar? | Modifikasi sesuai kebutuhan |
 
+=======
+### Milestone 8
+| Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
+| :--- | :--- | :--- | :--- |
+| Claude | Diskusi mengenai pseudocode dan kebenarannya | Apakah pseudocode yang dibuat sudah baik atau benar? Bagaimana dengan query? | Mengonfirmasi kembali pengecekan AI |
+>>>>>>> 3c4025ba8845f3c3f69cb57aa1e1d6a1663d0323
 
 ---
 
