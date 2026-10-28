@@ -155,5 +155,14 @@
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *26-10-2026* | *Kenzo Yo* | *Inisialisasi dokumen DPPL2* | *1* | *Done* | *-* | 
+| *26-10-2026* | *Nadia Layla S. dan Jessica A.T* | *Diskusi dan mencari referensi + ide untuk UI* | *3* | *Done* | *-* | 
+| *26-10-2026* | *Nadia Layla S.* | *Bikin wireframe dan mock up UI* | *2* | *Done* | *-* | 
+| *26-10-2026* | *Nadia Layla S. dan Jessica A.T* | *Membuat base interface HalamanLaporanPelapor* | *3* | *Done* | *-* | 
+| *26-10-2026* | *Jessica A.T* | *Membuat base interface HalamanFormulirLaporan, HalamanFormulirTanggapan* | *2* | *Done* | *-* |  
+| *27-10-2026* | *Nadia Layla S.* | *Membuat base interface HalamanNotifikasi, HalamanLaporanPetugas* | *4* | *Done* | *-* | 
+| *27-10-2026* | *Jessica A.T* | *Membuat base interface HalamanAkun, HalamanLeaderboard, HalamanLogin, HalamanFormulirLaporan, HalamanFormulirTanggapan* | *4* | *Done* | *-* | 
+| *28-10-2026* | *Jessica A.T* | *Merapihkan interface* | *2* | *Done* | *-* |  
+| *28-10-2026* | *Jessica A.T* | *Mengisi Bab 6.1 - 6.4* | *???* | *In progress* | *-* | 
+| *28-10-2026* | *Nadia Layla S.* | *Mengisi Bab 6.4 - 6.8* | *???* | *In progress* | *-* | 
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
