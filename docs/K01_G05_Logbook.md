@@ -162,7 +162,7 @@
 | *27-10-2026* | *Nadia Layla S.* | *Membuat base interface HalamanNotifikasi, HalamanLaporanPetugas* | *4* | *Done* | *-* | 
 | *27-10-2026* | *Jessica A.T* | *Membuat base interface HalamanAkun, HalamanLeaderboard, HalamanLogin, HalamanFormulirLaporan, HalamanFormulirTanggapan* | *4* | *Done* | *-* | 
 | *28-10-2026* | *Jessica A.T* | *Merapihkan interface* | *2* | *Done* | *-* |  
-| *28-10-2026* | *Jessica A.T* | *Mengisi Bab 6.1 - 6.4* | *???* | *In progress* | *-* | 
+| *28-10-2026* | *Jessica A.T* | *Mengisi Bab 6.1 - 6.4* | *4* | *Done* | *-* | 
 | *28-10-2026* | *Nadia Layla S.* | *Mengisi Bab 6.4 - 6.8* | *???* | *In progress* | *-* |
 | *28-10-2026* | *Kenzo Yo* | *Mengisi Bab 5.1 - 5.6* | *2* | *Done* | *-* | 
 
