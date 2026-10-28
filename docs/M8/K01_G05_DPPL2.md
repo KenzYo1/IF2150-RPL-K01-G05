@@ -479,15 +479,12 @@ Tabel 5.1. Daftar Kelas Perancangan dan Kelas Analisis Terkait
 **Nama Kelas:** *PelaporEntity*  
 **ID Kelas:** *C01*
 
-| *C01* | *PelaporEntity* | *idPelapor, namaPelapor, nimnipPelapor, poinPelapor* | *getIdPelapor(), getNamaPelapor(), getNimNipPelapor(), getPoinPelapor(), setIdPelapor(), setNamaPelapor(), setNimNipPelapor(), setPoinPelapor()* | 
-### jangan lupa dihapus lol
-
 Tabel 5.1.1. Operasi Kelas PelaporEntity
 
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
-| *[Signature operasi, termasuk parameter dan tipe kembalian]* | *[Visibility]* | *[Tanggung jawab operasi]* |
-| *...* | *...* | *...* |
+| *-* | *-* | *-* |
+PelaporEntity tidak memiliki operasi kelas *signature* karena berupa kumpulan data, getter, dan setter.
 
 Tabel 5.1.2. Atribut Kelas PelaporEntity
 
@@ -499,25 +496,7 @@ Tabel 5.1.2. Atribut Kelas PelaporEntity
 | *poinPelapor* | *private* | *number* |
 
 ### 5.1.1 Algoritma/Query
-
-Bagian ini diisi untuk kerangka algoritma proses yang dianggap cukup penting. Algoritma dapat dituliskan sebagai *pseudocode*. Implementasi *skeleton code* juga dapat digunakan untuk kelas yang sudah terdefinisi pada bahasa pemrograman tertentu.
-
-**Nama Kelas:** *[Nama kelas]*  
-**Nama Operasi:** *[Signature operasi]*  
-**ID Algoritma:** *[Algo-001]*
-
-```text
-[Tuliskan pseudocode algoritma operasi di sini.]
-```
-
-Jika operasi mengacu pada query tertentu, lengkapi tabel berikut. 
-
-Tabel 5.1.1. Query Operasi [Nama Operasi]
-
-| No Query | Query | Keterangan |
-| :--- | :--- | :--- |
-| *[Q-001]* | *[Tuliskan query]* | *[Fungsi query]* |
-| *...* | *...* | *...* |
+Kelas ini tidak memiliki algoritma atau query yang bersifat *signature* karena merupakan kelas entity kumpulan data dan metode berupa *setter* atau *getter*
 
 
 ## 5.2 Kelas PelaporEntity
@@ -525,15 +504,12 @@ Tabel 5.1.1. Query Operasi [Nama Operasi]
 **Nama Kelas:** *LaporanEntity*  
 **ID Kelas:** *C02*
 
-| *C02* | *LaporanEntity* | *idLaporan, descLaporan, fotoLaporan, likeLaporan, statusLaporan* | *getIdLaporan(), getDescLaporan(), getFotoLaporan(), getLikeLaporan(), getStatusLaporan(), setIdLaporan(), setDescLaporan(), setFotoLaporan(), setLikeLaporan(), setStatusLaporan()* |
-### jangan lupa dihapus lol
-
 Tabel 5.2.1. Operasi Kelas PelaporEntity
 
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
 | ** | ** | ** |
-*Tabel kosong karena kelas hanya berupa data, setter, dan getter sehingga tidak memiliki signature operation*
+Tabel kosong karena kelas hanya berupa data, *setter*, dan *getter* sehingga tidak memiliki *signature operation*
 
 Tabel 5.2.2. Atribut Kelas LaporanEntity
 
@@ -546,51 +522,28 @@ Tabel 5.2.2. Atribut Kelas LaporanEntity
 | *statusLaporan* | *private* | *string* |
 
 ### 5.2.1 Algoritma/Query
-
-Bagian ini diisi untuk kerangka algoritma proses yang dianggap cukup penting. Algoritma dapat dituliskan sebagai *pseudocode*. Implementasi *skeleton code* juga dapat digunakan untuk kelas yang sudah terdefinisi pada bahasa pemrograman tertentu.
-
-**Nama Kelas:** *[Nama kelas]*  
-**Nama Operasi:** *[Signature operasi]*  
-**ID Algoritma:** *[Algo-001]*
-
-```text
-[Tuliskan pseudocode algoritma operasi di sini.]
-```
-
-Jika operasi mengacu pada query tertentu, lengkapi tabel berikut. 
-
-Tabel 5.2.1. Query Operasi [Nama Operasi]
-
-| No Query | Query | Keterangan |
-| :--- | :--- | :--- |
-| *[Q-001]* | *[Tuliskan query]* | *[Fungsi query]* |
-| *...* | *...* | *...* |
-
+Algoritma/Query kosong karena kelas ini hanya berupa kelas entity yang terdiri atas kumpulan data dan operasi *get* atau *set* saja sehingga tidak memiliki *signature operation*.
 
 ## 5.3 Kelas HalamanLaporan
 
 **Nama Kelas:** *HalamanLaporan*  
 **ID Kelas:** *C03*
 
-| *C03* | *HalamanLaporan* | *daftarLaporan* | *createLaporan(), sortLaporan(), showLaporan(), TekanLike()* |
-### jangan lupa dihapus lol
 
-Tabel 5.2.1. Operasi Kelas HalamanLaporan
+Tabel 5.3.1. Operasi Kelas HalamanLaporan
 
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
 | *showLaporan* | *public* | *Menampilkan daftar laporan ke halaman berdasarkan data daftarLaporan* |
 
-Tabel 5.2.2. Atribut Kelas HalamanLaporan
+Tabel 5.3.2. Atribut Kelas HalamanLaporan
 
 | Nama Atribut | Visibility (private, public) | Tipe |
 | :--- | :--- | :--- |
 | *daftarLaporan* | *private* | *<List>Laporan* |
 
-
 ### 5.3.1 Algoritma/Query
 
-Bagian ini diisi untuk kerangka algoritma proses yang dianggap cukup penting. Algoritma dapat dituliskan sebagai *pseudocode*. Implementasi *skeleton code* juga dapat digunakan untuk kelas yang sudah terdefinisi pada bahasa pemrograman tertentu.
 
 **Nama Kelas:** *HalamanLaporan*  
 **Nama Operasi:** *showLaporan()*  
@@ -618,22 +571,16 @@ procedure showLaporan():
     )
 ```
 
-Jika operasi mengacu pada query tertentu, lengkapi tabel berikut. 
-
-Tabel 5.3.1. Query Operasi Mengambil Daftar Laporan
+Tabel 5.3.3. Query Operasi Mengambil Daftar Laporan
 
 | No Query | Query | Keterangan |
 | :--- | :--- | :--- |
 | *[Q-001]* | *[SELECT * FROM laporan ORDER BY created_at DESC LIMIT 10 OFFSET 0]* | *[Mengambil 10 laporan untuk ditampilkan]* |
 
-
 ## 5.4 Kelas HalamanFormulirLaporan
 
 **Nama Kelas:** *HalamanFormulirLaporan*  
 **ID Kelas:** *C04*
-
-| *C04* | *HalamanFormulirLaporan* | *maxKarakter, maxUkuranFoto, laporanValid* | *isJumlahKarakterValid(), isUkuranFotoValid(), isLaporanValid(), showFormulirLaporan()* |
-### jangan lupa dihapus lol
 
 Tabel 5.4.1. Operasi Kelas HalamanFormulirLaporan
 
@@ -653,7 +600,7 @@ Tabel 5.4.2. Atribut Kelas HalamanFormulirLaporan
 
 **Nama Kelas:** *HalamanFormulirLaporan*  
 **Nama Operasi:** *showFormulirLaporan()*  
-**ID Algoritma:** *[Algo-001]*
+**ID Algoritma:** *[Algo-002]*
 
 ```text
 { ALGORITMA MENAMPILKAN HALAMAN FORMULIR LAPORAN }
@@ -673,21 +620,16 @@ procedure showFormulirLaporan():
     )
 ```
 
-Jika operasi mengacu pada query tertentu, lengkapi tabel berikut. 
-
 Tabel 5.4.3. Query Operasi Menambah Laporan
 
 | No Query | Query | Keterangan |
 | :--- | :--- | :--- |
-| *Q-001* | *INSERT INTO laporan (judul, deskripsi, foto, status) VALUES ($1, $2, $3, 'diproses')* | *[Menambahkan laporan baru ke dalam database]* |
+| *[Q-002]* | *INSERT INTO laporan (judul, deskripsi, foto, status) VALUES ($1, $2, $3, 'diproses')* | *Menambahkan laporan baru ke dalam database* |
 
-## 5.5 Kelas HalamanFormulirLaporan
+## 5.5 Kelas LaporanController
 
 **Nama Kelas:** *LaporanController*  
 **ID Kelas:** *C05*
-
-| *C05* | *LaporanController* | *laporanValid* | *isLaporanValid(), setStatusLaporan(), getValidLaporan()* |
-### jangan lupa dihapus lol
 
 Tabel 5.5.1. Operasi Kelas LaporanController
 
@@ -705,7 +647,7 @@ Tabel 5.5.2. Atribut Kelas LaporanController
 
 **Nama Kelas:** *LaporanController*  
 **Nama Operasi:** *isLaporanValid(desc, foto) -> Boolean:*  
-**ID Algoritma:** *[Algo-001]*
+**ID Algoritma:** *[Algo-003]*
 
 ```text
 { ALGORITMA VALIDASI LAPORAN }
@@ -720,21 +662,17 @@ function isLaporanValid(desc, foto) -> Boolean:
         return false
 ```
 
-
-## 5.6 Kelas HalamanFormulirLaporan
+## 5.6 Kelas AdminEntity
 
 **Nama Kelas:** *AdminEntity*  
 **ID Kelas:** *C06*
-### jangan lupa dihapus lol
-
-| *C06* | *AdminEntity* | *idAdmin, namaAdmin, nipAdmin* | *getIdAdmin(), getNamaAdmin(), getNipAdmin(), setIdAdmin(), setNamaAdmin(), setNipAdmin()* |
 
 Tabel 5.6 Operasi Kelas AdminEntity
 
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
 | ** | ** | ** |
-*Kelas tidak memiliki signature operation karena hanya berupa data, fungsi setter, dan fungsi getter.*
+Kelas tidak memiliki signature operation karena hanya berupa data, fungsi *setter*, dan fungsi *getter* sehingga tidak memiliki *signature operation* apa pun.
 
 Tabel 5.6 Atribut Kelas AdminEntity
 
@@ -743,9 +681,10 @@ Tabel 5.6 Atribut Kelas AdminEntity
 | *idAdmin* | *private* | *number* |
 | *namaAdmin* | *private* | *string* |
 | *nipAdmin* | *private* | *string* |
+| *emailAdmin* | *private* | *string* |
 
 ### 5.6.1 Algoritma/Query
-*Kelas tidak memiliki algoritma atau query yang bersifat signature karena hanya berupa kumpulan data, setter, dan getter.*
+Kelas tidak memiliki algoritma atau query yang bersifat *signature* karena hanya berupa kumpulan data, *setter*, dan *getter*.
 
 ## 5.7 Kelas PetugasEntity
 **Nama Kelas:** *PetugasEntity*  
@@ -770,6 +709,7 @@ Tabel 5.7.2. Atribut Kelas PetugasEntity
 
 ### 5.7.1 Algoritma/Query
 Kelas ini hanya berisi getter dan setter sederhana tanpa logika proses, sehingga tidak memerlukan pseudocode. Jika ada query yang mengambil data petugas dari database, query tersebut ditulis pada kelas control, bukan di kelas entity ini.
+
 ## 5.8 Kelas HalamanFormulirTanggapan
 **Nama Kelas:** *HalamanFormulirTanggapan*  
 **ID Kelas:** *C08*
@@ -795,7 +735,7 @@ Bagian ini diisi untuk kerangka algoritma proses yang dianggap cukup penting. Al
 
 **Nama Kelas:** *HalamanFormulirTanggapan*  
 **Nama Operasi:** *showFormulirTanggapan()*  
-**ID Algoritma:** *[Algo-001]*
+**ID Algoritma:** *[Algo-004]*
 
 ```text
 { ALGORITMA MENAMPILKAN FORMULIR TANGGAPAN }
@@ -854,7 +794,7 @@ Tabel 5.9.2. Atribut Kelas TanggapanController
 ### 5.9.1 Algoritma/Query addPoinPelapor()
 **Nama Kelas:** *TanggapanController*  
 **Nama Operasi:** *addPoinPelapor(idPelapor, poin)*  
-**ID Algoritma:** *[Algo-001]*
+**ID Algoritma:** *[Algo-005]*
 
 ```text
 { ALGORITMA MENAMBAHKAN POIN PELAPOR }
@@ -876,13 +816,13 @@ procedure addPoinPelapor(idPelapor, poin): boolean
 Tabel 5.9.1. Query Operasi addPoinPelapor()
 | No Query | Query | Keterangan |
 | :--- | :--- | :--- |
-| *[Q-00X]* | *SELECT poin_Pelapor FROM pelapor WHERE id_Pelapor = idPelapor;* | *Mengambil data poin yang dimiliki pelapor dengan idPelapor* |
-| *[Q-00X]* | *UPDATE pelapor SET poin_Pelapor = poinBaru WHERE id_Pelapor = idPelapor;* | *mengubah data poin yang dimiliki pelapor dengan idPelapor* |
+| *[Q-003]* | *SELECT poin_Pelapor FROM pelapor WHERE id_Pelapor = idPelapor;* | *Mengambil data poin yang dimiliki pelapor dengan idPelapor* |
+| *[Q-004]* | *UPDATE pelapor SET poin_Pelapor = poinBaru WHERE id_Pelapor = idPelapor;* | *mengubah data poin yang dimiliki pelapor dengan idPelapor* |
 
 ### 5.9.3 Algoritma/Query sendTanggapan()
 **Nama Kelas:** *TanggapanController*  
 **Nama Operasi:** *sendTanggapan(idLaporan, tanggapan)*  
-**ID Algoritma:** *[Algo-001]*
+**ID Algoritma:** *[Algo-006]*
 
 ```text
 { ALGORITMA MENGIRIM TANGGAPAN }
@@ -904,7 +844,7 @@ procedure sendTanggapan(idLaporan, tanggapan): boolean
 Tabel 5.9.1. Query Operasi [Nama Operasi]
 | No Query | Query | Keterangan |
 | :--- | :--- | :--- |
-| *[Q-001]* | *UPDATE Laporan SET tanggapan_Laporan = tanggapan WHERE id_Laporan = idLaporan;* | *Mengubah tanggapan di database* |
+| *[Q-005]* | *UPDATE Laporan SET tanggapan_Laporan = tanggapan WHERE id_Laporan = idLaporan;* | *Mengubah tanggapan di database* |
 ## 5.10 Kelas LikeController
 **Nama Kelas:** *LikeController*  
 **ID Kelas:** *C10*
@@ -919,7 +859,7 @@ Tabel 5.10.1. Operasi Kelas LikeController
 ### 5.10.1 Algoritma isLaporanLiked()
 **Nama Kelas:** *LikeController*  
 **Nama Operasi:** *isLaporanLiked(idLaporan, idPelapor): Boolean*  
-**ID Algoritma:** *[Algo-001]*
+**ID Algoritma:** *[Algo-007]*
 
 ```text
 { ALGORITMA MENGECEK STATUS LIKE LAPORAN }
@@ -939,12 +879,12 @@ Tabel 5.10.1. Query Operasi [Nama Operasi]
 
 | No Query | Query | Keterangan |
 | :--- | :--- | :--- |
-| *[Q-001]* | *SELECT status_like FROM Laporan WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengambil data status like dari database* |
+| *[Q-006]* | *SELECT status_like FROM Laporan WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengambil data status like dari database* |
 
 ### 5.10.2 Algoritma likeLaporan()
 **Nama Kelas:** *LikeController*  
 **Nama Operasi:** *likeLaporan(idLaporan, idPelapor)*  
-**ID Algoritma:** *[Algo-001]*
+**ID Algoritma:** *[Algo-008]*
 
 ```text
 { ALGORITMA MELAKUKAN LIKE LAPORAN }
@@ -964,14 +904,14 @@ procedure likeLaporan(idLaporan, idPelapor): boolean
 ```
 | No Query | Query | Keterangan |
 | :--- | :--- | :--- |
-| *[Q-00X]* | *SELECT status_Like FROM Laporan WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengambil status like sesui idPelapor dan idLaporan* |
-| *[Q-00X]* | *UPDATE Laporan SET status_Like = poinBaru WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengubah status like sesui idPelapor dan idLaporan* |
+| *[Q-007]* | *SELECT status_Like FROM Laporan WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengambil status like sesui idPelapor dan idLaporan* |
+| *[Q-008]* | *UPDATE Laporan SET status_Like = poinBaru WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengubah status like sesui idPelapor dan idLaporan* |
 
 ### 5.10.3 Algoritma/Query unlikeLaporan()
 
 **Nama Kelas:** *LikeController*  
 **Nama Operasi:** *unlikeLaporan(idLaporan, idPelapor)*  
-**ID Algoritma:** *[Algo-001]*
+**ID Algoritma:** *[Algo-009]*
 
 ```text
 { ALGORITMA MELAKUKAN LIKE LAPORAN }
@@ -992,8 +932,8 @@ procedure likeLaporan(idLaporan, idPelapor): boolean
 
 | No Query | Query | Keterangan |
 | :--- | :--- | :--- |
-| *[Q-00X]* | *SELECT status_Like FROM Laporan WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengambil status like sesui idPelapor dan idLaporan* |
-| *[Q-00X]* | *UPDATE Laporan SET status_Like = poinBaru WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengubah status like sesui idPelapor dan idLaporan* |
+| *[Q-009]* | *SELECT status_Like FROM Laporan WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengambil status like sesui idPelapor dan idLaporan* |
+| *[Q-010]* | *UPDATE Laporan SET status_Like = poinBaru WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengubah status like sesui idPelapor dan idLaporan* |
 ## 5.11 Kelas HalamanLeaderboard
 **Nama Kelas:** *HalamanLeaderboard*  
 **ID Kelas:** *C11*
@@ -1012,7 +952,7 @@ Tabel 5.11.2. Atribut Kelas HalamanLeaderboard
 ### 5.11.1 Algoritma/Query sortPelaporByPoin()
 **Nama Kelas:** *HalamanLeaderboard*  
 **Nama Operasi:** *sortPelaporByPoin(daftarPelapor)*  
-**ID Algoritma:** *[Algo-001]*
+**ID Algoritma:** *[Algo-010]*
 
 ```text
 { ALGORITMA MENGURUTKAN PELAPOR BERDASARKAN POIN }
@@ -1038,7 +978,7 @@ procedure sortPelaporByPoin(daftarPelapor): PelaporEntity[]
 ### 5.11.2 Algoritma/Query show20Pelapor()
 **Nama Kelas:** *HalamanLeaderboard*  
 **Nama Operasi:** *show20Pelapor()*  
-**ID Algoritma:** *[Algo-001]*
+**ID Algoritma:** *[Algo-011]*
 
 ```text
 { ALGORITMA MENAMPILKAN 20 PELAPOR POIN TERTINGGI }
@@ -1073,7 +1013,7 @@ procedure show20Pelapor():
 Tabel 5.11.1. Query Operasi show20Pelapor()
 | No Query | Query | Keterangan |
 | :--- | :--- | :--- |
-| *[Q-001]* | *SELECT id_pelapor, nama_pelapor, poin FROM Pelapor;* | *Mengambil data seluruh pelapor untuk diurutkan dan diambil 20 teratas* |
+| *[Q-011]* | *SELECT id_pelapor, nama_pelapor, poin FROM Pelapor;* | *Mengambil data seluruh pelapor untuk diurutkan dan diambil 20 teratas* |
 
 
 ## 5.18 Kelas HalamanLogin
@@ -1101,7 +1041,7 @@ Tabel 5.18.2. Atribut Kelas HalamanLogin
 
 **Nama Kelas:** *HalamanLogin*  
 **Nama Operasi:** *loginByITBEmail()*  
-**ID Algoritma:** *[Algo-001]*
+**ID Algoritma:** *[Algo-01X]*
 
 ```text
 { ALGORITMA LOGIN EMAIL ITB }
@@ -1124,7 +1064,7 @@ function loginByITBEmail():
 
 **Nama Kelas:** *HalamanLogin*  
 **Nama Operasi:** *loginByNormalEmail()*  
-**ID Algoritma:** *[Algo-001]*
+**ID Algoritma:** *[Algo-01X]*
 
 ```text
 { ALGORITMA LOGIN EMAIL ITB }
