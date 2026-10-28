@@ -1490,7 +1490,7 @@ Kelas `NotifikasiController` bertanggung jawab membuat dan mengirimkan notifikas
 **ID Algoritma:** *Algo-C17-01*
 
 ```text
-FUNCTION createNotifikasi(idPelapor, pesan): Notifikasi
+function createNotifikasi(idPelapor, pesan): Notifikasi
   if idPelapor is invalid or pesan is empty then
     THROW new Error('Invalid notifikasi')
 

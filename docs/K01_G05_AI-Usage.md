@@ -95,7 +95,7 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 ### Milestone 8
 | Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
 | :--- | :--- | :--- | :--- |
-| ChatGPT | Diskusi mengenai pseudocode dan kebenarannya | Apakah pseudocode yang dibuat sudah baik atau benar? Bagaimana dengan query? | Mengonfirmasi kembali pengecekan AI |
+| ChatGPT | Diskusi mengenai pseudocode dan kebenarannya gimana | Apakah pseudocode yang dibuat sudah baik atau benar? Bagaimana dengan query? | Mengonfirmasi kembali pengecekan AI |
 
 
 ---
