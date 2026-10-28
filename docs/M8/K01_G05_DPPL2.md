@@ -849,8 +849,6 @@ Tabel 6.4. Spesifikasi Objek Antarmuka I-04
 
 ## 6.5 Rancangan Antarmuka I-05
 
-Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tuliskan spesifikasi rinci objek yang ditampilkan dan reaksi sistem terhadap interaksi pengguna.
-
 **Antarmuka:** *I-05*  
 **Nama Layar:** *Halaman Notifikasi*
 
@@ -865,14 +863,20 @@ Tabel 6.5. Spesifikasi Objek Antarmuka I-05
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
-| *[ID objek]* | *[Jenis objek, misalnya Button, RTF Box, dll]* | *[String yang tampil pada layar]* | *[Reaksi sistem, layar tujuan, tautan, atau ID algoritma yang dijalankan]* |
-| *[ID objek]* | *[Jenis objek]* | *[Konten yang ditampilkan]* | *[Reaksi sistem atau nama file terkait beserta deskripsi ringkasnya]* |
-| *...* | *...* | *...* | *...* |
+| *O-001* | *Rich Label* | *APATIS* | *Text yang menunjukkan nama web app.* |
+| *O-002* | *Drawer Menu* | *Tautan menuju halaman akun, halaman formulir laporan, dan halaman leaderboard. Khusus untuk petugas, terdapat tautan menuju formulir tanggapan* | *Membuka side bar yang berisi tautan ke halaman-halaman lain.* |
+| *O-003* | *Icon* | *Daftar notifikasi* | *Untuk membuka halaman notfikasi.* |
+| *O-004* | *Icon* | *Profil akun* | *Untuk membuka halaman akun.* |
+| *O-005* | *Container* | *Header web* | *Mengandung objek-objek header web, seperti nama web, side bar, bel notfikasi, profil akun.* |
+| *O-006* | *Rich Label* | *Notifications* | *Text yang menunjukkan nama halaman.* |
+| *O-007* | *Rich Label* | *Judul notifikasi* | *Text yang menunjukkan judul notfikasi.* |
+| *O-013* | *Container* | *Seluruh field untuk formulir laporan* | *Mengkelompokkan objek-objek yang dibutuhkan dalam formulir laporan.* |
+| *O-008* | *Rich Label* | *Deskripsi notifikasi* | *Text yang menunjukkan deskripsi notifikasi.* |
+| *O-009* | *Container* | *Notifikasi* | *Mengandung judul dan deskripsi notfikasi.* |
+| *O-010* | *Separator* | *Garis pembatas* | *Pembatas antara judul halaman dan daftar notifikasi.* |
 
 
 ## 6.6 Rancangan Antarmuka I-06
-
-Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tuliskan spesifikasi rinci objek yang ditampilkan dan reaksi sistem terhadap interaksi pengguna.
 
 **Antarmuka:** *I-06*  
 **Nama Layar:** *Halaman Formulir Laporan*
@@ -888,14 +892,27 @@ Tabel 6.6. Spesifikasi Objek Antarmuka I-06
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
-| *[ID objek]* | *[Jenis objek, misalnya Button, RTF Box, dll]* | *[String yang tampil pada layar]* | *[Reaksi sistem, layar tujuan, tautan, atau ID algoritma yang dijalankan]* |
-| *[ID objek]* | *[Jenis objek]* | *[Konten yang ditampilkan]* | *[Reaksi sistem atau nama file terkait beserta deskripsi ringkasnya]* |
-| *...* | *...* | *...* | *...* |
+| *O-001* | *Rich Label* | *APATIS* | *Text yang menunjukkan nama web app.* |
+| *O-002* | *Drawer Menu* | *Tautan menuju halaman akun, halaman formulir laporan, dan halaman leaderboard* | *Membuka side bar yang berisi tautan ke halaman-halaman lain.* |
+| *O-003* | *Icon* | *Daftar notifikasi* | *Untuk membuka halaman notfikasi.* |
+| *O-004* | *Icon* | *Profil akun* | *Untuk membuka halaman akun.* |
+| *O-005* | *Container* | *Header web* | *Mengandung objek-objek header web, seperti nama web, side bar, bel notfikasi, profil akun.* |
+| *O-006* | *Rich Label* | *Report Form* | *Text yang menunjukkan nama halaman.* |
+| *O-007* | *Rich Label* | *Title'*'* | *Text yang menunjukkan tempat input judul laporan.* |
+| *O-008* | *Rich Text Input Field* | *Judul laporan* | *Tempat input judul laporan.* |
+| *O-009* | *Rich Label* | *Description'*'* | *Text yang menunjukkan tempat input deskripsi masalah.* |
+| *O-010* | *Rich Text Input Field* | *Deskripsi masalah* | *Tempat pengisian deskripsi masalah.* |
+| *O-011* | *Rich Label* | *Location'*'* | *Text yang menunjukkan tempat pemilihan lokasi masalah.* |
+| *O-012* | *Drop down* | *Lokasi-lokasi permasalah air dan sanitasi di ITB* | *Memilih lokasi permasalahan terjadi.* |
+| *O-012* | *Rich Label* | *Additional Files'*'* | *Text yang menunjukkan tempat pengunggahan foto pendukung.* |
+| *O-013* | *File input* | *Unggahan foto pendukung* | *Tempat pengunggahan foto pendukung.* |
+| *O-014* | *Separator* | *Garis pembatas tempat unggahan* | *Membedakan tempat untuk menggungah foto pendukung.* |
+| *O-015* | *Button* | *Submit Report* | *Mengirim laporan yang sudah terisi.* |
+| *O-016* | *Container* | *Seluruh field untuk formulir laporan* | *Mengkelompokkan objek-objek yang dibutuhkan dalam formulir laporan.* |
+| *O-018* | *Icon* | *Close* | *Menutup formulir laporan.* |
 
 
 ## 6.7 Rancangan Antarmuka I-07
-
-Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tuliskan spesifikasi rinci objek yang ditampilkan dan reaksi sistem terhadap interaksi pengguna.
 
 **Antarmuka:** *I-07*  
 **Nama Layar:** *Halaman Formulir Tanggapan*
@@ -911,14 +928,29 @@ Tabel 6.7. Spesifikasi Objek Antarmuka I-07
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
-| *[ID objek]* | *[Jenis objek, misalnya Button, RTF Box, dll]* | *[String yang tampil pada layar]* | *[Reaksi sistem, layar tujuan, tautan, atau ID algoritma yang dijalankan]* |
-| *[ID objek]* | *[Jenis objek]* | *[Konten yang ditampilkan]* | *[Reaksi sistem atau nama file terkait beserta deskripsi ringkasnya]* |
-| *...* | *...* | *...* | *...* |
+| *O-001* | *Rich Label* | *APATIS* | *Text yang menunjukkan nama web app.* |
+| *O-002* | *Drawer Menu* | *Tautan menuju halaman akun, halaman formulir laporan, dan halaman leaderboard* | *Membuka side bar yang berisi tautan ke halaman-halaman lain.* |
+| *O-003* | *Icon* | *Daftar notifikasi* | *Untuk membuka halaman notfikasi.* |
+| *O-004* | *Icon* | *Profil akun* | *Untuk membuka halaman akun.* |
+| *O-005* | *Container* | *Header web* | *Mengandung objek-objek header web, seperti nama web, side bar, bel notfikasi, profil akun.* |
+| *O-006* | *Rich Label* | *Response Form* | *Text yang menunjukkan nama halaman.* |
+| *O-007* | *Rich Label* | *Title* | *Text yang menunjukkan tempat judul laporan.* |
+| *O-008* | *Rich Label* | *Judul laporan* | *Text yang menunjukkan judul laporan.* |
+| *O-009* | *Rich Label* | *Description* | *Text yang menunjukkan tempat deskripsi masalah.* |
+| *O-010* | *Rich Label* | *Deskripsi masalah* | *Text yang menunjukkan deskripsi masalah laporan.* |
+| *O-011* | *Rich Label* | *Location* | *Text yang menunjukkan tempat lokasi masalah.* |
+| *O-012* | *Rich Label* | *Lokasi masalah yang dilaporkan* | *Text yang menunjukkan lokasi permasalahan terjadi.* |
+| *O-013* | *Rich Label* | *Additional Files'*'* | *Text yang menunjukkan tempat pengunggahan foto pendukung.* |
+| *O-011* | *Image* | *Unggahan foto pendukung* | *Menunjukkan foto pendukung yang diunggah.* |
+| *O-012* | *Rich Label* | *Status'*'* | *Text yang menunjukkan tempat pemilihan status laporan.* |
+| *O-013* | *Drop down* | *Status laporan* | *Memilih status laporan.* |
+| *O-014* | *Rich Label* | *Comment* | *Text yang menunjukkan tempat input komentar.* |
+| *O-015* | *Rich Text Input Field* | *Komentar laporan* | *Tempat pengisian komentar laporan.* |
+| *O-017* | *Container* | *Seluruh field untuk formulir tanggapan* | *Mengkelompokkan objek-objek yang dibutuhkan dalam formulir tanggapan.* |
+| *O-018* | *Icon* | *Close* | *Menutup formulir tanggapan.* |
 
 
 ## 6.8 Rancangan Antarmuka I-08
-
-Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tuliskan spesifikasi rinci objek yang ditampilkan dan reaksi sistem terhadap interaksi pengguna.
 
 **Antarmuka:** *I-08*  
 **Nama Layar:** *Halaman Leaderboard*
@@ -927,16 +959,19 @@ Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tu
 <img alt="Interface Halaman Leaderboard" src="./assets/interface/halamanleaderboard.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar 6.1. Rancangan Antarmuka I-08 - Halaman Leaderboard</i>
+<i>Gambar 6.8. Rancangan Antarmuka I-08 - Halaman Leaderboard</i>
 </p>
 
 Tabel 6.8. Spesifikasi Objek Antarmuka I-08
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
-| *[ID objek]* | *[Jenis objek, misalnya Button, RTF Box, dll]* | *[String yang tampil pada layar]* | *[Reaksi sistem, layar tujuan, tautan, atau ID algoritma yang dijalankan]* |
-| *[ID objek]* | *[Jenis objek]* | *[Konten yang ditampilkan]* | *[Reaksi sistem atau nama file terkait beserta deskripsi ringkasnya]* |
-| *...* | *...* | *...* | *...* |
+| *O-006* | *Rich Label* | *Leaderboard* | *Text yang menunjukkan nama halaman.* |
+| *O-007* | *Rich Label* | *Ranking* | *Text yang menunjukkan nomor ranking di leaderboard.* |
+| *O-008* | *Avatar* | *Profil akun* | *Gambar yang menunjukkan profil akun pengguna.* |
+| *O-009* | *Rich Label* | *Poin* | *Text yang menunjukkan jumlah poin yang dimiliki pengguna terkait.* |
+| *O-010* | *Container* | *Informasi ranking setiap pengguna* | *Mengelompokkan informasi yang dibutuhkan untuk ranking pengguna.* |
+| *O-011* | *Icon* | *Titik tiga kebawah* | *Icon yang menunjukkan bahwa ada kelanjutan ranking setelah ranking 20.* |
 
 
 ## 6.9 Rancangan Antarmuka Keseluruhan
