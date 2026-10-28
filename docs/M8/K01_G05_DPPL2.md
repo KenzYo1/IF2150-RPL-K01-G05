@@ -179,6 +179,7 @@ Tabel 2.3. Identifikasi Komponen/Modul/Subsistem
 
 | Nama Komponen/Modul/Subsistem | Jenis                 | Penjelasan                                                                                                           |
 | :---------------------------- | :-------------------- | :------------------------------------------------------------------------------------------------------------------- |
+| *HalamanLogin*                 | *Client*                | *Menampilkan halaman login untuk pengguna yang akan mengakses web APATIS.*     |
 | *HalamanLaporan*                 | *Client*                | *Menampilkan daftar laporan dan mengirim request data laporan serta like ke server.*     |
 | *HalamanFormulirLaporan*               | *Client*                | *Menerima input laporan baru dan mengirimkannya ke LaporanController.*                                                       |
 | *HalamanFormulirTanggapan*                | *Client*                | *Menerima input tanggapan atas laporan dan mengirimkannya ke TanggapanController.*                                      |
@@ -191,6 +192,7 @@ Tabel 2.3. Identifikasi Komponen/Modul/Subsistem
 | *Modul Like* | *Server* | *Memeriksa, menyimpan, dan membatalkan like serta memastikan seorang Pelapor hanya memiliki satu like pada setiap laporan. Modul ini mewadahi LikeController.* |
 | *Modul Poin dan Leaderboard* | *Server* | *Memberikan poin untuk laporan yang memenuhi ketentuan, memperbarui poin Pelapor, menghitung peringkat, dan mengambil data 20 peringkat teratas. Modul ini mewadahi LeaderboardController serta menggunakan data PelaporEntity dan DatabasePelaporEntity.* |
 | *Modul Notifikasi* | *Server* | *Membuat dan mengirimkan notifikasi ketika status laporan atau jumlah poin Pelapor berubah. Modul ini mewadahi NotifikasiController.* |
+| *Modul Login* | *Server* | *Melakukan validasi login menggunakan layanan eksternal autentikasi beserta mengubah ke halaman laporan yang sesuai dengan peran pengguna jika login berhasil. Modul ini mewadahi LoginController.* |
 | *Database APATIS*        | *Database*          | *Menyimpan data pelapor dan laporan secara terpusat.*                |
 | *Supabase Auth*           | *Layanan eksternal*          | *Menangani autentikasi pengguna.*                                                              |
 | *Supabase Storage*                      | *Layanan eksternal*               | *Menyimpan berkas lampiran laporan.*                        |
@@ -438,6 +440,8 @@ Tabel 4.1. Daftar Kelas Perancangan Keseluruhan
 | *C15* | *HalamanAkun* | *pelaporData* | *showPelaporData()* |
 | *C16* | *HalamanNotifikasi* | *listNotifikasi* | *showListNotifikasi()* |
 | *C17* | *NotifikasiController* | *statusNotifikasi* | *createNotifikasi(), sendNotifikasi()* |
+| *C18* | *HalamanLogin* | *-* | *loginByITBEmail(), loginByNormalEmail()* |
+| *C19* | *LoginController* | *-* | *validateITBLogin(), validateNormalLogin()* |
 
 ---
 
@@ -450,24 +454,25 @@ Tabel 5.1. Daftar Kelas Perancangan dan Kelas Analisis Terkait
 | No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
 | :--- | :--- | :--- |
 | 1 | *PelaporEntity* | *PelaporEntity* |
-| 2 | *LaporanEntity* | ** |
-| 3 | *HalamanLaporan* | ** |
-| 4 | *HalamanFormulirLaporan* | ** |
-| 5 | *LaporanController* | ** |
-| 6 | *AdminEntity* | ** | 
-| 7 | *PetugasEntity* | ** |
-| 8 | *HalamanFormulirTanggapan* | ** |
-| 9 | *TanggapanController* | ** |
-| 10 | *LikeController* | *-* | ** |
-| 11 | *HalamanLeaderboard* | ** |
-| 12 | *DatabaseLaporanEntity* | ** |
-| 13 | *DatabasePelaporEntity* | ** |
-| 14 | *LeaderboardController* | ** |
-| 15 | *HalamanAkun* | ** |
-| 16 | *HalamanNotifikasi* | ** |
-| 17 | *NotifikasiController* | ** |
+| 2 | *LaporanEntity* | *LaporanEntity* |
+| 3 | *HalamanLaporan* | *HalamanLaporan* |
+| 4 | *HalamanFormulirLaporan* | *HalamanFormulirLaporan* |
+| 5 | *LaporanController* | *LaporanController* |
+| 6 | *AdminEntity* | *AdminEntity* | 
+| 7 | *PetugasEntity* | *PetugasEntity* |
+| 8 | *HalamanFormulirTanggapan* | *HalamanFormulirTanggapan* |
+| 9 | *TanggapanController* | *TanggapanController* |
+| 10 | *LikeController* | *LikeController* |
+| 11 | *HalamanLeaderboard* | *HalamanLeaderboard* |
+| 12 | *DatabaseLaporanEntity* | *DatabaseLaporanEntity* |
+| 13 | *DatabasePelaporEntity* | *DatabasePelaporEntity* |
+| 14 | *LeaderboardController* | *LeaderboardController* |
+| 15 | *HalamanAkun* | *HalamanAkun* |
+| 16 | *HalamanNotifikasi* | *HalamanNotifikasi* |
+| 17 | *NotifikasiController* | *NotifikasiController* |
+| 18 | *HalamanLogin* | *HalamanLogin* |
+| 19 | *LoginController* | *LoginController* |
 
-Untuk **setiap kelas**, identifikasi operasi berdasarkan tanggung jawab kelas beserta *visibility*-nya, serta atribut beserta *visibility* dan tipenya. Buat subbab tersendiri untuk setiap kelas.
 
 ## 5.1 Kelas PelaporEntity
 
