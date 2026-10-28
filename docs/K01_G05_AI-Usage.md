@@ -85,6 +85,12 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | Claude | Diskusi ide dan bentuk diagram kelas | Apakah diagram yang dibuat sudah sesuai? Apakan metode dan atribut-nya sudah benar? | Beberapa ide valid, yakni pemindahan beberapa metode dan atribut ke kelas yang lebih cocok (Controller) |
 | Claude | Diskusi ide dan bentuk diagram sekuens | Apakah alur diagram sekuens ini sudah baik? | Memilih ide yang valid, yakni sesuai dengan apa yang ada di SKPL. |
 
+### Milestone 7
+| Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
+| :--- | :--- | :--- | :--- |
+| ChatGPT | Pseudecode | Apakah pseudocode yang dibuat sudah sesuai? Apakah variabel dan logika-nya sudah benar? | Modifikasi sesuai kebutuhan |
+
+
 ---
 
 

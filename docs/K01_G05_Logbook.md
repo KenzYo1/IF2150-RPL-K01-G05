@@ -155,5 +155,6 @@
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *26-10-2026* | *Kenzo Yo* | *Inisialisasi dokumen DPPL2* | *1* | *Done* | *-* | 
+| *28-10-2026* | *Justin Sepvians* | *C12-C17* | *2* | *Done* | *-* | 
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
