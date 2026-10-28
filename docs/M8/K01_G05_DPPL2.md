@@ -668,7 +668,7 @@ Tabel 5.6 Operasi Kelas AdminEntity
 
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
-| ** | ** | ** |
+| *-* | *-* | *-* |
 
 Kelas tidak memiliki signature operation karena hanya berupa data, fungsi *setter*, dan fungsi *getter* sehingga tidak memiliki *signature operation* apa pun.
 
@@ -697,9 +697,9 @@ Kelas ini berisi data, *getter*, serta *setter* dan tidak memiliki *signature op
 Tabel 5.7.2. Atribut Kelas PetugasEntity
 | Nama Atribut | Visibility (private, public) | Tipe |
 | :--- | :--- | :--- |
-| *idPetugas* | *private* | *Integer* |
+| *idPetugas* | *private* | *number* |
 | *namaPetugas* | *private* | *String* |
-| *nipPetugas* | *private* | *Integer* |
+| *nipPetugas* | *private* | *number* |
 
 ### 5.7.1 Algoritma/Query
 Kelas ini hanya berisi getter dan setter sederhana tanpa logika proses, sehingga tidak memerlukan pseudocode. Jika ada query yang mengambil data petugas dari database, query tersebut ditulis pada kelas control, bukan di kelas entity ini.
@@ -770,7 +770,7 @@ procedure showFormulirTanggapan():
 Tabel 5.9.1. Operasi Kelas TanggapanController
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
-| *addPoinPelapor(idPelapor, poin)* | *Public* | *Menambahkan poin bertipe Integer ke perolehan poin Pelapor dengan idPelapor terkait* |
+| *addPoinPelapor(idPelapor, poin)* | *Public* | *Menambahkan poin bertipe number ke perolehan poin Pelapor dengan idPelapor terkait* |
 | *sendTanggapan(idLaporan, tanggapan)* | *Public* | *Mengirimkan tanggapan ke database dan menampilkan status pengiriman tanggapan* |
 
 Tabel 5.9.2. Atribut Kelas TanggapanController
@@ -787,10 +787,10 @@ Tabel 5.9.2. Atribut Kelas TanggapanController
 { ALGORITMA MENAMBAHKAN POIN PELAPOR }
 
 { KAMUS }
-idPelapor : Integer   
-poin      : Integer    
-poinLama  : Integer    
-poinBaru  : Integer       
+idPelapor : number   
+poin      : number    
+poinLama  : number    
+poinBaru  : number       
 
 { ALGORITMA }
 procedure addPoinPelapor(idPelapor, poin): boolean
@@ -815,10 +815,10 @@ Tabel 5.9.1. Query Operasi addPoinPelapor()
 { ALGORITMA MENGIRIM TANGGAPAN }
 
 { KAMUS }
-idLaporan : Integer
+idLaporan : number
 tanggapan : StatusLaporan
 komentar  : String | null
-idPelapor : Integer
+idPelapor : number
 
 { ALGORITMA }
 procedure sendTanggapan(idLaporan, tanggapan): boolean
@@ -853,8 +853,8 @@ Tabel 5.10.1. Operasi Kelas LikeController
 { ALGORITMA MENGECEK STATUS LIKE LAPORAN }
 
 { KAMUS }
-idLaporan : Integer
-idPelapor : Integer
+idLaporan : number
+idPelapor : number
 hasil     : Boolean
 
 { ALGORITMA }
@@ -878,8 +878,8 @@ Tabel 5.10.1. Query Operasi [Nama Operasi]
 { ALGORITMA MELAKUKAN LIKE LAPORAN }
 
 { KAMUS }
-idLaporan :Integer
-idPelapor :Integer
+idLaporan :number
+idPelapor :number
 
 { ALGORITMA }
 procedure likeLaporan(idLaporan, idPelapor): boolean
@@ -905,8 +905,8 @@ procedure likeLaporan(idLaporan, idPelapor): boolean
 { ALGORITMA MELAKUKAN LIKE LAPORAN }
 
 { KAMUS }
-idLaporan :Integer
-idPelapor :Integer
+idLaporan :number
+idPelapor :number
 
 { ALGORITMA }
 procedure likeLaporan(idLaporan, idPelapor): boolean
@@ -949,7 +949,7 @@ Tabel 5.11.2. Atribut Kelas HalamanLeaderboard
 { KAMUS }
 daftarPelapor : PelaporEntity[]
 hasil         : PelaporEntity[]
-i, j          : Integer
+i, j          : number
 pelapor1         : PelaporEntity
 
 { ALGORITMA }
@@ -976,7 +976,7 @@ procedure sortPelaporByPoin(daftarPelapor): PelaporEntity[]
 daftarPelapor : PelaporEntity[]
 top20Pelapor  : PelaporEntity[]
 pelapor       : PelaporEntity
-peringkat     : Integer
+peringkat     : number
 
 { ALGORITMA }
 procedure show20Pelapor():
