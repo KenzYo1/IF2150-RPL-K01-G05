@@ -353,7 +353,7 @@ Tabel 3.3 Identifikasi Kelas Use Case [UC03]
 ### 3.3.3 Diagram Kelas
 
 <p align="center">
-<img alt="Diagram Kelas UC03" src="./assets/diagram/ClassDiagram-UC03.jpg" width="35%">
+<img alt="Diagram Kelas UC03" src="./assets/diagram/ClassDiagramUC03.jpg" width="35%">
 </p>
 <p align="center">
 <i>Gambar 11. Diagram Kelas UC03: Memberikan dan Membatalkan Like</i>
@@ -400,7 +400,7 @@ Tabel 3.4 Identifikasi Kelas Use Case [UC04]
 ### 3.4.3 Diagram Kelas
 
 <p align="center">
-<img alt="Diagram Kelas UC03" src="./assets/diagram/ClassDiagram-UC04.jpg" width="35%">
+<img alt="Diagram Kelas UC03" src="./assets/diagram/ClassDiagramUC04.jpg" width="35%">
 </p>
 <p align="center">
 <i>Gambar 14. Diagram Kelas UC04: Memperoleh Poin</i>
