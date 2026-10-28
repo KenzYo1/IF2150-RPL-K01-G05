@@ -572,7 +572,7 @@ Tabel 5.2.1. Query Operasi [Nama Operasi]
 *[Ulangi pola 5.1.1 untuk operasi penting berikutnya pada kelas yang sama, jika ada.]*
 
 
-## 5.3 Kelas PelaporEntity
+## 5.3 Kelas HalamanLaporan
 
 **Nama Kelas:** *HalamanLaporan*  
 **ID Kelas:** *C03*
@@ -580,24 +580,24 @@ Tabel 5.2.1. Query Operasi [Nama Operasi]
 | *C03* | *HalamanLaporan* | *daftarLaporan* | *createLaporan(), sortLaporan(), showLaporan(), TekanLike()* |
 ### jangan lupa dihapus lol
 
-Tabel 5.2.1. Operasi Kelas PelaporEntity
+Tabel 5.2.1. Operasi Kelas HalamanLaporan
 
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
 | *showLaporan* | *public* | *Menampilkan daftar laporan ke halaman berdasarkan data daftarLaporan* |
 
-Tabel 5.2.2. Atribut Kelas LaporanEntity
+Tabel 5.2.2. Atribut Kelas HalamanLaporan
 
 | Nama Atribut | Visibility (private, public) | Tipe |
 | :--- | :--- | :--- |
 | *daftarLaporan* | *private* | *<List>Laporan* |
 
 
-### 5.2.1 Algoritma/Query
+### 5.3.1 Algoritma/Query
 
 Bagian ini diisi untuk kerangka algoritma proses yang dianggap cukup penting. Algoritma dapat dituliskan sebagai *pseudocode*. Implementasi *skeleton code* juga dapat digunakan untuk kelas yang sudah terdefinisi pada bahasa pemrograman tertentu.
 
-**Nama Kelas:** *PelaporEntity*  
+**Nama Kelas:** *HalamanLaporan*  
 **Nama Operasi:** *showLaporan()*  
 **ID Algoritma:** *[Algo-001]*
 
@@ -627,18 +627,65 @@ procedure showLaporan():
 
 Jika operasi mengacu pada query tertentu, lengkapi tabel berikut. 
 
-Tabel 5.2.1. Query Operasi [Nama Operasi]
+Tabel 5.3.1. Query Operasi Mengambil Daftar Laporan
 
 | No Query | Query | Keterangan |
 | :--- | :--- | :--- |
-| *[Q-001]* | *[Tuliskan query]* | *[Fungsi query]* |
-| *...* | *...* | *...* |
+| *[Q-001]* | *[SELECT * FROM laporan ORDER BY created_at DESC LIMIT 10 OFFSET 0]* | *[Mengambil 10 laporan untuk ditampilkan]* |
 
 
-### 5.2.2 Algoritma/Query
+## 5.4 Kelas HalamanFormulirLaporan
 
-*[Ulangi pola 5.1.1 untuk operasi penting berikutnya pada kelas yang sama, jika ada.]*
+**Nama Kelas:** *HalamanFormulirLaporan*  
+**ID Kelas:** *C04*
 
+| *C04* | *HalamanFormulirLaporan* | *maxKarakter, maxUkuranFoto, laporanValid* | *isJumlahKarakterValid(), isUkuranFotoValid(), isLaporanValid(), showFormulirLaporan()* |
+### jangan lupa dihapus lol
+
+Tabel 5.4.1. Operasi Kelas HalamanFormulirLaporan
+
+| Nama Operasi | Visibility (private, public) | Keterangan |
+| :--- | :--- | :--- |
+| *showFormulirLaporan()* | *public* | *Menampilkan formulir laporan ke halaman untuk diisi pengguna* |
+
+Tabel 5.4.2. Atribut Kelas HalamanLaporan
+
+| Nama Atribut | Visibility (private, public) | Tipe |
+| :--- | :--- | :--- |
+| *maxKarakter* | *private* | *number* |
+| *maxUkuranFoto* | *private* | *Boolean* |
+| *laporanValid* | *private* | *number* |
+
+### 5.4.1 Algoritma/Query
+
+**Nama Kelas:** *HalamanFormulirLaporan*  
+**Nama Operasi:** *showFormulirLaporan()*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA MENAMPILKAN HALAMAN FORMULIR LAPORAN }
+{ KAMUS }
+    judulLaporan: string
+    descLaporan: string
+    fotoLaporan: string
+{ ALGORITMA }
+procedure showFormulirLaporan():
+    return(
+        <div>
+            <input name="Judul Laporan">
+            <input name="Deskripsi Laporan">
+            <input name="Foto Laporan">
+        </div>
+    )
+```
+
+Jika operasi mengacu pada query tertentu, lengkapi tabel berikut. 
+
+Tabel 5.3.1. Query Operasi Menambah Laporan
+
+| No Query | Query | Keterangan |
+| :--- | :--- | :--- |
+| *[Q-001]* | *[INSERT INTO laporan (judulLaporan, descLaporan, fotoLaporan, "")]* | *[Mengambil 10 laporan untuk ditampilkan]* |
 
 
 <br>
