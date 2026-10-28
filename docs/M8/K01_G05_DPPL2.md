@@ -532,8 +532,8 @@ Tabel 5.2.1. Operasi Kelas PelaporEntity
 
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
-| *[Signature operasi, termasuk parameter dan tipe kembalian]* | *[Visibility]* | *[Tanggung jawab operasi]* |
-| *...* | *...* | *...* |
+| ** | ** | ** |
+*Tabel kosong karena kelas hanya berupa data, setter, dan getter sehingga tidak memiliki signature operation*
 
 Tabel 5.2.2. Atribut Kelas LaporanEntity
 
@@ -565,11 +565,6 @@ Tabel 5.2.1. Query Operasi [Nama Operasi]
 | :--- | :--- | :--- |
 | *[Q-001]* | *[Tuliskan query]* | *[Fungsi query]* |
 | *...* | *...* | *...* |
-
-
-### 5.2.2 Algoritma/Query
-
-*[Ulangi pola 5.1.1 untuk operasi penting berikutnya pada kelas yang sama, jika ada.]*
 
 
 ## 5.3 Kelas HalamanLaporan
@@ -648,12 +643,12 @@ Tabel 5.4.1. Operasi Kelas HalamanFormulirLaporan
 | :--- | :--- | :--- |
 | *showFormulirLaporan()* | *public* | *Menampilkan formulir laporan ke halaman untuk diisi pengguna* |
 
-Tabel 5.4.2. Atribut Kelas HalamanLaporan
+Tabel 5.4.2. Atribut Kelas HalamanFormulirLaporan
 
 | Nama Atribut | Visibility (private, public) | Tipe |
 | :--- | :--- | :--- |
 | *maxKarakter* | *private* | *number* |
-| *maxUkuranFoto* | *private* | *Boolean* |
+| *maxUkuranFoto* | *private* | *number* |
 | *laporanValid* | *private* | *number* |
 
 ### 5.4.1 Algoritma/Query
@@ -667,26 +662,92 @@ Tabel 5.4.2. Atribut Kelas HalamanLaporan
 { KAMUS }
     judulLaporan: string
     descLaporan: string
-    fotoLaporan: string
+    fotoLaporan: File
 { ALGORITMA }
 procedure showFormulirLaporan():
     return(
-        <div>
-            <input name="Judul Laporan">
-            <input name="Deskripsi Laporan">
-            <input name="Foto Laporan">
-        </div>
+        <form>
+            <input type="text" name="Judul Laporan"/>
+            <input type="text" name="Deskripsi Laporan"/>
+            <input type="file" name="Foto Laporan"/>
+            <button>Kirim<button/>
+        </form>
     )
 ```
 
 Jika operasi mengacu pada query tertentu, lengkapi tabel berikut. 
 
-Tabel 5.3.1. Query Operasi Menambah Laporan
+Tabel 5.4.3. Query Operasi Menambah Laporan
 
 | No Query | Query | Keterangan |
 | :--- | :--- | :--- |
-| *[Q-001]* | *[INSERT INTO laporan (judulLaporan, descLaporan, fotoLaporan, "")]* | *[Mengambil 10 laporan untuk ditampilkan]* |
+| *Q-001* | *INSERT INTO laporan (judul, deskripsi, foto, status) VALUES ($1, $2, $3, 'diproses')* | *[Menambahkan laporan baru ke dalam database]* |
 
+## 5.5 Kelas HalamanFormulirLaporan
+
+**Nama Kelas:** *LaporanController*  
+**ID Kelas:** *C05*
+
+| *C05* | *LaporanController* | *laporanValid* | *isLaporanValid(), setStatusLaporan(), getValidLaporan()* |
+### jangan lupa dihapus lol
+
+Tabel 5.5.1. Operasi Kelas LaporanController
+
+| Nama Operasi | Visibility (private, public) | Keterangan |
+| :--- | :--- | :--- |
+| *isLaporanValid(desc, foto) -> Boolean:* | *public* | *Mengecek validitas laporan* |
+
+Tabel 5.5.2. Atribut Kelas LaporanController
+
+| Nama Atribut | Visibility (private, public) | Tipe |
+| :--- | :--- | :--- |
+| *laporanValid* | *private* | *Boolean* |
+
+### 5.5.1 Algoritma/Query
+
+**Nama Kelas:** *LaporanController*  
+**Nama Operasi:** *isLaporanValid(desc, foto) -> Boolean:*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA VALIDASI LAPORAN }
+{ KAMUS }
+    maxDescChar: number
+    maxFotoSize: number
+{ ALGORITMA }
+function isLaporanValid(desc, foto) -> Boolean:
+    if (countChar(desc) < maxDescChar and size(foto) < maxFotoSize) 
+        -> true
+    else 
+        -> false
+```
+
+
+## 5.6 Kelas HalamanFormulirLaporan
+
+**Nama Kelas:** *AdminEntity*  
+**ID Kelas:** *C06*
+### jangan lupa dihapus lol
+
+| *C06* | *AdminEntity* | *idAdmin, namaAdmin, nipAdmin* | *getIdAdmin(), getNamaAdmin(), getNipAdmin(), setIdAdmin(), setNamaAdmin(), setNipAdmin()* |
+
+Tabel 5.6 Operasi Kelas AdminEntity
+
+| Nama Operasi | Visibility (private, public) | Keterangan |
+| :--- | :--- | :--- |
+| ** | ** | ** |
+*Kelas tidak memiliki signature operation karena hanya berupa data, fungsi setter, dan fungsi getter.*
+
+Tabel 5.6 Atribut Kelas AdminEntity
+
+| Nama Atribut | Visibility (private, public) | Tipe |
+| :--- | :--- | :--- |
+| *idAdmin* | *private* | *number* |
+| *namaAdmin* | *private* | *string* |
+| *nipAdmin* | *private* | *string* |
+
+### 5.6.1 Algoritma/Query
+*Kelas tidak memiliki algoritma atau query yang bersifat signature karena hanya berupa kumpulan data, setter, dan getter.*
 
 <br>
 
