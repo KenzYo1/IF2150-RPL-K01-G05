@@ -1416,7 +1416,7 @@ Kelas `HalamanAkun` merupakan kelas *boundary* yang menampilkan identitas dan ju
 **ID Algoritma:** *Algo-C15-01*
 
 ```text
-FUNCTION showPelaporData(pelaporData): void
+function showPelaporData(pelaporData): void
   if pelaporData is null then
     DISPLAY 'Data akun tidak ditemukan'
     return
@@ -1452,7 +1452,7 @@ Kelas `HalamanNotifikasi` merupakan kelas *boundary* yang menampilkan daftar not
 **ID Algoritma:** *Algo-C16-01*
 
 ```text
-FUNCTION showListNotifikasi(listNotifikasi): void
+function showListNotifikasi(listNotifikasi): void
   if listNotifikasi is empty then
     DISPLAY 'Belum ada notifikasi'
     return
