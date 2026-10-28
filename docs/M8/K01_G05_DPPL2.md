@@ -8,7 +8,7 @@ DESKRIPSI PERANCANGAN PERANGKAT LUNAK (DPPL)
 <br>
 
 ## *APATIS: Aplikasi Pelaporan Air dan Sanitasi*
-### *[Logo Perangkat Lunak]*
+### <img alt="Logo APATIS" src="./assets/logo.png" width="50%">
 
 ### Untuk: *Made Branenda Jordhy*
 
