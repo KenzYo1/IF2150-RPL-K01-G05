@@ -440,8 +440,8 @@ Tabel 4.1. Daftar Kelas Perancangan Keseluruhan
 | *C15* | *HalamanAkun* | *pelaporData* | *showPelaporData()* |
 | *C16* | *HalamanNotifikasi* | *listNotifikasi* | *showListNotifikasi()* |
 | *C17* | *NotifikasiController* | *statusNotifikasi* | *createNotifikasi(), sendNotifikasi()* |
-| *C18* | *HalamanLogin* | *-* | *loginByITBEmail(), loginByNormalEmail()* |
-| *C19* | *LoginController* | *-* | *validateITBLogin(), validateNormalLogin()* |
+| *C18* | *HalamanLogin* | *-* | *loginByITBEmail(), loginByNormalEmail(), showLoginGagal(), showLoginBerhasil()* |
+| *C19* | *LoginController* | *-* | *validateITBLogin(), validateNormalLogin(), getRole(), getEmailFromPage()* |
 
 ---
 
@@ -518,11 +518,6 @@ Tabel 5.1.1. Query Operasi [Nama Operasi]
 | :--- | :--- | :--- |
 | *[Q-001]* | *[Tuliskan query]* | *[Fungsi query]* |
 | *...* | *...* | *...* |
-
-
-### 5.1.2 Algoritma/Query
-
-*[Ulangi pola 5.1.1 untuk operasi penting berikutnya pada kelas yang sama, jika ada.]*
 
 
 ## 5.2 Kelas PelaporEntity
@@ -617,9 +612,7 @@ procedure showLaporan():
                 <p>{laporan.desc}</p>
                 <StatusLaporan status={laporan.statusLaporan}/>
                 <LikeLaporan like={laporan.likeLaporan}/>
-                <!(laporan.fotoLaporan == 0) && (
-                    <Image url={laporan.fotoLaporan}/>
-                )>
+                <Image url={laporan.fotoLaporan}/>
             <div>     
         <div>
     )
@@ -722,9 +715,9 @@ Tabel 5.5.2. Atribut Kelas LaporanController
 { ALGORITMA }
 function isLaporanValid(desc, foto) -> Boolean:
     if (countChar(desc) < maxDescChar and size(foto) < maxFotoSize) 
-        -> true
+        return true
     else 
-        -> false
+        return false
 ```
 
 
@@ -753,6 +746,138 @@ Tabel 5.6 Atribut Kelas AdminEntity
 
 ### 5.6.1 Algoritma/Query
 *Kelas tidak memiliki algoritma atau query yang bersifat signature karena hanya berupa kumpulan data, setter, dan getter.*
+
+
+
+
+## 5.18 Kelas HalamanLogin
+
+**Nama Kelas:** *HalamanLogin*  
+**ID Kelas:** *C18*
+
+| *C18* | *HalamanLogin* | *email* | *loginByITBEmail(), loginByNormalEmail(), showLoginGagal(), showLoginBerhasil()* | 
+### jangan lupa dihapus lol
+
+Tabel 5.18.1. Operasi Kelas HalamanLogin
+
+| Nama Operasi | Visibility (private, public) | Keterangan |
+| :--- | :--- | :--- |
+| *loginByITBEmail()* | *public* | *Memproses pengguna untuk login melalui email ITB* |
+| *loginByNormalEmail()* | *public* | *Memproses pengguna untuk login menggunakan email pribadinya* |
+
+Tabel 5.18.2. Atribut Kelas HalamanLogin
+
+| Nama Atribut | Visibility (private, public) | Tipe |
+| :--- | :--- | :--- |
+| *email* | *private* | *string* |
+
+### 5.18.1 Algoritma
+
+**Nama Kelas:** *HalamanLogin*  
+**Nama Operasi:** *loginByITBEmail()*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA LOGIN EMAIL ITB }
+{ KAMUS }
+    berhasil: Boolean
+    role: string
+    email: string
+{ ALGORITMA }
+function loginByITBEmail():
+    email <- LoginController.getEmailFromPage()
+    berhasil <- LoginController.validateITBLogin() {note: memanggil service autentikasi eksternal}
+    if berhasil then:
+        role <- getRole(email)
+        showLoginBerhasil()
+    else:
+        showLoginGagal()
+```
+
+### 5.18.2 Algoritma
+
+**Nama Kelas:** *HalamanLogin*  
+**Nama Operasi:** *loginByNormalEmail()*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA LOGIN EMAIL ITB }
+{ KAMUS }
+    berhasil: Boolean
+    role: string
+    email: string
+{ ALGORITMA }
+function loginByITBEmail():
+    email <- LoginController.getEmailFromPage()
+    berhasil <- LoginController.validateNormalLogin() {note: memanggil service autentikasi eksternal}
+    if berhasil then:
+        role <- getRole(email)
+        showLoginBerhasil()
+    else:
+        showLoginGagal()
+```
+
+
+## 5.19 Kelas LoginController
+
+**Nama Kelas:** *LoginController*  
+**ID Kelas:** *C19*
+
+
+| *C19* | *LoginController* | *-* | *validateITBLogin(), validateNormalLogin(), getRole(), getEmailFromPage()* |
+### jangan lupa dihapus lol
+
+Tabel 5.18.1. Operasi Kelas HalamanLogin
+
+| Nama Operasi | Visibility (private, public) | Keterangan |
+| :--- | :--- | :--- |
+| *validateITBLogin(): Boolean* | *public* | *Validasi pengguna untuk login melalui email ITB* |
+| *validateNormalLogin(): Boolean* | *public* | *Validasi pengguna untuk login menggunakan email pribadinya* |
+
+Tabel 5.19.2. Atribut Kelas HalamanLogin
+
+| Nama Atribut | Visibility (private, public) | Tipe |
+| :--- | :--- | :--- |
+| *-* | *-* | *-* |
+
+### 5.19.1 Algoritma
+
+**Nama Kelas:** *LoginController*  
+**Nama Operasi:** *validateITBLogin(): Boolean*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA VALIDASI LOGIN EMAIL ITB }
+{ KAMUS }
+    email: string
+    valid: boolean
+{ ALGORITMA }
+function validateITBLogin():
+    email <- LoginController.getEmailFromPage()
+    valid <- LayananSSO.verifikasiEmail(email) {layanan eksternal}
+    return valid
+```
+
+### 5.19.2 Algoritma
+
+**Nama Kelas:** *LoginController*  
+**Nama Operasi:** *validateNormalLogin(): Boolean*  
+**ID Algoritma:** *[Algo-001]*
+
+```text
+{ ALGORITMA VALIDASI LOGIN EMAIL PRIBADI }
+{ KAMUS }
+    email: string
+    respons: ResponsSupabase
+{ ALGORITMA }
+function validateITBLogin():
+    email <- LoginController.getEmailFromPage()
+    respons <- LayananSupabase.kirimOTP(email) {layanan eksternal}
+    if respons == TIMEOUT or respons == ERROR:
+        return false
+    return true
+```
+
 
 <br>
 
