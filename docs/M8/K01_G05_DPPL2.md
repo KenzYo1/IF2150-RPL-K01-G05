@@ -558,7 +558,7 @@ procedure showLaporan():
         <div>
             for laporan in showLaporan
             <div class="kartu-laporan" key={laporan.idLaporan}>
-                <h3>{laporan.desc}</h3>
+                <h3>{laporan.judulLaporan}</h3>
                 <p>{laporan.desc}</p>
                 <StatusLaporan status={laporan.statusLaporan}/>
                 <LikeLaporan like={laporan.likeLaporan}/>
