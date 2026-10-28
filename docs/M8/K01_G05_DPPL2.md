@@ -1026,9 +1026,6 @@ Tabel 5.11.1. Query Operasi show20Pelapor()
 **Nama Kelas:** *HalamanLogin*  
 **ID Kelas:** *C18*
 
-| *C18* | *HalamanLogin* | *email* | *loginByITBEmail(), loginByNormalEmail(), showLoginGagal(), showLoginBerhasil()* | 
-### jangan lupa dihapus lol
-
 Tabel 5.18.1. Operasi Kelas HalamanLogin
 
 | Nama Operasi | Visibility (private, public) | Keterangan |
@@ -1094,11 +1091,7 @@ function loginByITBEmail():
 **Nama Kelas:** *LoginController*  
 **ID Kelas:** *C19*
 
-
-| *C19* | *LoginController* | *-* | *validateITBLogin(), validateNormalLogin(), getRole(), getEmailFromPage()* |
-### jangan lupa dihapus lol
-
-Tabel 5.18.1. Operasi Kelas HalamanLogin
+Tabel 5.19.1. Operasi Kelas HalamanLogin
 
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
