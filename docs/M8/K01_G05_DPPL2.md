@@ -8,7 +8,7 @@ DESKRIPSI PERANCANGAN PERANGKAT LUNAK (DPPL)
 <br>
 
 ## *APATIS: Aplikasi Pelaporan Air dan Sanitasi*
-### <img alt="Logo APATIS" src="./assets/logo.png" width="50%">
+### *[Logo Perangkat Lunak]*
 
 ### Untuk: *Made Branenda Jordhy*
 
@@ -38,6 +38,16 @@ Dipersiapkan oleh:
 
 ---
 
+<br>
+
+> **Petunjuk pengerjaan:** *[Silahkan hapus bagian ini setelah selesai mengerjakan]*
+>
+> Dokumen ini melanjutkan **Deskripsi Perancangan Perangkat Lunak**. Gunakan nama, ID, kebutuhan, dan use case yang konsisten dengan kedua dokumen tersebut. Contoh pola ID baru di bawah dapat disesuaikan dengan kesepakatan kelompok, ID yang sudah ada tetap dipertahankan.
+
+<br>
+
+---
+
 
 # BAB 1: Pendahuluan
 
@@ -47,7 +57,7 @@ Dokumen Deskripsi Perancangan Perangkat Lunak (DPPL-2) ini menjelaskan rancangan
 
 Dokumen ini digunakan oleh tim pengembang sebagai acuan dalam mengimplementasikan APATIS. Rancangan yang dijelaskan meliputi lingkungan implementasi, arsitektur perangkat lunak, identifikasi komponen, realisasi setiap use case melalui sequence diagram, serta perancangan kelas beserta atribut, metode, dan relasinya.
 
-Dokumen DPPL-2 juga digunakan untuk memastikan bahwa setiap use case dalam SKPL telah didukung oleh kelas perancangan dan interaksi antarkelas yang sesuai. Dengan demikian, proses implementasi, pengujian, pengembangan lanjutan, dan pemeliharaan APATIS dapat dilakukan secara terarah dan konsisten, termasuk apabila pengembangan perangkat lunak dilanjutkan oleh tim lain.
+Dokumen DPPL juga digunakan untuk memastikan bahwa setiap use case dalam SKPL telah didukung oleh kelas perancangan dan interaksi antarkelas yang sesuai. Dengan demikian, proses implementasi, pengujian, pengembangan lanjutan, dan pemeliharaan APATIS dapat dilakukan secara terarah dan konsisten, termasuk apabila pengembangan perangkat lunak dilanjutkan oleh tim lain.
 
 
 ## 1.2 Lingkup Masalah
@@ -479,7 +489,6 @@ Tabel 5.1.1. Operasi Kelas PelaporEntity
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
 | *-* | *-* | *-* |
-
 PelaporEntity tidak memiliki operasi kelas *signature* karena berupa kumpulan data, getter, dan setter.
 
 Tabel 5.1.2. Atribut Kelas PelaporEntity
@@ -505,7 +514,6 @@ Tabel 5.2.1. Operasi Kelas PelaporEntity
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
 | ** | ** | ** |
-
 Tabel kosong karena kelas hanya berupa data, *setter*, dan *getter* sehingga tidak memiliki *signature operation*
 
 Tabel 5.2.2. Atribut Kelas LaporanEntity
@@ -691,8 +699,12 @@ Kelas tidak memiliki algoritma atau query yang bersifat *signature* karena hanya
 Tabel 5.7.1. Operasi Kelas PetugasEntity
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
-
-Kelas ini berisi data, *getter*, serta *setter* dan tidak memiliki *signature operation* apa pun sehingga tabel dibiarkan kosong.
+| *getIdPetugas(petugasObject): Integer* | *Public* | *Mengembalikan idPetugas bertipe Integer dari petugasObject* |
+| *getNamaPetugas(idPetugas): String* | *Public* | *Mengembalikan namaPetugas bertipe String dari IdPetugas bertipe Integer* |
+| *getNipPetugas(idPetugas): Integer* | *Public* | *Mengembalikan nipPetugas bertipe Integer dari petugasObject* |
+| *setIdPetugas(petugasObject, id)* | *Public* | *Mengubah idPetugas bertipe Integer dalam petugasObject menjadi id bertipe Integer* |
+| *setNamaPetugas(idPetugas, nama)* | *Public* | *Mengubah namaPetugas bertipe String dalam petugasObject menjadi nama bertipe String yang idPetugasnya sesuai* |
+| *setNipPetugas(idPetugas, nip)* | *Public* | *Mengubah idPetugas bertipe Integer dalam petugasObject menjadi id bertipe Integer yang idPetugasnya sesuai* |
 
 Tabel 5.7.2. Atribut Kelas PetugasEntity
 | Nama Atribut | Visibility (private, public) | Tipe |
@@ -711,6 +723,10 @@ Kelas ini hanya berisi getter dan setter sederhana tanpa logika proses, sehingga
 Tabel 5.8.1. Operasi Kelas HalamanFormulirTanggapan
 | Nama Operasi | Visibility (private, public) | Keterangan |
 | :--- | :--- | :--- |
+| *getStatusLaporan(idLaporan): Status(Enum)* | *Public* | *Mengembalikan statusLaporan yaitu diterima, ditolak, maupun ditangguhkan* |
+| *getStatusTuntasLaporan(idLaporan): Status(Enum)* | *Public* | *Mengembalikan statusTuntasLaporan yaitu tuntas, menunggu, ataupun proses* |
+| *setStatusLaporan(idLaporan, status)* | *Public* | *Mengubah statusLaporan berdasarkan idLaporan menjadi status* |
+| *setStatusTuntasLaporan(idLaporan, statusTuntas)* | *Public* | *Mengubah statusTuntasLaporan berdasarkan idLaporan menjadi statusTuntas* |
 | *showFormulirTanggapan()* | *Public* | *Menampilkan halaman formulir tanggapan yang siap menerima input* |
 
 Tabel 5.8.2. Atribut Kelas HalamanFormulirTanggapan
@@ -720,6 +736,8 @@ Tabel 5.8.2. Atribut Kelas HalamanFormulirTanggapan
 | *statusTuntasLaporan* | *private* | *Enumerate* |
 
 ### 5.8.1 Algoritma/Query showFormulirTanggapan()
+
+Bagian ini diisi untuk kerangka algoritma proses yang dianggap cukup penting. Algoritma dapat dituliskan sebagai *pseudocode*. Implementasi *skeleton code* juga dapat digunakan untuk kelas yang sudah terdefinisi pada bahasa pemrograman tertentu.
 
 **Nama Kelas:** *HalamanFormulirTanggapan*  
 **Nama Operasi:** *showFormulirTanggapan()*  
@@ -806,7 +824,7 @@ Tabel 5.9.1. Query Operasi addPoinPelapor()
 | *[Q-003]* | *SELECT poin_Pelapor FROM pelapor WHERE id_Pelapor = idPelapor;* | *Mengambil data poin yang dimiliki pelapor dengan idPelapor* |
 | *[Q-004]* | *UPDATE pelapor SET poin_Pelapor = poinBaru WHERE id_Pelapor = idPelapor;* | *mengubah data poin yang dimiliki pelapor dengan idPelapor* |
 
-### 5.9.2 Algoritma/Query sendTanggapan()
+### 5.9.3 Algoritma/Query sendTanggapan()
 **Nama Kelas:** *TanggapanController*  
 **Nama Operasi:** *sendTanggapan(idLaporan, tanggapan)*  
 **ID Algoritma:** *[Algo-006]*
@@ -828,11 +846,10 @@ procedure sendTanggapan(idLaporan, tanggapan): boolean
     return
 ```
 
-Tabel 5.9.2 Query Operasi [Nama Operasi]
+Tabel 5.9.1. Query Operasi [Nama Operasi]
 | No Query | Query | Keterangan |
 | :--- | :--- | :--- |
 | *[Q-005]* | *UPDATE Laporan SET tanggapan_Laporan = tanggapan WHERE id_Laporan = idLaporan;* | *Mengubah tanggapan di database* |
-
 ## 5.10 Kelas LikeController
 **Nama Kelas:** *LikeController*  
 **ID Kelas:** *C10*
@@ -922,7 +939,6 @@ procedure likeLaporan(idLaporan, idPelapor): boolean
 | :--- | :--- | :--- |
 | *[Q-009]* | *SELECT status_Like FROM Laporan WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengambil status like sesui idPelapor dan idLaporan* |
 | *[Q-010]* | *UPDATE Laporan SET status_Like = poinBaru WHERE id_laporan = :idLaporan AND id_Pelapor_Like = :idPelapor;* | *Mengubah status like sesui idPelapor dan idLaporan* |
-
 ## 5.11 Kelas HalamanLeaderboard
 **Nama Kelas:** *HalamanLeaderboard*  
 **ID Kelas:** *C11*
@@ -1127,8 +1143,381 @@ function validateITBLogin():
 ```
 
 
-<br>
+====================================================
 
+## 5.12 Kelas DatabaseLaporanEntity
+
+**Nama Kelas:** *DatabaseLaporanEntity*  
+**ID Kelas:** *C12*
+
+Kelas `DatabaseLaporanEntity` bertanggung jawab menyediakan akses terhadap data laporan pada basis data. Kelas ini digunakan untuk mengambil daftar laporan, memperbarui data laporan, serta menyimpan laporan baru.
+
+### Tabel 5.12.1 Operasi Kelas DatabaseLaporanEntity
+
+| Nama Operasi | Visibility | Keterangan |
+| :--- | :--- | :--- |
+| *getLaporanData(idLaporan?: number): Promise<LaporanEntity \| List<LaporanEntity&gt;&gt;* | *public* | *Mengambil satu laporan berdasarkan ID atau mengambil seluruh laporan apabila ID tidak diberikan.* |
+| *setLaporanData(idLaporan: number, dataLaporan: Partial&lt;LaporanEntity&gt;): Promise&lt;boolean&gt;* | *public* | *Memperbarui data laporan berdasarkan ID laporan dan mengembalikan status keberhasilan operasi.* |
+| *insertNewLaporan(laporan: LaporanEntity): Promise&lt;LaporanEntity&gt;* | *public* | *Menyimpan laporan baru dan mengembalikan data laporan yang berhasil disimpan.* |
+
+### Tabel 5.12.2 Atribut Kelas DatabaseLaporanEntity
+
+| Nama Atribut | Visibility | Tipe |
+| :--- | :--- | :--- |
+| *daftarLaporan* | *private* | *List<LaporanEntity>* |
+
+### 5.12.1 Algoritma/Query Operasi `getLaporanData()`
+
+**Nama Kelas:** *DatabaseLaporanEntity*  
+**Nama Operasi:** *getLaporanData(idLaporan?: number): Promise&lt;LaporanEntity&gt;*  
+**ID Algoritma:** *Algo-C12-01*
+
+```
+function getLaporanData(idLaporan):
+    if idLaporan is invalid then
+      return <div>"IdLaporan tidak valid"</div>
+    found <- execute Q-C12-01 using idLaporan
+    if found = NULL then
+      return <div>"Laporan tidak ditemukan"</div>
+    else
+      return map result into LaporanEntity
+```
+**Tabel 5.12.3 Query Operasi `getLaporanData()`**
+
+| No Query | Query | Keterangan |
+| :--- | :--- | :--- |
+| *Q-C12-01* | *SELECT id_laporan, deskripsi, foto_url, jumlah_like, status_laporan FROM laporan WHERE id_laporan = :idLaporan* | *Mengambil satu laporan berdasarkan ID laporan.* |
+
+### 5.2.2 Algoritma/Query Operasi `setLaporanData()`
+
+**Nama Kelas:** *DatabaseLaporanEntity*  
+**Nama Operasi:** *setLaporanData(idLaporan: number, dataLaporan: Partial&lt;LaporanEntity&gt;): Promise&lt;string&gt;*  
+**ID Algoritma:** *Algo-C12-02*
+
+```text
+FUNCTION setLaporanData(idLaporan, dataLaporan): Boolean
+  if IdLaporan is invalid or dataLaporan is invalid then
+    return False
+  else
+    laporanUpdate <- execute Q-C12-02 using idLaporan and dataLaporan
+    if laporanUpdate is not null then
+      return True
+    else
+      return False
+```
+
+**Tabel 5.12.4 Query Operasi `setLaporanData()`**
+
+| No Query | Query | Keterangan |
+| :--- | :--- | :--- |
+| *Q-C12-02* | *UPDATE laporan SET deskripsi = COALESCE(:deskripsi, deskripsi), foto_url = COALESCE(:fotoUrl, foto_url), jumlah_like = COALESCE(:jumlahLike, jumlah_like), status_laporan = COALESCE(:statusLaporan, status_laporan) WHERE id_laporan = :idLaporan;* | *Memperbarui atribut laporan yang diberikan tanpa mengubah atribut lain.* |
+
+
+### 5.12.3 Algoritma/Query Operasi `insertNewLaporan()`
+
+**Nama Kelas:** *DatabaseLaporanEntity*  
+**Nama Operasi:** *insertNewLaporan(laporan: LaporanEntity): Promise&lt;LaporanEntity&gt;*  
+**ID Algoritma:** *Algo-C12-03*
+
+```text
+FUNCTION insertNewLaporan(laporan): LaporanEntity
+  if laporan is invalid then
+    THROW new Error('Invalid laporan')
+
+  result <- execute Q-C12-03 using report data
+  return map result into LaporanEntity
+```
+**Tabel 5.12.5 Query Operasi `insertNewLaporan()`**
+
+| No Query | Query | Keterangan |
+| :--- | :--- | :--- |
+| *Q-C12-03* | *INSERT INTO laporan (id_pelapor, deskripsi, foto_url, jumlah_like, status_laporan) VALUES (:idPelapor, :deskripsi, :fotoUrl, 0, 'Submitted') RETURNING id_laporan, deskripsi, foto_url, jumlah_like, status_laporan;* | *Menyimpan laporan baru dengan jumlah like awal nol dan status awal Submitted.* |
+
+---
+
+## 5.13 Kelas DatabasePelaporEntity
+
+**Nama Kelas:** *DatabasePelaporEntity*  
+**ID Kelas:** *C13*
+
+Kelas `DatabasePelaporEntity` bertanggung jawab mengakses dan memperbarui data Pelapor, terutama data identitas dan poin yang digunakan pada halaman akun dan leaderboard.
+
+### Tabel 5.13.1 Operasi Kelas DatabasePelaporEntity
+
+| Nama Operasi | Visibility | Keterangan |
+| :--- | :--- | :--- |
+| *getDataPelapor(idPelapor: number): PelaporEntity \| null* | *public* | *Mengambil satu Pelapor berdasarkan ID Pelapor.* |
+| *updateDataPelapor(idPelapor: number, pelaporData: PelaporEntity): boolean* | *public* | *Memperbarui poin satu Pelapor.* |
+| *insertPelapor(pelapor: PelaporEntity): PelaporEntity* | *public* | *Menyimpan Pelapor baru dan mengembalikan data yang berhasil disimpan.* |
+
+### Tabel 5.13.2 Atribut Kelas DatabasePelaporEntity
+
+| Nama Atribut | Visibility | Tipe |
+| :--- | :--- | :--- |
+| *daftarPelapor* | *private* | *PelaporEntity[]* |
+
+### 5.13.1 Algoritma/Query Operasi `getDataPelapor()`
+
+**Nama Kelas:** *DatabasePelaporEntity*  
+**Nama Operasi:** *getDataPelapor(idPelapor: number): PelaporEntity | null*  
+**ID Algoritma:** *Algo-C13-01*
+
+```text
+FUNCTION getDataPelapor(idPelapor): PelaporEntity | null
+  result <- execute Q-C13-01 using idPelapor
+
+  if result is empty then
+    return null
+
+  return map result into PelaporEntity
+```
+
+**Tabel 5.13.3 Query Operasi `getDataPelapor()`**
+
+| No Query | Query | Keterangan |
+| :--- | :--- | :--- |
+| *Q-C13-01* | *SELECT id_pelapor, nama_pelapor, nim_nip, poin FROM pelapor WHERE id_pelapor = :idPelapor;* | *Mengambil satu Pelapor berdasarkan ID yang unik.* |
+
+
+### 5.13.2 Algoritma/Query Operasi `updateDataPelapor()`
+
+**Nama Kelas:** *DatabasePelaporEntity*  
+**Nama Operasi:** *updateDataPelapor(idPelapor: number, pelaporData: PelaporEntity): boolean*  
+**ID Algoritma:** *Algo-C13-02*
+
+```text
+function updateDataPelapor(idPelapor: number, pelaporData: PelaporEntity): boolean
+  if idPelapor is invalid or pelaporData is invalid then
+    return false
+
+  affectedRows <- execute Q-C13-02 using idPelapor and pelaporData
+  return true
+```
+
+**Tabel 5.13.4 Query Operasi `updateDataPelapor()`**
+
+| No Query | Query | Keterangan |
+| :--- | :--- | :--- |
+| *Q-C13-03* | *UPDATE pelapor SET nama_pelapor = :namaPelapor, nim_nip = :nimNipPelapor, poin = :poinPelapor WHERE id_pelapor = :idPelapor;* | *Memperbarui poin satu Pelapor berdasarkan ID.* |
+
+
+### 5.13.3 Algoritma/Query Operasi `insertPelapor()`
+
+**Nama Kelas:** *DatabasePelaporEntity*  
+**Nama Operasi:** *insertPelapor(pelapor: PelaporEntity): PelaporEntity*  
+**ID Algoritma:** *Algo-C13-03*
+
+```text
+FUNCTION insertPelapor(pelapor): PelaporEntity
+  if pelapor is invalid then
+    THROW new Error('Invalid pelapor')
+
+  result <- execute Q-C13-04 using pelapor data
+  return map result into PelaporEntity
+```
+
+**Tabel 5.13.5 Query Operasi `insertPelapor()`**
+
+| No Query | Query | Keterangan |
+| :--- | :--- | :--- |
+| *Q-C13-04* | *INSERT INTO pelapor (nama_pelapor, nim_nip, poin) VALUES (:namaPelapor, :nimNipPelapor, 0) RETURNING id_pelapor, nama_pelapor, nim_nip, poin;* | *Menyimpan Pelapor baru dengan poin awal nol.* |
+
+
+## 5.14 Kelas LeaderboardController
+
+**Nama Kelas:** *LeaderboardController*  
+**ID Kelas:** *C14*
+
+Kelas `LeaderboardController` bertanggung jawab mengambil poin, mengurutkan Pelapor, dan menentukan peringkat Pelapor.
+
+### Tabel 5.14.1 Operasi Kelas LeaderboardController
+
+| Nama Operasi | Visibility | Keterangan |
+| :--- | :--- | :--- |
+| *getPelaporPoin(idPelapor: number): number* | *public* | *Mengambil jumlah poin Pelapor berdasarkan ID.* |
+| *getPelaporRank(idPelapor: number): number* | *public* | *Menentukan peringkat Pelapor berdasarkan poin.* |
+| *sortPelaporByPoin(): PelaporEntity[]* | *public* | *Mengurutkan seluruh Pelapor berdasarkan poin dari tertinggi ke terendah.* |
+
+### Tabel 5.14.2 Atribut Kelas LeaderboardController
+
+| Nama Atribut | Visibility | Tipe |
+| :--- | :--- | :--- |
+| *databasePelapor* | *private* | *DatabasePelaporEntity* |
+
+### 5.14.1 Algoritma Operasi `getPelaporPoin()`
+
+**Nama Kelas:** *LeaderboardController*  
+**Nama Operasi:** *getPelaporPoin(idPelapor: number): number*  
+**ID Algoritma:** *Algo-C14-01*
+
+```text
+FUNCTION getPelaporPoin(idPelapor): number
+  pelapor <- databasePelapor.getDataPelapor(idPelapor)
+
+  if pelapor is null then
+    return 0
+
+  return pelapor.poinPelapor
+```
+
+### 5.14.2 Algoritma Operasi `sortPelaporByPoin()`
+
+**Nama Kelas:** *LeaderboardController*  
+**Nama Operasi:** *sortPelaporByPoin(): PelaporEntity[]*  
+**ID Algoritma:** *Algo-C14-02*
+
+```text
+FUNCTION sortPelaporByPoin(): PelaporEntity[]
+  daftarPelapor <- databasePelapor.getAllPelapor()
+  sort daftarPelapor by poinPelapor descending
+  return daftarPelapor
+```
+
+### 5.14.3 Algoritma Operasi `getPelaporRank()`
+
+**Nama Kelas:** *LeaderboardController*  
+**Nama Operasi:** *getPelaporRank(idPelapor: number): number*  
+**ID Algoritma:** *Algo-C14-03*
+
+```text
+FUNCTION getPelaporRank(idPelapor): number
+  daftarPelapor <- sortPelaporByPoin()
+
+  for index <- 0 to length(daftarPelapor) - 1
+    if daftarPelapor[index].idPelapor = idPelapor then
+      return index + 1
+
+  return 0
+```
+
+## 5.15 Kelas HalamanAkun
+
+**Nama Kelas:** *HalamanAkun*  
+**ID Kelas:** *C15*
+
+Kelas `HalamanAkun` merupakan kelas *boundary* yang menampilkan identitas dan jumlah poin Pelapor.
+
+### Tabel 5.15.1 Operasi Kelas HalamanAkun
+
+| Nama Operasi | Visibility | Keterangan |
+| :--- | :--- | :--- |
+| *showPelaporData(pelaporData: PelaporEntity): void* | *public* | *Menampilkan data Pelapor pada halaman akun.* |
+
+### Tabel 5.15.2 Atribut Kelas HalamanAkun
+
+| Nama Atribut | Visibility | Tipe |
+| :--- | :--- | :--- |
+| *pelaporData* | *private* | *PelaporEntity \| null* |
+
+### 5.15.1 Algoritma Operasi `showPelaporData()`
+
+**Nama Kelas:** *HalamanAkun*  
+**Nama Operasi:** *showPelaporData(pelaporData: PelaporEntity): void*  
+**ID Algoritma:** *Algo-C15-01*
+
+```text
+function showPelaporData(pelaporData): void
+  if pelaporData is null then
+    DISPLAY 'Data akun tidak ditemukan'
+    return
+
+  DISPLAY pelaporData.namaPelapor
+  DISPLAY pelaporData.nimnipPelapor
+  DISPLAY pelaporData.poinPelapor
+```
+
+## 5.16 Kelas HalamanNotifikasi
+
+**Nama Kelas:** *HalamanNotifikasi*  
+**ID Kelas:** *C16*
+
+Kelas `HalamanNotifikasi` merupakan kelas *boundary* yang menampilkan daftar notifikasi kepada Pelapor.
+
+### Tabel 5.16.1 Operasi Kelas HalamanNotifikasi
+
+| Nama Operasi | Visibility | Keterangan |
+| :--- | :--- | :--- |
+| *showListNotifikasi(listNotifikasi: Notifikasi[]): void* | *public* | *Menampilkan daftar notifikasi kepada Pelapor.* |
+
+### Tabel 5.16.2 Atribut Kelas HalamanNotifikasi
+
+| Nama Atribut | Visibility | Tipe |
+| :--- | :--- | :--- |
+| *listNotifikasi* | *private* | *Notifikasi[]* |
+
+### 5.16.1 Algoritma Operasi `showListNotifikasi()`
+
+**Nama Kelas:** *HalamanNotifikasi*  
+**Nama Operasi:** *showListNotifikasi(listNotifikasi: Notifikasi[]): void*  
+**ID Algoritma:** *Algo-C16-01*
+
+```text
+function showListNotifikasi(listNotifikasi): void
+  if listNotifikasi is empty then
+    DISPLAY 'Belum ada notifikasi'
+    return
+
+  for each notifikasi in listNotifikasi
+    DISPLAY notifikasi.pesan
+    DISPLAY notifikasi.statusNotifikasi
+```
+
+
+## 5.17 Kelas NotifikasiController
+
+**Nama Kelas:** *NotifikasiController*  
+**ID Kelas:** *C17*
+
+Kelas `NotifikasiController` bertanggung jawab membuat dan mengirimkan notifikasi kepada Pelapor.
+
+### Tabel 5.17.1 Operasi Kelas NotifikasiController
+
+| Nama Operasi | Visibility | Keterangan |
+| :--- | :--- | :--- |
+| *createNotifikasi(idPelapor: number, pesan: string): Notifikasi* | *public* | *Membuat dan menyimpan notifikasi baru untuk Pelapor.* |
+| *sendNotifikasi(notifikasi: Notifikasi): boolean* | *public* | *Mengirim atau menyediakan notifikasi agar dapat ditampilkan.* |
+
+### Tabel 5.17.2 Atribut Kelas NotifikasiController
+
+| Nama Atribut | Visibility | Tipe |
+| :--- | :--- | :--- |
+| *statusNotifikasi* | *private* | *string* |
+
+### 5.17.1 Algoritma/Query Operasi `createNotifikasi()`
+
+**Nama Kelas:** *NotifikasiController*  
+**Nama Operasi:** *createNotifikasi(idPelapor: number, pesan: string): Notifikasi*  
+**ID Algoritma:** *Algo-C17-01*
+
+```text
+function createNotifikasi(idPelapor, pesan): Notifikasi
+  if idPelapor is invalid or pesan is empty then
+    THROW new Error('Invalid notifikasi')
+
+  result <- execute Q-C17-01 using idPelapor and pesan
+  return map result into Notifikasi
+```
+
+**Tabel 5.17.3 Query Operasi `createNotifikasi()`**
+
+| No Query | Query | Keterangan |
+| :--- | :--- | :--- |
+| *Q-C17-01* | *INSERT INTO notifikasi (id_pelapor, pesan, status_notifikasi, created_at) VALUES (:idPelapor, :pesan, 'Belum Dibaca', CURRENT_TIMESTAMP) RETURNING id_notifikasi, id_pelapor, pesan, status_notifikasi, created_at;* | *Menyimpan notifikasi baru untuk Pelapor.* |
+
+### 5.17.2 Algoritma Operasi `sendNotifikasi()`
+
+**Nama Kelas:** *NotifikasiController*  
+**Nama Operasi:** *sendNotifikasi(notifikasi: Notifikasi): boolean*  
+**ID Algoritma:** *Algo-C17-02*
+
+```text
+FUNCTION sendNotifikasi(notifikasi): boolean
+  if notifikasi is null then
+    return false
+
+  statusNotifikasi <- 'Terkirim'
+  return true
+```
 ---
 
 # BAB 6: Perancangan Antarmuka
