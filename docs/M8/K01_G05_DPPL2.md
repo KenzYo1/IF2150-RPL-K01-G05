@@ -896,10 +896,10 @@ Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tu
 <img alt="Interface Halaman Login" src="./assets/interface/halamanlogin.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar 6.1. Rancangan Antarmuka I-01 - Halaman Login</i>
+<i>Gambar 6.1 Rancangan Antarmuka I-01 - Halaman Login</i>
 </p>
 
-Tabel 6.1. Spesifikasi Objek Antarmuka I-01
+Tabel 6.1 Spesifikasi Objek Antarmuka I-01
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
@@ -927,10 +927,18 @@ Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tu
 <img alt="Interface Halaman Laporan Pelapor" src="./assets/interface/halamanlaporanpelapor-1.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar 6.2. Rancangan Antarmuka I-02 - Halaman Laporan Pelapor</i>
+<i>Gambar 6.2.1 Rancangan Antarmuka I-02 - Halaman Laporan Pelapor</i>
 </p>
 
-Tabel 6.2. Spesifikasi Objek Antarmuka I-02
+<p align="center">
+<img alt="Interface Halaman Laporan Pelapor" src="./assets/interface/halamanlaporanpelapor-2.png" width="50%">
+</p>
+<p align="center">
+<i>Gambar 6.2.2 Rancangan Antarmuka I-02 - Halaman Laporan Pelapor</i>
+</p>
+
+
+Tabel 6.2 Spesifikasi Objek Antarmuka I-02
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
@@ -964,10 +972,24 @@ Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tu
 <img alt="Interface Halaman Laporan Petugas" src="./assets/interface/halamanlaporanpetugas-1.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar 6.3. Rancangan Antarmuka I-03 - Halaman Laporan Petugas</i>
+<i>Gambar 6.3.1 Rancangan Antarmuka I-03 - Halaman Laporan Petugas</i>
 </p>
 
-Tabel 6.3. Spesifikasi Objek Antarmuka I-03
+<p align="center">
+<img alt="Interface Halaman Laporan Petugas" src="./assets/interface/halamanlaporanpetugas-2.png" width="50%">
+</p>
+<p align="center">
+<i>Gambar 6.3.2 Rancangan Antarmuka I-03 - Halaman Laporan Petugas</i>
+</p>
+
+<p align="center">
+<img alt="Interface Halaman Laporan Petugas" src="./assets/interface/halamanlaporanpetugas-3.png" width="50%">
+</p>
+<p align="center">
+<i>Gambar 6.3.3 Rancangan Antarmuka I-03 - Halaman Laporan Petugas</i>
+</p>
+
+Tabel 6.3 Spesifikasi Objek Antarmuka I-03
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
@@ -993,10 +1015,10 @@ Masukkan versi awal prototipe antarmuka, dimana untuk setiap antarmuka/layar, tu
 <img alt="Interface Halaman Akun" src="./assets/interface/halamanakun.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar 6.4. Rancangan Antarmuka I-04 - Halaman Akun</i>
+<i>Gambar 6.4 Rancangan Antarmuka I-04 - Halaman Akun</i>
 </p>
 
-Tabel 6.4. Spesifikasi Objek Antarmuka I-04
+Tabel 6.4 Spesifikasi Objek Antarmuka I-04
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
@@ -1020,10 +1042,10 @@ Tabel 6.4. Spesifikasi Objek Antarmuka I-04
 <img alt="Interface Halaman Notifikasi" src="./assets/interface/halamannotifikasi.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar 6.5. Rancangan Antarmuka I-05 - Halaman Notifikasi</i>
+<i>Gambar 6.5 Rancangan Antarmuka I-05 - Halaman Notifikasi</i>
 </p>
 
-Tabel 6.5. Spesifikasi Objek Antarmuka I-05
+Tabel 6.5 Spesifikasi Objek Antarmuka I-05
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
@@ -1044,10 +1066,10 @@ Tabel 6.5. Spesifikasi Objek Antarmuka I-05
 <img alt="Interface Halaman Formulir Laporan" src="./assets/interface/halamanformulirlaporan.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar 6.6. Rancangan Antarmuka I-06 - Halaman Formulir Laporan</i>
+<i>Gambar 6.6 Rancangan Antarmuka I-06 - Halaman Formulir Laporan</i>
 </p>
 
-Tabel 6.6. Spesifikasi Objek Antarmuka I-06
+Tabel 6.6 Spesifikasi Objek Antarmuka I-06
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
@@ -1075,10 +1097,10 @@ Tabel 6.6. Spesifikasi Objek Antarmuka I-06
 <img alt="Interface Halaman Formulir Tanggapan" src="./assets/interface/halamanformulirtanggapan.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar 6.7. Rancangan Antarmuka I-07 - Halaman Formulir Tanggapan</i>
+<i>Gambar 6.7 Rancangan Antarmuka I-07 - Halaman Formulir Tanggapan</i>
 </p>
 
-Tabel 6.7. Spesifikasi Objek Antarmuka I-07
+Tabel 6.7 Spesifikasi Objek Antarmuka I-07
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
@@ -1108,10 +1130,10 @@ Tabel 6.7. Spesifikasi Objek Antarmuka I-07
 <img alt="Interface Halaman Leaderboard" src="./assets/interface/halamanleaderboard.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar 6.8. Rancangan Antarmuka I-08 - Halaman Leaderboard</i>
+<i>Gambar 6.8 Rancangan Antarmuka I-08 - Halaman Leaderboard</i>
 </p>
 
-Tabel 6.8. Spesifikasi Objek Antarmuka I-08
+Tabel 6.8 Spesifikasi Objek Antarmuka I-08
 
 | Id_Objek | Jenis | Konten | Keterangan |
 | :--- | :--- | :--- | :--- |
@@ -1127,13 +1149,13 @@ Tabel 6.8. Spesifikasi Objek Antarmuka I-08
 
 Tuliskan daftar gambar seluruh antarmuka. Berikan ID unik untuk setiap tampilan dan gunakan ID yang sama pada subbab perancangan antarmuka masing-masing.
 
-Tabel 6.9. Rancangan Antarmuka Keseluruhan
+Tabel 6.9 Rancangan Antarmuka Keseluruhan
 
 | No | Tampilan Antarmuka |
 | :--- | :--- |
 | *[I-01]* | <img src="./assets/interface/halamanlogin.png" alt="Interface Login" width="400"> |
-| *[I-02]* | <img src="./assets/interface/halamanlaporanpelapor.png" alt="Interface Laporan Pelapor" width="400"> |
-| *[I-03]* | <img src="./assets/interface/halamanlaporanpetugas.png" alt="Interface Laporan Petugas/Admin" width="400"> |
+| *[I-02]* | <img src="./assets/interface/halamanlaporanpelapor-1.png" alt="Interface Laporan Pelapor" width="400"><br><img src="./assets/interface/halamanlaporanpelapor-2.png" alt="Interface Laporan Pelapor" width="400"> |
+| *[I-03]* | <img src="./assets/interface/halamanlaporanpetugas-1.png" alt="Interface Laporan Petugas/Admin" width="400"><br><img src="./assets/interface/halamanlaporanpetugas-2.png" alt="Interface Laporan Pelapor" width="400"><br><img src="./assets/interface/halamanlaporanpetugas-3.png" alt="Interface Laporan Pelapor" width="400"> |
 | *[I-04]* | <img src="./assets/interface/halamanakun.png" alt="Interface Akun" width="400"> |
 | *[I-05]* | <img src="./assets/interface/halamannotifikasi.png" alt="Interface Notifikasi" width="400"> |
 | *[I-06]* | <img src="./assets/interface/halamanformulirlaporan.png" alt="Interface Formulir Laporan" width="400"> |
