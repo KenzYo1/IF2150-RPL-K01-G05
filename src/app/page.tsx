@@ -1,4 +1,9 @@
 import Image from "next/image";
+import localFont from "next/font/local";
+
+const hyWenHei = localFont({
+  src: './zhcn.tff',
+})
 
 export default function Home() {
   return (
