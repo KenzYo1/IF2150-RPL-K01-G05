@@ -16,3 +16,11 @@ export async function loginWithPass(formData: FormData) {
         redirect("/halamanFurinaOrSomething");
     }
 }
+
+export async function loginByITBEmail() {
+    const supabase = await createClient();
+    await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: { redirectTo: `${location.origin}/oauth/consent`}
+    })
+}
