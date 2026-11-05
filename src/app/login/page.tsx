@@ -12,14 +12,14 @@ const InputField = ({type, title, name, placeholder}: {type: string, name: strin
 
 const LoginPage = () => {
     return (
-        <div className="flex items-center justify-center gap-[147px] min-h-[40vw] p-10">
+        <div className="flex items-center justify-center gap-45 min-h-[40vw] p-10 overflow-hidden">
             <img
                 src="/Logo.png"
                 alt=""
                 width={200}
                 height={200}
             />
-            <form className="flex flex-col items-center rounded-[25px] border-2 border-black w-[40vw] h-full p-[47px] gap-6 py-30">
+            <form className="flex flex-col items-center rounded-[25px] border-2 border-black w-[40vw] h-full p-[47px] gap-6 py-20">
                 <h1 className="font-hywenhei text-[28px] font-black text-center font-light">Welcome!</h1>
                 <div className="flex flex-col w-full items-center justify-center gap-2">
                     <Button variant="rounded" size="auto" className="text-[16px] w-full h-10">Sign in with ITB Account</Button>
