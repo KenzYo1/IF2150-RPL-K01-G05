@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@base-ui/react"
 
-const InputField = ({type, title, name, placeholder}: {type: string, name: string, title: string, placeholder: string}) => {
+const InputField = ({type, title, name, placeholder, required}: {type: string, name: string, title: string, placeholder: string, required:boolean}) => {
     return (
         <div className="flex flex-col w-full gap-[6px]">
             <span className="font-hywenhei text-[18px] text-[#5D6494]">{title}</span>
-            <Input type={type} name={name} placeholder={placeholder} className="border-2 border-[#5D6494] rounded-[10px] p-4 font-hywenhei text-[14px] w-full placeholder:text-[#A8BCF7] h-11"/>
+            <Input type={type} name={name} placeholder={placeholder} required={required} className="border-2 border-[#5D6494] rounded-[10px] p-4 font-hywenhei text-[14px] w-full placeholder:text-[#A8BCF7] h-11"/>
         </div>
     )
 }
@@ -24,9 +24,9 @@ const LoginPage = () => {
                 <div className="flex flex-col w-full items-center justify-center gap-2">
                     <Button variant="rounded" size="auto" className="text-[16px] w-full h-10">Sign in with ITB Account</Button>
                     <p className="font-hywenhei text-[14px] font-black">or</p>
-                    <InputField type="email" name="email" title="Email" placeholder="Input email here" />
-                    <InputField type="password" name="password" title="Password" placeholder="Input password here"/>
-                    <Button variant="ghost" size="auto" className="self-end justify-end font-hywenhei text-[10px] text-[#A8BCF7]">Forgot Password?</Button>
+                    <InputField type="email" name="email" title="Email" placeholder="Input email here" required/>
+                    <InputField type="password" name="password" title="Password" placeholder="Input password here" required/>
+                    <Button variant="ghost" size="auto" className="self-end justify-end font-hywenhei text-[10px] text-[#A8BCF7]" type="submit">Forgot Password?</Button>
                     <Button variant="normal" size="auto" className="text-[16px] h-10 rounded-[16px]">Sign In</Button>
                 </div>
             </form>
