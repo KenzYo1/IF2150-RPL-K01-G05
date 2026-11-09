@@ -6,7 +6,7 @@ import { Menu } from "lucide-react";
 import type { Role } from "@/types/role";
 
 const menuUser = [
-  { href: "/akun", label: "Profile", icon: "/icon/Profile.svg" },
+  { href: "/HalamanAkun", label: "Profile", icon: "/icon/Profile.svg" },
   { href: "/laporan/baru", label: "Report", icon: "/icon/Lapor.svg" },
   { href: "/leaderboard", label: "Leaderboard", icon: "/icon/Leaderboard.svg" },
 ];
