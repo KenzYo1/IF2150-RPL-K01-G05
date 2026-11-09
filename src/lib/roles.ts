@@ -19,9 +19,9 @@ export async function getRole(email: string): Promise<Role | null> {
     if (!data) {
         return null;
     }
-    if (data.is_admin) {
-        return "admin";
-    }
+
+    // Note admin gak bisa ditentuin dari email, security reasons
+    
     if ((String(data.nim_nip)).length == 18 || e.endsWith("@staff.itb.ac.id")) {
         return "petugas";
     }
