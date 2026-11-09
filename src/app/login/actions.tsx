@@ -3,7 +3,15 @@
 import { headers } from "next/headers";
 import { createClient } from "@/lib/supabase/server"
 import { redirect } from "next/navigation";
- 
+import { getRole } from "@/lib/roles";
+ import { Role } from "@/types/role";
+
+const START_PAGE: Record<Role, string> = {
+    admin: "/HalamanContohAdmin",
+    petugas: "/HalamanContohPetugas",
+    pelapor: "/HalamanContohPelapor"
+}
+
 export async function loginWithPass(formData: FormData) {
     const supabase = await createClient();
     const { data, error } = await supabase.auth.signInWithPassword({
@@ -14,6 +22,8 @@ export async function loginWithPass(formData: FormData) {
         // TODO Give status here lol;
     }
     else {
+        const role = await getRole(String(formData.get("email")));
+        if (!role) redirect ("/login?error=norole"); 
         redirect("/halamanFurinaOrSomething");
     }
 }
@@ -25,8 +35,6 @@ export async function loginByITBEmail() {
         provider: "google",
         options: { redirectTo: `${origin}/oauth/consent`}
     })
-
-    console.log("OAUTH RESULT:", { origin, url: data?.url, error });
 
     if (error) redirect("/error");
     if (data.url) redirect(data.url);
