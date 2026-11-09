@@ -15,7 +15,7 @@ export async function loginWithPass(formData: FormData) {
         password: formData.get("password") as string,
     })
     if (error) {
-        // TODO Give status here lol;
+        redirect("/error");
     }
     else {
         const role = await getRole(String(formData.get("email")));
