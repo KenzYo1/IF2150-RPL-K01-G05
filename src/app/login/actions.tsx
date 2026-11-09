@@ -1,5 +1,6 @@
 "use server"
 
+import { headers } from "next/headers";
 import { createClient } from "@/lib/supabase/server"
 import { redirect } from "next/navigation";
  
@@ -19,8 +20,14 @@ export async function loginWithPass(formData: FormData) {
 
 export async function loginByITBEmail() {
     const supabase = await createClient();
-    await supabase.auth.signInWithOAuth({
+    const origin = (await headers()).get("origin");
+    const { data, error } = await supabase.auth.signInWithOAuth({
         provider: "google",
-        options: { redirectTo: `${location.origin}/oauth/consent`}
+        options: { redirectTo: `${origin}/oauth/consent`}
     })
+
+    console.log("OAUTH RESULT:", { origin, url: data?.url, error });
+
+    if (error) redirect("/error");
+    if (data.url) redirect(data.url);
 }
