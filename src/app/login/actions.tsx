@@ -3,7 +3,7 @@
 import { headers } from "next/headers";
 import { createClient } from "@/lib/supabase/server"
 import { redirect } from "next/navigation";
-import { getRole } from "@/lib/roles";
+import { resolveRole } from "@/lib/roles";
 import { START_PAGE } from "@/types/start-pages";
 
 
@@ -18,7 +18,11 @@ export async function loginWithPass(formData: FormData) {
         redirect("/error");
     }
     else {
-        const role = await getRole(String(formData.get("email")));
+        const {data: { user }} = await supabase.auth.getUser();
+        if (!user) {
+            redirect("/error");
+        }
+        const role = await resolveRole(user);
         if (!role) redirect ("/error"); 
         redirect(START_PAGE[role]);
     }

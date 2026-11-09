@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
-import { getRole } from "@/lib/roles";
+import { resolveRole } from "@/lib/roles";
 import { START_PAGE } from "@/types/start-pages";
 export async function GET(request: Request) {
     const { searchParams, origin } = new URL(request.url);
@@ -12,8 +12,10 @@ export async function GET(request: Request) {
         if (userError) {
             return NextResponse.redirect(`${origin}/error`);
         }
-        const email = user?.email;
-        const role = await getRole(String(email));
+        if (!user) {
+            return NextResponse.redirect(`${origin}/error`);
+        }
+        const role = await resolveRole(user);
         if (!role) {
             return NextResponse.redirect(`${origin}/error`);
         }

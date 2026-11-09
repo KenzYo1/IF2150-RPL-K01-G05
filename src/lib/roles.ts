@@ -1,5 +1,7 @@
 import "server-only";
+import type { User } from "@supabase/supabase-js";
 import { createClient  } from "./supabase/server";
+import { supabaseAdmin } from "./supabase/admin";
 import { Role } from "@/types/role"
 
 export async function getRole(email: string): Promise<Role | null> {
@@ -24,4 +26,33 @@ export async function getRole(email: string): Promise<Role | null> {
         return "petugas";
     }
     return "pelapor";
+}
+
+// this one uhh resolves it generally
+export async function resolveRole(user: User): Promise<Role> {
+    const r = user.app_metadata.role;
+    if (r) {
+        return r as Role;
+    }
+    if (!user.email) {
+        throw new Error("User has no email");
+    }
+    const role = await getRole(user.email);
+    if (!role) {
+        throw new Error("Unable to determine user role");
+    }
+
+    const { error } = await supabaseAdmin.auth.admin.updateUserById(
+        user.id,
+        {
+            app_metadata: {
+                ...user.app_metadata,
+                role,
+            },
+        }
+    )
+    if (error) {
+        throw new Error("Unable to update database");
+    }
+    return role;
 }
