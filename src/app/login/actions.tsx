@@ -4,13 +4,9 @@ import { headers } from "next/headers";
 import { createClient } from "@/lib/supabase/server"
 import { redirect } from "next/navigation";
 import { getRole } from "@/lib/roles";
- import { Role } from "@/types/role";
+import { START_PAGE } from "@/types/start-pages";
 
-const START_PAGE: Record<Role, string> = {
-    admin: "/HalamanContohAdmin",
-    petugas: "/HalamanContohPetugas",
-    pelapor: "/HalamanContohPelapor"
-}
+
 
 export async function loginWithPass(formData: FormData) {
     const supabase = await createClient();
@@ -23,8 +19,8 @@ export async function loginWithPass(formData: FormData) {
     }
     else {
         const role = await getRole(String(formData.get("email")));
-        if (!role) redirect ("/login?error=norole"); 
-        redirect("/halamanFurinaOrSomething");
+        if (!role) redirect ("/error"); 
+        redirect(START_PAGE[role]);
     }
 }
 
