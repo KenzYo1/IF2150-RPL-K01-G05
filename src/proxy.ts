@@ -2,9 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { createServerClient } from "@supabase/ssr";
 import { START_PAGE } from "@/types/start-pages";
 import { ROUTE_ROLES } from "@/types/route-roles";
-import { redirect } from "next/dist/server/api-utils";
 
 export async function proxy(request: NextRequest) {
+    console.log("A");
+    console.log("proxy hit: " + request.nextUrl.pathname);
   let response = NextResponse.next({ request });
 
   const supabase = createServerClient(
@@ -37,6 +38,7 @@ export async function proxy(request: NextRequest) {
   const redirectTo = (path: string) => {
     const res = NextResponse.redirect(new URL(path, request.url));
     response.cookies.getAll().forEach((c) => res.cookies.set(c));
+    return res;
   }
   if (pathname === "/login") {
     const target = role ? START_PAGE[role] : undefined;
