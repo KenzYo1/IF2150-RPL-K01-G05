@@ -1,13 +1,11 @@
 import "server-only";
 import type { User } from "@supabase/supabase-js";
-import { createClient  } from "./supabase/server";
 import { supabaseAdmin } from "./supabase/admin";
 import { Role } from "@/types/role"
 
 export async function getRole(email: string): Promise<Role | null> {
     const e = email.toLowerCase();
     
-    const supabase = await createClient();
     const { data, error } = await supabaseAdmin
         .from("pelapor")
         .select("nim_nip")
@@ -26,7 +24,18 @@ export async function getRole(email: string): Promise<Role | null> {
     throw new Error("Fetching from database failed: " + error.message);
 }
     if (!data) {
-        return null;
+        const { data: created,  error: insertError } = await supabaseAdmin
+            .from("pelapor")
+            .upsert({ email: e, nim_nip: getUserNimFromEmail(e) },
+                    {onConflict: "email", ignoreDuplicates: true}
+        );
+        if (insertError) {
+            throw new Error("Creating user failed: " + insertError.message);
+        }
+        if (e.endsWith("@staff.itb.ac.id")) { // nim_nip tidak terdefinisi
+            return "petugas";
+        }
+        return "pelapor";
     }
 
     // Note admin gak bisa ditentuin dari email, security reasons
@@ -64,4 +73,18 @@ export async function resolveRole(user: User): Promise<Role> {
         throw new Error("Unable to update database");
     }
     return role;
+}
+
+function getUserNimFromEmail(email: string): string | null {
+    if (!email) {
+        return null;
+    }
+    const nim = email.split("@")[0];
+    const aft = email.split("@")[-1];
+    if (nim.length == 8) {
+        if (aft.includes(".itb.ac.id")) {
+            return nim;
+        }
+    }
+    return null;
 }
