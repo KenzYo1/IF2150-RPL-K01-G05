@@ -39,3 +39,7 @@ export async function loginByITBEmail() {
     if (error) redirect("/error");
     if (data.url) redirect(data.url);
 }
+
+export async function onForgotPass() {
+    
+}
