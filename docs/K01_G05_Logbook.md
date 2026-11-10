@@ -30,6 +30,7 @@
 * [Milestone 6](#milestone-6)
 * [Milestone 7](#milestone-7)
 * [Milestone 8](#milestone-8)
+* [Milestone 9](#milestone-9)
 ---
 
 ### Milestone 1
@@ -155,9 +156,7 @@
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *26-10-2026* | *Kenzo Yo* | *Inisialisasi dokumen DPPL2* | *1* | *Done* | *-* | 
-<<<<<<< HEAD
 | *28-10-2026* | *Justin Sepvians* | *C12-C17* | *2* | *Done* | *-* | 
-=======
 | *26-10-2026* | *Nadia Layla S. dan Jessica A.T* | *Diskusi dan mencari referensi + ide untuk UI* | *3* | *Done* | *-* | 
 | *26-10-2026* | *Nadia Layla S.* | *Bikin wireframe dan mock up UI* | *2* | *Done* | *-* | 
 | *26-10-2026* | *Nadia Layla S. dan Jessica A.T* | *Membuat base interface HalamanLaporanPelapor* | *3* | *Done* | *-* | 
@@ -172,5 +171,11 @@
 | *28-10-2026* | *Arini K* | *Mengisi Bab 5.7 - 5.11 dan Bab 7* | *2* | *Done* | *-* |
 | *28-10-2026* | *Justin S* | *C12-C17, logbook* | *2* | *Done* | *-* |
 | *28-10-2026* | *Kenzo Yo* | *Merapikan dokumen* | *1* | *Done* | *-* |
+
+### Milestone 9
+**Periode:** 28 Oktober 2026 - 11 November 2026
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``

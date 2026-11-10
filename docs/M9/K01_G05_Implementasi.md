@@ -7,24 +7,24 @@ IMPLEMENTASI PERANGKAT LUNAK
 </h1>
 <br>
 
-## *Nama Perangkat Lunak*
-### *[Logo Perangkat Lunak]*
+## *APATIS: Aplikasi Pelaporan Air dan Sanitasi*
+### <img alt="Logo APATIS" src="./assets/logo.png" width="50%">
 
-### Untuk: *[Nama Asisten]*
+### Untuk: *Made Branenda Jordhy*
 
 Dipersiapkan oleh:
 | Informasi | Keterangan |
 | --- | --- |
-| Kelas | *\[Kelas\]* |
-| Kelompok | *\[Nomor Kelompok\]*  |
+| Kelas | *\[K01\]* |
+| Kelompok | *\[5\]*  |
 
 | NIM | Nama |
 |---|---|
-| *[NIM 1]* | *[Nama Anggota 1]* |
-| *[NIM 2]* | *[Nama Anggota 2]* |
-| *[NIM 3]* | *[Nama Anggota 3]* |
-| *[NIM 4]* | *[Nama Anggota 4]* |
-| *[NIM 5]* | *[Nama Anggota 5]* |
+| *13525016* | *Kenzo Yo* |
+| *13525112* | *Justin Sepvian* |
+| *13525142* | *Jessica Audrey Tjahjadi* |
+| *13525073* | *Nadia Layla Safira* |
+| *13525097* | *Arini Karimatunnikmah* |
 ---
 
 > **Petunjuk pengerjaan:** *[Silahkan hapus bagian ini setelah selesai mengerjakan]*
