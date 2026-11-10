@@ -1,6 +1,8 @@
-import { NextResponse, type NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { createServerClient } from "@supabase/ssr";
 import { START_PAGE } from "@/types/start-pages";
+import { ROUTE_ROLES } from "@/types/route-roles";
+import { redirect } from "next/dist/server/api-utils";
 
 export async function proxy(request: NextRequest) {
   let response = NextResponse.next({ request });
@@ -30,18 +32,33 @@ export async function proxy(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   const role = user?.app_metadata?.role as keyof typeof START_PAGE | undefined;
-  const target = role ? START_PAGE[role] : undefined;
+  const { pathname } = request.nextUrl;
 
-  if (target) {
-    const redirect = NextResponse.redirect(new URL(`/${target}`, request.url));
-    // keep any refreshed session cookies on the redirect response
-    response.cookies.getAll().forEach((c) => redirect.cookies.set(c));
-    return redirect;
+  const redirectTo = (path: string) => {
+    const res = NextResponse.redirect(new URL(path, request.url));
+    response.cookies.getAll().forEach((c) => res.cookies.set(c));
+  }
+  if (pathname === "/login") {
+    const target = role ? START_PAGE[role] : undefined;
+    return target ? redirectTo(`/${target}`) : response;
   }
 
+  const prefix = Object.keys(ROUTE_ROLES).find(
+    (p) => pathname === p || pathname.startsWith(p + "/")
+  );
+  if (prefix) {
+    if (!user || !role) {
+        return redirectTo("/login");
+    }
+    if (!ROUTE_ROLES[prefix].includes(role)) {
+        return redirectTo(`/${START_PAGE[role]}`);
+    }
+  }
+  
   return response;
 }
 
 export const config = {
-  matcher: ["/login"],
+    // change kalau perlu page spesifik tertentu
+  matcher: ["/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)$).*)"],
 };
