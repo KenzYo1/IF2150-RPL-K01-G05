@@ -112,11 +112,18 @@ export async function likeLaporan(
     const jumlahLikeBaru = Math.max(0, laporan.likeLaporan) + 1;
 
     try {
-        await setLaporanData(
+        const updated = await setLaporanData(
             valid.idLaporan,
             { likeLaporan: jumlahLikeBaru },
             clientOverride
         );
+        if (!updated) {
+            throw new LikeServiceError(
+                "LIKE_UPDATE_FAILED",
+                "Gagal memperbarui jumlah like pada laporan di database",
+                500
+            );
+        }
     } catch (updateError) {
         await deleteLikeRecord(
             valid.idLaporan,
@@ -178,11 +185,18 @@ export async function unlikeLaporan(
 
     const jumlahLikeBaru = Math.max(0, laporan.likeLaporan - 1);
 
-    await setLaporanData(
+    const updated = await setLaporanData(
         valid.idLaporan,
         { likeLaporan: jumlahLikeBaru },
         clientOverride
     );
+    if (!updated) {
+        throw new LikeServiceError(
+            "UNLIKE_UPDATE_FAILED",
+            "Gagal memperbarui jumlah like pada laporan di database",
+            500
+        );
+    }
 
     return {
         idLaporan: valid.idLaporan,
