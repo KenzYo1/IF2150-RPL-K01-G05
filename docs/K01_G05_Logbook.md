@@ -173,9 +173,16 @@
 | *28-10-2026* | *Kenzo Yo* | *Merapikan dokumen* | *1* | *Done* | *-* |
 
 ### Milestone 9
-**Periode:** 28 Oktober 2026 - 11 November 2026
+**Periode:** 28 Oktober 2026 - 13 November 2026
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
-
-
+| *31-10-2026* | *Kenzo Yo* | *Membagi tugas, membuat sheets pembagian tugas detail (frontend dan backend), membuat docs arahan kerja* | *1.5* | *Done* | *-* |
+| *31-10-2026* | *Kenzo Yo* | *Menginisiasi supabase dan nextjs app* | *1* | *Done* | *-* |
+| *02-11-2026* | *Kenzo Yo* | *Membuat struktur web dan inisiasi server.ts client.ts supabase* | *1* | *Done* | *-* |
+| *04-11-2026* | *Kenzo Yo* | *Mengimplementasi variasi tombol menggunakan shadcn, font hywenhei, serta login page* | *4* | *Done* | *-* |
+| *05-11-2026* | *Kenzo Yo* | *Implementasi auth untuk keperluan autentikasi menggunakan supabase auth* | *2* | *Done* | *-* |
+| *09-11-2026* | *Kenzo Yo* | *Implementasi cloudflare workers* | *4* | *Done* | *-* |
+| *09-11-2026* | *Kenzo Yo* | *Implementasi pembeda role pengguna web* | *1* | *Done* | *-* |
+| *10-11-2026* | *Kenzo Yo* | *Memperbaiki auth di login page* | *3* | *Done* | *-* |
+| *10-11-2026* | *Kenzo Yo* | *Implementasi redirect ke page tertentu dan penyimpanan sesi pengguna (agar tidak harus login berkali-kali)* | *2* | *Done* | *-* |
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
