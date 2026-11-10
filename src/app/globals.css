@@ -136,3 +136,10 @@
   font-weight: 400;
   font-display: swap;
 }
+
+font-face {
+  font-family: "Mermaid";
+  src: url("/Mermaid1001.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
