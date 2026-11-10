@@ -8,14 +8,23 @@ export async function getRole(email: string): Promise<Role | null> {
     const e = email.toLowerCase();
     
     const supabase = await createClient();
-    const { data, error } = await supabase
+    const { data, error } = await supabaseAdmin
         .from("pelapor")
         .select("nim_nip, is_admin")
         .eq("email", e)
         .maybeSingle();
     if (error) {
-        throw new Error("Fetching from database failed")
-    }
+    console.error(
+        "resolveRole failed " +
+        JSON.stringify({
+            code: error.code,
+            message: error.message,
+            details: error.details,
+            hint: error.hint,
+        })
+    );
+    throw new Error("Fetching from database failed: " + error.message);
+}
     if (!data) {
         return null;
     }
