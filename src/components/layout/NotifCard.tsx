@@ -33,7 +33,7 @@ function Notification
         >
             {/* Title */}
             <div className={cn(
-                "text-[16px] font-hywenhei",
+                "text-[16px] font-hywenhei whitespace-normal break-words",
                 isRead ? "text-[#67697a]" : "text-[#000000]"
             )}>
                 {title}
@@ -41,7 +41,7 @@ function Notification
 
             {/* Description */}
             <div className={cn(
-                "text-[13px] font-Mermaid] font-bold",
+                "text-[13px] font-Mermaid] font-bold whitespace-normal break-words",
                 isRead ? "text-[#67697a]" : "text-[#757575]"
             )}>
                 {desc}
