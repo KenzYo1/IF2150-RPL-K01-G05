@@ -45,6 +45,11 @@ export async function proxy(request: NextRequest) {
     return target ? redirectTo(`/${target}`) : response;
   }
 
+  if (pathname === "/") {
+    const target = role ? START_PAGE[role] : undefined;
+    return target ? redirectTo(`/${target}`) : "/login";
+  }
+
   const prefix = Object.keys(ROUTE_ROLES).find(
     (p) => pathname === p || pathname.startsWith(p + "/")
   );
