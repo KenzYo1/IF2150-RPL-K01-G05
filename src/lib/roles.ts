@@ -5,7 +5,7 @@ import { Role } from "@/types/role"
 
 export async function getRole(email: string): Promise<Role | null> {
     const e = email.toLowerCase();
-    
+    const nama = e.split("@")[0];
     const { data, error } = await supabaseAdmin
         .from("pelapor")
         .select("nim_nip")
@@ -26,7 +26,7 @@ export async function getRole(email: string): Promise<Role | null> {
     if (!data) {
         const { data: created,  error: insertError } = await supabaseAdmin
             .from("pelapor")
-            .upsert({ email: e, nim_nip: getUserNimFromEmail(e) },
+            .upsert({ email: e, nim_nip: getUserNimFromEmail(e), nama_pelapor: nama },
                     {onConflict: "email", ignoreDuplicates: true}
         );
         if (insertError) {
