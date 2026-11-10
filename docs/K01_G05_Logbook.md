@@ -181,8 +181,11 @@
 | *02-11-2026* | *Kenzo Yo* | *Membuat struktur web dan inisiasi server.ts client.ts supabase* | *1* | *Done* | *-* |
 | *04-11-2026* | *Kenzo Yo* | *Mengimplementasi variasi tombol menggunakan shadcn, font hywenhei, serta login page* | *4* | *Done* | *-* |
 | *05-11-2026* | *Kenzo Yo* | *Implementasi auth untuk keperluan autentikasi menggunakan supabase auth* | *2* | *Done* | *-* |
+| *06-11-2026* | *Arini K.* | *Implementasi header dan side bar sesuai role* | *1* | *Done* | *-* |
 | *09-11-2026* | *Kenzo Yo* | *Implementasi cloudflare workers* | *4* | *Done* | *-* |
 | *09-11-2026* | *Kenzo Yo* | *Implementasi pembeda role pengguna web* | *1* | *Done* | *-* |
 | *10-11-2026* | *Kenzo Yo* | *Memperbaiki auth di login page* | *3* | *Done* | *-* |
 | *10-11-2026* | *Kenzo Yo* | *Implementasi redirect ke page tertentu dan penyimpanan sesi pengguna (agar tidak harus login berkali-kali)* | *2* | *Done* | *-* |
+| *10-11-2026* | *Arini K.* | *Menyesuaikan header dan side bar sesuai role, Implementasi kartu form lapor* | *1* | *Done* | *-* |
+| *11-11-2026* | *Arini K.* | *Implementasi kartu tanggap laporan* | *1* | *Done* | *-* |
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
