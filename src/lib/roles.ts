@@ -48,9 +48,9 @@ export async function getRole(email: string): Promise<Role | null> {
 
 // this one uhh resolves it generally
 export async function resolveRole(user: User): Promise<Role> {
-    const r = user.app_metadata.role;
-    if (r) {
-        return r as Role;
+    const current = user.app_metadata.role;
+    if (current) {
+        return current as Role;
     }
     if (!user.email) {
         throw new Error("User has no email");
@@ -60,18 +60,20 @@ export async function resolveRole(user: User): Promise<Role> {
         throw new Error("Unable to determine user role");
     }
 
-    const { error } = await supabaseAdmin.auth.admin.updateUserById(
-        user.id,
-        {
-            app_metadata: {
-                ...user.app_metadata,
-                role,
-            },
+    if (role !== current) {
+        const { error } = await supabaseAdmin.auth.admin.updateUserById(
+            user.id,
+            {
+                app_metadata: {
+                    ...user.app_metadata,
+                    role,
+                },
+            }
+        )
+        if (error) {
+            throw new Error("Unable to update database");
         }
-    )
-    if (error) {
-        throw new Error("Unable to update database");
-    }
+    } 
     return role;
 }
 
