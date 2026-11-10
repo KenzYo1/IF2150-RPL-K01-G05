@@ -78,15 +78,17 @@ export async function resolveRole(user: User): Promise<Role> {
 }
 
 function getUserNimFromEmail(email: string): string | null {
-    if (!email) {
-        return null;
-    }
-    const nim = email.split("@")[0];
-    const aft = email.split("@")[-1];
-    if (nim.length == 8) {
-        if (aft.includes(".itb.ac.id")) {
-            return nim;
-        }
+    const at = email.lastIndexOf("@");
+    if (at < 1) return null;
+
+    const nim = email.slice(0, at);
+    const domain = email.slice(at + 1);
+
+    const validDomain =
+        domain === "itb.ac.id" || domain.endsWith(".itb.ac.id");
+
+    if (validDomain && /^\d{8}$/.test(nim)) {
+        return nim;
     }
     return null;
 }
