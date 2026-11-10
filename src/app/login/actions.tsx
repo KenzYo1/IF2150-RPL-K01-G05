@@ -33,7 +33,7 @@ export async function loginByITBEmail() {
     const origin = (await headers()).get("origin");
     const { data, error } = await supabase.auth.signInWithOAuth({
         provider: "google",
-        options: { redirectTo: `${origin}/oauth/consent`}
+        options: { redirectTo: `${origin}/auth/callback`}
     })
 
     if (error) redirect("/error");
