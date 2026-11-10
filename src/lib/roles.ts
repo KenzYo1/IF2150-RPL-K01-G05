@@ -10,7 +10,7 @@ export async function getRole(email: string): Promise<Role | null> {
     const supabase = await createClient();
     const { data, error } = await supabaseAdmin
         .from("pelapor")
-        .select("nim_nip, is_admin")
+        .select("nim_nip")
         .eq("email", e)
         .maybeSingle();
     if (error) {
