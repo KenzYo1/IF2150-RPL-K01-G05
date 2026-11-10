@@ -6,6 +6,16 @@ const nextConfig: NextConfig = {
     agentFeedback: true,
   },
 
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.supabase.co",
+        pathname: "/storage/v1/object/public/**",
+      },
+    ],
+  },
+
   turbopack: {
     rules: {
       "*.css": {
@@ -19,3 +29,4 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 
 import('@opennextjs/cloudflare').then(m => m.initOpenNextCloudflareForDev());
+

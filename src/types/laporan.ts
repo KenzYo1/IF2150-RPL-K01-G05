@@ -1,5 +1,7 @@
 export type StatusLaporan = "diproses" | "tuntas" | "ditolak" | string;
 
+export type AllowedFotoMimeType = "image/jpeg" | "image/jpg" | "image/png";
+
 export interface LaporanRow {
     id_laporan: number;
     id_pelapor: number | null;
@@ -37,6 +39,40 @@ export interface LaporanEntity {
     catatan: string | null;
     createdAt: string | null;
     updatedAt: string | null;
+}
+
+export interface NewLaporanData {
+    idPelapor?: number | null;
+    judulLaporan?: string | null;
+    kategori?: string | null;
+    descLaporan: string;
+    lokasi?: string | null;
+    fotoLaporan?: string | null;
+    statusLaporan?: StatusLaporan;
+}
+
+export interface FotoUploadFileInput {
+    buffer: Uint8Array | ArrayBuffer | Blob;
+    fileName: string;
+    mimeType: string;
+    size: number;
+}
+
+export interface FotoStorageUploadResult {
+    bucket: string;
+    path: string;
+    publicUrl: string;
+}
+
+export interface CreateLaporanInput {
+    idPelapor?: number | null;
+    judulLaporan?: string | null;
+    kategori?: string | null;
+    descLaporan: string;
+    lokasi?: string | null;
+    fotoFile?: FotoUploadFileInput | File | null;
+    fotoLaporan?: string | null;
+    statusLaporan?: StatusLaporan;
 }
 
 export interface ApiSuccessResponse<T> {
