@@ -191,7 +191,7 @@ Tabel B.1. Perubahan dari DPPL
 | No | Bagian DPPL | Rancangan Awal | Implementasi Akhir | Alasan |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | *[mis. Kelas C05, layar I-03, tabel `orders`]* | *[Yang direncanakan]* | *[Yang dibuat]* | *[Alasan perubahan]* |
-| *...* | *...* | *...* | *...* | *...* |
+| *1* | *Bagian UI, setiap Halaman* | *Font size yang besar (title: 40px, heading 1: 27px, heading 2: 24px) dan container besar* | *Font size diperkecil (title: 25px, heading 1: 16px, heading 2: 13px) dan container diperkecil* | *Agar komponen halaman tidak terlalu besar dan mempunyai design UI yang enak dilihat (FIX THIS LATER?????)* |
 
 ## B.2 Bukti Penerapan Best Practices
 
@@ -229,8 +229,11 @@ Tabel B.4. Kontribusi Anggota
 
 | NIM | Nama | Modul / Fitur yang Dikerjakan | Persentase Kontribusi |
 | :--- | :--- | :--- | :--- |
-| *[NIM 1]* | *[Nama]* | *[Modul/fitur]* | *[%]* |
-| *...* | *...* | *...* | *...* |
+| *13525016* | *Kenzo Yo* | *?* | *??%* |
+| *13525112* | *Justin Sepvian* | *?* | *??%* |
+| *13525142* | *Jessica Audrey Tjahjadi* | *Front End Card / Komponen dan Halaman Akun, Notifikasi, dan Leaderboard* | *??%* |
+| *13525073* | *Nadia Layla Safira* | *?* | *??%* |
+| *13525097* | *Arini Karimatunnikmah* | *?* | *??%* |
 
 ## B.5 Traceability Kelas Perancangan ke Implementasi
 
