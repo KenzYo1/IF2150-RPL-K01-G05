@@ -1,7 +1,9 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Input } from "@base-ui/react"
-
 import { loginByITBEmail, loginWithPass } from "./actions"
+import { useRouter } from "next/navigation";
 
 const InputField = ({type, title, name, placeholder, required}: {type: string, name: string, title: string, placeholder: string, required:boolean}) => {
     return (
@@ -13,6 +15,10 @@ const InputField = ({type, title, name, placeholder, required}: {type: string, n
 }
 
 const LoginPage = () => {
+    const router = useRouter();
+    const onForgotPass = async (formData: FormData) => {
+        router.push(`/login/ForgotPassword?email=${encodeURIComponent(String(formData.get("email") ?? ""))}`);
+    }
     return (
         <div className="flex items-center justify-center gap-45 min-h-[40vw] p-10 overflow-hidden">
             <img
@@ -28,7 +34,7 @@ const LoginPage = () => {
                     <p className="font-hywenhei text-[14px] text-black">or</p>
                     <InputField type="email" name="email" title="Email" placeholder="Input email here" required/>
                     <InputField type="password" name="password" title="Password" placeholder="Input password here" required/>
-                    <Button variant="ghost" size="auto" className="self-end justify-end font-hywenhei text-[10px] text-[#A8BCF7]">Forgot Password?</Button>
+                    <Button variant="ghost" size="auto" className="self-end justify-end font-hywenhei text-[10px] text-[#A8BCF7]" type="submit" formAction={onForgotPass} suppressHydrationWarning formNoValidate>Forgot Password?</Button>
                     <Button variant="normal" size="auto" className="text-[16px] h-10 rounded-[16px]" type="submit">Sign In</Button>
                 </div>
             </form>

@@ -7,7 +7,6 @@ import { resolveRole } from "@/lib/roles";
 import { START_PAGE } from "@/types/start-pages";
 
 
-
 export async function loginWithPass(formData: FormData) {
     const supabase = await createClient();
     const { data, error } = await supabase.auth.signInWithPassword({
@@ -38,8 +37,4 @@ export async function loginByITBEmail() {
 
     if (error) redirect("/error");
     if (data.url) redirect(data.url);
-}
-
-export async function onForgotPass() {
-    
 }
