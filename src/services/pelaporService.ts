@@ -99,10 +99,15 @@ export async function resolvePelaporAuthContext(
         );
     }
 
+    const emailLower = (data.user.email ?? "").trim().toLowerCase();
+    const fallbackRoleByEmail = emailLower.endsWith("@staff.itb.ac.id")
+        ? "petugas"
+        : "pelapor";
+
     const rawRole =
         (data.user.app_metadata?.role as string | undefined) ??
         (data.user.user_metadata?.role as string | undefined) ??
-        "pelapor";
+        fallbackRoleByEmail;
 
     const normalizedRole = rawRole.toLowerCase();
     const role: Role =

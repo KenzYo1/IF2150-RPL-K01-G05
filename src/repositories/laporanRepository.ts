@@ -94,6 +94,7 @@ export interface LaporanSupabaseClient {
             data: {
                 user: {
                     id: string;
+                    email?: string | null;
                     user_metadata?: Record<string, unknown>;
                     app_metadata?: Record<string, unknown>;
                 } | null;
@@ -343,6 +344,43 @@ export async function setLaporanData(
         .maybeSingle();
 
     if (error) {
+        const isMissingOptionalColumn =
+            error.code === "PGRST204" ||
+            error.code === "42703" ||
+            /column .* does not exist|schema cache/i.test(error.message ?? "");
+
+        const optionalColumns = [
+            "status_moderasi",
+            "status_penanganan",
+            "catatan",
+            "points_awarded",
+        ];
+        const hasOptionalColumn = optionalColumns.some(
+            (col) => col in updatePayload
+        );
+
+        if (isMissingOptionalColumn && hasOptionalColumn) {
+            const fallbackPayload: Record<string, unknown> = {
+                ...updatePayload,
+            };
+            for (const col of optionalColumns) {
+                delete fallbackPayload[col];
+            }
+
+            if (Object.keys(fallbackPayload).length > 0) {
+                const retryResult = await supabase
+                    .from("laporan")
+                    .update(fallbackPayload)
+                    .eq("id_laporan", idLaporan)
+                    .select("*")
+                    .maybeSingle();
+
+                if (!retryResult.error) {
+                    return retryResult.data !== null;
+                }
+            }
+        }
+
         throw createLaporanRepositoryError(
             "Gagal memperbarui data laporan di database",
             error,

@@ -15,7 +15,10 @@ import {
     setLaporanData,
     uploadFotoLaporanToStorage,
 } from "@/repositories/laporanRepository";
-import type { PelaporSupabaseClient } from "@/repositories/pelaporRepository";
+import {
+    getDataPelaporByAuthUserId,
+    type PelaporSupabaseClient,
+} from "@/repositories/pelaporRepository";
 import {
     PelaporServiceError,
     resolvePelaporAuthContext,
@@ -264,6 +267,13 @@ export async function createLaporanService(
                 authOverride
             );
             resolvedIdPelapor = authUser.idPelapor ?? null;
+            if (resolvedIdPelapor === null && authUser.authUserId) {
+                const pelaporByAuth = await getDataPelaporByAuthUserId(
+                    authUser.authUserId,
+                    clientOverride as unknown as PelaporSupabaseClient | undefined
+                ).catch(() => null);
+                resolvedIdPelapor = pelaporByAuth?.idPelapor ?? null;
+            }
         } catch (error) {
             if (error instanceof PelaporServiceError) {
                 throw new LaporanServiceError(
