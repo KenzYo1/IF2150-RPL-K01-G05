@@ -30,6 +30,7 @@
 * [Milestone 6](#milestone-6)
 * [Milestone 7](#milestone-7)
 * [Milestone 8](#milestone-8)
+* [Milestone 9](#milestone-9)
 ---
 
 ### Milestone 1
@@ -119,6 +120,7 @@
 | *30-09-2026* | *Kenzo Yo* | *Melakukan finishing terhadap subbab 2.2 dan 2.4* | *0.5* | *Done* | *-* |
 | *30-09-2026* | *Justin Sepvian* | *Membuat subbab 1.6 dan 1.2, beberapa perubahan di bab 5, dan mereview ulang isi dokumen* | *0.5* | *Done* | *-* |
 
+---
 
 ### Milestone 6
 **Periode:** 30 September 2026 - 7 Oktober 2026
@@ -132,6 +134,8 @@
 | *07-10-2026* | *Kenzo Yo* | *Membantu membuat diagram bab 3* | *0.5* | *Done* | *-* |
 | *07-10-2026* | *Arini K.* | *Membantu pembuatan diagram dan mengisi alasan pemilihan diagram* | *0.5* | *Done* | *-* |
 | *07-10-2026* | *Justin Sepvian* | *Melengkapi tabel bab 2 dan memberi ide diagram* | *0.5* | *Done* | *-* |
+
+---
 
 ### Milestone 7
 **Periode:** 7 Oktober 2026 - 21 Oktober 2026
@@ -150,14 +154,14 @@
 | *21-10-2026* | *Kenzo Yo* | *Merevisi hal yang kurang sesuai di DPPL* | *0.5* | *Done* | *-* |
 | *21-10-2026* | *Nadia Layla S.* | *Merapikan DPPL* | *0.5* | *Done* | 
 
+---
+
 ### Milestone 8
 **Periode:** 21 Oktober 2026 - 28 Oktober 2026
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *26-10-2026* | *Kenzo Yo* | *Inisialisasi dokumen DPPL2* | *1* | *Done* | *-* | 
-<<<<<<< HEAD
 | *28-10-2026* | *Justin Sepvians* | *C12-C17* | *2* | *Done* | *-* | 
-=======
 | *26-10-2026* | *Nadia Layla S. dan Jessica A.T* | *Diskusi dan mencari referensi + ide untuk UI* | *3* | *Done* | *-* | 
 | *26-10-2026* | *Nadia Layla S.* | *Bikin wireframe dan mock up UI* | *2* | *Done* | *-* | 
 | *26-10-2026* | *Nadia Layla S. dan Jessica A.T* | *Membuat base interface HalamanLaporanPelapor* | *3* | *Done* | *-* | 
@@ -172,5 +176,30 @@
 | *28-10-2026* | *Arini K* | *Mengisi Bab 5.7 - 5.11 dan Bab 7* | *2* | *Done* | *-* |
 | *28-10-2026* | *Justin S* | *C12-C17, logbook* | *2* | *Done* | *-* |
 | *28-10-2026* | *Kenzo Yo* | *Merapikan dokumen* | *1* | *Done* | *-* |
+
+---
+
+### Milestone 9
+**Periode:** 28 Oktober 2026 - 13 November 2026
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *31-10-2026* | *Kenzo Yo* | *Membagi tugas, membuat sheets pembagian tugas detail (frontend dan backend), membuat docs arahan kerja* | *1.5* | *Done* | *-* |
+| *31-10-2026* | *Kenzo Yo* | *Menginisiasi supabase dan nextjs app* | *1* | *Done* | *-* |
+| *02-11-2026* | *Kenzo Yo* | *Membuat struktur web dan inisiasi server.ts client.ts supabase* | *1* | *Done* | *-* |
+| *04-11-2026* | *Kenzo Yo* | *Mengimplementasi variasi tombol menggunakan shadcn, font hywenhei, serta login page* | *4* | *Done* | *-* |
+| *05-11-2026* | *Kenzo Yo* | *Implementasi auth untuk keperluan autentikasi menggunakan supabase auth* | *2* | *Done* | *-* |
+| *06-11-2026* | *Arini K.* | *Implementasi header dan side bar sesuai role* | *1* | *Done* | *-* |
+| *09-11-2026* | *Kenzo Yo* | *Implementasi cloudflare workers* | *4* | *Done* | *-* |
+| *09-11-2026* | *Kenzo Yo* | *Implementasi pembeda role pengguna web* | *1* | *Done* | *-* |
+| *09-11-2026* | *Jessica A.T* | *Implementasi kartu akun dan HalamanAkun* | *3* | *Done* | *-* |
+| *10-11-2026* | *Kenzo Yo* | *Memperbaiki auth di login page* | *3* | *Done* | *-* |
+| *10-11-2026* | *Kenzo Yo* | *Implementasi redirect ke page tertentu dan penyimpanan sesi pengguna (agar tidak harus login berkali-kali)* | *2* | *Done* | *-* |
+| *10-11-2026* | *Arini K.* | *Menyesuaikan header dan side bar sesuai role, Implementasi kartu form lapor* | *1* | *Done* | *-* |
+| *10-11-2026* | *Jessica A.T* | *Implementasi kartu notifikasi dan HalamanNotifikasi* | *2* | *Done* | *-* |
+| *10-11-2026* | *Jessica A.T* | *Implementasi komponen leaderboard dan HalamanLeaderboard* | *3* | *Done* | *-* |
+| *11-11-2026* | *Arini K.* | *Implementasi kartu tanggap laporan* | *1* | *Done* | *-* |
+| *11-11-2026* | *Jessica A.T* | *Menambah path ke HalamanLeaderboard dan menambah bagian menunjukkan info akun sendiri* | *??* | *In progress* | *-* |
+
+---
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``

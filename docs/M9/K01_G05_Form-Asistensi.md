@@ -4,23 +4,23 @@
 
 | Informasi | Keterangan |
 | --- | --- |
-| **Hari** | *\[Hari\]* |
-| **Tanggal** | *\[DD/MM/YYYY\]* |
-| **Kelas** | *\[Kelas\]* |
-| **Nomor Kelompok** | *\[Nomor Kelompok\]*  |
-| **Nama Kelompok** | *\[Nama Kelompok\]*  |
-| **Nama Perangkat Lunak** | *\[Nama P/L\]*  |
-| **Dokumen** | *\[Nama Dokumen yang diasistensikan\]*  |
+| **Hari** | *\[Senin\]* |
+| **Tanggal** | *\[02/11/2026\]* |
+| **Kelas** | *\[K01\]* |
+| **Nomor Kelompok** | *\[5\]*  |
+| **Nama Kelompok** | *\[Furina: Forum RPL Indonesia Jaya\]*  |
+| **Nama Perangkat Lunak** | *\[APATIS: Aplikasi Pelaporan Air dan Sanitasi\]*  |
+| **Dokumen** | *\[K01_G05_Implementasi\]*  |
 
 ### Anggota Kelompok
 
 | NIM | Nama |
-| --- | --- |
-| *\[NIM 1\]* | *\[Nama Anggota 1\]* |
-| *\[NIM 2\]* | *\[Nama Anggota 2\]* |
-| *\[NIM 3\]* | *\[Nama Anggota 3\]* |
-| *\[NIM 4\]* | *\[Nama Anggota 4\]* |
-| *\[NIM 5\]* | *\[Nama Anggota 5\]* |
+|---|---|
+| *13525016* | *Kenzo Yo* |
+| *13525112* | *Justin Sepvian* |
+| *13525142* | *Jessica Audrey Tjahjadi* |
+| *13525073* | *Nadia Layla Safira* |
+| *13525097* | *Arini Karimatunnikmah* |
 
 ### Catatan
 

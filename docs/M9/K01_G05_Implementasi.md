@@ -7,24 +7,24 @@ IMPLEMENTASI PERANGKAT LUNAK
 </h1>
 <br>
 
-## *Nama Perangkat Lunak*
-### *[Logo Perangkat Lunak]*
+## *APATIS: Aplikasi Pelaporan Air dan Sanitasi*
+### <img alt="Logo APATIS" src="./assets/logo.png" width="50%">
 
-### Untuk: *[Nama Asisten]*
+### Untuk: *Made Branenda Jordhy*
 
 Dipersiapkan oleh:
 | Informasi | Keterangan |
 | --- | --- |
-| Kelas | *\[Kelas\]* |
-| Kelompok | *\[Nomor Kelompok\]*  |
+| Kelas | *\[K01\]* |
+| Kelompok | *\[5\]*  |
 
 | NIM | Nama |
 |---|---|
-| *[NIM 1]* | *[Nama Anggota 1]* |
-| *[NIM 2]* | *[Nama Anggota 2]* |
-| *[NIM 3]* | *[Nama Anggota 3]* |
-| *[NIM 4]* | *[Nama Anggota 4]* |
-| *[NIM 5]* | *[Nama Anggota 5]* |
+| *13525016* | *Kenzo Yo* |
+| *13525112* | *Justin Sepvian* |
+| *13525142* | *Jessica Audrey Tjahjadi* |
+| *13525073* | *Nadia Layla Safira* |
+| *13525097* | *Arini Karimatunnikmah* |
 ---
 
 > **Petunjuk pengerjaan:** *[Silahkan hapus bagian ini setelah selesai mengerjakan]*
@@ -191,7 +191,7 @@ Tabel B.1. Perubahan dari DPPL
 | No | Bagian DPPL | Rancangan Awal | Implementasi Akhir | Alasan |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | *[mis. Kelas C05, layar I-03, tabel `orders`]* | *[Yang direncanakan]* | *[Yang dibuat]* | *[Alasan perubahan]* |
-| *...* | *...* | *...* | *...* | *...* |
+| *1* | *Bagian UI, setiap Halaman* | *Font size yang besar (title: 40px, heading 1: 27px, heading 2: 24px) dan container besar* | *Font size diperkecil (title: 25px, heading 1: 16px, heading 2: 13px) dan container diperkecil* | *Agar komponen halaman tidak terlalu besar dan mempunyai design UI yang enak dilihat (FIX THIS LATER?????)* |
 
 ## B.2 Bukti Penerapan Best Practices
 
@@ -199,10 +199,10 @@ Tabel B.2. Bukti Best Practices
 
 | Praktik | Bukti | Keterangan |
 | :--- | :--- | :--- |
-| Branching | *[Tautan ke daftar branch / graph commit]* | *[Skema yang dipakai]* |
-| Semantic commit | *[Tautan ke riwayat commit]* | *[Ringkasan]* |
-| Track tasks | *[Tautan ke Issues/Projects]* | *[Jumlah issue, pembagian]* |
-| Pull request dan review | *[Tautan ke 2-3 PR representatif]* | *[Siapa me-review siapa]* |
+| Branching | *https://github.com/KenzYo1/IF2150-RPL-K01-G05/branches/all (Note: Beberapa branch udah dihapus agar memperkecil jumlah branch active)* | *Git branching dari main berdasarkan fitur-fitur yang diimplementasi, baik itu per interface (misal, feat/sidebar-header) ataupun per integrasi backend (feat-login-session-and-redirect)* |
+| Semantic commit | *https://github.com/KenzYo1/IF2150-RPL-K01-G05/commits/main/* | *Setiap commit dilakukan dengan mengikuti git semantics, yakni 'feat' untuk penambahan fitur, 'fix' untuk memperbaiki bug, 'merge' untuk menggabungkan branch, serta refactor untuk penyederhanaan kode* |
+| Track tasks | *https://docs.google.com/spreadsheets/d/1kjdk0zXsvS5BIcUXCYIPnuToNj_cfLpCn5ijEUmlwUU/edit?gid=0#gid=0* | *Frontend: 19 (berdasarkan sheets)* |
+| Pull request dan review | *https://github.com/KenzYo1/IF2150-RPL-K01-G05/pull/8, https://github.com/KenzYo1/IF2150-RPL-K01-G05/pull/9, https://github.com/KenzYo1/IF2150-RPL-K01-G05/pull/5* | *Review oleh diri sendiri setelah testing secara remote* |
 | Pengujian | *[Tautan ke `src/tests/` dan hasil test]* | *[Apa yang diuji, cara menjalankan]* |
 
 ### B.2.1 Profiling dan Optimasi
@@ -229,8 +229,11 @@ Tabel B.4. Kontribusi Anggota
 
 | NIM | Nama | Modul / Fitur yang Dikerjakan | Persentase Kontribusi |
 | :--- | :--- | :--- | :--- |
-| *[NIM 1]* | *[Nama]* | *[Modul/fitur]* | *[%]* |
-| *...* | *...* | *...* | *...* |
+| *13525016* | *Kenzo Yo* | *?* | *??%* |
+| *13525112* | *Justin Sepvian* | *?* | *??%* |
+| *13525142* | *Jessica Audrey Tjahjadi* | *Front End Card / Komponen dan Halaman Akun, Notifikasi, dan Leaderboard* | *??%* |
+| *13525073* | *Nadia Layla Safira* | *?* | *??%* |
+| *13525097* | *Arini Karimatunnikmah* | *?* | *??%* |
 
 ## B.5 Traceability Kelas Perancangan ke Implementasi
 
