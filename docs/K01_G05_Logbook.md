@@ -120,6 +120,7 @@
 | *30-09-2026* | *Kenzo Yo* | *Melakukan finishing terhadap subbab 2.2 dan 2.4* | *0.5* | *Done* | *-* |
 | *30-09-2026* | *Justin Sepvian* | *Membuat subbab 1.6 dan 1.2, beberapa perubahan di bab 5, dan mereview ulang isi dokumen* | *0.5* | *Done* | *-* |
 
+---
 
 ### Milestone 6
 **Periode:** 30 September 2026 - 7 Oktober 2026
@@ -133,6 +134,8 @@
 | *07-10-2026* | *Kenzo Yo* | *Membantu membuat diagram bab 3* | *0.5* | *Done* | *-* |
 | *07-10-2026* | *Arini K.* | *Membantu pembuatan diagram dan mengisi alasan pemilihan diagram* | *0.5* | *Done* | *-* |
 | *07-10-2026* | *Justin Sepvian* | *Melengkapi tabel bab 2 dan memberi ide diagram* | *0.5* | *Done* | *-* |
+
+---
 
 ### Milestone 7
 **Periode:** 7 Oktober 2026 - 21 Oktober 2026
@@ -150,6 +153,8 @@
 | *21-10-2026* | *Kenzo Yo* | *Membuat diagram 3.3 dan 3.4* | *2* | *Done* | *-* |
 | *21-10-2026* | *Kenzo Yo* | *Merevisi hal yang kurang sesuai di DPPL* | *0.5* | *Done* | *-* |
 | *21-10-2026* | *Nadia Layla S.* | *Merapikan DPPL* | *0.5* | *Done* | 
+
+---
 
 ### Milestone 8
 **Periode:** 21 Oktober 2026 - 28 Oktober 2026
@@ -172,6 +177,8 @@
 | *28-10-2026* | *Justin S* | *C12-C17, logbook* | *2* | *Done* | *-* |
 | *28-10-2026* | *Kenzo Yo* | *Merapikan dokumen* | *1* | *Done* | *-* |
 
+---
+
 ### Milestone 9
 **Periode:** 28 Oktober 2026 - 13 November 2026
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
@@ -192,4 +199,7 @@
 | *10-11-2026* | *Jessica A.T* | *Implementasi komponen leaderboard dan HalamanLeaderboard* | *3* | *Done* | *-* |
 | *11-11-2026* | *Arini K.* | *Implementasi kartu tanggap laporan* | *1* | *Done* | *-* |
 | *11-11-2026* | *Jessica A.T* | *Menambah path ke HalamanLeaderboard dan menambah bagian menunjukkan info akun sendiri* | *??* | *In progress* | *-* |
+
+---
+
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
