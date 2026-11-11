@@ -184,8 +184,12 @@
 | *06-11-2026* | *Arini K.* | *Implementasi header dan side bar sesuai role* | *1* | *Done* | *-* |
 | *09-11-2026* | *Kenzo Yo* | *Implementasi cloudflare workers* | *4* | *Done* | *-* |
 | *09-11-2026* | *Kenzo Yo* | *Implementasi pembeda role pengguna web* | *1* | *Done* | *-* |
+| *09-11-2026* | *Jessica A.T* | *Implementasi kartu akun dan HalamanAkun* | *3* | *Done* | *-* |
 | *10-11-2026* | *Kenzo Yo* | *Memperbaiki auth di login page* | *3* | *Done* | *-* |
 | *10-11-2026* | *Kenzo Yo* | *Implementasi redirect ke page tertentu dan penyimpanan sesi pengguna (agar tidak harus login berkali-kali)* | *2* | *Done* | *-* |
 | *10-11-2026* | *Arini K.* | *Menyesuaikan header dan side bar sesuai role, Implementasi kartu form lapor* | *1* | *Done* | *-* |
+| *10-11-2026* | *Jessica A.T* | *Implementasi kartu notifikasi dan HalamanNotifikasi* | *2* | *Done* | *-* |
+| *10-11-2026* | *Jessica A.T* | *Implementasi komponen leaderboard dan HalamanLeaderboard* | *3* | *Done* | *-* |
 | *11-11-2026* | *Arini K.* | *Implementasi kartu tanggap laporan* | *1* | *Done* | *-* |
+| *11-11-2026* | *Jessica A.T* | *Menambah path ke HalamanLeaderboard dan menambah bagian menunjukkan info akun sendiri* | *??* | *In progress* | *-* |
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
