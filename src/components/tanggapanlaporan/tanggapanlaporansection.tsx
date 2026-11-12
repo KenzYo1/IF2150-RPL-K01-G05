@@ -18,12 +18,12 @@ export function ReportSection({ title, reports, open = false }: ReportSectionPro
             <button onClick={() => setIsOpen(!isOpen)}
                 aria-expanded={isOpen}
                 className="flex w-full items-center justify-between border-b border-black px-8 pb-2">
-                <h2 className="text-4xl font-hywenhei">
+                <h2 className="text-[25px] font-hywenhei">
                     {title}
                 </h2>
 
                 <div className="mt-2 flex items-center gap-2">
-                    <img src="/icon/ChevD.svg" alt="drop" className={`size-6 transition-transform ${isOpen ? "" : "-rotate-90"}`} />
+                    <img src="/icon/ChevD.svg" alt="drop" className={`size-4 transition-transform ${isOpen ? "" : "-rotate-90"}`} />
                 </div>
             </button>
 
