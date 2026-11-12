@@ -27,6 +27,11 @@ const rawLeaderboardData =
     { id: "u20", name: "aaa", points: 88, avatarUrl: "" },
 ];
 
+const ownData = 
+[
+    { id: "u0", name: "Me", points: 67, avatarUrl: "" }
+];
+
 export default function HalamanLeaderboard() 
 {
     const userRole: Role = "pelapor";
@@ -36,8 +41,8 @@ export default function HalamanLeaderboard()
             <Header role={userRole} />
 
             {/* Leaderboard title */}
-            <main className="flex flex-col items-center pt-[30px] pb-[30px]">
-                <div className="w-[1070px] pb-[25px]">
+            <main className="flex flex-col items-center pt-[30px] pb-[30px] gap-[20px]">
+                <div className="w-[1070px] pb-[13px]">
                     <h1 className="text-[25px] font-hywenhei text-[#000000]">
                         Leaderboard
                     </h1>
@@ -49,6 +54,29 @@ export default function HalamanLeaderboard()
                         <LeaderboardItem
                             key={user.id}
                             rank={index + 1} // increment the rank/tier
+                            name={user.name}
+                            points={user.points}
+                            avatarUrl={user.avatarUrl}
+                        />
+                    ))}
+                </div>
+                
+                {/* Bottom Part */}
+                <img
+                    src="/3dotlb.svg"
+                    alt="3dot"
+                    className="h-[42px] mb-[95px]"
+                />
+
+                {/* White Rectangle to cover the back */}
+                <div className="fixed bottom-0 left-0 w-full h-[55px] bg-white z-1 pointer-events-none" />
+
+                {/* Own Account */}
+                <div className="fixed bottom-0 left-0 flex w-full flex-col items-center pb-[30px] z-2">
+                    {ownData.map((user, index) => (
+                        <LeaderboardItem
+                            key={user.id}
+                            rank={67} // increment the rank/tier
                             name={user.name}
                             points={user.points}
                             avatarUrl={user.avatarUrl}

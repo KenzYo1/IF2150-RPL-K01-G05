@@ -8,7 +8,7 @@ import type { Role } from "@/types/role";
 const menuUser = [
   { href: "/HalamanAkun", label: "Profile", icon: "/icon/Profile.svg" },
   { href: "/laporan/baru", label: "Report", icon: "/icon/Lapor.svg" },
-  { href: "/leaderboard", label: "Leaderboard", icon: "/icon/Leaderboard.svg" },
+  { href: "/HalamanLeaderboard", label: "Leaderboard", icon: "/icon/Leaderboard.svg" },
 ];
 
 const menuStaf = [

@@ -23,7 +23,7 @@ export function LeaderboardItem
     return (
         // Container
         <div className={cn(
-            "flex px-[25px] py-[12px] w-[1070px] min-h-[30px] items-center border-[2px] border-[#000000] rounded-[20px]",
+            "flex px-[25px] py-[12px] w-[1070px] min-h-[30px] items-center border-[2px] border-[#000000] rounded-[20px] bg-white",
             className
         )}
         {...props}>
