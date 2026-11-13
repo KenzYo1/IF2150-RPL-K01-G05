@@ -1,3 +1,4 @@
+import { logout } from "@/app/(app)/HalamanAkun/actions";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import type { Role } from "@/types/role";
 
@@ -56,14 +57,16 @@ export function AccountCard({ role, name, email, points }: AccountCardProp)
             </div>
 
             {/* Log out */}
-            <button className="flex items-center gap-[20px] text-[20px] font-hywenhei">
-                <img 
-                    src ="/logout.svg"
-                    alt="Log Out"
-                    className="size-6 object-contain"
-                />
-                Log Out
-            </button>
+            <form action={logout}>
+                <button className="flex items-center gap-[20px] text-[20px] font-hywenhei" type="submit">
+                    <img 
+                        src ="/logout.svg"
+                        alt="Log Out"
+                        className="size-6 object-contain"
+                    />
+                    Log Out
+                </button>
+            </form>
         </div>
     );
 }
