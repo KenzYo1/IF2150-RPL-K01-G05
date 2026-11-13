@@ -5,11 +5,16 @@ import {
 import {
     deleteLikeRecord,
     findLikeRecord,
+    getLikedLaporanIdsByPelapor,
     insertLikeRecord,
     LikeRepositoryError,
     type LikeSupabaseClient,
 } from "@/repositories/likeRepository";
-import type { PelaporSupabaseClient } from "@/repositories/pelaporRepository";
+import {
+    getDataPelaporByAuthUserId,
+    getDataPelaporByEmail,
+    type PelaporSupabaseClient,
+} from "@/repositories/pelaporRepository";
 import {
     LaporanServiceError,
     parseAndValidateIdLaporan,
@@ -51,6 +56,23 @@ function normalizeValidationIds(
         }
         throw error;
     }
+}
+
+export async function getLikedLaporanIdsByPelaporService(
+    idPelapor: number,
+    clientOverride?: LikeSupabaseClient
+): Promise<number[]> {
+    let validIdPelapor: number;
+    try {
+        validIdPelapor = parseAndValidateIdPelapor(idPelapor);
+    } catch (error) {
+        if (error instanceof PelaporServiceError) {
+            throw new LikeServiceError(error.code, error.message, error.statusCode);
+        }
+        throw error;
+    }
+
+    return await getLikedLaporanIdsByPelapor(validIdPelapor, clientOverride);
 }
 
 export async function isLaporanLiked(
@@ -231,7 +253,30 @@ export async function resolveAuthenticatedPelaporForLike(
         );
     }
 
-    if (typeof user.idPelapor !== "number" || user.idPelapor <= 0) {
+    if (typeof user.idPelapor === "number" && user.idPelapor > 0) {
+        return { idPelapor: user.idPelapor };
+    }
+
+    const pelaporClient = clientOverride as unknown as PelaporSupabaseClient | undefined;
+    let resolvedIdPelapor: number | null = null;
+
+    if (user.authUserId) {
+        const pelaporByAuth = await getDataPelaporByAuthUserId(
+            user.authUserId,
+            pelaporClient
+        ).catch(() => null);
+        resolvedIdPelapor = pelaporByAuth?.idPelapor ?? null;
+    }
+
+    if (resolvedIdPelapor === null && user.email) {
+        const pelaporByEmail = await getDataPelaporByEmail(
+            user.email,
+            pelaporClient
+        ).catch(() => null);
+        resolvedIdPelapor = pelaporByEmail?.idPelapor ?? null;
+    }
+
+    if (typeof resolvedIdPelapor !== "number" || resolvedIdPelapor <= 0) {
         throw new LikeServiceError(
             "INVALID_PELAPOR_SESSION",
             "Profil pelapor tidak ditemukan pada sesi login",
@@ -239,5 +284,5 @@ export async function resolveAuthenticatedPelaporForLike(
         );
     }
 
-    return { idPelapor: user.idPelapor };
+    return { idPelapor: resolvedIdPelapor };
 }

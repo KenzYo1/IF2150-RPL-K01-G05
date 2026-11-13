@@ -103,6 +103,36 @@ export function extractStoragePathFromUrlOrPath(
     return trimmed.replace(/^\/+/, "");
 }
 
+/**
+ * Mengubah path relatif storage menjadi public URL Supabase jika belum berupa URL penuh.
+ */
+export function resolveLaporanFotoUrl(
+    pathOrUrl: string | null | undefined,
+    bucket = getLaporanStorageBucket()
+): string {
+    const trimmed = pathOrUrl?.trim() ?? "";
+    if (!trimmed) {
+        return "";
+    }
+
+    if (
+        trimmed.startsWith("http://") ||
+        trimmed.startsWith("https://") ||
+        trimmed.startsWith("/")
+    ) {
+        return trimmed;
+    }
+
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
+    if (!supabaseUrl) {
+        return "";
+    }
+
+    const cleanBase = supabaseUrl.replace(/\/+$/, "");
+    const cleanPath = trimmed.replace(/^\/+/, "");
+    return `${cleanBase}/storage/v1/object/public/${bucket}/${cleanPath}`;
+}
+
 export async function fileToFotoUploadInput(
     file: File | FotoUploadFileInput
 ): Promise<FotoUploadFileInput> {
