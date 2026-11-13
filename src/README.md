@@ -59,7 +59,7 @@ Namun, jika ingin menjalankan secara lokal, cukup ikuti setiap perintah di atas.
 | Nama | Fitur |
 | --- | --- |
 | Kenzo Yo |  |
-| Justin Sepvian |  |
+| Justin Sepvian | Like, send notification, data laporan, data pelapor |
 | Jessica Audrey Tjahjadi | Halaman Info Akun, Halaman Notifikasi, Halaman Leaderboard |
 | Nadia Layla Safira | Halaman Laporan, Halaman Formulir Tanggapan, Halaman List Laporan Petugas |
 | Arini Karimatunnikmah | Header, Side bar, Halaman Tanggapan, Halaman List Laporan Petugas |
