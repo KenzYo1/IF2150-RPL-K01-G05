@@ -27,11 +27,15 @@ export function Header({
           <AvatarFallback>U</AvatarFallback>
         </Avatar>
       <div className="flex items-center gap-8">
-        <img src="/icon/Notif.svg" alt="Notifikasi" className="h-11 w-auto" />
+        <Link href="/HalamanNotifikasi">
+          <img 
+            src="/icon/Notif.svg" 
+            alt="Notifikasi" 
+            className="h-11 w-auto" 
+          />
+        </Link>
 
-        <Link 
-          href="/HalamanAkun" 
-        >
+        <Link href="/HalamanAkun">
           <Avatar className="size-[77px]">
             <AvatarImage src="" alt="Profil" />
             <AvatarFallback>U</AvatarFallback>
