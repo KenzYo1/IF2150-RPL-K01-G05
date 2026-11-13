@@ -17,11 +17,7 @@ export async function loginWithPass(formData: FormData) {
         redirect("/error");
     }
     else {
-        const {data: { user }} = await supabase.auth.getUser();
-        if (!user) {
-            redirect("/error");
-        }
-        const role = await resolveRole(user);
+        const role = await resolveRole();
         if (!role) redirect ("/error"); 
         redirect(START_PAGE[role]);
     }

@@ -22,7 +22,7 @@ export async function GET(request: Request) {
         if (!isAllowedEmail(user.email)) {
             return NextResponse.redirect(`${origin}/error`);
         }
-        const role = await resolveRole(user);
+        const role = await resolveRole();
         if (!role) {
             return NextResponse.redirect(`${origin}/error`);
         }

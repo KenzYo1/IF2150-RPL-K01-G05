@@ -16,11 +16,7 @@ export const verifyOtp = async (email: string, token: string) => {
     const { error } = await supabase.auth.verifyOtp({ email, token, type:"email" });
 
     if (error) return error.message;
-    const {data: { user }} = await supabase.auth.getUser();
-    if (!user) {
-        redirect("/error");
-    }
-    const role = await resolveRole(user);
+    const role = await resolveRole();
     if (!role) redirect ("/error"); 
     redirect(START_PAGE[role]);
 
