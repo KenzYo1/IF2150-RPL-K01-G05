@@ -1,4 +1,3 @@
-import { Header } from "@/components/layout/Header";
 import { TanggapanSections, type TanggapanItem } from "@/components/tanggapanlaporan/Tanggapansections";
 import type { Role } from "@/types/role";
 
@@ -23,7 +22,6 @@ const dummyCompleted: TanggapanItem[] = [
 export default function HalamanTanggapan() {
     return (
         <div className="min-h-screen bg-white">
-            <Header role={dummyRole} />
             <main className="flex flex-col items-center gap-8 px-4 py-8">
                 <TanggapanSections
                     unverified={dummyUnverified}

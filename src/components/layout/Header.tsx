@@ -19,25 +19,16 @@ export function Header({
         alt="APATIS"
         className="absolute left-1/2 h-[42px] w-auto -translate-x-1/2"
       />
-
-      <div className="flex items-center gap-5">
-        <img src="/icon/Notif.svg" alt="Notifikasi" className="h-7 w-auto" />
-        <Avatar className="size-10">
-          <AvatarImage src={fotoProfil} alt="Profil" />
-          <AvatarFallback>U</AvatarFallback>
-        </Avatar>
       <div className="flex items-center gap-8">
         <Link href="/HalamanNotifikasi">
           <img 
-            src="/icon/Notif.svg" 
-            alt="Notifikasi" 
-            className="h-11 w-auto" 
+            src="/icon/Notif.svg" alt="Notifikasi" className="h-7 w-auto"
           />
         </Link>
 
         <Link href="/HalamanAkun">
-          <Avatar className="size-[77px]">
-            <AvatarImage src="" alt="Profil" />
+          <Avatar className="size-10">
+            <AvatarImage src={fotoProfil} alt="Profil" />
             <AvatarFallback>U</AvatarFallback>
           </Avatar>
         </Link>

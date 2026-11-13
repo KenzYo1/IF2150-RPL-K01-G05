@@ -1,4 +1,3 @@
-import { Header } from "@/components/layout/Header";
 import { LeaderboardItem } from "@/components/layout/LbComponent";
 import type { Role } from "@/types/role";
 
@@ -38,8 +37,6 @@ export default function HalamanLeaderboard()
     return(
         <div className="min-h-screen">
             {/* Header */}
-            <Header role={userRole} />
-
             {/* Leaderboard title */}
             <main className="flex flex-col items-center pt-[30px] pb-[30px] gap-[20px]">
                 <div className="w-[1070px] pb-[13px]">
