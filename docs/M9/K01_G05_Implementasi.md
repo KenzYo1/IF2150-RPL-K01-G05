@@ -190,8 +190,11 @@ Tabel B.1. Perubahan dari DPPL
 
 | No | Bagian DPPL | Rancangan Awal | Implementasi Akhir | Alasan |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | *[mis. Kelas C05, layar I-03, tabel `orders`]* | *[Yang direncanakan]* | *[Yang dibuat]* | *[Alasan perubahan]* |
-| *1* | *Bagian UI, setiap Halaman* | *Font size yang besar (title: 40px, heading 1: 27px, heading 2: 24px) dan container besar* | *Font size diperkecil (title: 25px, heading 1: 16px, heading 2: 13px) dan container diperkecil* | *Agar komponen halaman tidak terlalu besar dan mempunyai design UI yang enak dilihat (FIX THIS LATER?????)* |
+| 1 | *Bagian UI, setiap Halaman* | *Font size yang besar (title: 40px, heading 1: 27px, heading 2: 24px) dan container besar* | *Font size diperkecil (title: 25px, heading 1: 16px, heading 2: 13px) dan container diperkecil* | *Agar komponen halaman tidak terlalu besar dan mempunyai design UI yang enak dilihat (FIX THIS LATER?????)* |
+| 2 | Kelas `C18` (`HalamanLogin`), Kelas `C19` (`LoginController`), Layar `I-01` | Login hanya menggunakan OTP / email ITB. | Adanya login menggunakan Email dan Password. | Mempermudah akses masuk pengguna tanpa harus selalu bergantung pada OTP/email ITB. |
+| 3 | Layar `I-01` (Objek `O-10` *Forget Password*), Kelas `C18` (`HalamanLogin`) | Alur tombol *Forget Password* belum didefinisikan pada dokumen/diagram kelas. | Tombol *Forget Password* tidak diimplementasikan untuk reset password, melainkan diubah untuk menerima OTP. | Keterbatasan waktu pengerjaan sehingga tombol dialihfungsikan untuk pengiriman/penerimaan OTP. |
+| 4 | Spesifikasi Antarmuka (di luar layar `I-01` s.d. `I-08`) | Belum ada halaman khusus error pada desain Figma maupun DPPL. | Penambahan halaman `/error` untuk menunjukkan pesan error. | Memberikan informasi yang jelas kepada pengguna saat terjadi kesalahan akses atau sistem. |
+| 5 | Kelas `C04`, Kelas `C08`, Layar `I-06` (`O-56`), Layar `I-07` (`O-79`) | Belum ada aturan batasan karakter untuk judul laporan dan komentar penanggap. | Tambahan aturan batasan karakter untuk judul dan komentar penanggap (admin/petugas). | Menjaga kerapian tata letak antarmuka agar teks input tidak terlalu panjang dan mengontrol ukuran data yang disimpan di database. |
 
 ## B.2 Bukti Penerapan Best Practices
 
@@ -233,7 +236,7 @@ Tabel B.4. Kontribusi Anggota
 | *13525112* | *Justin Sepvian* | *?* | *??%* |
 | *13525142* | *Jessica Audrey Tjahjadi* | *Front End Card / Komponen dan Halaman Akun, Notifikasi, dan Leaderboard* | *??%* |
 | *13525073* | *Nadia Layla Safira* | *?* | *??%* |
-| *13525097* | *Arini Karimatunnikmah* | *?* | *??%* |
+| *13525097* | *Arini Karimatunnikmah* | *Front End Card / Header, Side bar, Kartu Form Lapor, Kartu Tanggapan Laporan, dan Halaman Tanggapan* | *??%* |
 
 ## B.5 Traceability Kelas Perancangan ke Implementasi
 
