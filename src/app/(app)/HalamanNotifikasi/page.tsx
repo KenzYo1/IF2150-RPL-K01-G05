@@ -1,4 +1,3 @@
-import { Header } from "@/components/layout/Header";
 import { Notification } from "@/components/layout/NotifCard";
 import type { Role } from "@/types/role";
 
@@ -49,8 +48,6 @@ export default function HalamanNotifikasi()
     return (
         <div className="min-h-screen">
             {/* Header */}
-            <Header role={userRole} />
-
             {/* Notification Part */}
             <main className="flex flex-col items-center pt-[30px] pb-[30px]">
                 {/* Top part */}

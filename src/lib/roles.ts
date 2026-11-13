@@ -2,6 +2,7 @@ import "server-only";
 import type { User } from "@supabase/supabase-js";
 import { supabaseAdmin } from "./supabase/admin";
 import { Role } from "@/types/role"
+import { createClient } from "./supabase/server";
 
 export async function getRole(email: string): Promise<Role | null> {
     const e = email.toLowerCase();
@@ -47,7 +48,12 @@ export async function getRole(email: string): Promise<Role | null> {
 }
 
 // this one uhh resolves it generally
-export async function resolveRole(user: User): Promise<Role> {
+export async function resolveRole(): Promise<Role> {
+    const supabase = await createClient();
+    const { data: { user }, error: userError } = await supabase.auth.getUser();
+    if (!user) {
+        throw new Error("Not authenticated");
+    }
     const current = user.app_metadata.role;
     if (current) {
         return current as Role;

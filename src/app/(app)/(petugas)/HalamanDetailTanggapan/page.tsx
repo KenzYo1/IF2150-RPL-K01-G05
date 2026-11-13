@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { Header } from "@/components/layout/Header";
 import { KartuTanggapLaporan, type TanggapanData, type LaporanDetail } from "@/components/tanggapanlaporan/KartuTanggapanLaporan";
 import type { Role } from "@/types/role";
 
@@ -27,7 +26,6 @@ export default function HalamanDetailTanggapan() {
 
     return (
         <div className="min-h-screen bg-white">
-            <Header role={dummyRole} />
             <main className="px-4 py-8">
                 <KartuTanggapLaporan
                     laporan={dummyLaporan}

@@ -2,7 +2,6 @@
 // Delete this folder once real Supabase keys are available.
 // Switch role with ?role=pelapor | petugas | admin
 import Link from "next/link";
-import { Header } from "@/components/layout/Header";
 import { LaporanCard } from "@/components/layout/laporancard";
 import type { Role } from "@/types/role";
 
@@ -38,7 +37,6 @@ export default async function PreviewLaporan({
 
     return (
         <div className="min-h-screen bg-white">
-            <Header role={userRole} />
             <main className="flex flex-col items-center gap-8 px-4 py-8">
                 <Link href="/HalamanFormulirLaporan" className="relative flex h-[90px] w-[880px] max-w-full items-start rounded-xl border-2 border-[#485AB8] px-5 py-3 hover:bg-[#485AB8]/5">
                     <span className="font-hywenhei text-[#608BE0]">Make a report!</span>
