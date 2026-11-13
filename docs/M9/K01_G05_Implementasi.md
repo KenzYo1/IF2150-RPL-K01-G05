@@ -199,7 +199,7 @@ Tabel B.2. Bukti Best Practices
 | Branching | *https://github.com/KenzYo1/IF2150-RPL-K01-G05/branches/all (Note: Beberapa branch udah dihapus agar memperkecil jumlah branch active)* | *Git branching dari main berdasarkan fitur-fitur yang diimplementasi, baik itu per interface (misal, feat/sidebar-header) ataupun per integrasi backend (feat-login-session-and-redirect)* |
 | Semantic commit | *https://github.com/KenzYo1/IF2150-RPL-K01-G05/commits/main/* | *Setiap commit dilakukan dengan mengikuti git semantics, yakni 'feat' untuk penambahan fitur, 'fix' untuk memperbaiki bug, 'merge' untuk menggabungkan branch, serta refactor untuk penyederhanaan kode* |
 | Track tasks | *https://docs.google.com/spreadsheets/d/1kjdk0zXsvS5BIcUXCYIPnuToNj_cfLpCn5ijEUmlwUU/edit?gid=0#gid=0* | *Frontend: 19 (berdasarkan sheets)* |
-| Pull request dan review | *https://github.com/KenzYo1/IF2150-RPL-K01-G05/pull/8, https://github.com/KenzYo1/IF2150-RPL-K01-G05/pull/9, https://github.com/KenzYo1/IF2150-RPL-K01-G05/pull/5* | *Review oleh diri sendiri setelah testing secara remote* |
+| Pull request dan review | *https://github.com/KenzYo1/IF2150-RPL-K01-G05/pull/8, https://github.com/KenzYo1/IF2150-RPL-K01-G05/pull/9, https://github.com/KenzYo1/IF2150-RPL-K01-G05/pull/5 https://github.com/KenzYo1/IF2150-RPL-K01-G05/pull/23* | *Review oleh diri sendiri setelah testing secara remote, review oleh KenzYo1 (Kenzo Yo) * |
 | Pengujian | *[Tautan ke `src/tests/` dan hasil test]* | *[Apa yang diuji, cara menjalankan]* |
 
 ### B.2.1 Profiling dan Optimasi
@@ -226,7 +226,7 @@ Tabel B.4. Kontribusi Anggota
 
 | NIM | Nama | Modul / Fitur yang Dikerjakan | Persentase Kontribusi |
 | :--- | :--- | :--- | :--- |
-| *13525016* | *Kenzo Yo* | *?* | *??%* |
+| *13525016* | *Kenzo Yo* | *Login Page, OTP, inisialisasi dan integrasi supabase, cloudflare workers, inisialisasi database, Layouting, Integrasi backend dan frontend bagian HalamanAkun, HalamanTanggapanLaporan, HalamanFormulirLaporan* | *??%* |
 | *13525112* | *Justin Sepvian* | *Like, send notification, data laporan, data pelapor, integrasi fitur* | *??%* |
 | *13525142* | *Jessica Audrey Tjahjadi* | *Front End Card / Komponen dan Halaman Akun, Notifikasi, dan Leaderboard* | *??%* |
 | *13525073* | *Nadia Layla Safira* | *Kartu laporan, kartu tanggapan laporan dan section, serta halamanlaporan* | *??%* |
