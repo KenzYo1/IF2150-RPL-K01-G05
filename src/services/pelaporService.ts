@@ -2,6 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import {
     getDataPelapor,
     getDataPelaporByAuthUserId,
+    getDataPelaporByEmail,
     type PelaporSupabaseClient,
 } from "@/repositories/pelaporRepository";
 import type {
@@ -127,6 +128,7 @@ export async function resolvePelaporAuthContext(
     return {
         authUserId: data.user.id,
         idPelapor,
+        email: data.user.email ?? null,
         role,
     };
 }
@@ -141,8 +143,12 @@ export async function getMyPelaporProfileService(
 
     if (typeof user.idPelapor === "number" && user.idPelapor > 0) {
         pelapor = await getDataPelapor(user.idPelapor, clientOverride);
-    } else if (user.authUserId) {
+    }
+    if (!pelapor && user.authUserId) {
         pelapor = await getDataPelaporByAuthUserId(user.authUserId, clientOverride);
+    }
+    if (!pelapor && user.email) {
+        pelapor = await getDataPelaporByEmail(user.email, clientOverride);
     }
 
     if (!pelapor) {
