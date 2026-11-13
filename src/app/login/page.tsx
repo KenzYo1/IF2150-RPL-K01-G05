@@ -29,7 +29,7 @@ const LoginPage = () => {
             />
             <form action={ loginWithPass } className="flex flex-col items-center rounded-[25px] border-2 border-black w-[40vw] h-full p-[47px] gap-6 py-20">
                 <h1 className="font-hywenhei text-[28px] text-black text-center font-light">Welcome!</h1>
-                <div className="flex flex-col w-full items-center justify-cente r gap-2">
+                <div className="flex flex-col w-full items-center justify-center gap-2">
                     <Button formAction={ loginByITBEmail } formNoValidate type="submit" variant="rounded" size="auto" className="text-[16px] w-full h-10">Sign in with ITB Account</Button>
                     <p className="font-hywenhei text-[14px] text-black">or</p>
                     <InputField type="email" name="email" title="Email" placeholder="Input email here" required/>
