@@ -27,14 +27,10 @@ Dipersiapkan oleh:
 | *13525097* | *Arini Karimatunnikmah* |
 ---
 
-> **Petunjuk pengerjaan:** *[Silahkan hapus bagian ini setelah selesai mengerjakan]*
->
-> Dokumen ini adalah **spesifikasi sekaligus template laporan singkat** Tugas 9. Bagian **Ketentuan Implementasi** (Bagian A) adalah aturan yang harus kalian ikuti, boleh dihapus dari laporan akhir. Bagian **Laporan Implementasi** (Bagian B) adalah yang **wajib kalian isi**. Gunakan nama, ID, kebutuhan, use case, dan kelas yang konsisten dengan SKPL, APL, dan DPPL.
-
 ---
 
-**Deadline:** Rabu, 11 November 2026, 21.50 WIB
-**Asistensi akbar:** *[Hari, DD Bulan YYYY, HH.MM WIB, lokasi/link]*
+**Deadline:** Jumat, 13 November 2026, 21.50 WIB
+**Asistensi akbar:** *[Senin, 02 November 2026, 19.00 WIB, Microsoft Teams]*
 
 ---
 
@@ -184,13 +180,11 @@ Ketentuan:
 
 ## B.1 Perubahan dari DPPL
 
-Catat semua perbedaan antara perancangan (DPPL) dan implementasi akhir. Jika tidak ada perubahan, tuliskan "Tidak ada perubahan".
-
 Tabel B.1. Perubahan dari DPPL
 
 | No | Bagian DPPL | Rancangan Awal | Implementasi Akhir | Alasan |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | *Bagian UI, setiap Halaman* | *Font size yang besar (title: 40px, heading 1: 27px, heading 2: 24px) dan container besar* | *Font size diperkecil (title: 25px, heading 1: 16px, heading 2: 13px) dan container diperkecil* | *Agar komponen halaman tidak terlalu besar dan mempunyai design UI yang enak dilihat (FIX THIS LATER?????)* |
+| 1 | *Bagian UI, setiap Halaman* | *Font size yang besar (title: 40px, heading 1: 27px, heading 2: 24px) dan container besar* | *Font size diperkecil (title: 25px, heading 1: 16px, heading 2: 13px) dan container diperkecil* | *Agar komponen halaman tidak terlalu besar dan mempunyai design UI yang enak dilihat* |
 | 2 | Kelas `C18` (`HalamanLogin`), Kelas `C19` (`LoginController`), Layar `I-01` | Login hanya menggunakan OTP / email ITB. | Adanya login menggunakan Email dan Password. | Mempermudah akses masuk pengguna tanpa harus selalu bergantung pada OTP/email ITB. |
 | 3 | Layar `I-01` (Objek `O-10` *Forget Password*), Kelas `C18` (`HalamanLogin`) | Alur tombol *Forget Password* belum didefinisikan pada dokumen/diagram kelas. | Tombol *Forget Password* tidak diimplementasikan untuk reset password, melainkan diubah untuk menerima OTP. | Keterbatasan waktu pengerjaan sehingga tombol dialihfungsikan untuk pengiriman/penerimaan OTP. |
 | 4 | Spesifikasi Antarmuka (di luar layar `I-01` s.d. `I-08`) | Belum ada halaman khusus error pada desain Figma maupun DPPL. | Penambahan halaman `/error` untuk menunjukkan pesan error. | Memberikan informasi yang jelas kepada pengguna saat terjadi kesalahan akses atau sistem. |
@@ -233,14 +227,12 @@ Tabel B.4. Kontribusi Anggota
 | NIM | Nama | Modul / Fitur yang Dikerjakan | Persentase Kontribusi |
 | :--- | :--- | :--- | :--- |
 | *13525016* | *Kenzo Yo* | *?* | *??%* |
-| *13525112* | *Justin Sepvian* | *?* | *??%* |
+| *13525112* | *Justin Sepvian* | *Like, send notification, data laporan, data pelapor, integrasi fitur* | *??%* |
 | *13525142* | *Jessica Audrey Tjahjadi* | *Front End Card / Komponen dan Halaman Akun, Notifikasi, dan Leaderboard* | *??%* |
 | *13525073* | *Nadia Layla Safira* | *Kartu laporan, kartu tanggapan laporan dan section, serta halamanlaporan* | *??%* |
 | *13525097* | *Arini Karimatunnikmah* | *Front End Card / Header, Side bar, Kartu Form Lapor, Kartu Tanggapan Laporan, dan Halaman Tanggapan* | *??%* |
 
 ## B.5 Traceability Kelas Perancangan ke Implementasi
-
-Pemetaan dari **setiap kelas perancangan** pada DPPL (Tabel 4.1) ke wujud implementasinya. Bentuk implementasi bebas (kelas, fungsi, komponen, *route/handler*, *stored procedure*, skrip, dsb.), tetapi tiap kelas perancangan harus muncul pada tabel ini. Jika implementasi berupa kelas dengan nama yang sama, tetap dicantumkan.
 
 Tabel B.5. Traceability Kelas Perancangan ke Implementasi
 
@@ -265,7 +257,3 @@ Tabel B.5. Traceability Kelas Perancangan ke Implementasi
 | *C17* | *NotifikasiController* | *...* | *...* | *...* |
 | *C18* | *HalamanLogin* | *Page dan Komponen* | *`src/app/login` - `login`* | *-* |
 | *C19* | *LoginController* | *...* | *...* | *...* |
-
-Catatan:
-- Satu kelas perancangan boleh diwujudkan oleh beberapa file/unit, dan satu file/unit boleh mewujudkan beberapa kelas perancangan. Tuliskan semuanya.
-- Kelas perancangan yang **tidak diimplementasikan** atau **digabung/dipecah** tetap dicantumkan, dan alasannya dicatat di Bagian B.1.
