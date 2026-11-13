@@ -200,9 +200,8 @@
 | *11-11-2026* | *Arini K.* | *Implementasi kartu tanggap laporan* | *1* | *Done* | *-* |
 | *11-11-2026* | *Jessica A.T* | *Menambah path ke HalamanLeaderboard dan menambah bagian menunjukkan info akun sendiri* | *??* | *In progress* | *-* |
 | *13-11-2026* | *Nadia Layla S.* | *Membuat kartu laporan, kartu tanggapan laporan dan section, serta halaman akun* | *7* | *Done* | *-* |
-| *13-11-2026* | *Nadia Layla S.* | *Mengisi laporan asistesi* | *0.5* | *In progress* | *-* |
+| *13-11-2026* | *Arini K.* | *Mengisi B1* | *0.5* | *Done* | *-* |
 | *13-11-2026* | *Nadia Layla S.* | *Mengisi laporan asistesi* | *1* | *Done* | *-* |
-
 
 
 ---
