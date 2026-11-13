@@ -26,19 +26,20 @@
 
 | Catatan |
 | --- |
-| 1. *\[Berikan catatan hasil asistensi\]*  |
-| 2. ... |
-| 3. ... |
-| 4. ... |
+| 1. *Teknologi yang digunakan untuk implementasi perangkat lunak selama sesuai dengan DPPL.*  |
+| 2. *Arsitektur harus terlihat di struktur kode.* |
+| 3. *Code review fokus ke requirement, logic, penamaan, dan code smell. Optimisasi dilakukan * |
+| 4. *Hindari god class, hardcore, error handling yang buruk, dan logika yang tercampur antar layer.*|
 
 **Notes for this section:**  
 *Catatan dapat dituliskan dalam bentuk paragraf atau poin-poin, disesuaikan saja.* 
+*Asistensi diatas merupakan asistensi akbar.*
 
 ## Dokumentasi
 
 <!-- ![](./assets/foto-asistensi.jpg) -->
 <p align="center">
-  <img src="./assets/foto-asistensi.jpg" width="100%">
+  <img src="./assets/foto-asistensi.jpeg" width="100%">
 </p>
 
 <p align="center">
