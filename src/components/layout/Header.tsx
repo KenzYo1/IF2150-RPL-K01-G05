@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { SideBar } from "./SideBar";
 import type { Role } from "@/types/role";
@@ -25,6 +26,17 @@ export function Header({
           <AvatarImage src={fotoProfil} alt="Profil" />
           <AvatarFallback>U</AvatarFallback>
         </Avatar>
+      <div className="flex items-center gap-8">
+        <img src="/icon/Notif.svg" alt="Notifikasi" className="h-11 w-auto" />
+
+        <Link 
+          href="/HalamanAkun" 
+        >
+          <Avatar className="size-[77px]">
+            <AvatarImage src="" alt="Profil" />
+            <AvatarFallback>U</AvatarFallback>
+          </Avatar>
+        </Link>
       </div>
     </header>
   );
