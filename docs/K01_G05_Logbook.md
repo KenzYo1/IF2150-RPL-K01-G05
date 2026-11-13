@@ -198,7 +198,8 @@
 | *10-11-2026* | *Jessica A.T* | *Implementasi kartu notifikasi dan HalamanNotifikasi* | *2* | *Done* | *-* |
 | *10-11-2026* | *Jessica A.T* | *Implementasi komponen leaderboard dan HalamanLeaderboard* | *3* | *Done* | *-* |
 | *11-11-2026* | *Arini K.* | *Implementasi kartu tanggap laporan* | *1* | *Done* | *-* |
-| *11-11-2026* | *Jessica A.T* | *Menambah path ke HalamanLeaderboard dan menambah bagian menunjukkan info akun sendiri* | *??* | *In progress* | *-* |
+| *11-11-2026* | *Jessica A.T* | *Menambah path ke HalamanLeaderboard dan menambah bagian menunjukkan info akun sendiri* | *2* | *Done* | *-* |
+| *13-11-2026* | *Jessica A.T* | *Mengisi tabel B.5 untuk UI atau Halaman* | *1* | *Done* | *-* |
 
 ---
 
