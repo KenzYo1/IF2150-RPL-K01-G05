@@ -232,7 +232,7 @@ Tabel B.4. Kontribusi Anggota
 | *13525016* | *Kenzo Yo* | *?* | *??%* |
 | *13525112* | *Justin Sepvian* | *?* | *??%* |
 | *13525142* | *Jessica Audrey Tjahjadi* | *Front End Card / Komponen dan Halaman Akun, Notifikasi, dan Leaderboard* | *??%* |
-| *13525073* | *Nadia Layla Safira* | *?* | *??%* |
+| *13525073* | *Nadia Layla Safira* | *Kartu laporan, kartu tanggapan laporan dan section, serta halamanlaporan* | *??%* |
 | *13525097* | *Arini Karimatunnikmah* | *?* | *??%* |
 
 ## B.5 Traceability Kelas Perancangan ke Implementasi
