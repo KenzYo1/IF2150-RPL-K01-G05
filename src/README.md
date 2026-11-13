@@ -47,11 +47,11 @@ Namun, jika ingin menjalankan secara lokal, cukup ikuti setiap perintah di atas.
 
 6. **Akun/data uji** untuk mencoba tiap peran pengguna (jika ada login).
 
-| Akun | Data Uji |
-| :--- | :--- |
-| **...** | ... |
-| **...** | ... |
-| **...** | ... |
+| Akun | Uji Username | Uji Password |
+| :--- | :--- | :--- |
+| **Admin** | admin@itb.ac.id | password123 |
+| **Petugas** | petugas@itb.ac.id | password123 |
+| **Pelapor** |  13524001@mahasiswa.itb.ac.id | password123 |
 
 
 7. **Daftar modul/fitur yang diimplementasi** beserta pembagian anggota.
