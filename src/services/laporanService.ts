@@ -31,6 +31,7 @@ import type {
     StatusLaporan,
 } from "@/types/laporan";
 import type { AuthenticatedUserContext } from "@/types/pelapor";
+import { STATUS } from "@/types/tanggapan";
 
 export const MAX_DESKRIPSI_CHARS = 300;
 export const MAX_JUDUL_CHARS = 100;
@@ -328,6 +329,7 @@ export async function createLaporanService(
                         : null,
                 fotoLaporan: finalFotoUrl,
                 statusLaporan: input.statusLaporan ?? "diproses",
+                statusModerasi: "menunggu",
             },
             clientOverride
         );
@@ -412,7 +414,9 @@ export async function setStatusLaporanService(
 
         return await setLaporanData(
             idLaporan,
-            { statusLaporan: trimmedStatus },
+            { statusLaporan: trimmedStatus,
+                statusModerasi: "valid",
+            },
             clientOverride
         );
     } catch (error) {

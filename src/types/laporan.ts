@@ -1,5 +1,5 @@
 export type StatusLaporan = "diproses" | "tuntas" | "ditolak" | string;
-
+export type StatusModerasi = "tidak valid" | "valid" | "menunggu";
 export type AllowedFotoMimeType = "image/jpeg" | "image/jpg" | "image/png";
 
 export interface LaporanRow {
@@ -15,7 +15,7 @@ export interface LaporanRow {
     jumlah_like: number | null;
     status_laporan?: StatusLaporan | null;
     status?: StatusLaporan | null;
-    status_moderasi?: string | null;
+    status_moderasi?: StatusModerasi | null;
     status_penanganan?: string | null;
     points_awarded?: boolean | null;
     catatan?: string | null;
