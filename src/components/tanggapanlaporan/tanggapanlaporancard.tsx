@@ -9,8 +9,8 @@ type ReportedRowProps = {
 
 export function ReportRow({ title, actionLabel, onAction, status }: ReportedRowProps) {
     return (
-        <div className="flex items-center justify-between rounded-2xl border-2 border-black px-12 py-3">
-            <span className="text-xl font-hywenhei">
+        <div className="flex items-center justify-between rounded-2xl border-[1.5px] border-black px-8 py-2">
+            <span className="text-[16px] font-hywenhei">
                 {title}
 
                 {status && (
@@ -20,7 +20,7 @@ export function ReportRow({ title, actionLabel, onAction, status }: ReportedRowP
                 )}
             </span>
 
-            <button onClick={onAction} className="text-xl font-hywenhei text-[#5D6494] hover:underline">
+            <button onClick={onAction} className="text-[16px] font-hywenhei text-[#5D6494] hover:underline">
                 {actionLabel}
             </button>
         </div>
