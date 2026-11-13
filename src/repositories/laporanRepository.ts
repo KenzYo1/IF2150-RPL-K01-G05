@@ -263,6 +263,7 @@ export async function insertNewLaporan(
         foto_url: laporan.fotoLaporan ?? null,
         jumlah_like: 0,
         status_laporan: laporan.statusLaporan ?? "diproses",
+        status_moderasi: "menunggu",
     };
 
     if (laporan.idPelapor !== undefined && laporan.idPelapor !== null) {
