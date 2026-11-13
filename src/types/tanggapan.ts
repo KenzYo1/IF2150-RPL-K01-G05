@@ -34,3 +34,8 @@ export interface TanggapanActionResult {
     notifikasi: Notifikasi | null;
 }
 
+export const STATUS = {
+    MODERASI_MENUNGGU: "menunggu",  
+    STATUS_DIPROSES:  "diproses",  
+    DITOLAK:  "ditolak",
+} as const;
