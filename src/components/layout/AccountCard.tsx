@@ -5,6 +5,9 @@ import type { Role } from "@/types/role";
 interface AccountCardProp
 {
     role: Role;
+    name: string;
+    email: string;
+    points: Number;  
 }
 
 // Role for status account
@@ -15,7 +18,7 @@ const ROLE_LABELS: Record<Role, string> =
     admin: "Admin",
 };
 
-export function AccountCard({ role }: AccountCardProp)
+export function AccountCard({ role, name, email, points }: AccountCardProp)
 {
     return (
         // Container
@@ -31,9 +34,9 @@ export function AccountCard({ role }: AccountCardProp)
 
                 {/* Name + email */}
                 <div className="flex flex-col">
-                    <h2 className="text-[25px] font-hywenhei tracking-wide">Name</h2>
+                    <h2 className="text-[25px] font-hywenhei tracking-wide">{name}</h2>
                     <p className="text-[16px] font-hywenhei tracking-wide">
-                    13526767@mahasiswa.itb.ac.id
+                    {email}
                     </p>
                 </div>
             </div>
@@ -49,7 +52,7 @@ export function AccountCard({ role }: AccountCardProp)
             {/* Total points */}
             <div className="flex flex-col">
                 <span className="text-[16px] font-hywenhei">Total Points</span>
-                <span className="text-[13px] font-hywenhei">888888</span>
+                <span className="text-[13px] font-hywenhei">{String(points)}</span>
             </div>
 
             {/* Log out */}
