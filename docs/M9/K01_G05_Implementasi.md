@@ -238,22 +238,22 @@ Tabel B.5. Traceability Kelas Perancangan ke Implementasi
 
 | ID Kelas | Nama Kelas Perancangan | Bentuk Implementasi | Lokasi (File dan Nama) | Keterangan |
 | :--- | :--- | :--- | :--- | :--- |
-| *C01* | *Pelapor Entity* | *[mis. Kelas / Fungsi / Komponen / Route / Tabel]* | *[mis. `src/models/user.py` - `User`]* | *[Cara atribut dan operasi kelas diwujudkan; "-" jika tidak ada penjelasan tambahan]* |
-| *C02* | *Laporan Entity* | *[Bentuk implementasi]* | *[mis. `src/components/LoginForm.tsx` - `LoginForm`]* | *[mis. atribut menjadi *state*, operasi menjadi *handler*]* |
+| *C01* | *PelaporEntity* | *PelaporEntity (tipe data interface)* | *IF2150-RPL-K01-G05\src\types\pelapor.ts* | *-* |
+| *C02* | *LaporanEntity* | *Interface data* | *IF2150-RPL-K01-G05\src\types\laporan.ts* | *-* |
 | *C03* | *HalamanLaporan* | *Page dan Komponen* | *`src/app/(app)/HalamanLaporan/page.tsx` dan `src/components/laporan` - `HalamanLaporan` dan `laporan`* | *-* |
 | *C04* | *HalamanFormulirLaporan* | *Page dan Komponen* | *`src/app/(app)/HalamanFormulirLaporan/page.tsx` dan `src/components/laporan` - `HalamanFormulirLaporan` dan `laporan`* | *-* |
-| *C05* | *LaporanController* | *...* | *...* | *...* |
-| *C06* | *AdminEntity* | *...* | *...* | *...* |
-| *C07* | *PetugasEntity* | *...* | *...* | *...* |
+| *C05* | *LaporanController* | *Berbagai fungsi* | *IF2150-RPL-K01-G05\src\services\laporanService.ts* | *-* |
+| *C06* | *AdminEntity* | *-* | *-* | *Tidak perlu diimplementasi secara terpisah karena hanya berupa perbedaan role (sehingga bisa dipisah menurut role saat runtime)* |
+| *C07* | *PetugasEntity* | *-* | *-* | *Tidak perlu diimplementasi karena hanya berupa role yang akan diberi saat runtime(login)* |
 | *C08* | *HalamanFormulirTanggapan* | *Page dan Komponen* | *`src/app/(app)/HalamanFormulirTanggapan/page.tsx` dan `src/components/tanggapanlaporan` - `HalamanFormulirLaporan` dan `tanggapanlaporan`* | *-* |
-| *C09* | *TanggapanController* | *...* | *...* | *...* |
-| *C10* | *LikeController* | *...* | *...* | *...* |
+| *C09* | *TanggapanController* | *berbagai fungsi fungsi* | *IF2150-RPL-K01-G05\src\services\tanggapanService.ts* | *-* |
+| *C10* | *LikeController* | *berbagai fungsi fungsi* | *IF2150-RPL-K01-G05\src\services\likeService.ts* | *-* |
 | *C11* | *HalamanLeaderboard* | *Page dan Komponen* | *`src/app/(app)/HalamanLeaderboard/page.tsx` dan `src/components/layout/LbComponent.tsx` - `HalamanLeaderboard` dan `LbComponent`* | *-* |
-| *C12* | *DatabaseLaporanEntity* | *...* | *...* | *...* |
-| *C13* | *DatabasePelaporEntity* | *...* | *...* | *...* |
-| *C14* | *LeaderboardController* | *...* | *...* | *...* |
+| *C12* | *DatabaseLaporanEntity* | *Tabel di supabase (laporan)* | *-* | *-* |
+| *C13* | *DatabasePelaporEntity* | *Tabel di supabase (pelapor)* | *-* | *-* |
+| *C14* | *LeaderboardController* | *berbagai fungsi* | *IF2150-RPL-K01-G05\src\services\leaderboardService.ts* | *-* |
 | *C15* | *HalamanAkun* | *Page dan Komponen* | *`src/app/(app)/HalamanAkun/page.tsx` dan `src/components/layout/AccountCard.tsx` - `HalamanAkun` dan `AccountCard`* | *-* |
 | *C16* | *HalamanNotifikasi* | *Page dan Komponen* | *`src/app/(app)/HalamanNotifikasi/page.tsx` dan `src/components/layout/NotifCard.tsx` - `HalamanNotifikasi` dan `NotifCard`* | *-* |
-| *C17* | *NotifikasiController* | *...* | *...* | *...* |
+| *C17* | *NotifikasiController* | *berbagai fungsi* | *IF2150-RPL-K01-G05\src\services\notifikasiService.ts* | *-* |
 | *C18* | *HalamanLogin* | *Page dan Komponen* | *`src/app/login` - `login`* | *-* |
-| *C19* | *LoginController* | *...* | *...* | *...* |
+| *C19* | *LoginController* | *berbagai fungsi login* | *IF2150-RPL-K01-G05\src\app\login\actions.tsx* | *-* |
