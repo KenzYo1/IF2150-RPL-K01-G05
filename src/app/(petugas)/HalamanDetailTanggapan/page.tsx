@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { Header } from "@/components/layout/Header";
-import { KartuTanggapLaporan, type TanggapanData, type LaporanDetail } from "@/components/tanggapan/KartuTanggapLaporan";
+import { KartuTanggapLaporan, type TanggapanData, type LaporanDetail } from "@/components/tanggapanlaporan/KartuTanggapanLaporan";
 import type { Role } from "@/types/role";
 
 
