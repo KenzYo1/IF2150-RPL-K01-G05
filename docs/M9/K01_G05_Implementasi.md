@@ -243,10 +243,25 @@ Tabel B.5. Traceability Kelas Perancangan ke Implementasi
 
 | ID Kelas | Nama Kelas Perancangan | Bentuk Implementasi | Lokasi (File dan Nama) | Keterangan |
 | :--- | :--- | :--- | :--- | :--- |
-| *[C01]* | *[Nama kelas pada DPPL]* | *[mis. Kelas / Fungsi / Komponen / Route / Tabel]* | *[mis. `src/models/user.py` - `User`]* | *[Cara atribut dan operasi kelas diwujudkan; "-" jika tidak ada penjelasan tambahan]* |
-| *[C02]* | *[Nama kelas pada DPPL]* | *[Bentuk implementasi]* | *[mis. `src/components/LoginForm.tsx` - `LoginForm`]* | *[mis. atribut menjadi *state*, operasi menjadi *handler*]* |
-| *[C03]* | *[Nama kelas pada DPPL]* | *[Bentuk implementasi]* | *[mis. `src/routes/auth.js` - `POST /login`]* | *[Keterangan]* |
-| *...* | *...* | *...* | *...* | *...* |
+| *C01* | *Pelapor Entity* | *[mis. Kelas / Fungsi / Komponen / Route / Tabel]* | *[mis. `src/models/user.py` - `User`]* | *[Cara atribut dan operasi kelas diwujudkan; "-" jika tidak ada penjelasan tambahan]* |
+| *C02* | *Laporan Entity* | *[Bentuk implementasi]* | *[mis. `src/components/LoginForm.tsx` - `LoginForm`]* | *[mis. atribut menjadi *state*, operasi menjadi *handler*]* |
+| *C03* | *HalamanLaporan* | *Page dan Komponen* | *`src/app/(app)/HalamanLaporan/page.tsx` dan `src/components/laporan` - `HalamanLaporan` dan `laporan`* | *-* |
+| *C04* | *HalamanFormulirLaporan* | *Page dan Komponen* | *`src/app/(app)/HalamanFormulirLaporan/page.tsx` dan `src/components/laporan` - `HalamanFormulirLaporan` dan `laporan`* | *-* |
+| *C05* | *LaporanController* | *...* | *...* | *...* |
+| *C06* | *AdminEntity* | *...* | *...* | *...* |
+| *C07* | *PetugasEntity* | *...* | *...* | *...* |
+| *C08* | *HalamanFormulirTanggapan* | *Page dan Komponen* | *`src/app/(app)/HalamanFormulirTanggapan/page.tsx` dan `src/components/tanggapanlaporan` - `HalamanFormulirLaporan` dan `tanggapanlaporan`* | *-* |
+| *C09* | *TanggapanController* | *...* | *...* | *...* |
+| *C10* | *LikeController* | *...* | *...* | *...* |
+| *C11* | *HalamanLeaderboard* | *Page dan Komponen* | *`src/app/(app)/HalamanLeaderboard/page.tsx` dan `src/components/layout/LbComponent.tsx` - `HalamanLeaderboard` dan `LbComponent`* | *-* |
+| *C12* | *DatabaseLaporanEntity* | *...* | *...* | *...* |
+| *C13* | *DatabasePelaporEntity* | *...* | *...* | *...* |
+| *C14* | *LeaderboardController* | *...* | *...* | *...* |
+| *C15* | *HalamanAkun* | *Page dan Komponen* | *`src/app/(app)/HalamanAkun/page.tsx` dan `src/components/layout/AccountCard.tsx` - `HalamanAkun` dan `AccountCard`* | *-* |
+| *C16* | *HalamanNotifikasi* | *Page dan Komponen* | *`src/app/(app)/HalamanNotifikasi/page.tsx` dan `src/components/layout/NotifCard.tsx` - `HalamanNotifikasi` dan `NotifCard`* | *-* |
+| *C17* | *NotifikasiController* | *...* | *...* | *...* |
+| *C18* | *HalamanLogin* | *Page dan Komponen* | *`src/app/login` - `login`* | *-* |
+| *C19* | *LoginController* | *...* | *...* | *...* |
 
 Catatan:
 - Satu kelas perancangan boleh diwujudkan oleh beberapa file/unit, dan satu file/unit boleh mewujudkan beberapa kelas perancangan. Tuliskan semuanya.
