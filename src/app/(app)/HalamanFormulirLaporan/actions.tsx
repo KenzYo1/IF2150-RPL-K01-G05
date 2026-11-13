@@ -30,7 +30,7 @@ export async function createLapor(input: FormData) {
             fotoFile: foto instanceof File && foto.size > 0 ? foto : undefined,
         });
         revalidatePath("/HalamanLaporan");
-        return({ ok: false as const, data: laporan });
+        return({ ok: true as const, data: laporan });
     } catch (e) {
         console.error("createLapor failed:", e);
         return { ok: false as const, error: "Gagal membuat laporan" };
