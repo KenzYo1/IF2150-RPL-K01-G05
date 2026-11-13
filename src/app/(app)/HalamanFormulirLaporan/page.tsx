@@ -20,10 +20,9 @@ export default function HalamanFormulirLaporan() {
     startTransition(async () => {
       const result = await createLapor(fd);
       if (!result.ok) {
-        setError(result.error);
+        setError(result.error ?? "Something went wrong");
         return;
       }
-      // success: close the modal, router.push, toast, etc.
     });
   }
 
