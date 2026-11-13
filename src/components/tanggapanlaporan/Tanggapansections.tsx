@@ -23,7 +23,7 @@ type Props = {
 export function TanggapanSections({ unverified, ongoing, completed }: Props) {
     const router = useRouter();
 
-    const keDetail = (id: number | string) => router.push(`/HalamanDetailTanggapan?id=${id}`);
+    const keDetail = (id: number | string) => router.push(`/HalamanDetailTanggapanLaporan?id=${id}`);
 
     return (
         <div className="w-[880px] max-w-full">

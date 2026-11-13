@@ -13,24 +13,23 @@ export default async function HalamanTanggapan() {
     const completed: TanggapanItem[] = [];
 
     for (const l of all) {
-    const item = {
-        idLaporan: l.idLaporan,
-        judulLaporan: l.judulLaporan ?? "(Tanpa judul)",
-    };
+        const item = {
+            idLaporan: l.idLaporan,
+            judulLaporan: l.judulLaporan ?? "(Tanpa judul)",
+        };
 
-    const ditolak =
-        l.statusLaporan === STATUS.DITOLAK || l.statusModerasi === STATUS.DITOLAK;
+        const ditolak =
+            l.statusLaporan === STATUS.DITOLAK || l.statusModerasi === STATUS.DITOLAK;
 
-    if (ditolak) {
-        completed.push({ ...item, status: "REJECTED" });
-    } else if (l.statusModerasi === STATUS.MODERASI_MENUNGGU) {
-        unverified.push(item);
-    } else if (l.statusLaporan === STATUS.MODERASI_MENUNGGU) {
-        ongoing.push(item);
-    } else {
-        // any other status (e.g. "selesai") counts as done
-        completed.push({ ...item, status: "ACCEPTED" });
-    }
+        if (ditolak) {
+            completed.push({ ...item, status: "REJECTED" });
+        } else if (l.statusModerasi === STATUS.MODERASI_MENUNGGU) {
+            unverified.push(item);
+        } else if (l.statusLaporan === STATUS.STATUS_DIPROSES) {
+            ongoing.push(item);
+        } else {
+            completed.push({ ...item, status: "ACCEPTED" });
+        }
     }
 
     return (
