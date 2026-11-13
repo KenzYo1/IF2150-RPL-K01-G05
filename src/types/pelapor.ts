@@ -3,6 +3,7 @@ import type { Role } from "@/types/role";
 export interface AuthenticatedUserContext {
     authUserId: string;
     idPelapor?: number | null;
+    email?: string | null;
     role: Role;
 }
 

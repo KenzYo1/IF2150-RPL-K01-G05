@@ -88,8 +88,10 @@ export function mapRowToPelaporEntity(row: PelaporRow): PelaporEntity {
     };
 }
 
-export async function getDataPelapor(
-    idPelapor: number,
+async function findPelaporByColumn(
+    column: "id_pelapor" | "auth_user_id" | "email",
+    value: number | string,
+    errorMessage: string,
     clientOverride?: PelaporSupabaseClient
 ): Promise<PelaporEntity | null> {
     const supabase =
@@ -98,12 +100,12 @@ export async function getDataPelapor(
     const { data, error } = await supabase
         .from("pelapor")
         .select("*")
-        .eq("id_pelapor", idPelapor)
+        .eq(column, value)
         .maybeSingle();
 
     if (error) {
         throw new PelaporRepositoryError(
-            "Gagal mengambil data pelapor berdasarkan ID dari database",
+            errorMessage,
             error.code ?? "DATABASE_QUERY_ERROR"
         );
     }
@@ -115,31 +117,40 @@ export async function getDataPelapor(
     return mapRowToPelaporEntity(data);
 }
 
+export async function getDataPelapor(
+    idPelapor: number,
+    clientOverride?: PelaporSupabaseClient
+): Promise<PelaporEntity | null> {
+    return findPelaporByColumn(
+        "id_pelapor",
+        idPelapor,
+        "Gagal mengambil data pelapor berdasarkan ID dari database",
+        clientOverride
+    );
+}
+
 export async function getDataPelaporByAuthUserId(
     authUserId: string,
     clientOverride?: PelaporSupabaseClient
 ): Promise<PelaporEntity | null> {
-    const supabase =
-        clientOverride ?? ((await createClient()) as unknown as PelaporSupabaseClient);
+    return findPelaporByColumn(
+        "auth_user_id",
+        authUserId,
+        "Gagal mengambil data pelapor berdasarkan auth_user_id dari database",
+        clientOverride
+    );
+}
 
-    const { data, error } = await supabase
-        .from("pelapor")
-        .select("*")
-        .eq("auth_user_id", authUserId)
-        .maybeSingle();
-
-    if (error) {
-        throw new PelaporRepositoryError(
-            "Gagal mengambil data pelapor berdasarkan auth_user_id dari database",
-            error.code ?? "DATABASE_QUERY_ERROR"
-        );
-    }
-
-    if (!data) {
-        return null;
-    }
-
-    return mapRowToPelaporEntity(data);
+export async function getDataPelaporByEmail(
+    email: string,
+    clientOverride?: PelaporSupabaseClient
+): Promise<PelaporEntity | null> {
+    return findPelaporByColumn(
+        "email",
+        email.trim().toLowerCase(),
+        "Gagal mengambil data pelapor berdasarkan email dari database",
+        clientOverride
+    );
 }
 
 export async function getAllPelapor(

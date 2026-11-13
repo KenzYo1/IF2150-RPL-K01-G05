@@ -175,3 +175,36 @@ export async function deleteLikeRecord(
 
     return Array.isArray(data) && data.length > 0;
 }
+
+export async function getLikedLaporanIdsByPelapor(
+    idPelapor: number,
+    clientOverride?: LikeSupabaseClient
+): Promise<number[]> {
+    const supabase =
+        clientOverride ?? ((await createClient()) as unknown as LikeSupabaseClient);
+
+    const query = supabase
+        .from("likes")
+        .select("id_laporan")
+        .eq("id_pelapor", idPelapor) as unknown as PromiseLike<{
+        data: Pick<LikeRow, "id_laporan">[] | null;
+        error: LikeSupabaseError;
+    }>;
+
+    const { data, error } = await query;
+
+    if (error) {
+        throw new LikeRepositoryError(
+            "Gagal mengambil daftar like pelapor dari database",
+            error.code ?? "DATABASE_QUERY_ERROR"
+        );
+    }
+
+    if (!Array.isArray(data) || data.length === 0) {
+        return [];
+    }
+
+    return data
+        .map((row) => Number(row.id_laporan))
+        .filter((id) => Number.isInteger(id) && id > 0);
+}

@@ -1,7 +1,9 @@
 "use server";
 
 import { getLaporanByIdService } from "@/services/laporanService";
-import { setStatusLaporan } from "@/services/tanggapanService";
+import { getPelaporPoin } from "@/services/leaderboardService";
+import { getPelaporByIdService } from "@/services/pelaporService";
+import { addPoinPelapor, setStatusLaporan } from "@/services/tanggapanService";
 import { StatusLaporan } from "@/types/laporan";
 
 export async function getLaporanDetail(id: string) {
@@ -32,6 +34,9 @@ export async function submitTanggapan(
   if (data.status === "Diterima") {
     status = "diproses";
     moderasi = "valid";
+    const laporan = await getLaporanByIdService(idLaporan);
+    const idPelapor = laporan.idPelapor; // number | null
+    addPoinPelapor(Number(idPelapor));
   } else if (data.status === "Ditolak") {
     status = "ditolak";
     moderasi = "tidak valid"; // use your real rejected value
