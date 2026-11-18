@@ -205,7 +205,10 @@
 
 ### Milestone 9
 **Periode:** 13 November 2026 - 20 November 2026
-
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *16-11-2026* | *Jessica A.T* | *Menyiapkan mengisi Bab 4.4* | *1* | *Done* | *-* |
+| *17-11-2026* | *Jessica A.T* | *Mengisi Bab 4.4* | *3* | *Done* | *-* |
 | *17-11-2026* | *Nadia Layla S.* | *Mengisi Bab 4.3* | *1* | *In Progress* | *-* |
 | *18-11-2026* | *Nadia Layla S.* | *Mengisi Bab 4.3* | *1* | *In Progress* | *-* |
 
