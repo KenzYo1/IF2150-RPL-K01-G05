@@ -203,6 +203,11 @@
 | *13-11-2026* | *Arini K.* | *Mengisi B1* | *0.5* | *Done* | *-* |
 | *13-11-2026* | *Nadia Layla S.* | *Mengisi laporan asistesi* | *1* | *Done* | *-* |
 
+### Milestone 9
+**Periode:** 13 November 2026 - 20 November 2026
+
+| *17-11-2026* | *Nadia Layla S.* | *Mengisi Bab 4.3* | *1* | *In Progress* | *-* |
+| *18-11-2026* | *Nadia Layla S.* | *Mengisi Bab 4.3* | *1* | *In Progress* | *-* |
 
 ---
 
