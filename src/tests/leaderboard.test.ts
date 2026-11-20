@@ -6,7 +6,10 @@ import {
     getPelaporPoin,
     getPelaporRank,
     getTop20Pelapor,
+    LeaderboardServiceError,
+    sortPelaporByPoin,
 } from "@/services/leaderboardService";
+import { PelaporServiceError } from "@/services/pelaporService";
 import { createMockSupabaseClient } from "./helpers/mockSupabase";
 
 describe("Modul Leaderboard (UC05)", () => {
@@ -55,6 +58,78 @@ describe("Modul Leaderboard (UC05)", () => {
         });
         assert.equal(myInsideTop20.rank, 1);
         assert.equal(myInsideTop20.inTop20, true);
+
+        const myBoundary20 = await getMyLeaderboardService(client, {
+            authUserId: "auth-6",
+            idPelapor: 6,
+            role: "pelapor",
+        });
+        assert.equal(myBoundary20.rank, 20);
+        assert.equal(myBoundary20.inTop20, true);
+
+        const myBoundary21 = await getMyLeaderboardService(client, {
+            authUserId: "auth-5",
+            idPelapor: 5,
+            role: "pelapor",
+        });
+        assert.equal(myBoundary21.rank, 21);
+        assert.equal(myBoundary21.inTop20, false);
+    });
+
+    it("menangani data pelapor kosong dan tie-breaker poin sama berdasarkan idPelapor terkecil", async () => {
+        const emptyMock = createMockSupabaseClient({ pelapor: [] });
+        const emptyClient = emptyMock as unknown as PelaporSupabaseClient;
+
+        assert.deepEqual(await sortPelaporByPoin(emptyClient), []);
+        assert.deepEqual(await getTop20Pelapor(emptyClient), []);
+        assert.equal(await getPelaporPoin(1, emptyClient), 0);
+        assert.equal(await getPelaporRank(1, emptyClient), 0);
+
+        const tieMock = createMockSupabaseClient({
+            pelapor: [
+                { id_pelapor: 5, nama_pelapor: "Eko", poin: 50 },
+                { id_pelapor: 8, nama_pelapor: "Hadi", poin: 80 },
+                { id_pelapor: 2, nama_pelapor: "Budi", poin: 50 },
+            ],
+        });
+        const tieClient = tieMock as unknown as PelaporSupabaseClient;
+
+        const sorted = await sortPelaporByPoin(tieClient);
+        assert.deepEqual(
+            sorted.map((p) => p.idPelapor),
+            [8, 2, 5]
+        );
+        assert.equal(await getPelaporRank(2, tieClient), 2);
+        assert.equal(await getPelaporRank(5, tieClient), 3);
+    });
+
+    it("menolak ID pelapor invalid (400) dan sesi belum login pada getMyLeaderboardService (401)", async () => {
+        const mock = createMockSupabaseClient();
+        const client = mock as unknown as PelaporSupabaseClient;
+
+        await assert.rejects(
+            () => getPelaporPoin(0, client),
+            (err: unknown) =>
+                err instanceof PelaporServiceError &&
+                err.code === "INVALID_PELAPOR_ID" &&
+                err.statusCode === 400
+        );
+
+        await assert.rejects(
+            () => getPelaporRank(-1, client),
+            (err: unknown) =>
+                err instanceof PelaporServiceError &&
+                err.code === "INVALID_PELAPOR_ID" &&
+                err.statusCode === 400
+        );
+
+        await assert.rejects(
+            () => getMyLeaderboardService(client, null),
+            (err: unknown) =>
+                err instanceof LeaderboardServiceError &&
+                err.code === "UNAUTHORIZED" &&
+                err.statusCode === 401
+        );
     });
 });
 
