@@ -407,17 +407,19 @@ Tabel 4.4.4. Hasil Pengujian Use Case [UC04]
 <br>
 
 ## 4.5 Pengujian Kebutuhan Non-Fungsional (KNF)
-ttrace
-Setiap KNF pada Tabel 3.2 SKPL diuji secara terukur berdasarkan parameter yang telah didefinisikan. Setiap pengujian memuat target terukur, metode dan alat yang sesuai dengan parameter (misalnya Chrome DevTools untuk *response time* dan inspeksi basis data untuk *security*), serta hasil aktual berupa angka atau data. KNF yang belum dipenuhi atau tidak diimplementasikan dicantumkan beserta alasan dan rencana perbaikan.
 
 Tabel 4.5. Hasil Pengujian KNF
 
 | ID Pengujian | ID KNF | Parameter | Target Terukur | Metode dan Alat | Hasil Aktual | Kesimpulan |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| *KNF01-TC01* | *KNF01* | *Reliability* | *Tidak ada data hilang/ganda saat jaringan putus di tengah transaksi* | *Simulasi putus koneksi saat bayar, lalu cek status di DB* | *[Hasil aktual]* | *Pass/Fail* |
-| *KNF02-TC01* | *KNF02* | *Security* | *Password tersimpan sebagai hash, bukan plain-text* | *Inspeksi tabel pengguna di DB* | *[...]* | *Pass/Fail* |
-| *KNFXX-TC01* | *KNFXX* | *Response time* | *Halaman tampil ≤ 4 detik* | *Chrome DevTools, 5 kali ukur, ambil rata-rata* | *[Rata-rata ... detik, maks ... detik]* | *Pass/Fail* |
-| *...* | *...* | *...* | *...* | *...* | *...* | *...* |
+| *KNF01-TC01* | *KNF01* | *Portability* | *Ketika pengguna ingin melapor dengan mengakses sistem APATIS, sistem dapat mengarahkan pengguna untuk masuk dengan mudah dan cepat serta menampilkan tampilan antarmuka yang sesuai dan memproses input secara konsisten meskipun melalui berbagai macam browser.* | *Membuka APATIS melalui browser yang berbeda-beda (Chrome, Edge, Firefox)* | *Setiap halaman memiliki tampilan yang cukup konsisten secara tata letak, sistem responsif dan cepat, input (seperti melakukan like, membuat laporan, merespons laporan, dan sebagainya) diproses dengan baik. Terdapat sedikit perbedaan pada ukuran teks, tampilan font, dan sebagainya, tetapi hal ini wajar dalam browser yang berbeda.* | *Pass* |
+| *KNF02-TC01* | *KNF02* | *Response time* | *Ketika pengguna mencoba untuk masuk ke sistem APATIS, sistem melakukan verifikasi pengguna dan menampilkan keterangan berhasil atau gagal selambat-lambatnya 5 detik setelah pengajuan login dilakukan* | *Melakukan tes pengukuran waktu manual sebanyak 5 kali melalui DevTools di Microsoft Edge dan dari _tab_ network.* | *Pengukuran akan berupa total waktu login dan menampilkan halaman pertama (termasuk indikasi berhasil atau gagal). Tes 1: 2.79 detik. Tes 2: 3.84 detik. Tes 3: 3.07 detik. Tes 4: 3.45 detik. Tes 5: 3.02 detik. Rata-rata: 3.234 detik.* | *Pass* |
+| *KNF03-TC01* | *KNF03* | *Response time* | *Ketika pengguna mengirimkan laporan, sistem harus bisa menampilkan keterangan sukses atau gagal selambat-lambatnya 3 detik setelah laporan dikirim.* | *Microsoft Edge DevTools, tiga kali ukur untuk berhasil, 3 kali ukur untuk gagal, ambil rata-rata* | *Tes 1: 1.50 detik (status: gagal membuat laporan). Tes 2: 2.34 detik (gagal membuat laporan). Tes 3: 1.02 detik (gagal membuat laporan). Tes 4: 2.46 detik (berhasil membuat laporan). Tes 5: 2.77 detik (berhasil membuat laporan). Tes 6: 2.08 detik (berhasil membuat laporan). Rata-rata waktu jika gagal: 1.62 detik. Rata-rata waktu jika berhasil: 2.43 detik.* | *Pass* |
+| *KNF04-TC01* | *KNF04* | *Availability* | *Sistem harus selalu beroperasi secara kontinu dengan minimal tingkat ketersediaan (uptime) sebesar 99%, kecuali pada saat jadwal pemiliharaan sistem .* | *Mengecek waktu _uptime_ APATIS web menggunakan halaman Cloudflare Workers dengan mengecek persentase _error rate_.* | *Error rate dari web adalah sebesar 0% selama _deployment_ terakhir, yakni sekitar 1 minggu yang lalu.* | *Pass* |
+| *KNF05-TC01* | *KNF05* | *Security* | *Jika pengguna mengunggah file selain JPEG/PNG atau ukuran file melebihi 10 MB, maka sistem harus menolak unggahan tersebut dan menampilkan pesan kesalahan kepada pengguna. Hal ini diperlukan untuk mencegah pengguna mengunggah file berbahaya.* | *Mencoba untuk membuat laporan dengan file selain JPG/JPEG/PNG* | *Gagal membuat laporan dengan file .webp (validasi dari backend).* | *Pass* |
+| *KNF05-TC02* | *KNF05* | *Security* | *Jika pengguna mengunggah file selain JPEG/PNG atau ukuran file melebihi 10 MB, maka sistem harus menolak unggahan tersebut dan menampilkan pesan kesalahan kepada pengguna. Hal ini diperlukan untuk mencegah pengguna mengunggah file berbahaya.* | *Mencoba mengirimkan foto yang lebih besar dari 10 MB.* | *Gagal mengirimkan foto berukuran 20 MB (validasi frontend)* | *Pass* |
+| *KNF06-TC01* | *KNF06* | *Security* | *Sistem harus menampilkan informasi pengguna pada leaderboard yang hanya terbatas pada nama pengguna (username) dan total perolehan poin pelaporan. Saat halaman leaderboard dimuat oleh pengguna, sistem harus menyembunyikan seluruh data pribadi pengguna.* | *Mengecek HalamanLeaderboard secara visual dan melalui Microsoft Edge DevTools* | *Secara visual, HalamanLeaderboard hanya memuat setiap pelapor dengan nama, poin, dan foto profil pelapor. Pengecekan elemen HTML mealui Edge DevTools juga membuktikan bahwa hanya foto profil, nama, dan total poin pelapor yang ditampilkan.* | *Pass* |
+| *KNF07-TC01* | *KNF07* | *Performance efficiency* | *Sistem harus memperbarui data peringkat pada leaderboard setiap 5 detik. Saat waktu memasuki pukul 00.00 WIB pada hari pertama setiap bulan kalender, sistem harus mengatur ulang (reset) seluruh akumulasi skor pada leaderboard ke angka nol.* | *Mengecek melalui Network Tab pada Edge DevTools untuk pembaruan, mengecek apakah terdapat algoritma atau _cron_ untuk pembaruan data leaderboard.* | *Tidak dapat mengecek pembaruan data peringkat karena kegagalan pada pemberian poin. Namun, secara logika kode, harusnya leaderboard sudah otomatis menampilkan data terbaru dan terurut berdasarkan jumlah poin setiap kali HalamanLeaderboard di-fetch atau di-reload. Tidak terdapat algoritma ataupun _cron_ pada Supabase yang memperbarui data HalamanLeaderboard atau tabel leaderboard. Hal ini merupakan kesalahan pada ketidaklengkapan implementasi seluruh KNF, walau hanya terjadi pada KNF07. Rencana perbaikannya adalah menambahkan algoritma atau _cron_ pada HalamanLeaderboard atau Supabase untuk menghapus data leaderboard sesuai KNF07 dan memperbaiki _bug_ yakni poin pelapor yang tidak berubah.* | *Fail* |
 
 <br>
 
@@ -434,8 +436,15 @@ Tabel 4.6. Bukti Hasil Pengujian
 | *INT-TC01* | *[Sisipkan bukti pengujian integrasi]* |
 | *UC01-TC01* | *[Sisipkan tangkapan layar UC01-TC01 sesuai prosedur pengujian]* |
 | *UC01-TC02* | *[Sisipkan tangkapan layar UC01-TC02 sesuai prosedur pengujian]* |
-| *KNF01-TC01* | *[Sisipkan bukti pengukuran parameter KNF01-TC01]* |
-| *...* | *...* |
+| *KNF01-TC01* | ![KNF01-TC01-1](.\assets\bukti-knf01-tc01-1.png) ![KNF01-TC01-2](.\assets\bukti-knf01-tc01-2.png) ![KNF01-TC01-3](.\assets\bukti-knf01-tc01-3.png) |
+| *KNF02-TC01* | ![KNF02-TC01-1](.\assets\bukti-knf02-tc01-1.png) ![KNF01-TC01-2](.\assets\bukti-knf02-tc01-2.png) ![KNF01-TC01-3](.\assets\bukti-knf02-tc01-3.png) |
+| *KNF03-TC01* | ![KNF03-TC01-1](.\assets\bukti-knf03-tc01-1.png) ![KNF03-TC01-2](.\assets\bukti-knf03-tc01-2.png) ![KNF03-TC01-3](.\assets\bukti-knf03-tc01-3.png) ![KNF03-TC01-4](.\assets\bukti-knf03-tc01-4.png) |
+| *KNF04-TC01* | ![KNF04-TC01-1](.\assets\bukti-knf04-tc01-1.png) |
+| *KNF05-TC01* | ![KNF05-TC01-1](.\assets\bukti-knf05-tc01-1.png) ![KNF05-TC01-2](.\assets\bukti-knf05-tc01-2.png) |
+| *KNF05-TC01* | ![KNF05-TC01-1](.\assets\bukti-knf05-tc01-1.png) |
+| *KNF05-TC02* | ![KNF05-TC02-1](.\assets\bukti-knf05-tc02-1.png) |
+| *KNF06-TC01* | ![KNF06-TC01-1](.\assets\bukti-knf06-tc01-1.png) ![KNF06-TC01-2](.\assets\bukti-knf06-tc01-2.png) |
+| *KNF07-TC01* | Bukti adanya algoritma sorting dan fungsi yang menampilkan urutan leaderboard setiap kali HalamanLeaderboard di-_render_ ![KNF07-TC01-1](.\assets\bukti-knf07-tc01-1.png) Bukti tidak adanya _cron_ pada Supabase ![KNF07-TC01-2](.\assets\bukti-knf07-tc01-2.png) |
 
 <br>
 
