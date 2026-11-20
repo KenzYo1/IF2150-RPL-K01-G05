@@ -31,6 +31,7 @@
 * [Milestone 7](#milestone-7)
 * [Milestone 8](#milestone-8)
 * [Milestone 9](#milestone-9)
+* [Milestone 10](#milestone-10)
 ---
 
 ### Log Penggunaan AI per Milestone
@@ -102,7 +103,12 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | Claude | Menjelaskan, memeriksa, dan memberi arahan tentang cara mengimplementasi suatu fitur, baik itu fitur frontend maupun backend | Bagaimana cara mengimpelentasi proxy.ts untuk keperluan redirect? | Memperbaiki perbedaan nama variabel, mengecek kebenaran *redirection* proxy.ts |
 | Claude | Membantu pencarian dan perbaikan berbagai *bug* dan masalah dalam implementasi kode | Dalam page.tsx ini, beberapa elemen tidak tertampilkan dengan semestinya, apa yang salah? | Mengecek perbaikan kode dan menyesuaikan perbaikan | 
 | Claude | Membuat kode awal komponen | "Buat KartuFormLapor sesuai I-06 dengan hooks, bisa menerima file, scrollable, dsb" | Menjalankan di `localhost:3000/test`, membandingkan dengan Figma (warna, ukuran, font), menyesuaikan skala dan ukuran |
+| Gemini | Membuat kode tes | "Buat test untuk setiap UC yang ada" | Menyesuaikan hasil dengan rancangan kode |
 
+* [Milestone 10](#milestone-10)
+| Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
+| :--- | :--- | :--- | :--- |
+| Claude | Mengetahui tentang tes untuk KNF, seperti cara _profiling_ | Bagaimana cara mengukur waktu dari mulai login hingga render page selanjutnya? | Menerima informasi dan menyesuaikan metode uji |
 ---
 
 
