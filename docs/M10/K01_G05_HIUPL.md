@@ -471,7 +471,26 @@ Tabel 4.6. Bukti Hasil Pengujian
 | :--- | :--- |
 | *C02-UT01 – C02-UT08* | *[Sisipkan hasil keluaran unit test]* |
 | *C02 (coverage)* | *[Sisipkan laporan coverage kelas C02]* |
-| *INT-TC01* | *[Sisipkan bukti pengujian integrasi]* |
+| *INT-TC01 – INT-TC03* | *Tidak dapat diuji (lihat Tabel 4.3.2)* |
+| *INT-TC04* | ![INT-TC04](assets/43bukti/TC04.png) |
+| *INT-TC05* | ![INT-TC05](assets/43bukti/TC05.png) |
+| *INT-TC06* | ![INT-TC06-1](assets/43bukti/TC06.png) ![INT-TC06-2](assets/43bukti/TC-06-2.png) ![INT-TC06-3](assets/43bukti/TC-06-3.png) |
+| *INT-TC07* | ![INT-TC07-1](assets/43bukti/TC07.png) ![INT-TC07-2](assets/43bukti/TC07-1.png) |
+| *INT-TC08* | ![INT-TC08](assets/43bukti/TC-08-1.png) |
+| *INT-TC09* | ![INT-TC09](assets/43bukti/TC09-1.png) |
+| *INT-TC10* | ![INT-TC10](assets/43bukti/TC10.png) |
+| *INT-TC11* | ![INT-TC11](assets/43bukti/TC-11.png) |
+| *INT-TC12* | ![INT-TC12](assets/43bukti/TC12.png) |
+| *INT-TC13* | ![INT-TC13](assets/43bukti/TC13.png) |
+| *INT-TC14* | ![INT-TC14](assets/43bukti/TC14.png) |
+| *INT-TC15* | ![INT-TC15](assets/43bukti/TC15.png) |
+| *INT-TC16* | ![INT-TC16](assets/43bukti/TC16.png) |
+| *INT-TC17 – INT-TC20* | ![INT-TC17 – INT-TC20](assets/43bukti/TC17-18-19-20.png) |
+| *INT-TC21* | ![INT-TC21](assets/43bukti/TC21.png) |
+| *INT-TC22 – INT-TC34* | *[Sisipkan bukti pengujian integrasi]* |
+| *INT-TC35* | ![INT-TC35](assets/43bukti/TC35.png) |
+| *INT-TC36* | ![INT-TC36](assets/43bukti/TC36.png) |
+| *INT-TC37* | *[Sisipkan bukti pengujian integrasi]* |
 | *UC01-TC01* | *[Sisipkan tangkapan layar UC01-TC01 sesuai prosedur pengujian]* |
 | *UC01-TC02* | *[Sisipkan tangkapan layar UC01-TC02 sesuai prosedur pengujian]* |
 | *KNF01-TC01* | ![KNF01-TC01-1](assets/bukti-knf01-tc01-1.png) ![KNF01-TC01-2](assets/bukti-knf01-tc01-2.png) ![KNF01-TC01-3](assets/bukti-knf01-tc01-3.png) |
