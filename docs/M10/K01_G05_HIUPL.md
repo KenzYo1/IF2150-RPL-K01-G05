@@ -405,7 +405,7 @@ Tabel 4.2.5. Hasil Pengujian Unit Kelas C17
 ### 4.2.6 Kelas LoginController
 
 **ID Kelas:** *C19*  
-**Nama Kelas:** *LoginController* (`src/types/allowed-domains.ts`, `src/services/pelaporService.ts`, dan `src/app/login/actions.tsx`)  
+**Nama Kelas:** *LoginController* (unit test mencakup fungsi pendukung autentikasi di `src/types/allowed-domains.ts` dan `src/services/pelaporService.ts`; alur login pada `src/app/login/actions.tsx` diuji melalui pengujian integrasi `INT-TC01` s.d. `INT-TC03`)  
 **Tingkat:** *Mendalam*
 
 Tabel 4.2.6. Hasil Pengujian Unit Kelas C19
@@ -428,7 +428,7 @@ Tabel 4.2.6b. Ringkasan Cakupan Kelas C19
 | :--- | :--- |
 | Daftar operasi public pada DPPL | `validateITBLogin()`, `validateNormalLogin()`, `getRole()` (diimplementasikan melalui `isAllowedEmail()`, `resolvePelaporAuthContext()`, `getMyPelaporProfileService()`, `getPelaporByIdService()`, serta Server Actions `loginWithPass()` dan `loginByITBEmail()` yang diuji integrasinya pada `INT-TC01` s.d. `INT-TC03`) |
 | Operasi yang diuji | `isAllowedEmail()`, `resolvePelaporAuthContext()`, `parseAndValidateIdPelapor()`, `getMyPelaporProfileService()`, `getPelaporByIdService()` |
-| ID Algoritma yang tercakup | `Algo-027` (validasi domain/login ITB), `Algo-028` (penanganan error/timeout layanan Supabase) |
+| ID Algoritma yang tercakup | `Algo-027` dan `Algo-028` tercakup sebagian: unit test hanya menguji pembatasan domain email ITB dan penanganan error sesi autentikasi. Pengiriman OTP dan verifikasi SSO melalui layanan eksternal diuji pada pengujian integrasi `INT-TC01` s.d. `INT-TC03` |
 | Coverage (wajib ≥ 70%) | **`allowed-domains.ts`: 100.00% line / 75.00% branch**; **`pelaporService.ts`: 85.49% line / 77.19% branch / 85.71% funcs** (`npx tsx --test --experimental-test-coverage tests/login.test.ts`, bukti pada 4.6) |
 
 <br>

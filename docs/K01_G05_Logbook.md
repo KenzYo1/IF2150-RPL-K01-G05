@@ -212,6 +212,12 @@
 | *17-11-2026* | *Nadia Layla S.* | *Mengisi Bab 4.3* | *1* | *In Progress* | *-* |
 | *18-11-2026* | *Nadia Layla S.* | *Mengisi Bab 4.3* | *1* | *In Progress* | *-* |
 
+### Milestone 10
+**Periode:** 13 November 2026 - 20 November 2026
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *20-11-2026* | *Justin Sepvian* | *Buat bab 4.2* | *7* | *Done* | *-* |
+
 ---
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
