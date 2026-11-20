@@ -216,6 +216,7 @@
 | *20-11-2026* | *Kenzo Yo* | *Mengisi bab 5.2* | *0.5* | *Done* | *-* |
 | *20-11-2026* | *Nadia Layla S.* | *Mengisi Bab 4.3* | *3* | *Done* | *-* |
 | *20-11-2026* | *Justin Sepvian* | *Buat bab 4.2* | *7* | *Done* | *-* |
+| *20-11-2026* | *Arini K* | *Isi bab 1-3, 4.2, dan tabel 5.1* | *3* | *Done* | *-* |
 
 
 ---
