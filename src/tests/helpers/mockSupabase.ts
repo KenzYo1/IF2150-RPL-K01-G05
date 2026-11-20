@@ -63,6 +63,14 @@ export function createMockSupabaseClient(initial?: Partial<MockDatabaseState>) {
                     eq: (col1: string, val1: unknown) => {
                         const filtered1 = rows.filter((r) => r[col1] === val1);
                         return {
+                            then: (
+                                onfulfilled?: ((value: { data: Record<string, unknown>[]; error: null }) => unknown) | null,
+                                onrejected?: ((reason: unknown) => unknown) | null
+                            ) =>
+                                Promise.resolve({
+                                    data: filtered1.map((r) => ({ ...r })),
+                                    error: null,
+                                }).then(onfulfilled, onrejected),
                             maybeSingle: async () => ({
                                 data: filtered1[0] ? { ...filtered1[0] } : null,
                                 error: null,

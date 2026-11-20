@@ -213,7 +213,10 @@
 | *17-11-2026* | *Nadia Layla S.* | *Mengisi Bab 4.3* | *1* | *In Progress* | *-* |
 | *18-11-2026* | *Nadia Layla S.* | *Mengisi Bab 4.3* | *0.5* | *In Progress* | *-* |
 | *20-11-2026* | *Kenzo Yo* | *Mengisi bab 4.5 dan 4.6* | *2.5* | *Done* | *-* |
+| *20-11-2026* | *Kenzo Yo* | *Mengisi bab 5.2* | *0.5* | *Done* | *-* |
 | *20-11-2026* | *Nadia Layla S.* | *Mengisi Bab 4.3* | *3* | *Done* | *-* |
+| *20-11-2026* | *Justin Sepvian* | *Buat bab 4.2* | *7* | *Done* | *-* |
+
 
 ---
 
