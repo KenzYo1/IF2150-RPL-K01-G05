@@ -210,7 +210,9 @@
 | *16-11-2026* | *Jessica A.T* | *Menyiapkan mengisi Bab 4.4* | *1* | *Done* | *-* |
 | *17-11-2026* | *Jessica A.T* | *Mengisi Bab 4.4* | *3* | *Done* | *-* |
 | *17-11-2026* | *Nadia Layla S.* | *Mengisi Bab 4.3* | *1* | *In Progress* | *-* |
-| *18-11-2026* | *Nadia Layla S.* | *Mengisi Bab 4.3* | *1* | *In Progress* | *-* |
+| *18-11-2026* | *Nadia Layla S.* | *Mengisi Bab 4.3* | *0.5* | *In Progress* | *-* |
+| *20-11-2026* | *Nadia Layla S.* | *Mengisi Bab 4.3* | *3* | *Done* | *-* |
+
 
 ---
 
