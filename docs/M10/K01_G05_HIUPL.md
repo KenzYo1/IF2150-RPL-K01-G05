@@ -170,13 +170,13 @@ Tabel 3.1. Lingkungan Implementasi
 
 | Aspek | Keterangan |
 | :--- | :--- |
-| *Hardware* | *Laptop anggota tim* |
-| *Operating System* | *Windows 11* |
-| *Bahasa Pemrograman* | *TypeScript 5, Node.js v22.21.0 (npm 10.9.4)* |
-| *Framework/Library* | *Next.js 16 (App Router, Turbopack), React 19.3.0, Tailwind CSS 4, shadcn/ui berbasis Base UI (@base-ui/react 1.9), Lucide React, class-variance-authority, tw-animate-css, Supabase JS 2 dan @supabase/ssr, OpenNext untuk Cloudflare* |
-| *DBMS* | *Supabase (PostgreSQL 15)* |
-| *Development Tools* | *Visual Studio Code, Git dan GitHub, Figma, ESLint, Prettier, Wrangler (Cloudflare Workers)* |
-| *Testing Tools* | *Test runner bawaan Node.js dijalankan lewat tsx (`npm test`); tidak ada alat coverage???? PLISS NOTICE* |
+| *Hardware* | *Laptop pengembang dan penguji unit: Intel Core i7-13620H (8 thread), RAM 10 GB. Sisi server berjalan serverless di Cloudflare Workers sehingga tidak memerlukan server fisik.* |
+| *Operating System* | *Pengembangan dan pengujian unit: Ubuntu 26.04.1 LTS (kernel Linux 7.0.0). Aplikasi dapat diakses lintas platform melalui browser modern sesuai DPPL 2.1.* |
+| *Bahasa Pemrograman* | *TypeScript 5.9.3 (`strict: true`, target ES2017) di atas Node.js v22.14.0 (npm 10.9.2)* |
+| *Framework/Library* | *Next.js 16.4 (App Router, `package.json`: `^16.4.5`), React 19.3.0, Tailwind CSS 4.3.3, `@supabase/supabase-js` 2.118.0, `@supabase/ssr` 0.12.7, `@opennextjs/cloudflare` `^1.20.16`, Wrangler `^4.158.0`, ESLint 9.39.5* |
+| *DBMS* | *Supabase dengan PostgreSQL 15 (sesuai DPPL 2.1), beserta Supabase Auth dan Supabase Storage (bucket `laporan-foto`) sebagai object storage* |
+| *Development Tools* | *WebStorm sebagai IDE, Git 2.53.0 sebagai version control, GitHub sebagai repositori dan Pull Request, npm 10.9.2 sebagai package manager, Supabase Dashboard untuk pengelolaan basis data* |
+| *Testing Tools* | *Test runner bawaan Node.js (`node:test` dan `node:assert/strict`) yang dijalankan melalui `tsx` v4.23.15 dengan perintah `npm test`. Alat coverage: V8 code coverage bawaan Node.js v22 (`--experimental-test-coverage`) yang melaporkan `% line`, `% branch`, dan `% funcs`. Database dan Supabase Storage pada unit test disimulasikan dengan `tests/helpers/mockSupabase.ts`.* |
 
 ## 3.2 Implementasi Modul
 
@@ -263,61 +263,206 @@ Tabel 4.1.1. Identifikasi Tingkat Pengujian Kelas
 | :--- | :--- | :--- | :--- | :--- |
 | *C01* | *PelaporEntity* | *Tidak perlu* | *Kelas entity berisi atribut (id, nama, NIM/NIP, poin, email) beserta getter/setter tanpa logika.* | *-* |
 | *C02* | *LaporanEntity* | *Tidak perlu* | *Kelas entity berisi atribut laporan (id, judul, deskripsi, foto, like, status) beserta getter/setter tanpa logika.* | *-* |
-| *C03* | *HalamanLaporan* | *Sedang* | *Kelas boundary yang menampilkan daftar laporan dan meneruskan aksi like ke LikeController. Logika terbatas pada kondisi daftar kosong dan tidak ada perhitungan atau aturan bisnis.* | *-* |
-| *C04* | *HalamanFormulirLaporan* | *Mendalam* | *Memuat validasi sisi klien: batas karakter judul dan deskripsi, batas ukuran dan tipe file, serta kelengkapan sebelum laporan dikirim.* | *-* |
-| *C05* | *LaporanController* | *Mendalam* | *Kelas ini memuat isLaporanValid(), yaitu validasi.* | *-* |
+| *C03* | *HalamanLaporan* | *Tidak perlu* | *Kelas boundary UI yang menampilkan daftar laporan dan meneruskan aksi like ke `LikeController` (`C10`). Diuji melalui integrasi (`4.3`) dan use case (`UC01, UC03`).* | *-* |
+| *C04* | *HalamanFormulirLaporan* | *Tidak perlu* | *Kelas boundary UI formulir pelaporan. Aturan validasi batas karakter judul/deskripsi serta ukuran dan jenis foto diuji mendalam pada `LaporanController` (`C05`) dan alur `UC01`.* | *-* |
+| *C05* | *LaporanController* | *Mendalam* | *Memuat validasi laporan (`isLaporanValid()`, batas karakter, ukuran/tipe foto), upload ke object storage, pembuatan laporan, dan perubahan status.* | *C05-UT01 s.d. C05-UT12* |
 | *C06* | *AdminEntity* | *Tidak perlu* | *Kelas entity berisi data admin (id, nama, NIP, email) beserta getter/setter tanpa logika.* | *-* |
 | *C07* | *PetugasEntity* | *Tidak perlu* | *Kelas entity berisi data petugas (id, nama, NIP, email) beserta getter/setter tanpa logika.* | *-* |
-| *C08* | *HalamanFormulirTanggapann* | *Mendalam* | *Memuat aturan status laporan (diterima, ditolak, ditangguhkan), validasi status wajib dipilih, dan batas karakter komentar.* | *-* |
-| *C09* | *TanggapanController* | *Mendalam* | *sendTanggapan() mengubah status dan menambah poin sesuai aturan status dan perhitungannya.* | *-* |
-| *C10* | *LikeController* | *Mendalam* | *Kelas ini harus dapat memenuhi aturan satu like per Pelapor dan toggle like/unlike* | *-* |
-| *C11* | *HalamanLeaderboard* | *Sedang* | *Kelas boundary yang menampilkan 20 peringkat teratas, pengurutan dan pengambilan data didelegasikan ke LeaderboardController.* | *-* |
+| *C08* | *HalamanFormulirTanggapann* | *Tidak perlu* | *Kelas boundary UI formulir tanggapan. Aturan status laporan, validasi status wajib, dan pemberian poin diuji mendalam pada `TanggapanController` (`C09`) dan alur `UC02`.* | *-* |
+| *C09* | *TanggapanController* | *Mendalam* | *sendTanggapan() mengubah status dan menambah poin sesuai aturan status dan perhitungannya.* | *C09-UT01 s.d. C09-UT12* |
+| *C10* | *LikeController* | *Mendalam* | *Kelas ini harus dapat memenuhi aturan satu like per Pelapor dan toggle like/unlike* | *C10-UT01 s.d. C10-UT10* |
+| *C11* | *HalamanLeaderboard* | *Tidak perlu* | *Kelas boundary UI yang menampilkan 20 peringkat teratas; pengurutan dan perhitungan peringkat diuji mendalam pada `LeaderboardController` (`C14`) dan `UC04`.* | *-* |
 | *C12* | *DatabaseLaporanEntity* | *Tidak perlu* | *Kelas akses data yang hanya menjalankan query sederhana (SELECT, INSERT, UPDATE). Teruji tidak langsung melalui test case UC01 sampai UC03.* | *-* |
 | *C13* | *DatabasePelaporEntity* | *Tidak perlu* | *Kelas akses data yang hanya menjalankan query sederhana pada data Pelapor. Teruji tidak langsung melalui test case UC04* | *-* |
-| *C14* | *LeaderboardController* | *Mendalam* | *Memuat algoritma pengurutan Pelapor berdasarkan poin dan perhitungan peringkat, sehingga perlu diuji untuk data kosong, poin sama, dan urutan benar* | *-* |
+| *C14* | *LeaderboardController* | *Mendalam* | *Memuat algoritma pengurutan Pelapor berdasarkan poin dan perhitungan peringkat, sehingga perlu diuji untuk data kosong, poin sama, dan urutan benar* | *C14-UT01 s.d. C14-UT07* |
 | *C15* | *HalamanAkun* | *Tidak perlu* | *Kelas boundary yang hanya menampilkan nama, NIM/NIP, dan poin Pelapor tanpa perhitungan, validasi, atau aturan bisnis. Teruji tidak langsung melalui test case UC04.* | *-* |
 | *C16* | *HalamanNotifikasi* | *Tidak perlu* | *Kelas boundary yang hanya menampilkan daftar notifikasi tanpa perhitungan, validasi, atau aturan bisnis. Teruji tidak langsung melalui test case UC02 dan UC04.* | *-* |
-| *C17* | *NotifikasiController* | *Sedang* | *Mengoordinasikan pembuatan dan pengiriman notifikasi dengan validasi sederhana (id Pelapor dan pesan tidak kosong).* | *-* |
-| *C18* | *HalamanLogin* | *Sedang* | *Kelas boundary yang menerima input email dan password lalu mendelegasikan validasi ke LoginController, serta menampilkan hasil berhasil atau gagal.* | *-* |
-| *C19* | *LoginController* | *Mendalam* | *Integrasi eksternal OTP Supabases, penanganan TIMEOUT/ERROR, dan keamanan.* | *-* |
+| *C17* | *NotifikasiController* | *Sedang* | *Mengoordinasikan pembuatan dan pengiriman notifikasi dengan validasi sederhana (id Pelapor dan pesan tidak kosong).* | *C17-UT01 s.d. C17-UT06* |
+| *C18* | *HalamanLogin* | *Tidak perlu* | *Kelas boundary UI penerima input login yang mendelegasikan autentikasi ke `LoginController` (`C19`). Diuji pada pengujian integrasi (`INT-TC01` s.d. `INT-TC03`).* | *-* |
+| *C19* | *LoginController* | *Mendalam* | *Validasi domain email ITB, resolusi sesi & role Supabase (`pelapor`/`petugas`/`admin`), penanganan error autentikasi (`401`), dan keamanan akses profil.* | *C19-UT01 s.d. C19-UT07, INT-TC01 s.d. INT-TC03* |
 
 ## 4.2 Pengujian Unit Kelas
 
 Pengujian unit dilakukan pada kelas bertingkat Mendalam dan Sedang. Kelas Mendalam diuji pada seluruh operasi public dengan kasus normal, batas, dan negatif, serta mencapai *coverage* minimal 70%. Kelas Sedang diuji minimal dengan satu kasus normal dan satu kasus gagal pada operasi public utama.
 
-Cara menjalankan unit test: *[tuliskan perintah, mis. `pytest src/tests/`]*.
+Cara menjalankan unit test: `npm test` (atau dengan laporan cakupan: `npx tsx --test --experimental-test-coverage tests/*.test.ts` di dalam direktori `src/`).
 
-Lokasi file test: *[path, mis. `src/tests/`]*.
+Lokasi file test: `src/tests/`.
 
-### 4.2.1 Kelas [Nama Kelas 1]
+### 4.2.1 Kelas TanggapanController
 
-**ID Kelas:** *[C02]*  
-**Nama Kelas:** *[Pesanan]*  
-**Tingkat:** *[Mendalam]*
+**ID Kelas:** *C09*  
+**Nama Kelas:** *TanggapanController* (`src/services/tanggapanService.ts`)  
+**Tingkat:** *Mendalam*
 
-Tabel 4.2.1. Hasil Pengujian Unit Kelas [C02]
+Tabel 4.2.1. Hasil Pengujian Unit Kelas C09
 
 | ID Pengujian | Operasi yang Diuji | Jenis Kasus | Prosedur/Masukan | Hasil yang Diharapkan | Hasil Pengujian | Kesimpulan |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| *C02-UT01* | *`hitungTotal(): Decimal`* | *Normal* | *Pesanan berisi 2 item: 10.000 x 2 dan 5.000 x 1* | *Total = 25.000* | *[Hasil aktual]* | *Pass/Fail* |
-| *C02-UT02* | *`hitungTotal(): Decimal`* | *Batas* | *Pesanan berisi tepat 1 item dengan jumlah 1* | *Total = harga item tersebut* | *[...]* | *Pass/Fail* |
-| *C02-UT03* | *`hitungTotal(): Decimal`* | *Negatif* | *Pesanan tanpa item* | *Total = 0 atau melempar kesalahan sesuai rancangan* | *[...]* | *Pass/Fail* |
-| *...* | *...* | *...* | *...* | *...* | *...* | *...* |
+| *C09-UT01* | *`isStatusValidForPoin(status)` & `isStatusRejected(status)`* | *Normal & Batas* | *Status `"  VaLiD  "`, `"dalam penanganan"`, `"SELESAI"` pada `isStatusValidForPoin`; `"  DiToLaK  "`, `"INVALID"` pada `isStatusRejected`* | *Mengembalikan `true` untuk seluruh variasi huruf kapital dan spasi* | *Seluruh pemanggilan mengembalikan `true`* | *Pass* |
+| *C09-UT02* | *`isStatusValidForPoin(status)` & `isStatusRejected(status)`* | *Negatif* | *Status `"menunggu"`, `"   "`, `null` pada `isStatusValidForPoin`; `"valid"`, `undefined` pada `isStatusRejected`* | *Mengembalikan `false` tanpa melempar exception* | *Seluruh pemanggilan mengembalikan `false`* | *Pass* |
+| *C09-UT03* | *`addPoinPelapor(idPelapor, poin)`* | *Batas (Data Korup)* | *Pelapor `idPelapor = "1"` (string) dengan data korup `poin = -10` di DB ditambah `5`, lalu ditambah batas positif terkecil `1`* | *Poin negatif dinormalkan ke `0` (`poinLama = 0`, `poinBaru = 5`), lalu menjadi `6`* | *`poinLama = 0`, `poinBaru = 5`, lalu `poinBaru = 6`* | *Pass* |
+| *C09-UT04* | *`addPoinPelapor(idPelapor, poin)`* | *Negatif* | *`poin` bernilai `0`, desimal `1.5`, negatif `-3`, `NaN`; serta `idPelapor = "abc"` dan `idPelapor = 999` (tidak ada di DB)* | *Melempar `TanggapanServiceError`: `INVALID_POIN_VALUE` (400), `INVALID_PELAPOR_ID` (400), dan `PELAPOR_NOT_FOUND` (404)* | *Seluruh kasus melempar `TanggapanServiceError` dengan kode dan status HTTP yang sesuai* | *Pass* |
+| *C09-UT05* | *`setStatusLaporan(idLaporan, status, extraUpdates)`* | *Normal & Batas* | *Laporan `idLaporan = "5"` diubah statusnya ke `"  dalam penanganan  "` dengan catatan `"Teknisi otw"`* | *Mengembalikan `true` dan status tersimpan ter-trim menjadi `"dalam penanganan"`* | *Mengembalikan `true` dan `status_laporan` di DB menjadi `"dalam penanganan"`* | *Pass* |
+| *C09-UT06* | *`setStatusLaporan(idLaporan, status, extraUpdates)`* | *Batas & Negatif* | *`idLaporan = 999` (tidak ada), `idLaporan = 0` (batas invalid), dan `status = "    "` (spasi kosong)* | *`999` mengembalikan `false`; `0` melempar `INVALID_LAPORAN_ID` (400); `"    "` melempar `INVALID_STATUS_LAPORAN` (400)* | *Hasil sesuai ekspektasi (`false` untuk 999, exception 400 untuk ID 0 dan status kosong)* | *Pass* |
+| *C09-UT07* | *`sendTanggapan(idLaporan, input)`* | *Normal* | *Petugas memvalidasi laporan `id = 5` milik pelapor `id = 1` (`poin = 10`, `points_awarded = false`) dengan status `"valid"`* | *Status menjadi `"valid"`, `pointsAwardedNow = true`, `poinDitambahkan = 1`, `poinPelaporBaru = 11`, dan `notifikasiSent = true`* | *Status menjadi `"valid"`, poin pelapor menjadi 11, dan 1 notifikasi terkirim* | *Pass* |
+| *C09-UT08* | *`sendTanggapan(idLaporan, input)`* | *Batas* | *Petugas memperbarui laporan `id = 5` yang sudah `points_awarded = true` ke status `"selesai"`* | *Status berubah ke `"selesai"` tanpa poin ganda (`pointsAwardedNow = false`, `poinDitambahkan = 0`, poin tetap 11)* | *Status berubah ke `"selesai"`, `poinDitambahkan = 0`, poin tetap 11* | *Pass* |
+| *C09-UT09* | *`sendTanggapan(idLaporan, input)`* | *Normal & Batas* | *Admin menolak laporan `id = 7` yang `judul_laporan = null` dengan status `"ditolak"` dan catatan `"Foto tidak jelas"`* | *Status menjadi `"ditolak"`, tidak menambah poin (`0`), notifikasi penolakan terkirim memakai label fallback `#7`* | *Status `"ditolak"`, poin tetap 10, pesan notifikasi mengandung `#7` dan `"tidak dapat diproses"`* | *Pass* |
+| *C09-UT10* | *`sendTanggapan(idLaporan, input)`* | *Batas (Laporan Yatim)* | *Petugas memberi input string langsung `"selesai"` pada laporan `id = 8` dengan `id_pelapor = null`* | *Status menjadi `"selesai"` tanpa error, tidak menambah poin (`0`), dan tidak mengirim notifikasi (`notifikasiSent = false`)* | *Status menjadi `"selesai"`, `pointsAwardedNow = false`, `notifikasiSent = false`* | *Pass* |
+| *C09-UT11* | *`sendTanggapan(idLaporan, input)`* | *Negatif* | *Pengguna dengan role `"pelapor"` memanggil `sendTanggapan(1, { statusLaporan: "valid" })`* | *Melempar `TanggapanServiceError` dengan kode `FORBIDDEN` (403)* | *Melempar `TanggapanServiceError` (`FORBIDDEN`, status 403)* | *Pass* |
+| *C09-UT12* | *`sendTanggapan(idLaporan, input)`* | *Negatif* | *Petugas memanggil `sendTanggapan` dengan `idLaporan = -1`, `statusLaporan = "   "`, dan `idLaporan = 999`* | *Melempar `INVALID_LAPORAN_ID` (400), `INVALID_STATUS_LAPORAN` (400), dan `LAPORAN_NOT_FOUND` (404)* | *Ketiganya melempar `TanggapanServiceError` dengan kode dan status HTTP sesuai* | *Pass* |
 
 Khusus kelas **Mendalam**:
 
-Tabel 4.2.1b. Ringkasan Cakupan Kelas [C02]
+Tabel 4.2.1b. Ringkasan Cakupan Kelas C09
 
 | Informasi | Keterangan |
 | :--- | :--- |
-| Daftar operasi public pada DPPL | *[op1(), op2(), ...]* |
-| Operasi yang diuji | *[op1(), op2(), ...]* |
-| ID Algoritma yang tercakup | *[Algo-001, ...]* |
-| Coverage (wajib ≥ 70%) | *[% baris / % cabang, alat dan bukti pada 4.6]* |
+| Daftar operasi public pada DPPL | `addPoinPelapor()`, `setStatusLaporan()`, `sendTanggapan()` (beserta helper validasi `isStatusValidForPoin()`, `isStatusRejected()`, `resolveTanggapanActorContext()`) |
+| Operasi yang diuji | `isStatusValidForPoin()`, `isStatusRejected()`, `addPoinPelapor()`, `setStatusLaporan()`, `sendTanggapan()` (serta `resolveTanggapanActorContext()` melalui `sendTanggapan()`) |
+| ID Algoritma yang tercakup | `Algo-005`, `Algo-006` |
+| Coverage (wajib ≥ 70%) | **86.71% line / 78.38% branch / 76.19% funcs** (`npx tsx --test --experimental-test-coverage tests/tanggapan.test.ts`, bukti pada 4.6) |
 
-### 4.2.2 Kelas [Nama Kelas 2]
+### 4.2.2 Kelas LikeController
 
-*[Ulangi pola 4.2.1 untuk setiap kelas bertingkat Mendalam atau Sedang.]*
+**ID Kelas:** *C10*  
+**Nama Kelas:** *LikeController* (`src/services/likeService.ts`)  
+**Tingkat:** *Mendalam*
+
+Tabel 4.2.2. Hasil Pengujian Unit Kelas C10
+
+| ID Pengujian | Operasi yang Diuji | Jenis Kasus | Prosedur/Masukan | Hasil yang Diharapkan | Hasil Pengujian | Kesimpulan |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| *C10-UT01* | *`isLaporanLiked(idLaporan, idPelapor)`* | *Normal* | *Cek status like sebelum like, sesudah like, dan sesudah unlike untuk `idLaporan = 10`, `idPelapor = 2`* | *Berturut-turut mengembalikan `false`, `true`, lalu `false`* | *Mengembalikan `false`, `true`, dan `false` sesuai urutan aksi* | *Pass* |
+| *C10-UT02* | *`likeLaporan(idLaporan, idPelapor)`* | *Normal* | *Pelapor `2` me-like laporan `10` yang semula `jumlah_like = 3`* | *`liked = true`, `jumlahLike = 4`, dan record like tersimpan* | *`liked = true`, `jumlahLike = 4`* | *Pass* |
+| *C10-UT03* | *`likeLaporan(idLaporan, idPelapor)`* | *Negatif (Duplikat)* | *Pelapor `2` mencoba me-like ulang laporan `10` yang sudah di-like* | *Melempar `LikeServiceError` dengan kode `DUPLICATE_LIKE` (409)* | *Melempar `LikeServiceError` (`DUPLICATE_LIKE`, status 409)* | *Pass* |
+| *C10-UT04* | *`unlikeLaporan(idLaporan, idPelapor)`* | *Normal & Negatif* | *Pelapor `2` membatalkan like pada laporan `10` (`jumlah_like = 4`), lalu membatalkan like pada laporan yang belum di-like* | *Pertama: `liked = false`, `jumlahLike = 3`; kedua: melempar `LIKE_NOT_FOUND` (404)* | *Pertama kembali ke `3`; kedua melempar `LIKE_NOT_FOUND` (404)* | *Pass* |
+| *C10-UT05* | *`unlikeLaporan(idLaporan, idPelapor)`* | *Batas (Batas Bawah 0)* | *Unlike pada laporan `id = 21` dengan `jumlah_like = 0` meski record like ada di DB* | *`unlikeLaporan` menahan batas bawah `0` (`Math.max(0, 0 - 1) = 0`)* | *`liked = false` dan `jumlahLike` tetap `0` (tidak menjadi `-1`)* | *Pass* |
+| *C10-UT06* | *`getLikedLaporanIdsByPelaporService(idPelapor)`* | *Normal & Batas* | *Pelapor `2` memiliki like di laporan `10` & `12`; pelapor `3` belum me-like laporan mana pun* | *Pelapor `2` mengembalikan `[10, 12]`; pelapor `3` mengembalikan `[]`* | *Mengembalikan `[10, 12]` untuk pelapor `2` dan `[]` untuk pelapor `3`* | *Pass* |
+| *C10-UT07* | *`getLikedLaporanIdsByPelaporService(idPelapor)`* | *Negatif* | *Memanggil dengan `idPelapor = 0`* | *Melempar `LikeServiceError` (`INVALID_PELAPOR_ID`, 400)* | *Melempar `LikeServiceError` (`INVALID_PELAPOR_ID`, 400)* | *Pass* |
+| *C10-UT08* | *`likeLaporan()`, `unlikeLaporan()`, `isLaporanLiked()`* | *Negatif (Not Found & ID Invalid)* | *`likeLaporan(999, 1)`, `unlikeLaporan(999, 1)`, `isLaporanLiked(0, 1)`, dan `likeLaporan(1, -5)`* | *Berturut-turut melempar `LAPORAN_NOT_FOUND` (404), `LAPORAN_NOT_FOUND` (404), `INVALID_LAPORAN_ID` (400), `INVALID_PELAPOR_ID` (400)* | *Seluruh kasus melempar `LikeServiceError` dengan kode dan status HTTP sesuai* | *Pass* |
+| *C10-UT09* | *`resolveAuthenticatedPelaporForLike()`* | *Normal & Batas (Fallback Email)* | *Auth dengan `idPelapor = 2`, serta auth dengan `idPelapor = null` dan `auth_user_id = null` di DB tetapi memiliki `email` valid* | *Pertama mengembalikan `{ idPelapor: 2 }`; kedua fallback mencari via email dan mengembalikan `{ idPelapor: 7 }`* | *Mengembalikan `{ idPelapor: 2 }` dan `{ idPelapor: 7 }`* | *Pass* |
+| *C10-UT10* | *`resolveAuthenticatedPelaporForLike()`* | *Negatif* | *Auth role `"petugas"`, auth `null` (belum login), dan email pelapor yang tidak terdaftar di DB* | *Berturut-turut melempar `FORBIDDEN` (403), `UNAUTHORIZED` (401), dan `INVALID_PELAPOR_SESSION` (401)* | *Ketiganya melempar `LikeServiceError` dengan kode dan status HTTP sesuai* | *Pass* |
+
+Khusus kelas **Mendalam**:
+
+Tabel 4.2.2b. Ringkasan Cakupan Kelas C10
+
+| Informasi | Keterangan |
+| :--- | :--- |
+| Daftar operasi public pada DPPL | `isLaporanLiked()`, `likeLaporan()`, `unlikeLaporan()` (beserta helper `getLikedLaporanIdsByPelaporService()`, `resolveAuthenticatedPelaporForLike()`) |
+| Operasi yang diuji | `isLaporanLiked()`, `likeLaporan()`, `unlikeLaporan()`, `getLikedLaporanIdsByPelaporService()`, `resolveAuthenticatedPelaporForLike()` |
+| ID Algoritma yang tercakup | `Algo-007`, `Algo-008`, `Algo-009` |
+| Coverage (wajib ≥ 70%) | **87.15% line / 82.14% branch / 77.78% funcs** (`npx tsx --test --experimental-test-coverage tests/like.test.ts`, bukti pada 4.6) |
+
+### 4.2.3 Kelas LaporanController
+
+**ID Kelas:** *C05*  
+**Nama Kelas:** *LaporanController* (`src/services/laporanService.ts`)  
+**Tingkat:** *Mendalam*
+
+Tabel 4.2.3. Hasil Pengujian Unit Kelas C05
+
+| ID Pengujian | Operasi yang Diuji | Jenis Kasus | Prosedur/Masukan | Hasil yang Diharapkan | Hasil Pengujian | Kesimpulan |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| *C05-UT01* | *`isJumlahKarakterValid(desc, max)`* | *Normal, Batas & Negatif* | *Teks valid, spasi `"   "`, panjang tepat `300` (`MAX_DESKRIPSI_CHARS`), dan panjang `301`* | *Valid & `300` bernilai `true`; `"   "` & `301` bernilai `false`* | *Mengembalikan `true`, `false`, `true`, `false` sesuai batas* | *Pass* |
+| *C05-UT02* | *`isUkuranFotoValid(size, max)`* | *Normal, Batas & Negatif* | *Ukuran `1024`, tepat `10 MB` (`MAX_FOTO_SIZE_BYTES`), `0`, dan `10 MB + 1 byte`* | *`1024` & `10 MB` bernilai `true`; `0` & `10 MB + 1` bernilai `false`* | *Mengembalikan `true`, `true`, `false`, `false` sesuai batas* | *Pass* |
+| *C05-UT03* | *`isJenisFotoValid(mime, name)`* | *Normal, Batas & Negatif* | *`image/jpeg`+`.jpg`, `image/png`+`.png`, MIME kosong dengan `.png`, `image/png` tanpa ekstensi, `application/pdf`, dan `image/jpeg` dengan `.gif`* | *JPEG/PNG/tanpa ekstensi valid bernilai `true`; PDF & mismatch `.gif` bernilai `false`* | *Seluruh variasi MIME & ekstensi menghasilkan nilai boolean sesuai ekspektasi* | *Pass* |
+| *C05-UT04* | *`isLaporanValid(desc, foto)`* | *Normal & Negatif* | *Deskripsi valid + foto JPEG 500 KB, serta deskripsi valid + `foto = null`* | *Pertama mengembalikan `true`; kedua mengembalikan `false`* | *Mengembalikan `true` dan `false`* | *Pass* |
+| *C05-UT05* | *`parseAndValidateIdLaporan(rawId)`* | *Normal & Negatif* | *ID `1`, `" 42 "`, serta `0`, `-1`, `1.5`, `"abc"`, `"   "`* | *`1` & `" 42 "` menjadi `1` & `42`; selain itu melempar `INVALID_LAPORAN_ID` (400)* | *ID valid ter-parse; kelima input invalid melempar `INVALID_LAPORAN_ID` (400)* | *Pass* |
+| *C05-UT06* | *`validateFotoLaporanInput()` & `uploadFotoLaporanService()`* | *Normal & Negatif* | *Upload PNG 3 byte valid; serta file `size = 0`, tipe `application/pdf`, dan `size = 10 MB + 1`* | *File valid terunggah ke bucket `laporan-foto`; file invalid melempar `EMPTY_FOTO_FILE`, `INVALID_FOTO_TYPE`, `FOTO_TOO_LARGE` (400)* | *Upload berhasil dengan URL publik `pelapor-5`; ketiga kasus gagal melempar kode error yang sesuai* | *Pass* |
+| *C05-UT07* | *`createLaporanService()` & `getValidLaporanService()`* | *Normal* | *Buat laporan baru dengan foto JPEG 4 byte pada DB berisi 1 laporan berstatus `"ditolak"`, lalu panggil `listLaporanService()` dan `getValidLaporanService()`* | *Laporan tersimpan dengan URL storage; `listLaporanService()` berjumlah 2, `getValidLaporanService()` berjumlah 1 (memfilter yang ditolak)* | *Laporan tersimpan, `all.length = 2`, `validOnly.length = 1`* | *Pass* |
+| *C05-UT08* | *`createLaporanService(input)`* | *Batas (Resolve Auth)* | *Buat laporan tanpa `idPelapor` dengan `authOverride` (`idPelapor: 2`)* | *`idPelapor` otomatis terisi `2` dari konteks autentikasi* | *Laporan tersimpan dengan `idPelapor = 2`* | *Pass* |
+| *C05-UT09* | *`createLaporanService(input)`* | *Negatif (Validasi Input)* | *Deskripsi `"   "`, deskripsi `301` karakter, judul `101` karakter, dan tanpa `fotoFile`/`fotoLaporan`* | *Berturut-turut melempar `INVALID_LAPORAN_DESKRIPSI`, `DESKRIPSI_TOO_LONG`, `JUDUL_TOO_LONG`, `MISSING_FOTO_LAPORAN` (400)* | *Keempatnya melempar `LaporanServiceError` dengan kode yang sesuai* | *Pass* |
+| *C05-UT10* | *`getLaporanByIdService(rawId)`* | *Normal & Negatif* | *Ambil laporan dengan `rawId = "10"` (ada di DB) dan `rawId = 999` (tidak ada)* | *`"10"` mengembalikan entitas laporan `10`; `999` melempar `LAPORAN_NOT_FOUND` (404)* | *Data laporan `10` ditemukan; `999` melempar `LAPORAN_NOT_FOUND` (404)* | *Pass* |
+| *C05-UT11* | *`setStatusLaporanService(rawId, status)`* | *Normal* | *Ubah status laporan `10` ke `"  tuntas  "`* | *Mengembalikan `true` dan status laporan di DB menjadi `"tuntas"`* | *Mengembalikan `true` dan `status_laporan` menjadi `"tuntas"`* | *Pass* |
+| *C05-UT12* | *`setStatusLaporanService(rawId, status)`* | *Negatif* | *Ubah status laporan `10` ke `"   "` (kosong) dan laporan `999` ke `"tuntas"`* | *Melempar `INVALID_STATUS_LAPORAN` (400) dan `LAPORAN_NOT_FOUND` (404)* | *Keduanya melempar `LaporanServiceError` dengan kode dan status HTTP sesuai* | *Pass* |
+
+Khusus kelas **Mendalam**:
+
+Tabel 4.2.3b. Ringkasan Cakupan Kelas C05
+
+| Informasi | Keterangan |
+| :--- | :--- |
+| Daftar operasi public pada DPPL | `isLaporanValid()`, `setStatusLaporanService()`, `getValidLaporanService()` (beserta helper & operasi lain: `parseAndValidateIdLaporan()`, `isJumlahKarakterValid()`, `isUkuranFotoValid()`, `isJenisFotoValid()`, `validateFotoLaporanInput()`, `uploadFotoLaporanService()`, `createLaporanService()`, `listLaporanService()`, `getLaporanByIdService()`) |
+| Operasi yang diuji | Seluruh 12 fungsi public di `src/services/laporanService.ts` |
+| ID Algoritma yang tercakup | `Algo-003` |
+| Coverage (wajib ≥ 70%) | **84.15% line / 76.47% branch / 91.43% funcs** (`npx tsx --test --experimental-test-coverage tests/laporan.test.ts`, bukti pada 4.6) |
+
+### 4.2.4 Kelas LeaderboardController
+
+**ID Kelas:** *C14*  
+**Nama Kelas:** *LeaderboardController* (`src/services/leaderboardService.ts`)  
+**Tingkat:** *Mendalam*
+
+Tabel 4.2.4. Hasil Pengujian Unit Kelas C14
+
+| ID Pengujian | Operasi yang Diuji | Jenis Kasus | Prosedur/Masukan | Hasil yang Diharapkan | Hasil Pengujian | Kesimpulan |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| *C14-UT01* | *`getTop20Pelapor()`* | *Normal & Batas* | *25 data pelapor dengan poin bertingkat `5..125`* | *Mengembalikan tepat 20 entri (`rank = 1` berpoin `125` / `id = 25`; `rank = 20` adalah `id = 6`)* | *`top20.length = 20`, peringkat 1 dan 20 sesuai urutan tertinggi* | *Pass* |
+| *C14-UT02* | *`getPelaporPoin(id)` & `getPelaporRank(id)`* | *Normal* | *Panggil dengan `idPelapor = 1` (poin `5`) pada dataset 25 pelapor* | *`getPelaporPoin(1) = 5` dan `getPelaporRank(1) = 25`* | *Mengembalikan `5` dan `25`* | *Pass* |
+| *C14-UT03* | *`getMyLeaderboardService()`* | *Normal & Batas Top 20* | *Uji pelapor `id = 25` (`rank = 1`), `id = 6` (batas tepat `rank = 20`), `id = 5` (batas luar `rank = 21`), dan `id = 1` (`rank = 25`)* | *`inTop20 = true` untuk `rank` 1 dan 20; `inTop20 = false` untuk `rank` 21 dan 25* | *Seluruh status `rank` dan `inTop20` sesuai batas `MAX_LEADERBOARD_ENTRIES = 20`* | *Pass* |
+| *C14-UT04* | *`sortPelaporByPoin()`, `getTop20Pelapor()`, `getPelaporPoin()`, `getPelaporRank()`* | *Batas (Data Kosong)* | *Dataset pelapor kosong `[]` dengan pemanggilan masing-masing operasi dan `idPelapor = 1`* | *`sortPelaporByPoin()` & `getTop20Pelapor()` mengembalikan `[]`; `getPelaporPoin(1)` & `getPelaporRank(1)` mengembalikan `0`* | *Seluruh hasil sesuai (`[]` dan `0`)* | *Pass* |
+| *C14-UT05* | *`sortPelaporByPoin()` & `getPelaporRank(id)`* | *Batas (Poin Sama / Tie-breaker)* | *Pelapor `id = 5` (poin 50), `id = 8` (poin 80), `id = 2` (poin 50)* | *Urutan `[8, 2, 5]` (poin sama diurutkan berdasarkan `idPelapor` terkecil), `rank(2) = 2`, `rank(5) = 3`* | *Urutan ID `[8, 2, 5]` dengan `rank(2) = 2` dan `rank(5) = 3`* | *Pass* |
+| *C14-UT06* | *`getPelaporPoin(id)` & `getPelaporRank(id)`* | *Negatif* | *`getPelaporPoin(0)` dan `getPelaporRank(-1)`* | *Melempar `PelaporServiceError` (`INVALID_PELAPOR_ID`, status `400`)* | *Keduanya melempar `PelaporServiceError` (`INVALID_PELAPOR_ID`, 400)* | *Pass* |
+| *C14-UT07* | *`getMyLeaderboardService()`* | *Negatif* | *Pemanggilan dengan `authOverride = null` (belum terautentikasi)* | *Melempar `LeaderboardServiceError` (`UNAUTHORIZED`, status `401`)* | *Melempar `LeaderboardServiceError` (`UNAUTHORIZED`, 401)* | *Pass* |
+
+Khusus kelas **Mendalam**:
+
+Tabel 4.2.4b. Ringkasan Cakupan Kelas C14
+
+| Informasi | Keterangan |
+| :--- | :--- |
+| Daftar operasi public pada DPPL | `getPelaporPoin()`, `getPelaporRank()`, `sortPelaporByPoin()` (beserta helper & operasi tambahan `comparePelaporByPoin()`, `toLeaderboardEntry()`, `getTop20Pelapor()`, `getMyLeaderboardService()`) |
+| Operasi yang diuji | Seluruh 7 fungsi public di `src/services/leaderboardService.ts` |
+| ID Algoritma yang tercakup | `Algo-018`, `Algo-019`, `Algo-020` |
+| Coverage (wajib ≥ 70%) | **99.24% line / 93.10% branch / 80.00% funcs** (`npx tsx --test --experimental-test-coverage tests/leaderboard.test.ts`, bukti pada 4.6) |
+
+### 4.2.5 Kelas NotifikasiController
+
+**ID Kelas:** *C17*  
+**Nama Kelas:** *NotifikasiController* (`src/services/notifikasiService.ts`)  
+**Tingkat:** *Sedang*
+
+Tabel 4.2.5. Hasil Pengujian Unit Kelas C17
+
+| ID Pengujian | Operasi yang Diuji | Jenis Kasus | Prosedur/Masukan | Hasil yang Diharapkan | Hasil Pengujian | Kesimpulan |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| *C17-UT01* | *`createNotifikasi(idPelapor, pesan)`* | *Normal* | *Panggil `createNotifikasi(1, "Laporan Anda telah diverifikasi!")`* | *Notifikasi tersimpan dengan `idPelapor = 1` dan `statusNotifikasi = "Belum Dibaca"`* | *Mengembalikan objek notifikasi dengan `idPelapor = 1` dan status `"Belum Dibaca"`* | *Pass* |
+| *C17-UT02* | *`createNotifikasi(idPelapor, pesan)`* | *Negatif* | *Panggil `createNotifikasi(0, "Pesan valid")` dan `createNotifikasi(1, "   ")`* | *Keduanya melempar `NotifikasiServiceError` (`INVALID_NOTIFIKASI_INPUT`, status `400`)* | *Keduanya melempar `NotifikasiServiceError` (`INVALID_NOTIFIKASI_INPUT`, 400)* | *Pass* |
+| *C17-UT03* | *`sendNotifikasi(notifikasi)`* | *Normal* | *Kirim objek notifikasi valid hasil `createNotifikasi(1, "Status berubah")`* | *Mengembalikan `true` dan mengubah `statusNotifikasi` menjadi `"Terkirim"`* | *Mengembalikan `true` dan `statusNotifikasi = "Terkirim"`* | *Pass* |
+| *C17-UT04* | *`sendNotifikasi(notifikasi)`* | *Negatif* | *Panggil `sendNotifikasi(null)` dan objek dengan `idNotifikasi = 0`* | *Keduanya mengembalikan `false`* | *Keduanya mengembalikan `false`* | *Pass* |
+| *C17-UT05* | *`getNotifikasiPelapor(id)` & `markNotifikasiAsRead(idNotif, idPelapor)`* | *Normal* | *Ambil daftar notifikasi pelapor `1` lalu tandai sudah dibaca oleh pelapor `1`* | *Daftar berisi 1 notifikasi dengan pesan sesuai; `markNotifikasiAsRead` mengembalikan `true`* | *Daftar berjumlah 1 dan `markNotifikasiAsRead` mengembalikan `true`* | *Pass* |
+| *C17-UT06* | *`markNotifikasiAsRead(idNotif, idPelapor)`* | *Negatif* | *Pelapor `2` menandai notifikasi milik pelapor `1`, serta menandai `idNotifikasi = 999` (tidak ada)* | *Berturut-turut melempar `FORBIDDEN` (`403`) dan `NOTIFIKASI_NOT_FOUND` (`404`)* | *Keduanya melempar `NotifikasiServiceError` dengan kode dan status HTTP sesuai* | *Pass* |
+
+### 4.2.6 Kelas LoginController
+
+**ID Kelas:** *C19*  
+**Nama Kelas:** *LoginController* (unit test mencakup fungsi pendukung autentikasi di `src/types/allowed-domains.ts` dan `src/services/pelaporService.ts`; alur login pada `src/app/login/actions.tsx` diuji melalui pengujian integrasi `INT-TC01` s.d. `INT-TC03`)  
+**Tingkat:** *Mendalam*
+
+Tabel 4.2.6. Hasil Pengujian Unit Kelas C19
+
+| ID Pengujian | Operasi yang Diuji | Jenis Kasus | Prosedur/Masukan | Hasil yang Diharapkan | Hasil Pengujian | Kesimpulan |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| *C19-UT01* | *`isAllowedEmail(email)`* | *Normal & Batas* | *Email domain resmi ITB (`@mahasiswa.itb.ac.id`, `@std.stei.itb.ac.id`, `@staff.itb.ac.id`, `@itb.ac.id`) termasuk huruf kapital `@MAHASISWA.ITB.AC.ID`* | *Seluruhnya mengembalikan `true`* | *Seluruhnya mengembalikan `true`* | *Pass* |
+| *C19-UT02* | *`isAllowedEmail(email)`* | *Negatif* | *Email `user@gmail.com`, `fake@itb.ac.id.evil.com`, `""`, dan `"tanpa-at-sign"`* | *Seluruhnya mengembalikan `false`* | *Seluruhnya mengembalikan `false`* | *Pass* |
+| *C19-UT03* | *`resolvePelaporAuthContext()`* | *Normal* | *Sesi Supabase dengan `app_metadata.role = "admin"` serta akun tanpa metadata berdomain `@staff.itb.ac.id`* | *Masing-masing mengembalikan `role = "admin"` dan `role = "petugas"`* | *Mengembalikan `role = "admin"` dan `role = "petugas"`* | *Pass* |
+| *C19-UT04* | *`resolvePelaporAuthContext()`* | *Batas (Role Tak Dikenal)* | *Sesi dengan `user_metadata: { role: "superuser", id_pelapor: 12 }`* | *Fallback aman ke `role = "pelapor"` dengan `idPelapor = 12`* | *Mengembalikan `role = "pelapor"` dan `idPelapor = 12`* | *Pass* |
+| *C19-UT05* | *`resolvePelaporAuthContext()`* | *Negatif (Auth Error / Timeout)* | *Client tanpa properti `auth` dan `supabase.auth.getUser()` mengembalikan error `"Auth timeout / token expired"`* | *Keduanya melempar `PelaporServiceError` (`UNAUTHORIZED`, status `401`)* | *Keduanya melempar `PelaporServiceError` (`UNAUTHORIZED`, 401)* | *Pass* |
+| *C19-UT06* | *`getMyPelaporProfileService()` & `getPelaporByIdService()`* | *Normal & Keamanan Privasi* | *Pemilik akun (`id = 7`) vs pelapor lain (`id = 99`) mengakses profil pelapor `7`* | *Pemilik mendapat data lengkap (termasuk `nimnipPelapor`); pelapor lain hanya mendapat data publik (tanpa `nimnipPelapor`)* | *Pemilik menerima `nimnipPelapor`; pelapor lain hanya menerima data publik (`namaPelapor = "Kenzo"`)* | *Pass* |
+| *C19-UT07* | *`parseAndValidateIdPelapor()` & `getPelaporByIdService()`* | *Negatif* | *ID `"abc"` dan profil `id = 999` (tidak ditemukan)* | *Melempar `INVALID_PELAPOR_ID` (`400`) dan `PELAPOR_NOT_FOUND` (`404`)* | *Keduanya melempar `PelaporServiceError` dengan kode dan status HTTP sesuai* | *Pass* |
+
+Khusus kelas **Mendalam**:
+
+Tabel 4.2.6b. Ringkasan Cakupan Kelas C19
+
+| Informasi | Keterangan |
+| :--- | :--- |
+| Daftar operasi public pada DPPL | `validateITBLogin()`, `validateNormalLogin()`, `getRole()` (diimplementasikan melalui `isAllowedEmail()`, `resolvePelaporAuthContext()`, `getMyPelaporProfileService()`, `getPelaporByIdService()`, serta Server Actions `loginWithPass()` dan `loginByITBEmail()` yang diuji integrasinya pada `INT-TC01` s.d. `INT-TC03`) |
+| Operasi yang diuji | `isAllowedEmail()`, `resolvePelaporAuthContext()`, `parseAndValidateIdPelapor()`, `getMyPelaporProfileService()`, `getPelaporByIdService()` |
+| ID Algoritma yang tercakup | `Algo-027` dan `Algo-028` tercakup sebagian: unit test hanya menguji pembatasan domain email ITB dan penanganan error sesi autentikasi. Pengiriman OTP dan verifikasi SSO melalui layanan eksternal diuji pada pengujian integrasi `INT-TC01` s.d. `INT-TC03` |
+| Coverage (wajib ≥ 70%) | **`allowed-domains.ts`: 100.00% line / 75.00% branch**; **`pelaporService.ts`: 85.49% line / 77.19% branch / 85.71% funcs** (`npx tsx --test --experimental-test-coverage tests/login.test.ts`, bukti pada 4.6) |
 
 <br>
 
@@ -469,8 +614,12 @@ Tabel 4.6. Bukti Hasil Pengujian
 
 | ID Pengujian | Bukti Hasil Pengujian |
 | :--- | :--- |
-| *C02-UT01 – C02-UT08* | *[Sisipkan hasil keluaran unit test]* |
-| *C02 (coverage)* | *[Sisipkan laporan coverage kelas C02]* |
+| *C09-UT01 – C09-UT12 & C09 (coverage)* | ![Bukti Unit Test dan Coverage C09](./assets/C09_unit_test_coverage.png) |
+| *C10-UT01 – C10-UT10 & C10 (coverage)* | ![Bukti Unit Test dan Coverage C10](./assets/C10_unit_test_coverage.png) |
+| *C05-UT01 – C05-UT12 & C05 (coverage)* | ![Bukti Unit Test dan Coverage C05](./assets/C05_unit_test_coverage.png) |
+| *C14-UT01 – C14-UT07 & C14 (coverage)* | ![Bukti Unit Test dan Coverage C14](./assets/C14_unit_test_coverage.png) |
+| *C17-UT01 – C17-UT06* | ![Bukti Unit Test C17](./assets/C17_unit_test_coverage.png) |
+| *C19-UT01 – C19-UT07 & C19 (coverage)* | ![Bukti Unit Test dan Coverage C19](./assets/C19_unit_test_coverage.png) |
 | *INT-TC01* | *[Sisipkan bukti pengujian integrasi]* |
 | *UC01-TC01* | *[Sisipkan tangkapan layar UC01-TC01 sesuai prosedur pengujian]* |
 | *UC01-TC02* | *[Sisipkan tangkapan layar UC01-TC02 sesuai prosedur pengujian]* |

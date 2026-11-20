@@ -6,6 +6,7 @@ import {
     getNotifikasiPelapor,
     markNotifikasiAsRead,
     NotifikasiServiceError,
+    sendNotifikasi,
 } from "@/services/notifikasiService";
 import { createMockSupabaseClient } from "./helpers/mockSupabase";
 
@@ -50,6 +51,56 @@ describe("Modul Notifikasi", () => {
                 err instanceof NotifikasiServiceError &&
                 err.code === "FORBIDDEN" &&
                 err.statusCode === 403
+        );
+    });
+
+    it("createNotifikasi menolak idPelapor tidak valid atau pesan kosong (400)", async () => {
+        const mock = createMockSupabaseClient();
+        const client = mock as unknown as NotifikasiSupabaseClient;
+
+        await assert.rejects(
+            () => createNotifikasi(0, "Pesan valid", client),
+            (err: unknown) =>
+                err instanceof NotifikasiServiceError &&
+                err.code === "INVALID_NOTIFIKASI_INPUT" &&
+                err.statusCode === 400
+        );
+
+        await assert.rejects(
+            () => createNotifikasi(1, "   ", client),
+            (err: unknown) =>
+                err instanceof NotifikasiServiceError &&
+                err.code === "INVALID_NOTIFIKASI_INPUT" &&
+                err.statusCode === 400
+        );
+    });
+
+    it("sendNotifikasi mengirim notifikasi valid (true) dan mengembalikan false jika null atau ID invalid", async () => {
+        const mock = createMockSupabaseClient();
+        const client = mock as unknown as NotifikasiSupabaseClient;
+
+        const created = await createNotifikasi(1, "Status berubah", client);
+        const sent = await sendNotifikasi(created, client);
+        assert.equal(sent, true);
+        assert.equal(created.statusNotifikasi, "Terkirim");
+
+        assert.equal(await sendNotifikasi(null, client), false);
+        assert.equal(
+            await sendNotifikasi({ ...created, idNotifikasi: 0 }, client),
+            false
+        );
+    });
+
+    it("markNotifikasiAsRead mengembalikan 404 jika notifikasi tidak ditemukan", async () => {
+        const mock = createMockSupabaseClient();
+        const client = mock as unknown as NotifikasiSupabaseClient;
+
+        await assert.rejects(
+            () => markNotifikasiAsRead(999, 1, client),
+            (err: unknown) =>
+                err instanceof NotifikasiServiceError &&
+                err.code === "NOTIFIKASI_NOT_FOUND" &&
+                err.statusCode === 404
         );
     });
 });

@@ -215,6 +215,12 @@
 | *20-11-2026* | *Kenzo Yo* | *Mengisi bab 4.5 dan 4.6* | *2.5* | *Done* | *-* |
 | *20-11-2026* | *Nadia Layla S.* | *Mengisi Bab 4.3* | *3* | *Done* | *-* |
 
+### Milestone 10
+**Periode:** 13 November 2026 - 20 November 2026
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *20-11-2026* | *Justin Sepvian* | *Buat bab 4.2* | *7* | *Done* | *-* |
+
 ---
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
