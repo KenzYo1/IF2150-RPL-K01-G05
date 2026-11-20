@@ -235,15 +235,15 @@ Tabel 3.4. File Lain
 | 4 | *app/layout.tsx, app/(app)/layout.tsx* | *Layout halaman setelah login* |
 | 7 | *app/globals.css* | *Gaya global, tema warna, dan font HyWenHei* |
 | 8 | *lib/supabase/admin.ts, client.ts, server.ts, storage.ts* | *Konfigurasi klien Supabase* |
-| 10 | *lib/roles.ts, lib/utils.ts* | *Utilitas role dan fungsi bantu (cn)* |
-| 11 | *types/role.ts, route-roles.ts, start-pages.ts, allowed-domains.ts* | *Tipe dan aturan akses halaman per role, halaman awal per role, dan domain email yang diizinkan* |
-| 12 | *public/icon/*.svg, logoPutih.svg, Logo.png, dummy.svg, 3dotlb.svg, logout.svg* | *Aset ikon, logo, dan gambar dummy* |
-| 13 | *public/zhcn.ttf, public/Mermaid1001.ttf* | *Berkas font HyWenHei dan Mermaid* |
-| 14 | *public/_headers* | *Konfigurasi header HTTP untuk deployment Cloudflare* |
-| 15 | *next.config.ts, components.json, package.json, tsconfig.json, eslint.config.mjs* | *File konfigurasi proyek P/L* |
-| 16 | *.env.example* | *Contoh variabel lingkungan* |
-| 17 | *tests/*.test.ts* | *Unit test* |
-| 18 | *proxy.ts* | *Proteksi akses halaman dan sesi Supabase pada setiap request* |
+| 9 | *lib/roles.ts, lib/utils.ts* | *Utilitas role dan fungsi bantu (cn)* |
+| 10 | *types/role.ts, route-roles.ts, start-pages.ts, allowed-domains.ts* | *Tipe dan aturan akses halaman per role, halaman awal per role, dan domain email yang diizinkan* |
+| 11 | *public/icon/*.svg, logoPutih.svg, Logo.png, dummy.svg, 3dotlb.svg, logout.svg* | *Aset ikon, logo, dan gambar dummy* |
+| 12 | *public/zhcn.ttf, public/Mermaid1001.ttf* | *Berkas font HyWenHei dan Mermaid* |
+| 13 | *public/_headers* | *Konfigurasi header HTTP untuk deployment Cloudflare* |
+| 14 | *next.config.ts, components.json, package.json, tsconfig.json, eslint.config.mjs* | *File konfigurasi proyek P/L* |
+| 15 | *.env.example* | *Contoh variabel lingkungan* |
+| 16 | *tests/*.test.ts* | *Unit test* |
+| 17 | *proxy.ts* | *Proteksi akses halaman dan sesi Supabase pada setiap request* |
 
 <br>
 
@@ -645,11 +645,20 @@ Tabel 5.1. Matriks Kerunutan KF terhadap Implementasi dan Pengujian
 
 | KF ID | KNF Terkait | Use Case ID | Kelas Terkait | Implementasi File Terkait | Test Case (UC) | Test Case (Unit/Integrasi/KNF) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| *KF05* | *KNF01* | *UC03* | *C02 - Pesanan* | *`src/...`* | *UC03-TC01* | *C02-UT05, INT-TC04, KNF01-TC01* |
-| *KF01* | *-* | *UC01<br>UC02* | *[C01 - Nama kelas]<br>[C02 - Nama kelas]* | *[path/ke/file1]<br>[path/ke/file2]* | *UC01-TC01, UC01-TC02<br>UC02-TC01* | *-* |
-| *KF02* | *[KNFXX atau -]* | *[UCXX]* | *[CXX - Nama kelas]* | *[path/ke/file]* | *[UCXX-TCYY]* | *[CXX-UTYY, INT-TCYY, KNFXX-TCYY atau -]* |
-| *KFXX* | *-* | *[UCXX atau -]* | *[CXX - Nama kelas atau -]* | *Tidak diimplementasikan: [alasan]* | *-* | *-* |
-| *...* | *...* | *...* | *...* | *...* | *...* | *...* |
+| *KF01* | *KNF01, KNF02* | *UC01* | *C18 - HalamanLogin, C19 - LoginController* | *app/api/auth/login/route.ts, app/auth/callback/route.ts, lib/supabase/server.ts, lib/supabase/client.ts* | *-* | *INT-TC01, INT-TC02, INT-TC03, KNF01-TC01, KNF02-TC01* |
+| *KF02* | *KNF02* | *UC01* | *C18 - HalamanLogin, C19 - LoginController* | *app/api/auth/login/route.ts, app/auth/callback/route.ts, lib/supabase/server.ts, lib/supabase/client.ts* | *-* | *INT-TC01, INT-TC02, KNF02-TC01* |
+| *KF03* | *KNF01, KNF03, KNF05* | *UC01* | *C01 - PelaporEntity, C02 - LaporanEntity, C04 - HalamanFormulirLaporan, C05 - LaporanController, C12 - DatabaseLaporanEntity* | *src/types/pelapor.ts, src/types/laporan.ts, src/app/(app)/HalamanFormulirLaporan/page.tsx, src/components/laporan/KartuFormLapor.tsx, src/services/laporanService.ts, Tabel Supabase `laporan`* | *-* | *KNF01-TC01, KNF03-TC01, KNF05-TC01, KNF05-TC02* |
+| *KF04* | *-* | *UC02* | *C02 - LaporanEntity, C06 - AdminEntity, C07 - PetugasEntity, C08 - HalamanFormulirTanggapan, C09 - TanggapanController, C12 - DatabaseLaporanEntity* | *src/types/laporan.ts, C06 dan C07 tidak diimplementasikan sebagai kelas, src/app/(app)/(petugas)/HalamanDetailTanggapanLaporan/page.tsx, src/components/tanggapanlaporan/KartuTanggapanLaporan.tsx, src/services/tanggapanService.ts, Tabel Supabase `laporan`* | *UC01-TC01, UC01-TC02, UC01-TC03, UC01-TC04* | *-* |
+| *KF05* | *-* | *UC03* | *C02 - LaporanEntity, C03 - HalamanLaporan, C12 - DatabaseLaporanEntity* | *src/types/laporan.ts, src/app/(app)/HalamanLaporan/page.tsx, src/components/layout/laporancard.tsx, Tabel Supabase `laporan`* | *UC02-TC01, UC02-TC02, UC02-TC03, UC02-TC04* | *-* |
+| *KF06* | *-* | *UC03* | *C01 - PelaporEntity, C02 - LaporanEntity, C03 - HalamanLaporan, C10 - LikeController, C12 - DatabaseLaporanEntity* | *src/types/pelapor.ts, src/types/laporan.ts, src/app/(app)/HalamanLaporan/page.tsx, src/components/layout/laporancard.tsx, src/services/likeService.ts, Tabel Supabase `laporan`* | *UC02-TC01, UC02-TC02, UC02-TC03, UC02-TC04* | *-* |
+| *KF07* | *-* | *UC03* | *C01 - PelaporEntity, C02 - LaporanEntity, C10 - LikeController, C12 - DatabaseLaporanEntity* | *src/types/pelapor.ts, src/types/laporan.ts, src/services/likeService.ts, Tabel Supabase `laporan`* | *UC03-TC01, UC03-TC02, UC03-TC03* | *-* |
+| *KF08* | *-* | *UC03* | *C02 - LaporanEntity, C03 - HalamanLaporan, C10 - LikeController, C12 - DatabaseLaporanEntity* | *src/types/laporan.ts, src/app/(app)/HalamanLaporan/page.tsx, src/components/layout/laporancard.tsx, src/services/likeService.ts, Tabel Supabase `laporan`* | *UC03-TC03* | *-* |
+| *KF09* | *-* | *UC02* | *C02 - LaporanEntity, C07 - PetugasEntity, C08 - HalamanFormulirTanggapan, C09 - TanggapanController, C12 - DatabaseLaporanEntity, C16 - HalamanNotifikasi, C17 - NotifikasiController* | *src/types/laporan.ts, C07 tidak diimplementasikan sebagai kelas (B.5), src/app/(app)/(petugas)/HalamanDetailTanggapanLaporan/page.tsx, src/components/tanggapanlaporan/KartuTanggapanLaporan.tsx, src/services/tanggapanService.ts, Tabel Supabase `laporan`, src/app/(app)/HalamanNotifikasi/page.tsx, src/components/layout/NotifCard.tsx, src/services/notifikasiService.ts* | *UC03-TC01, UC03-TC02, UC03-TC03* | *-* |
+| *KF10* | *-* | *UC04* | *C01 - PelaporEntity, C09 - TanggapanController, C13 - DatabasePelaporEntity, C16 - HalamanNotifikasi, C17 - NotifikasiController* | *src/types/pelapor.ts, src/services/tanggapanService.ts, Tabel Supabase `pelapor`, src/app/(app)/HalamanNotifikasi/page.tsx, src/components/layout/NotifCard.tsx, src/services/notifikasiService.ts* | *-* | *-* |
+| *KF11* | *-* | *UC04* | *C01 - PelaporEntity, C09 - TanggapanController, C11 - HalamanLeaderboard, C13 - DatabasePelaporEntity, C14 - LeaderboardController, C15 - HalamanAkun, C16 - HalamanNotifikasi, C17 - NotifikasiController* | *src/types/pelapor.ts, src/services/tanggapanService.ts, src/app/(app)/HalamanLeaderboard/page.tsx, src/components/layout/LbComponent.tsx, Tabel Supabase `pelapor`, src/services/leaderboardService.ts, src/app/(app)/HalamanAkun/page.tsx, src/components/layout/AccountCard.tsx, src/app/(app)/HalamanNotifikasi/page.tsx, src/components/layout/NotifCard.tsx, src/services/notifikasiService.ts* | *UC04-TC01, UC04-TC02* | *-* |
+| *KF12* | *KNF06, KNF07	* | *UC04* | *C11 - HalamanLeaderboard, C13 - DatabasePelaporEntity, C14 - LeaderboardController, C15 - HalamanAkun* | *src/app/(app)/HalamanLeaderboard/page.tsx, src/components/layout/LbComponent.tsx, Tabel Supabase `pelapor`, src/services/leaderboardService.ts, src/app/(app)/HalamanAkun/page.tsx, src/components/layout/AccountCard.tsx* | *-* | *KNF06-TC01, KNF07-TC01* |
+| *KF13* | *KNF07* | *UC04* | *C11 - HalamanLeaderboard, C13 - DatabasePelaporEntity, C14 - LeaderboardController* | *src/app/(app)/HalamanLeaderboard/page.tsx, src/components/layout/LbComponent.tsx, Tabel Supabase `pelapor`, src/services/leaderboardService.ts* | *-* | *KNF07-TC01* |
+| *KF14* | *KNF07* | *UC04* | *C11 - HalamanLeaderboard, C13 - DatabasePelaporEntity, C14 - LeaderboardController* | *src/app/(app)/HalamanLeaderboard/page.tsx, src/components/layout/LbComponent.tsx, Tabel Supabase `pelapor`, src/services/leaderboardService.ts* | *-* | *KNF07-TC01* |
 
 Tabel 5.2. Matriks Kerunutan KNF terhadap Pengujian
 
