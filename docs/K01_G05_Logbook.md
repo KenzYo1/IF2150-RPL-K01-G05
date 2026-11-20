@@ -31,6 +31,7 @@
 * [Milestone 7](#milestone-7)
 * [Milestone 8](#milestone-8)
 * [Milestone 9](#milestone-9)
+* [Milestone 10](#milestone-10)
 ---
 
 ### Milestone 1
@@ -203,7 +204,7 @@
 | *13-11-2026* | *Arini K.* | *Mengisi B1* | *0.5* | *Done* | *-* |
 | *13-11-2026* | *Nadia Layla S.* | *Mengisi laporan asistesi* | *1* | *Done* | *-* |
 
-### Milestone 9
+### Milestone 10
 **Periode:** 13 November 2026 - 20 November 2026
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
@@ -211,6 +212,7 @@
 | *17-11-2026* | *Jessica A.T* | *Mengisi Bab 4.4* | *3* | *Done* | *-* |
 | *17-11-2026* | *Nadia Layla S.* | *Mengisi Bab 4.3* | *1* | *In Progress* | *-* |
 | *18-11-2026* | *Nadia Layla S.* | *Mengisi Bab 4.3* | *1* | *In Progress* | *-* |
+| *20-11-2026* | *Kenzo Yo* | *Mengisi bab 4.5 dan 4.6* | *2.5* | *Done* | *-* |
 
 ---
 
