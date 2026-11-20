@@ -169,13 +169,13 @@ Tabel 3.1. Lingkungan Implementasi
 
 | Aspek | Keterangan |
 | :--- | :--- |
-| *Hardware* | *[Spesifikasi perangkat keras]* |
-| *Operating System* | *[Nama dan versi OS]* |
-| *Bahasa Pemrograman* | *[Bahasa dan versi]* |
-| *Framework/Library* | *[Daftar framework/library beserta versi]* |
-| *DBMS* | *[Nama dan versi DBMS]* |
-| *Development Tools* | *[IDE, version control, tools lain]* |
-| *Testing Tools* | *[Framework unit test, alat ukur performa, alat coverage]* |
+| *Hardware* | *Laptop anggota tim* |
+| *Operating System* | *Windows 11* |
+| *Bahasa Pemrograman* | *TypeScript 5, Node.js v22.21.0 (npm 10.9.4)* |
+| *Framework/Library* | *Next.js 16 (App Router, Turbopack), React 19.3.0, Tailwind CSS 4, shadcn/ui berbasis Base UI (@base-ui/react 1.9), Lucide React, class-variance-authority, tw-animate-css, Supabase JS 2 dan @supabase/ssr, OpenNext untuk Cloudflare* |
+| *DBMS* | *Supabase (PostgreSQL 15)* |
+| *Development Tools* | *Visual Studio Code, Git dan GitHub, Figma, ESLint, Prettier, Wrangler (Cloudflare Workers)* |
+| *Testing Tools* | *Test runner bawaan Node.js dijalankan lewat tsx (`npm test`); tidak ada alat coverage???? PLISS NOTICE* |
 
 ## 3.2 Implementasi Modul
 
@@ -185,9 +185,23 @@ Tabel 3.2. Implementasi Modul
 
 | No | ID Kelas | Nama Modul/Kelas | Nama File Fisik | Nama File Executable |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | *[C01]* | *[Nama modul/kelas]* | *[path/ke/file]* | *[Nama file executable, atau - jika tidak ada]* |
-| 2 | *[C02]* | *[Nama modul/kelas]* | *[path/ke/file]* | *[...]* |
-| ... | *...* | *...* | *...* | *...* |
+| 1 | *C01* | *PelaporEntity* | *types/pelapor.ts* | *-* |
+| 2 | *C02* | *LaporanEntity* | *types/laporan.ts* | *-* |
+| 3 | *C03* | *HalamanLaporan* | *app/(app)/HalamanLaporan/page.tsx, components/layout/laporancard.tsx* | *-* |
+| 4 | *C04* | *HalamanFormulirLaporan* | *app/(app)/HalamanFormulirLaporan/page.tsx, app/(app)/HalamanFormulirLaporan/actions.tsx, components/laporan/KartuFormLapor.tsx* | *-* |
+| 5 | *C05* | *LaporanController* | *services/laporanService.ts, app/api/laporan/route.ts, app/api/laporan/[id]/route.ts, app/api/laporan/upload/route.ts* | *-* |
+| 6 | *C08* | *HalamanFormulirTanggapan* | *app/(app)/(petugas)/HalamanDetailTanggapanLaporan/page.tsx, app/(app)/(petugas)/HalamanDetailTanggapanLaporan/actions.tsx, components/tanggapanlaporan/KartuTanggapanLaporan.tsx* | *-* |
+| 7 | *C09* | *TanggapanController* | *services/tanggapanService.ts, types/tanggapan.ts, app/api/tanggapan/route.ts, app/api/laporan/[id]/tanggapan/route.ts* | *-* |
+| 8 | *C10* | *LikeController* | *services/likeService.ts, repositories/likeRepository.ts, types/like.ts, app/api/like/route.ts* | *-* |
+| 9 | *C11* | *HalamanLeaderboard* | *app/(app)/HalamanLeaderboard/page.tsx, components/layout/LbComponent.tsx* | *-* |
+| 10 | *C12* | *DatabaseLaporanEntity* | *repositories/laporanRepository.ts* | *-* |
+| 11 | *C13* | *DatabasePelaporEntity* | *repositories/pelaporRepository.ts, services/pelaporService.ts, app/api/pelapor/[id]/route.ts, app/api/pelapor/me/route.ts* | *-* |
+| 12 | *C14* | *LeaderboardController* | *services/leaderboardService.ts, types/leaderboard.ts, app/api/leaderboard/route.ts, app/api/leaderboard/me/route.ts* | *-* |
+| 13 | *C15* | *HalamanAkun* | *app/(app)/HalamanAkun/page.tsx, app/(app)/HalamanAkun/actions.tsx, components/layout/AccountCard.tsx* | *-* |
+| 14 | *C16* | *HalamanNotifikasi* | *app/(app)/HalamanNotifikasi/page.tsx, components/layout/NotifCard.tsx* | *-* |
+| 15 | *C17* | *NotifikasiController* | *services/notifikasiService.ts, repositories/notifikasiRepository.ts, types/notifikasi.ts, app/api/notifikasi/route.ts* | *-* |
+| 16 | *C18* | *HalamanLogin* | *app/login/page.tsx, app/login/actions.tsx, app/login/ForgotPassword/page.tsx, app/login/ForgotPassword/actions.tsx* | *-* |
+| 17 | *C19* | *LoginController* | *app/api/auth/login/route.ts, app/auth/callback/route.ts, lib/supabase/server.ts, lib/supabase/client.ts* | *-* |
 
 ## 3.3 Implementasi Antarmuka
 
@@ -197,9 +211,14 @@ Tabel 3.3. Implementasi Antarmuka
 
 | No | ID Antarmuka | Nama Antarmuka | Nama File Fisik | Nama File Executable |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | *[I-01]* | *[Nama layar]* | *[path/ke/file]* | *[Nama file executable, atau - jika tidak ada]* |
-| 2 | *[I-02]* | *[Nama layar]* | *[path/ke/file]* | *[...]* |
-| ... | *...* | *...* | *...* | *...* |
+| 1 | *I-01* | *Halaman Login* | *app/login/page.tsx, app/login/ForgotPassword/page.tsx* | *-* |
+| 2 | *I-02* | *Halaman Laporan Pelapor* | *app/(app)/HalamanLaporan/page.tsx, components/layout/laporancard.tsx* | *-* |
+| 3 | *I-03* | *Halaman Laporan Petugas* | *app/(app)/(petugas)/HalamanTanggapanLaporan/page.tsx, components/tanggapanlaporan/Tanggapansections.tsx, components/tanggapanlaporan/tanggapanlaporansection.tsx, components/tanggapanlaporan/tanggapanlaporancard.tsx* | *-* |
+| 4 | *I-04* | *Halaman Akun* | *app/(app)/HalamanAkun/page.tsx, components/layout/AccountCard.tsx* | *-* |
+| 5 | *I-05* | *Halaman Notifikasi* | *app/(app)/HalamanNotifikasi/page.tsx, components/layout/NotifCard.tsx* | *-* |
+| 6 | *I-06* | *Halaman Formulir Laporan* | *app/(app)/HalamanFormulirLaporan/page.tsx, components/laporan/KartuFormLapor.tsx* | *-* |
+| 7 | *I-07* | *Halaman Formulir Tanggapan* | *app/(app)/(petugas)/HalamanDetailTanggapanLaporan/page.tsx, components/tanggapanlaporan/KartuTanggapanLaporan.tsx* | *-* |
+| 8 | *I-08* | *Halaman Leaderboard* | *app/(app)/HalamanLeaderboard/page.tsx, components/layout/LbComponent.tsx* | *-* |
 
 ## 3.4 File Lain
 
@@ -209,8 +228,21 @@ Tabel 3.4. File Lain
 
 | No | Nama File | Keterangan |
 | :--- | :--- | :--- |
-| 1 | *[Nama file]* | *[Fungsi file]* |
-| ... | *...* | *...* |
+| 1 | *components/layout/Header.tsx* | *Header bersama untuk halaman setelah login* |
+| 2 | *components/layout/SideBar.tsx* | *Menu samping dengan isi sesuai role* |
+| 3 | *components/ui/button.tsx, avatar.tsx, sheet.tsx* | *Komponen UI* |
+| 4 | *app/layout.tsx, app/(app)/layout.tsx* | *Layout halaman setelah login* |
+| 7 | *app/globals.css* | *Gaya global, tema warna, dan font HyWenHei* |
+| 8 | *lib/supabase/admin.ts, client.ts, server.ts, storage.ts* | *Konfigurasi klien Supabase* |
+| 10 | *lib/roles.ts, lib/utils.ts* | *Utilitas role dan fungsi bantu (cn)* |
+| 11 | *types/role.ts, route-roles.ts, start-pages.ts, allowed-domains.ts* | *Tipe dan aturan akses halaman per role, halaman awal per role, dan domain email yang diizinkan* |
+| 12 | *public/icon/*.svg, logoPutih.svg, Logo.png, dummy.svg, 3dotlb.svg, logout.svg* | *Aset ikon, logo, dan gambar dummy* |
+| 13 | *public/zhcn.ttf, public/Mermaid1001.ttf* | *Berkas font HyWenHei dan Mermaid* |
+| 14 | *public/_headers* | *Konfigurasi header HTTP untuk deployment Cloudflare* |
+| 15 | *next.config.ts, components.json, package.json, tsconfig.json, eslint.config.mjs* | *File konfigurasi proyek P/L* |
+| 16 | *.env.example* | *Contoh variabel lingkungan* |
+| 17 | *tests/*.test.ts* | *Unit test* |
+| 18 | *proxy.ts* | *Proteksi akses halaman dan sesi Supabase pada setiap request* |
 
 <br>
 
