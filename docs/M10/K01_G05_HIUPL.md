@@ -201,8 +201,8 @@ Tabel 3.2. Implementasi Modul
 | 13 | *C15* | *HalamanAkun* | *app/(app)/HalamanAkun/page.tsx, app/(app)/HalamanAkun/actions.tsx, components/layout/AccountCard.tsx* | *-* |
 | 14 | *C16* | *HalamanNotifikasi* | *app/(app)/HalamanNotifikasi/page.tsx, components/layout/NotifCard.tsx* | *-* |
 | 15 | *C17* | *NotifikasiController* | *services/notifikasiService.ts, repositories/notifikasiRepository.ts, types/notifikasi.ts, app/api/notifikasi/route.ts* | *-* |
-| 16 | *C18* | *HalamanLogin* | *app/login/page.tsx, app/login/actions.tsx, app/login/ForgotPassword/page.tsx, app/login/ForgotPassword/actions.tsx* | *-* |
-| 17 | *C19* | *LoginController* | *app/api/auth/login/route.ts, app/auth/callback/route.ts, lib/supabase/server.ts, lib/supabase/client.ts* | *-* |
+| 16 | *C18* | *HalamanLogin* | *app/login/page.tsx, app/login/ForgotPassword/page.tsx* | *-* |
+| 17 | *C19* | *LoginController* | *app/api/auth/login/route.ts, app/auth/callback/route.ts, lib/supabase/server.ts, lib/supabase/client.ts, app/login/ForgotPassword/actions.tsx, app/login/actions.tsx* | *-* |
 
 ## 3.3 Implementasi Antarmuka
 
