@@ -469,6 +469,12 @@ Tabel 5.2. Matriks Kerunutan KNF terhadap Pengujian
 
 | ID KNF | Parameter | KF/UC Terkait | Test Case |
 | :--- | :--- | :--- | :--- |
-| *KNF01* | *Reliability* | *KF05 / UC03* | *KNF01-TC01* |
-| *KNFXX* | *[Parameter]* | *[KFXX / UCXX atau -]* | *[KNFXX-TCYY]* |
-| *...* | *...* | *...* | *...* |
+| *KNF01* | *Portability* | *KF01, KF03 / UC01* | *KNF01-TC01* |
+| *KNF02* | *Response time* | *KF01, KF02 / UC01* | *KNF02-TC01* |
+| *KNF03* | *Response time* | *KF03 / UC01* | *KNF03-TC01* |
+| *KNF04* | *Availability* | *-* | *KNF04-TC01* |
+| *KNF05* | *Security* | *KF03 / UC01* | *KNF05-TC01, KNF05-TC02* |
+| *KNF06* | *Security* | *KF12 / UC04* | *KNF06-TC01* |
+| *KNF07* | *Performance efficiency* | *KF12, KF13, KF14 / UC04* | *KNF07-TC01* |
+
+
