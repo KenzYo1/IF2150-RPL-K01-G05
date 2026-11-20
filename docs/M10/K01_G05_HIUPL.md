@@ -437,15 +437,15 @@ Tabel 4.6. Bukti Hasil Pengujian
 | *INT-TC01* | *[Sisipkan bukti pengujian integrasi]* |
 | *UC01-TC01* | *[Sisipkan tangkapan layar UC01-TC01 sesuai prosedur pengujian]* |
 | *UC01-TC02* | *[Sisipkan tangkapan layar UC01-TC02 sesuai prosedur pengujian]* |
-| *KNF01-TC01* | ![KNF01-TC01-1](assets\bukti-knf01-tc01-1.png) ![KNF01-TC01-2](assets\bukti-knf01-tc01-2.png) ![KNF01-TC01-3](assets\bukti-knf01-tc01-3.png) |
-| *KNF02-TC01* | ![KNF02-TC01-1](assets\bukti-knf02-tc01-1.png) ![KNF01-TC01-2](assets\bukti-knf02-tc01-2.png) ![KNF01-TC01-3](assets\bukti-knf02-tc01-3.png) |
-| *KNF03-TC01* | ![KNF03-TC01-1](assets\bukti-knf03-tc01-1.png) ![KNF03-TC01-2](assets\bukti-knf03-tc01-2.png) ![KNF03-TC01-3](assets\bukti-knf03-tc01-3.png) ![KNF03-TC01-4](assets\bukti-knf03-tc01-4.png) |
-| *KNF04-TC01* | ![KNF04-TC01-1](assets\bukti-knf04-tc01-1.png) |
-| *KNF05-TC01* | ![KNF05-TC01-1](assets\bukti-knf05-tc01-1.png) ![KNF05-TC01-2](assets\bukti-knf05-tc01-2.png) |
-| *KNF05-TC01* | ![KNF05-TC01-1](assets\bukti-knf05-tc01-1.png) |
-| *KNF05-TC02* | ![KNF05-TC02-1](assets\bukti-knf05-tc02-1.png) |
-| *KNF06-TC01* | ![KNF06-TC01-1](assets\bukti-knf06-tc01-1.png) ![KNF06-TC01-2](assets\bukti-knf06-tc01-2.png) |
-| *KNF07-TC01* | Bukti adanya algoritma sorting dan fungsi yang menampilkan urutan leaderboard setiap kali HalamanLeaderboard di-_render_ ![KNF07-TC01-1](assets\bukti-knf07-tc01-1.png) Bukti tidak adanya _cron_ pada Supabase ![KNF07-TC01-2](assets\bukti-knf07-tc01-2.png) |
+| *KNF01-TC01* | ![KNF01-TC01-1](assets/bukti-knf01-tc01-1.png) ![KNF01-TC01-2](assets/bukti-knf01-tc01-2.png) ![KNF01-TC01-3](assets/bukti-knf01-tc01-3.png) |
+| *KNF02-TC01* | ![KNF02-TC01-1](assets/bukti-knf02-tc01-1.png) ![KNF01-TC01-2](assets/bukti-knf02-tc01-2.png) ![KNF01-TC01-3](assets/bukti-knf02-tc01-3.png) |
+| *KNF03-TC01* | ![KNF03-TC01-1](assets/bukti-knf03-tc01-1.png) ![KNF03-TC01-2](assets/bukti-knf03-tc01-2.png) ![KNF03-TC01-3](assets/bukti-knf03-tc01-3.png) ![KNF03-TC01-4](assets/bukti-knf03-tc01-4.png) |
+| *KNF04-TC01* | ![KNF04-TC01-1](assets/bukti-knf04-tc01-1.png) |
+| *KNF05-TC01* | ![KNF05-TC01-1](assets/bukti-knf05-tc01-1.png) ![KNF05-TC01-2](assets/bukti-knf05-tc01-2.png) |
+| *KNF05-TC01* | ![KNF05-TC01-1](assets/bukti-knf05-tc01-1.png) |
+| *KNF05-TC02* | ![KNF05-TC02-1](assets/bukti-knf05-tc02-1.png) |
+| *KNF06-TC01* | ![KNF06-TC01-1](assets/bukti-knf06-tc01-1.png) ![KNF06-TC01-2](assets/bukti-knf06-tc01-2.png) |
+| *KNF07-TC01* | Bukti adanya algoritma sorting dan fungsi yang menampilkan urutan leaderboard setiap kali HalamanLeaderboard di-_render_ ![KNF07-TC01-1](assets/bukti-knf07-tc01-1.png) Bukti tidak adanya _cron_ pada Supabase ![KNF07-TC01-2](assets/bukti-knf07-tc01-2.png) |
 
 <br>
 
